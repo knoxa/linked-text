@@ -14,7 +14,7 @@
 </xsl:template>
 
 <xsl:template match="item">
-  <html:p onload="window.open('{@href}')">
+  <html:p onclick="window.open('{@href}')">
   <xsl:value-of select="@href"/>
   </html:p>
 </xsl:template>
