@@ -6,7 +6,7 @@
   <html:html>
     <html:head><html:title>TESTING</html:title></html:head>
     <html:body>
-      <html:h1>qqqq3</html:h1>
+      <html:h1>qqqq4</html:h1>
       <xsl:apply-templates select="//item"/>
     </html:body>
   </html:html>
@@ -14,7 +14,7 @@
 </xsl:template>
 
 <xsl:template match="item">
-  <html:p>
+  <html:p onload="window.open('{@href}')">
   <xsl:value-of select="@href"/>
   </html:p>
 </xsl:template>
