@@ -15,7 +15,7 @@
 
 <xsl:template match="item">
   <html:p>
-  <xsl:value-of select="document(@href)"/>
+  <xsl:value-of select="@href"/>
   </html:p>
 </xsl:template>
 
