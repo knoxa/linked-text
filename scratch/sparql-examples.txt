@@ -1,0 +1,147 @@
+construct{
+
+?entity rdf:type skos:Concept.
+?entity skos:broader dbc:United_States_helicopters_1960-1969.
+?entity skos:prefLabel ?name; skos:altLabel ?label; rdfs:comment ?comment.
+}
+where {
+
+  ?entity dct:subject dbc:United_States_military_helicopters.
+  ?alias dbo:wikiPageRedirects ?entity.
+  ?alias rdfs:label ?label.
+  ?entity rdfs:label ?name; rdfs:comment ?comment.
+
+  FILTER( LANGMATCHES(LANG(?label), "en") ).
+  FILTER( LANGMATCHES(LANG(?name), "en") ).
+  FILTER( LANGMATCHES(LANG(?comment), "en") ).
+}
+
+-----
+
+CONSTRUCT {
+
+  ?person rdfs:label ?name;
+          rdfs:comment ?abstract;
+          rdf:type schema:Person;
+          owl:sameAs ?wikidata;
+          rdf:type schema:Organization;
+          schema:name ?name.
+
+  ?person rdfs:member ?category.
+  ?person foaf:isPrimaryTopicOf ?page. 
+  
+}
+WHERE {
+
+  ?person dct:subject ?category.
+  ?person rdf:type dbo:Person.
+  ?person rdfs:label ?name.
+  ?person dbo:abstract ?abstract.
+
+  OPTIONAL {   
+    ?person owl:sameAs ?wikidata.
+    FILTER (regex(str(?wikidata), 'wikidata.org'))
+  }
+
+  OPTIONAL {   
+    ?person foaf:isPrimaryTopicOf ?page. 
+  }
+
+  FILTER ( LANGMATCHES(LANG(?name), "en") && LANGMATCHES(LANG(?abstract), "en") )
+
+  VALUES (?category) { (dbc:Medellín_Cartel_traffickers) (dbc:Cali_Cartel_traffickers)}
+}
+
+　
+---
+
+CONSTRUCT {
+
+  ?person rdfs:label ?name;
+          rdfs:comment ?abstract;
+          owl:sameAs ?wikidata;
+          rdfs:member dbc:Medellín_Cartel;
+          geo:lat ?lat; geo:long ?long; rdf:type geo:SpatialThing.
+  ?person foaf:isPrimaryTopicOf ?page. 
+}
+WHERE {
+
+  ?person dct:subject dbc:Colombian_intelligence_agencies.
+  ?person rdf:type geo:SpatialThing.
+  ?person rdfs:label ?name.
+  ?person dbo:abstract ?abstract.
+
+  OPTIONAL {   
+    ?person owl:sameAs ?wikidata.
+    ?person geo:lat ?lat; geo:long ?long.
+    FILTER (regex(str(?wikidata), 'wikidata.org'))
+  }
+
+  OPTIONAL {   
+    ?person foaf:isPrimaryTopicOf ?page. 
+  }
+
+  FILTER ( LANGMATCHES(LANG(?name), "en") && LANGMATCHES(LANG(?abstract), "en") )
+}
+
+---
+
+CONSTRUCT {
+
+  ?entity rdfs:label ?name;
+          rdfs:comment ?abstract;
+          owl:sameAs ?wikidata;
+          geo:lat ?lat; geo:long ?long; rdf:type geo:SpatialThing.
+  ?entity foaf:isPrimaryTopicOf ?page. 
+}
+WHERE {
+
+  ?entity rdf:type geo:SpatialThing.
+  ?entity rdfs:label ?name.
+  ?entity dbo:abstract ?abstract.
+
+  OPTIONAL {   
+    ?entity owl:sameAs ?wikidata.
+    ?entity geo:lat ?lat; geo:long ?long.
+    FILTER (regex(str(?wikidata), 'wikidata.org'))
+  }
+
+  OPTIONAL {   
+    ?entity foaf:isPrimaryTopicOf ?page. 
+  }
+
+  FILTER ( LANGMATCHES(LANG(?name), "en") && LANGMATCHES(LANG(?abstract), "en") )
+
+  VALUES (?entity) { (dbr:Central_American_University) }.
+}
+
+---
+CONSTRUCT {
+
+  ?entity rdf:type schema:Thing;
+          schema:name ?name;
+          schema:alternateName ?redirectName;
+          schema:alternateName ?alias.
+}
+WHERE {
+
+  ?entity rdfs:label ?name.
+
+OPTIONAL {
+  ?redirect dbo:wikiPageRedirects ?entity.
+  ?redirect rdfs:label ?redirectName.
+  FILTER ( LANGMATCHES(LANG(?redirectName), "en"))
+}
+
+OPTIONAL {
+  ?entity dbp:alias ?alias.
+  FILTER ( LANGMATCHES(LANG(?alias), "en"))
+}
+
+  FILTER ( LANGMATCHES(LANG(?name), "en") )
+
+  VALUES (?entity) { (dbr:Pablo_Escobar) }.
+}
+
+　
+---
