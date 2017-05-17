@@ -19,11 +19,13 @@ where {
     dbc:United_States_military_reconnaissance_aircraft_1960–1969
     dbc:United_States_military_helicopters
     dbc:United_States_attack_aircraft_1960–1969
+    dbc:United_States_military_trainer_aircraft_1960–1969
+    dbc:United_States_military_trainer_aircraft_1940–1949
     dbc:United_States_military_transport_aircraft_1960–1969
     dbc:United_States_military_transport_aircraft_1950–1959
+    dbc:CASA_aircraft
   }
 }
-
 
 -----
 
