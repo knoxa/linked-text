@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:dc="http://purl.org/dc/elements/1.1/" 
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link type="text/css" href="master.css" rel="stylesheet"/>
+<title>Family Tree</title>
+<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"/>
+<meta name="DC.source" content="The Elephant and the Fly"/>
+<meta name="DC.identifier" content="Example ..."/>
+</head>
+<body>
+
+<p class="note">
+This example attempts to derive the Julio-Claudian family tree.
+</p>
+<p class="note">We derive arguments from source text. We quote extracts from the text and use them as evidence to support claims.
+We present all this in a 'workbook' style. This needs to be human readable, but have sufficient structure for it to be possible (ideally simple) to extract an AIF argument map. The idea is that the process of developing knowledge (by elaborating the arguments) is iterative: the 'workbook' can be udated/extended an re-evaluated repeatedly. 
+</p>
+
+<p class="note">
+The aim is to construct very simple arguments as might reasonably be produced by natural language processing. These will be about entities and relationships. They are justified by the source text. They may or may not be correct. They can be rebutted or confirmed (or questioned) by other agents 'reading' the same text.
+</p>
+<p class="note">
+We will allow both human and machine arguments. The 'low-level' machine NLP claims can be constructed so that they are trivial to extract. Similarly, machine arguments over these premises can be constructed to be easy to extract, but there is is also the need to make them 'readable' so that humans can engage. We don't wish to constrain the expression of human arguments at all, though adopting some convention in how these are expressed will make them easier to extract. The ultimate aim is that state-of-the-art argument mining will, in time, render these considerations irrelevant. 
+</p>
+<p class="note">
+We can use the final analysis to index the text. 
+</p>
+<p class="note">
+We can apply NLP to the text rephrasing (and arguments) in the workbook, as well as the original text. We can capture the results of NLP as semantic mark-up on text extracts in the workbook as well as, or instead of, generating NLP claims. Similarly, we can capture argument mining results as semantic mark-up of claims and arguments.
+</p>
+<p class="note">
+We can simplify the workbook by accepting certain facts then not 'stating the obvious'. (JavaScript links?)
+</p>
+<p class="note">
+We will assume that an argument is <em>identified</em> by its text - so the same words are the same argument regardless of context. In general, of course, this isn't always true. The idea is that ambiguities should be detectable, and that the offending claims can be rephrased to eliminate them. For example the claim "This refers to Julia" may need to be rephrased as "This refers to Julia the Elder" or "This refers to Julia the Younger". We'll use the eleatics has function.
+</p>
+<p class="note">
+We can phrase arguments in different ways. For example, draw fragments of family tree with SVG. This can be part of the same workboox, with an unbroken chain back to text, or we could have something that operates on the arguments derived from the work book. The assumption that an argument is identified by itsw text means that we don't hve to have everything in one place. Algorithms can operate on the extracted facts (as text, or graphs derived from text) and should be capable of being related back (possibly ambiguously) to source. There is always the option of implementing a fill provenance trail (noting a cost). Alternatively, claims made separately from source text may need to be checked (and should be capable of being checked).
+</p>
+
+
+<article about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:1.3">
+<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book1.xhtml#3">Tacitus, Annals 1.3</a>:</p>
+<blockquote>
+Augustus meanwhile, as supports to his despotism, raised to the pontificate and curule aedileship Claudius Marcellus, his sister's son,<span class="ellipsis"> ...</span>
+</blockquote>
+<ul>
+	<li class="claim">Claudius Marcellus is the nephew of Augustus.</li>
+</ul>
+<blockquote>
+For he had admitted the children of Agrippa, Caius and Lucius, into the house of the Caesars;
+</blockquote>
+<ul>
+	<li class="claim">Caius is the offspring of Agrippa.</li>
+	<li class="claim">Lucius is the offspring of Agrippa.</li>
+</ul>
+<p class="note">from co-reference:</p>
+<ul>
+	<li class="claim">"Lucius" and "Lucius Caesar" refer to the same person.</li>
+	<li typeof="rdf:Alt"><span class="claim">Agrippa and Marcus Agrippa are the same person.</span> <span class="claim wrong">Agrippa and Agrippa Postumus are the same person.</span></li>	
+</ul>
+<blockquote>
+<span class="ellipsis">... </span>he drove out as an exile into the island of Planasia, his only grandson, Agrippa Postumus,<span class="ellipsis"> ...</span>
+</blockquote>
+
+</article>
+
+
+<div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:1.53">
+<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book1.xhtml#53">Tacitus, Annals 1.53</a>:</p>
+<blockquote>
+That same year <span class="name person">Julia</span> ended her days. For her profligacy she had formerly been confined by her father <span class="name person">Augustus</span> in the island of Pandateria, and then in the town of the Regini on the shores of the straits of Sicily. She had been the wife of Tiberius while Caius and Lucius Caesar were in their glory, and had disdained him as an unequal match.
+</blockquote>
+<blockquote>
+<span class="ellipsis">... </span><span class="person" content="Julia">she</span> had formerly been confined by <span class="person" content="Julia">her</span> father Augustus<span class="ellipsis"> ...</span>
+</blockquote>
+<ul content="nlp">
+<li><span class="claim">This refers to Julia</span>, so:</li>
+	<ul content="nlp">
+	<li class="claim">Julia is the daughter of Augustus.</li>
+	</ul>
+</ul>
+</div>
+
+<hr/>
+
+<article about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:2.53">
+<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book2.xhtml#53">Tacitus, Annals 2.53</a>:</p>
+<blockquote>
+Germanicus, however, entered on the office at Nicopolis, a city of Achaia, whither he had arrived by the coast of Illyricum, after having seen his brother Drusus, who was then in Dalmatia, and endured a stormy voyage through the Adriatic and afterwards the Ionian Sea.
+</blockquote>
+<blockquote>
+... <span class="person" content="Germanicus">his</span> brother Drusus ...
+</blockquote>
+<ul content="nlp">
+<li class="claim">Germanicus is the brother of Drusus.</li>
+</ul>
+</article>
+
+
+<hr/>
+
+<div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:2.56">
+<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book2.xhtml#56">Tacitus, Annals 2.56</a>:</p>
+<blockquote>
+Meantime <span class="person">Germanicus</span>, while, as I have related, he was collecting the taxes of Gaul, received news of the death of <span class="person">Augustus</span>. He was married to the granddaughter of <span class="person">Augustus</span>, <span class="person">Agrippina</span>, by whom he had several children, and though he was himself the son of <span class="person">Drusus</span>, brother of <span class="person">Tiberius</span>, and grandson of <span class="person">Augusta</span>, he was troubled by the secret hatred of his uncle and grandmother, the motives for which were the more venomous because unjust.
+</blockquote>
+<ul content="nlp">
+<li class="claim">Agrippina is the grandaughter of Augustus.</li>
+</ul>
+<blockquote>
+<span class="ellipsis">... </span><span class="person" content="Germanicus">he</span> was himself the son of Drusus, brother of Tiberius, and grandson of Augusta,<span class="ellipsis"> ...</span>
+</blockquote>
+
+
+<ul content="nlp">
+<li><span class="claim">This refers to Germanicus</span>, so:</li>
+	<ul content="nlp">
+	<li class="claim">Germanicus is the son of Drusus.</li>
+	<li typeof="rdf:Alt">The phrase is ambiguous: Either <span class="claim wrong">Germanicus is the brother of Tiberius</span>, <span>or</span> <span class="claim">Drusus is the brother of Tiberius.</span></li>
+	<li typeof="rdf:Alt">The phrase is ambiguous: Either <span class="claim">Germanicus is the grandson of Augusta</span>, <span>or</span> <span class="claim wrong">Drusus is the grandson of Augusta.</span></li>
+	</ul>
+	<li>If <span class="premise">Drusus is the son of Tiberius</span>, and <span class="premise">Drusus is the brother of Tiberius</span>, <span class="support">then</span> <span class="conclusion">there is more than one Drusus</span>.</li>
+	<li class="question">Has Drusus been identified?</li>
+</ul>
+</div>
+
+<hr/>
+
+<div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:4.3">
+<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book4.xhtml#3">Tacitus, Annals 4.3</a>:</p>
+<blockquote>
+<span class="ellipsis">... </span>Livia, Drusus's wife. <span class="person" content="Livia">She</span> was a sister of Germanicus,<span class="ellipsis"> ...</span>
+</blockquote>
+<blockquote>
+<span class="ellipsis">... </span><span class="person" content="Livia">she</span>, the niece of Augustus, the daughter-in-law of Tiberius, the mother of children by Drusus,<span class="ellipsis"> ...</span>
+</blockquote>
+</div>
+
+<div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:4.71">
+<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book4.xhtml#71">Tacitus, Annals 4.71</a>:</p>
+<blockquote>
+About the same time Julia died, the granddaughter of Augustus.
+</blockquote>
+</div>
+
+
+<div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:4.75">
+<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book4.xhtml#75">Tacitus, Annals 4.75</a>:</p>
+<blockquote>
+Tiberius meanwhile having himself in person bestowed the hand of his granddaughter Agrippina, Germanicus's daughter, on Cneius Domitius, directed the marriage to be celebrated at Rome. In selecting Domitius he looked not only to his ancient lineage, but also to his alliance with the blood of the Caesars, for he could point to Octavia as his grandmother and through her to Augustus as his great-uncle.
+</blockquote>
+<blockquote>
+<span class="ellipsis">... </span>his granddaughter Agrippina, Germanicus's daughter,<span class="ellipsis"> ...</span>
+</blockquote>
+<blockquote>
+<span class="ellipsis">... </span>he could point to Octavia as his grandmother and through her to Augustus as his great-uncle.
+</blockquote>
+
+</div>
+
+
+</body>
+</html>

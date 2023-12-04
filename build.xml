@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+
+<project name="Linked Text" basedir=".">
+
+	<property file="ant.properties"/>
+
+	<description>
+		Information extraction from text.
+	</description>
+	
+	<target name="all" depends="identify, aif"/>
+
+	<target name="identify" description="add URI to claims">
+		<!--
+		<xslt in="reasoning/germanicus.xhtml" out="output/dialogue.xhtml" style="xsl/add-uri.xsl" force="yes"/>
+		-->
+		<xslt in="reasoning/roman/family.xhtml" out="output/dialogue.xhtml" style="xsl/add-uri.xsl" force="yes"/>
+	</target>
+
+	<target name="aif" description="make AIF">
+		<xslt in="output/dialogue.xhtml" out="output/aif.txt" style="xsl/claims.xsl" force="yes"/>
+	</target>
+
+	<target name="AIF-to-GraphML">
+		<!-- Convert AIF to GraphML -->
+	    <xslt in="C:\workspaces\development\LookingGlassCakes\dump.xml" out="output/aif.graphml" style="${xsl-map}/aif-to-graphml2.xsl" force="yes"/>
+	</target>
+
+	<target name="family" description="family tree">
+		<xslt in="reasoning/roman/family.xhtml" out="output/family.xhtml" style="xsl/family.xsl" force="yes"/>
+		<xslt in="output/family.xhtml" out="output/id.xhtml" style="xsl/add-uri.xsl" force="yes"/>
+		<xslt in="output/id.xhtml" out="output/family.graphml" style="xsl/graph.xsl" force="yes"/>
+	</target>
+
+	<target name="RDFa" description="extract RDFa mark-up">
+		<xslt in="output/dialogue.xhtml" out="output/rdf.txt" style="/D:/GitHub/eleatics/xsl-utils/rdfa-ntriples.xsl" force="yes"/>
+	</target>
+
+</project>

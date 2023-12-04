@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:dc="http://purl.org/dc/elements/1.1/" 
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link type="text/css" href="../master.css" rel="stylesheet"/>
+<title>Family Tree</title>
+<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"/>
+<meta name="DC.source" content="The Elephant and the Fly"/>
+<meta name="DC.identifier" content="Julio-Claudian Family Tree"/>
+</head>
+<body>
+
+<article about="urn:cts:latinLit:phi1348.abo012.perseus-eng1:4">
+
+<p class="ref"><a href="http://data.perseus.org/citations/urn:cts:latinLit:phi1348.abo012.perseus-eng1:4">Suet. Aug. 4</a>:</p>
+
+<blockquote>
+After quitting Macedonia, before he could declare himself a candidate for the consulship, he died suddenly, leaving behind <span class="person" content="Caius Octavius">him</span> a daughter, the elder Octavia, by Ancharia; and another daughter, Octavia the younger, as well as Augustus, by Atia, who was the daughter of Marcus Atius Balbus, and Julia, sister to Caius Julius Caesar.
+</blockquote>
+	
+	<p class="note">An entity and relationship extraction process might give:</p>
+	
+	<div class="nlp">
+		<ul>
+			<li class="claim">Ancharia is the mother of <span content="Octavia the Elder">the elder Octavia</span>.</li>
+			<li class="claim">Atia is the mother of <span content="Octavia the Younger">Octavia the younger</span>.</li>
+			<li class="claim">Atia is the mother of Augustus.</li>
+			<li class="claim">Atia is the daughter of Marcus Atius Balbus.</li>
+			<li class="claim">Atia is the daughter of <span content="Julia Minor">Julia</span>.</li>
+			<li class="claim"><span content="Julia Minor">Julia</span> is the sister of Caius Julius Caesar.</li>
+		</ul>
+	</div>
+
+	<div class="coref">
+		<ul>
+			<li>
+				<span class="claim">"him" refers to Caius Octavius</span>, so:
+				<ul content="nlp">
+					<li class="claim">Caius Octavius is the father of <span content="Octavia the Elder">the elder Octavia</span>.</li>
+					<li class="claim">Caius Octavius is the father of <span content="Octavia the Younger">Octavia the younger</span>.</li>
+					<li class="claim">Caius Octavius is the father of Augustus.</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+
+	<div class="analysis">
+		<p class="rewrite">"Julia" refers to <span class="name">Julia Minor</span>.</p>
+		<p class="rewrite">"Octavia the younger" refers <span class="name">Octavia the Younger</span>.</p>
+		<p class="rewrite">"the elder Octavia" refers to <span class="name">Octavia the Elder</span>.</p>
+	</div>
+	
+</article>
+
+<article about="urn:cts:latinLit:phi1348.abo012.perseus-eng1:62">
+
+<p class="ref"><a href="http://data.perseus.org/citations/urn:cts:latinLit:phi1348.abo012.perseus-eng1:62">Suet. Aug. 62</a>:</p>
+
+<blockquote>
+<span class="person" content="Augustus">He</span> had three grandsons by <span content="Marcus Agrippa">Agrippa</span> and Julia, namely, Caius, Lucius, and <span content="Agrippa Postumus">Agrippa</span>; and two granddaughters, Julia and Agrippina.
+</blockquote>
+	
+	<div class="coref">
+		<ul>
+			<li>
+				<span class="claim">"He" refers to Augustus</span>, so:
+				<ul content="nlp">
+					<li class="claim">Caius is the grandson of Augustus.</li>
+					<li class="claim">Lucius is the grandson of Augustus.</li>
+					<li><span class="claim"><span content="Agrippa Postumus">Agrippa</span> is the grandson of Augustus.</span></li>
+					<li class="claim"><span content="Julia the Younger">Julia</span> is the granddaughter of Augustus.</li>
+					<li class="claim"><span content="Agrippina the Elder">Agrippina</span> is the granddaughter of Augustus.</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	
+	<div class="nlp">
+		<ul>
+			<li class="claim">Caius is the son of <span content="Marcus Agrippa">Agrippa</span>.</li>
+			<li class="claim">Caius is the son of <span content="Julia the Elder">Julia</span>.</li>
+			<li class="claim">Lucius is the son of <span content="Marcus Agrippa">Agrippa</span>.</li>
+			<li class="claim">Lucius is the son of <span content="Julia the Elder">Julia</span>.</li>
+			<li class="claim"><span content="Agrippina the Elder">Agrippina</span> is the daughter of <span content="Marcus Agrippa">Agrippa</span>.</li>
+			<li class="claim"><span content="Agrippina the Elder">Agrippina</span> is the daughter of <span content="Julia the Elder">Julia</span>.</li>
+			<li class="claim"><span content="Agrippa Postumus">Agrippa</span> is the son of <span content="Marcus Agrippa">Agrippa</span>.</li>
+			<li class="claim"><span content="Agrippa Postumus">Agrippa</span> is the son of <span content="Julia the Elder">Julia</span>.</li>
+			<li class="claim"><span content="Julia the Younger">Julia</span> is the daughter of <span content="Marcus Agrippa">Agrippa</span>.</li>
+			<li class="claim"><span content="Julia the Younger">Julia</span> is the daughter of <span content="Julia the Elder">Julia</span>.</li>
+		</ul>
+	</div>
+	
+	<div class="analysis">
+		<p about="_:A001" class="rewrite">"Agrippa" is ambigous, referring to <span class="name">Marcus Agrippa</span> as parent and <span class="name">Agrippa Postumus</span> as child.</p>
+	</div>
+	
+	<div class="analysis">
+		<p about="_:A002" class="rewrite">"Julia" is ambigous, referring to <span class="name">Julia the Elder</span> as parent and <span class="name">Julia the Younger</span> as child.</p>
+	</div>
+	
+	<div class="analysis">
+		<p class="rewrite">"Agrippina" refers to <span class="name">Agrippina the Elder</span>.</p>
+	</div>
+	
+	<div class="analysis" about="urn:cts:latinLit:phi1348.abo012.perseus-eng1:62">
+		<p class="question">Is Augustus the father of Marcus Agrippa, or of Julia the Elder?</p>
+	</div>
+
+</article>
+
+
+<article about="urn:cts:latinLit:phi1348.abo012.perseus-eng1:61">
+
+<p class="ref"><a href="http://data.perseus.org/citations/urn:cts:latinLit:phi1348.abo012.perseus-eng1:61">Suet. Aug. 61</a>:</p>
+
+<blockquote>
+By Scribonia <span class="person" content="Augustus">he</span> had a daughter named <span content="Julia the Elder">Julia</span>, but no children by Livia, although extremely desirous of issue.
+</blockquote>
+
+	<div class="coref">
+		<ul>
+			<li>
+				<span class="claim">"he" refers to Augustus</span>, so:
+				<ul content="nlp">
+					<li class="claim"><span content="Julia the Elder">Julia</span> is the daughter of Augustus.</li>
+				</ul>
+			</li>
+			<li class="claim"><span content="Julia the Elder">Julia</span> is the daughter of Scribonia.</li>
+		</ul>
+	</div>
+	
+	<div class="analysis">
+		<p class="rewrite">"Julia" refers to <span class="name">Julia the Elder</span>.</p>
+	</div>
+
+	<div class="analysis">
+	 <p class="answer">Augustus is the father of Julia the Elder.</p>
+	</div>
+	
+</article>
+
+
+<article about="urn:cts:latinLit:phi1348.abo014.perseus-eng1:7">
+
+<p class="ref"><a href="http://data.perseus.org/citations/urn:cts:latinLit:phi1348.abo014.perseus-eng1:7">Suet. Cal. 7</a>:</p>
+
+	<blockquote>
+	Germanicus married Agrippina, the daughter of Marcus Agrippa and Julia, by whom he had nine children, two of whom died in their infancy, and another a few years after;<span class="ellipsis"> ...</span>
+	</blockquote>
+
+	<div class="nlp">
+		<ul>
+			<li class="claim"><span content="Agrippina the Elder">Agrippina</span> is the daughter of <span content="Julia the Elder">Julia</span>.</li>
+			<li class="claim"><span content="Agrippina the Elder">Agrippina</span> is the daughter of Marcus Agrippa.</li>
+		</ul>
+	</div>
+	
+	<div class="analysis">
+		<p class="rewrite">"Julia" refers to <span class="name">Julia the Elder</span>.</p>
+	</div>
+
+	<blockquote>
+	The rest survived their father; three daughters, Agrippina, Drusilla, and -Livilla, who were born in three successive years; and as many sons, Nero, Drusus, and Caius Caesar.
+	</blockquote>
+
+	<div class="coref">
+		<ul>
+			<li>
+				<span class="claim">"their father" refers to Germanicus</span>, so:
+				<ul>
+					<li class="claim"><span content="Agrippina the Younger">Agrippina</span> is the daughter of Germanicus.</li>
+					<li class="claim">Drusilla is the daughter of Germanicus.</li>
+					<li class="claim">Livilla is the daughter of Germanicus.</li>
+					<li class="claim">Nero is the son of Germanicus.</li>
+					<li class="claim"><span content="Drusus Caesar">Drusus</span> is the son of Germanicus.</li>
+					<li class="claim">Caius Caesar is the son of Germanicus.</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	
+	<p class="note">It's clears from that context that we can also claim: </p>
+
+	<div class="analysis">
+		<ul>
+			<li class="claim"><span content="Agrippina the Younger">Agrippina</span> is the daughter of <span content="Agrippina the Elder">Agrippina</span>.</li>
+			<li class="claim">Drusilla is the daughter of <span content="Agrippina the Elder">Agrippina</span>.</li>
+			<li class="claim">Livilla is the daughter of <span content="Agrippina the Elder">Agrippina</span>.</li>
+			<li class="claim">Nero is the son of <span content="Agrippina the Elder">Agrippina</span>.</li>
+			<li class="claim"><span content="Drusus Caesar">Drusus</span> is the son of <span content="Agrippina the Elder">Agrippina</span>.</li>
+			<li class="claim">Caius Caesar is the son of <span content="Agrippina the Elder">Agrippina</span>.</li>
+		</ul>
+	</div>
+
+	<div class="analysis">
+		<p class="rewrite">"Agrippina" is ambigous, referring to <span class="name">Agrippina the Elder</span> as parent and <span class="name">Agrippina the Younger</span> as child.</p>
+	</div>
+	<div class="analysis">
+		<p class="rewrite">"Drusus" refers to <span class="name">Drusus Caesar</span>.</p>
+	</div>
+</article>
+
+<article about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:1.33">
+
+<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book1.xhtml#33">Tacitus, Annals 1.33</a>:</p>
+
+<blockquote>
+Meantime <span class="person">Germanicus</span>, while, as I have related, he was collecting the taxes of Gaul, received news of the death of <span class="person">Augustus</span>. He was married to the granddaughter of <span class="person">Augustus</span>, <span class="person">Agrippina</span>, by whom he had several children, and though he was himself the son of <span class="person">Drusus</span>, brother of <span class="person">Tiberius</span>, and grandson of <span class="person">Augusta</span>, he was troubled by the secret hatred of his uncle and grandmother, the motives for which were the more venomous because unjust.
+</blockquote>
+
+	<div class="nlp">
+		<ul>
+			<li class="claim"><span content="Agrippina the Elder">Agrippina</span> is the granddaughter of Augustus.</li>
+		</ul>
+	</div>
+
+	<div class="analysis">
+		<p class="rewrite">"Agrippina" refers to <span class="name">Agrippina the Elder</span>.</p>
+	</div>
+
+	<blockquote>
+	<span class="ellipsis">... </span><span class="person" content="Germanicus">he</span> was himself the son of Drusus, brother of Tiberius, and grandson of Augusta,<span class="ellipsis"> ...</span>
+	</blockquote>
+	
+	<div class="nlp">
+		<ul>
+			<li class="claim"><span content="Drusus the Elder">Drusus</span> is the brother of Tiberius.</li>
+			<li class="claim wrong"><span content="Drusus the Elder">Drusus</span> is the grandson of Augusta.</li>
+		</ul>
+	</div>
+
+	<div class="coref">
+		<ul>
+			<li>
+				<span class="claim">This refers to Germanicus</span>, so:
+				<ul content="nlp">
+					<li class="claim">Germanicus is the son of <span content="Drusus the Elder">Drusus</span>.</li>
+					<li class="claim wrong">Germanicus is the brother of Tiberius.</li>
+					<li class="claim">Germanicus is the grandson of Augusta.</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	
+	<div class="analysis">
+		The phrase is ambiguous: 
+		<ul>
+			<li typeof="rdf:Alt">Either <span class="claim wrong">Germanicus is the brother of Tiberius</span>, <span>or</span> <span class="claim"><span content="Drusus the Elder">Drusus</span> is the brother of Tiberius.</span></li>
+			<li typeof="rdf:Alt">Either <span class="claim">Germanicus is the grandson of Augusta</span>, <span>or</span> <span class="claim wrong"><span content="Drusus the Elder">Drusus</span> is the grandson of Augusta.</span></li>
+		</ul>
+	</div>
+
+	<div class="analysis">
+		<p class="rewrite">"Drusus" refers to <span class="name">Drusus the Elder</span>.</p>
+	</div>
+
+</article>
+
+<article about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:1.24">
+
+<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book1.xhtml#24">Tacitus, Annals 1.24</a>:</p>
+
+<blockquote>
+This intelligence had such an effect on Tiberius, close as he was, and most careful to hush up every very serious disaster, that he despatched his son Drusus<span class="ellipsis"> ...</span>
+</blockquote>
+
+	<div class="coref">
+		<blockquote>
+		<span class="ellipsis">... </span><span class="person">he</span> despatched his son Drusus<span class="ellipsis"> ...</span>
+		</blockquote>
+		
+		<ul>
+			<li>
+				<span class="claim">This refers to Tiberius</span>, so:
+				<ul>
+					<li class="claim"><span content="Drusus Julius Caesar">Drusus</span> is the son of Tiberius.</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+
+	<div class="analysis">
+		<p class="rewrite">"Drusus" refers to <span class="name">Drusus Julius Caesar</span>.</p>
+	</div>
+
+</article>
+
+
+<article about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:1.3">
+
+<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book1.xhtml#3">Tacitus, Annals 1.3</a>:</p>
+
+<blockquote>
+And yet Augustus had appointed Germanicus, Drusus's offspring, to the command of eight legions on the Rhine, and required Tiberius to adopt him, although Tiberius had a son, now a young man, in his house<span class="ellipsis"> ...</span>
+</blockquote>
+	
+	<div class="nlp">
+		<ul>
+			<li class="claim">Germanicus is the offspring of <span content="Drusus the Elder">Drusus</span>.</li>
+			<li class="claim">Germanicus is the adopted son of Tiberius.</li>
+		</ul>
+	</div>
+
+	<div class="analysis">
+		<p class="rewrite">"Drusus" refers to <span class="name">Drusus the Elder</span>.</p>
+	</div>
+
+</article>
+
+
+<article about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:2.53">
+	<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book2.xhtml#53">Tacitus, Annals 2.53</a>:</p>
+	<blockquote>
+	Germanicus, however, entered on the office at Nicopolis, a city of Achaia, whither he had arrived by the coast of Illyricum, after having seen his brother Drusus, who was then in Dalmatia, and endured a stormy voyage through the Adriatic and afterwards the Ionian Sea.
+	</blockquote>
+	<blockquote>
+	... <span class="person" content="Germanicus">his</span> brother Drusus ...
+	</blockquote>
+	
+	<div class="nlp">
+		<ul content="nlp">
+		<li class="claim wrong">Germanicus is the brother of <span content="Drusus Julius Caesar">Drusus</span>.</li>
+		</ul>
+	</div>
+	<div class="analysis">
+		<p class="rewrite">"Drusus" refers to <span class="name">Drusus Julius Caesar</span>.</p>
+	</div>
+
+	<div class="analysis">
+		<p>
+			<span class="claim">
+				If <span class="premise"><span content="Drusus Julius Caesar">Drusus</span> is the son of Tiberius</span>, 
+				and <span class="premise">Germanicus is the adopted son of Tiberius</span>, 
+				<span class="support">then</span> 
+				<span class="conclusion">Germanicus is the step-brother of <span content="Drusus Julius Caesar">Drusus</span>.</span>
+			</span> 
+			<span class="claim">
+				<span class="premise" content="Germanicus is the step-brother of Drusus Julius Caesar">This</span> 
+				<span class="conflict">contradicts</span> the claim that 
+				<span class="conclusion">Germanicus is the brother of <span content="Drusus Julius Caesar">Drusus</span>.</span>
+			</span>
+		</p>
+	</div>
+	
+</article>
+
+
+</body>
+</html>

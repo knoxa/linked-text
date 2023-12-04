@@ -1,0 +1,85 @@
+
+.doubtful {
+	#background: pink;
+}
+body {
+  font-family: Arial;
+  font-size: medium;
+  width: 50em;
+  padding-left: 4em;
+}
+
+blockquote {
+               font-family: Gerogia, serif;
+               font-size: 14px;
+               font-style: italic;
+               width: 800px;
+               margin: 0.25em 0;
+               padding: 0.25em 40px;
+               line-height: 1.45;
+               position: relative;
+               color: #383838;
+}
+
+blockquote:before {
+               display: block;
+               content: "\201C";
+               font-size: 60px;
+               position: absolute;
+               left: -5px;
+               top: -10px;
+               color: #7a7a7a;
+}
+
+blockquote cite {
+               color: #999999;
+               font-size: 10px;
+               display: block;
+               margin-top: 5px;
+               #margin-bottom: 10px;
+}
+
+blockquote cite:before {
+               content: "\2014 \2009";
+}
+
+p {
+	  text-indent: 2em;
+}
+
+span.name {
+	text-decoration: underline;
+}
+
+span.person {
+	font-weight: bold;
+}
+
+span.role {
+	color: green;
+}
+
+span.event {
+	text-decoration: underline;
+}
+
+.note {
+	color: grey;
+	font-style: italic;
+}
+
+.wrong {
+	text-decoration: line-through;
+}
+
+div.nlp {
+		background: PapayaWhip;
+}
+
+div.coref {
+		background: LemonChiffon;
+}
+
+div.analysis {
+		background: PaleTurquoise;
+}
