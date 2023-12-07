@@ -16,7 +16,7 @@
 <!-- 
 	<xsl:apply-templates select="//html:article[@about = 'urn:cts:latinLit:phi1348.abo012.perseus-eng1:62']"/>
  -->
-	<xsl:apply-templates select="//html:article[@about = 'urn:cts:latinLit:phi1351.phi005.perseus-eng1:2.53']"/>
+	<xsl:apply-templates select="//html:article[@about = 'urn:cts:latinLit:phi1351.phi005.perseus-eng1:1.33']"/>
 </xsl:template>
 
 <xsl:template match="html:article">
@@ -25,9 +25,11 @@
 	<xsl:apply-templates select="." mode="quote"/>
 	<xsl:apply-templates select=".//html:blockquote" mode="quote"/>
 	<xsl:apply-templates select=".//html:div/html:ul/html:li"/>
-	<xsl:apply-templates select=".//html:*[contains(@class, 'claim') or contains(@class, 'premise') or contains(@class, 'conclusion')]" mode="infer"/>
 	<xsl:apply-templates select=".//html:*[@typeof = 'rdf:Alt']" />
 	<xsl:apply-templates select=".//html:*[contains(@class, 'wrong')]" mode="wrong"/>
+	<!-- 
+	 -->
+	<xsl:apply-templates select=".//html:*[contains(@class, 'claim') or contains(@class, 'premise') or contains(@class, 'conclusion')]" mode="infer"/>
 	<xsl:apply-templates select="." mode="rewrite"/>
 	<xsl:apply-templates select="." mode="question"/>
 </xsl:template>

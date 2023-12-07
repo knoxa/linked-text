@@ -24,6 +24,10 @@
 				<xsl:with-param name="text" select="$text"/>
 			</xsl:call-template>
 		</xsl:variable>
+		<!-- 
+		<xsl:attribute name="about"><xsl:value-of select="concat('_:', $hash)"/></xsl:attribute>
+		<xsl:attribute name="about"><xsl:value-of select="concat('urn:string:md5:', $hash)"/></xsl:attribute>
+		 -->
 		<xsl:attribute name="about"><xsl:value-of select="concat('urn:string:md5:', $hash)"/></xsl:attribute>
 		<xsl:apply-templates select="*|comment()|text()"/>
 	</xsl:copy>

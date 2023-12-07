@@ -29,7 +29,8 @@
 	<target name="family" description="family tree">
 		<xslt in="reasoning/roman/family.xhtml" out="output/family.xhtml" style="xsl/family.xsl" force="yes"/>
 		<xslt in="output/family.xhtml" out="output/id.xhtml" style="xsl/add-uri.xsl" force="yes"/>
-		<xslt in="output/id.xhtml" out="output/family.graphml" style="xsl/graph.xsl" force="yes"/>
+		<xslt in="output/id.xhtml" out="output/family-raw.graphml" style="xsl/graph.xsl" force="yes"/>
+		<xslt in="output/family-raw.graphml" out="output/family.graphml" style="xsl/graph-clean1.xsl" force="yes"/>
 	</target>
 
 	<target name="RDFa" description="extract RDFa mark-up">

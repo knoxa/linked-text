@@ -76,10 +76,18 @@ div.nlp {
 		background: PapayaWhip;
 }
 
+div.nlpx {
+		background: Lavender;
+}
+
 div.coref {
 		background: LemonChiffon;
 }
 
 div.analysis {
 		background: PaleTurquoise;
+}
+
+div.sme {
+		background: Pink;
 }

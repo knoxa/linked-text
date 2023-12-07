@@ -6,7 +6,7 @@
 <xsl:import href="file:///D:/GitHub/eleatics/xsl-utils/stringhash.xsl"/>
 
 <xsl:template match="/|*|@*|comment()|processing-instruction()|text()" mode="rewrite">
-    <xsl:apply-templates select="*|@*|comment()|processing-instruction()|text()" mode="rewrite"/>
+    <xsl:apply-templates select="*" mode="rewrite"/>
 </xsl:template>
 
 
@@ -25,8 +25,12 @@
 </xsl:template>
 
 
-
-<xsl:template match="html:*[@class = 'claim'][./html:span[@content]]" mode="rewrite">
+<xsl:template match="html:*[@class = 'analysis']" mode="rewrite">
+    <xsl:apply-templates select="html:*[@class = 'rewrite']" mode="rewrite"/>
+	<!-- Don't rewrite analyst claims -->
+</xsl:template>
+ 
+<xsl:template match="html:*[contains(@class,'claim')][./html:span[@content]]" mode="rewrite">
 	<xsl:variable name="original" select="translate(., '.', '')"/>
 	<xsl:variable name="rewritten"><xsl:call-template name="getArgument"/></xsl:variable>
 	<xsl:message><xsl:value-of select="$original"/> --- <xsl:value-of select="$rewritten"/></xsl:message>

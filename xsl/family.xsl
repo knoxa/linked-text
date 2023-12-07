@@ -66,6 +66,12 @@
 	</xsl:apply-templates>
 </xsl:template>
 
+<xsl:template match="html:*[contains(., 'is the offspring of')]">
+	<xsl:apply-templates select="." mode="child">
+		<xsl:with-param name="relationship" select="'is the offspring of'"/>
+	</xsl:apply-templates>
+</xsl:template>
+
 <xsl:template match="html:*[contains(., 'is the grandfather of')]">
 	<xsl:apply-templates select="." mode="grandparent">
 		<xsl:with-param name="relationship" select="'is the grandfather of'"/>
@@ -102,6 +108,16 @@
 	</xsl:apply-templates>
 </xsl:template>
 
+<xsl:template match="html:*[contains(., 'is married to')]">
+	<xsl:apply-templates select="." mode="marriage">
+		<xsl:with-param name="relationship" select="'is married to'"/>
+	</xsl:apply-templates>
+</xsl:template>
+
+
+<xsl:template match="html:*[contains(., ' refers to ')]">
+	<!--  ignore -->
+</xsl:template>
 
 <xsl:template match="html:*">
 	<xsl:message>TO DO: <xsl:value-of select="."/></xsl:message>
@@ -205,6 +221,16 @@
 		</html:span>
 		<xsl:text>.</xsl:text>
 	</html:p>
+</xsl:template>
+
+
+
+<xsl:template match="html:*" mode="marriage">
+	<xsl:param name="relationship"/>
+	<xsl:variable name="text"><xsl:call-template name="getArgument"/></xsl:variable>
+	<xsl:variable name="p1" select="normalize-space(substring-before($text, $relationship))"/>	
+	<xsl:variable name="p2" select="normalize-space(substring-after($text, $relationship))"/>
+	<xsl:message>MARRIAGE: {<xsl:value-of select="$p1"/>,<xsl:value-of select="$p2"/>}</xsl:message>
 </xsl:template>
 
 </xsl:stylesheet>
