@@ -25,7 +25,6 @@
       <data key="d3" xml:space="preserve"><![CDATA["Julia" refers to Julia the Elder]]></data>
       <data key="d4" xml:space="preserve"><![CDATA[urn:string:md5:C391E956BDD798935DA6483572E2E792]]></data>
       <data key="d5" xml:space="preserve"><![CDATA[I-node]]></data>
-      <data key="d9"/>
       <data key="d10">
         <y:ShapeNode>
           <y:Geometry height="80.0" width="150.0" x="682.0" y="298.0"/>
@@ -40,7 +39,6 @@
       <data key="d3" xml:space="preserve"><![CDATA[Germanicus married Agrippina, the daughter of Marcus Agrippa and Julia, by whom he had nine children, two of whom died in their infancy, and another a few years after; ...]]></data>
       <data key="d4" xml:space="preserve"><![CDATA[urn:string:md5:61187D2143EF97B2553B75B06DDD0EE8]]></data>
       <data key="d5" xml:space="preserve"><![CDATA[I-node]]></data>
-      <data key="d9"/>
       <data key="d10">
         <y:ShapeNode>
           <y:Geometry height="104.0" width="177.0" x="363.5" y="286.0"/>
@@ -55,7 +53,6 @@
       <data key="d3" xml:space="preserve"><![CDATA[Agrippina is the daughter of Julia]]></data>
       <data key="d4" xml:space="preserve"><![CDATA[urn:string:md5:5879C897E19F76456BBFD92F94B40937]]></data>
       <data key="d5" xml:space="preserve"><![CDATA[I-node]]></data>
-      <data key="d9"/>
       <data key="d10">
         <y:ShapeNode>
           <y:Geometry height="80.0" width="150.0" x="378.0" y="516.0"/>
@@ -70,7 +67,6 @@
       <data key="d3" xml:space="preserve"><![CDATA[Agrippina is the daughter of Julia the Elder]]></data>
       <data key="d4" xml:space="preserve"><![CDATA[urn:string:md5:354EC27F114DF94654ED26A4110262B1]]></data>
       <data key="d5" xml:space="preserve"><![CDATA[I-node]]></data>
-      <data key="d9"/>
       <data key="d10">
         <y:ShapeNode>
           <y:Geometry height="80.0" width="150.0" x="682.0" y="516.0"/>
@@ -85,7 +81,6 @@
       <data key="d3" xml:space="preserve"><![CDATA[Suet. Cal. 7:]]></data>
       <data key="d4" xml:space="preserve"><![CDATA[urn:cts:latinLit:phi1348.abo014.perseus-eng1:7]]></data>
       <data key="d5" xml:space="preserve"><![CDATA[I-node]]></data>
-      <data key="d9"/>
       <data key="d10">
         <y:ShapeNode>
           <y:Geometry height="80.0" width="150.0" x="377.0" y="96.5"/>
@@ -97,25 +92,9 @@
       </data>
     </node>
     <node id="n5">
-      <data key="d3"/>
-      <data key="d4" xml:space="preserve"><![CDATA[N65542]]></data>
-      <data key="d5" xml:space="preserve"><![CDATA[RA-node]]></data>
-      <data key="d9"/>
-      <data key="d10">
-        <y:ShapeNode>
-          <y:Geometry height="35.0" width="60.0" x="581.25" y="320.5"/>
-          <y:Fill color="#99CC00" transparent="false"/>
-          <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" width="60.0" x="0.0" y="15.5"/>
-          <y:Shape type="diamond"/>
-        </y:ShapeNode>
-      </data>
-    </node>
-    <node id="n6">
-      <data key="d3"/>
+      <data key="d3" xml:space="preserve"/>
       <data key="d4" xml:space="preserve"><![CDATA[N65571]]></data>
       <data key="d5" xml:space="preserve"><![CDATA[RA-node]]></data>
-      <data key="d9"/>
       <data key="d10">
         <y:ShapeNode>
           <y:Geometry height="35.0" width="60.0" x="422.0" y="435.5"/>
@@ -126,11 +105,10 @@
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n7">
-      <data key="d3"/>
+    <node id="n6">
+      <data key="d3" xml:space="preserve"/>
       <data key="d4" xml:space="preserve"><![CDATA[N65592]]></data>
       <data key="d5" xml:space="preserve"><![CDATA[MA-node]]></data>
-      <data key="d9"/>
       <data key="d10">
         <y:GenericNode configuration="com.yworks.flowchart.decision">
           <y:Geometry height="35.0" width="60.0" x="575.0" y="538.5"/>
@@ -140,11 +118,10 @@
         </y:GenericNode>
       </data>
     </node>
-    <node id="n8">
-      <data key="d3"/>
+    <node id="n7">
+      <data key="d3" xml:space="preserve"/>
       <data key="d4" xml:space="preserve"><![CDATA[N65613]]></data>
       <data key="d5" xml:space="preserve"><![CDATA[RA-node]]></data>
-      <data key="d9"/>
       <data key="d10">
         <y:ShapeNode>
           <y:Geometry height="35.0" width="60.0" x="727.0" y="429.5"/>
@@ -155,11 +132,10 @@
         </y:ShapeNode>
       </data>
     </node>
-    <node id="n9">
-      <data key="d3"/>
+    <node id="n8">
+      <data key="d3" xml:space="preserve"/>
       <data key="d4" xml:space="preserve"><![CDATA[N65629]]></data>
       <data key="d5" xml:space="preserve"><![CDATA[RA-node]]></data>
-      <data key="d9"/>
       <data key="d10">
         <y:ShapeNode>
           <y:Geometry height="35.0" width="60.0" x="422.0" y="213.75"/>
@@ -171,7 +147,6 @@
       </data>
     </node>
     <edge id="e0" source="n1" target="n5">
-      <data key="d13"/>
       <data key="d14">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -181,8 +156,7 @@
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e1" source="n5" target="n0">
-      <data key="d13"/>
+    <edge id="e1" source="n5" target="n2">
       <data key="d14">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -192,8 +166,7 @@
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e2" source="n1" target="n6">
-      <data key="d13"/>
+    <edge id="e2" source="n2" target="n6">
       <data key="d14">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -203,8 +176,7 @@
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e3" source="n6" target="n2">
-      <data key="d13"/>
+    <edge id="e3" source="n6" target="n3">
       <data key="d14">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -214,8 +186,7 @@
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e4" source="n2" target="n7">
-      <data key="d13"/>
+    <edge id="e4" source="n0" target="n7">
       <data key="d14">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -225,30 +196,7 @@
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e5" source="n7" target="n3">
-      <data key="d13"/>
-      <data key="d14">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
-          <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="none" target="standard"/>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="e6" source="n0" target="n8">
-      <data key="d13"/>
-      <data key="d14">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
-          <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="none" target="standard"/>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="e7" source="n1" target="n8">
-      <data key="d13"/>
+    <edge id="e5" source="n1" target="n7">
       <data key="d14">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
@@ -260,8 +208,7 @@
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e8" source="n8" target="n3">
-      <data key="d13"/>
+    <edge id="e6" source="n7" target="n3">
       <data key="d14">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -271,8 +218,7 @@
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e9" source="n4" target="n9">
-      <data key="d13"/>
+    <edge id="e7" source="n4" target="n8">
       <data key="d14">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -282,8 +228,7 @@
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e10" source="n9" target="n1">
-      <data key="d13"/>
+    <edge id="e8" source="n8" target="n1">
       <data key="d14">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -293,7 +238,7 @@
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e11" source="n9" target="n1">
+    <edge id="e9" source="n8" target="n1">
       <data key="d14">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
