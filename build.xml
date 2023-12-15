@@ -14,7 +14,7 @@
 		<!--
 		<xslt in="reasoning/germanicus.xhtml" out="output/dialogue.xhtml" style="xsl/add-uri.xsl" force="yes"/>
 		-->
-		<xslt in="reasoning/roman/family.xhtml" out="output/dialogue.xhtml" style="xsl/add-uri.xsl" force="yes"/>
+		<xslt in="reasoning/roman/rewrite.xhtml" out="output/dialogue.xhtml" style="xsl/add-uri.xsl" force="yes"/>
 	</target>
 
 	<target name="aif" description="make AIF">
@@ -36,5 +36,19 @@
 	<target name="RDFa" description="extract RDFa mark-up">
 		<xslt in="output/dialogue.xhtml" out="output/rdf.txt" style="/D:/GitHub/eleatics/xsl-utils/rdfa-ntriples.xsl" force="yes"/>
 	</target>
+	
+	<target name="Events-to-GraphML">
+		<!-- Convert Events (XHTML from tigersmuseum) to GraphML -->
+	    <xslt in="C:\workspaces\development\LookingGlassCakes\dump.xml" out="output/temp.graphml" style="xsl/partof-graphml.xsl" force="yes"/>
+	    <xslt in="output/temp.graphml" out="output/events.graphml" style="xsl/graphml/filter-edgeless.xsl" force="yes"/>
+	</target>
+	
+	<target name="Events-order">
+		<!-- Partial ordering of events -->
+	    <xslt in="C:\workspaces\development\LookingGlassCakes\dump.xml" out="output/temp.xml" style="xsl/event-format.xsl" force="yes"/>
+	    <xslt in="output/temp.xml" out="output/temporal.xml" style="xsl/event-sort.xsl" force="yes"/>
+	    <xslt in="output/temporal.xml" out="output/events.graphml" style="xsl/time-graphml.xsl" force="yes"/>
+	</target>
+
 
 </project>
