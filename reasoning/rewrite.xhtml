@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:dc="http://purl.org/dc/elements/1.1/" 
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link type="text/css" href="master.css" rel="stylesheet"/>
+<title>Rewrite</title>
+<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"/>
+<meta name="DC.source" content="The Elephant and the Fly"/>
+<meta name="DC.identifier" content="Rewriting claims"/>
+</head>
+<body>
+
+<h2>Rewriting claims</h2>
+
+<p class="note">
+This is an example of rewriting claims to resolve entity references.
+</p>
+
+<article about="urn:cts:latinLit:phi1348.abo014.perseus-eng1:7">
+
+<p class="ref"><a href="http://data.perseus.org/citations/urn:cts:latinLit:phi1348.abo014.perseus-eng1:7">Suet. Cal. 7</a>:</p>
+
+	<blockquote>
+	Germanicus married Agrippina, the daughter of Marcus Agrippa and Julia, by whom he had nine children, two of whom died in their infancy, and another a few years after;<span class="ellipsis"> ...</span>
+	</blockquote>
+
+	<p class="note">We make a claim ...</p>
+	
+	<div class="nlp">
+		<ul>
+			<li class="claim"><span>Agrippina</span> is the daughter of <span content="Julia the Elder">Julia</span>.</li>
+		</ul>
+	</div>
+
+	<p class="note">Julia is ambiguous, so we create a rewrite rule:</p>
+	
+	<div class="analysis">
+		<p class="rewrite">"Julia" refers to <span class="name">Julia the Elder</span>.</p>
+	</div>
+
+	<p class="note">... and, at the same time, add content="Julia the Elder" to the HTML <strong>span</strong> element containing "Julia" in the original argument (see the source for this page). </p>
+
+	<p class="note">
+	An XSLT transform takes this page and generates an AIF argument map. This will extract both the claim as presented (Agrippina is the daughter of Julia) and 
+	the rewritten claim (Agrippina is the daughter of Julia the Elder), and link the two via an AIF MA-Node.
+	</p>
+
+	<p class="note">
+	The unambiguous name (underlined above) is inside a <strong>span</strong> element with class="name". This makes it possible to find any rewrite rules that justify the 
+	rewritten claim and add them as premises.
+	</p>
+
+	<p class="note">
+	The argument map generated for this page is:
+	</p>
+	
+	<img src="rewrite-example.svg"/>
+	
+</article>
+
+</body>
+</html>

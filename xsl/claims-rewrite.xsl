@@ -11,6 +11,7 @@
 
 
 <xsl:template match="html:*[@class = 'rewrite']" mode="rewrite">
+<!-- 
 	<xsl:variable name="claim" select="@about"/>
 	<xsl:call-template name="aif-ranode">
 		<xsl:with-param name="nodeid" select="concat('_:', generate-id())"/>
@@ -22,6 +23,7 @@
 			<xsl:value-of select="concat('&lt;', $claim, '&gt;')"/>
 		</xsl:with-param>
 	</xsl:call-template>		
+ -->
 </xsl:template>
 
 
@@ -59,8 +61,8 @@
 			<xsl:value-of select="concat('&lt;', 'urn:string:md5:', $hash, '&gt;')" />
 		</xsl:with-param>
 		</xsl:call-template>
-		<!-- Make an MA-node (TO DO - an RA-node for the time being) -->		
-		<xsl:call-template name="aif-ranode">
+		<!-- Make an MA-node -->		
+		<xsl:call-template name="aif-manode">
 		<xsl:with-param name="nodeid" select="concat('_:', generate-id(), 'MA')"/>
 		<xsl:with-param name="claimText" select="'rewriting'"/>
 		<xsl:with-param name="premises">
