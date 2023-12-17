@@ -24,28 +24,16 @@
 	<xsl:apply-templates select=".//html:blockquote" mode="list"/>
 	<xsl:apply-templates select="." mode="quote"/>
 	<xsl:apply-templates select=".//html:blockquote" mode="quote"/>
+	<!-- 
+
+	 -->
 	<xsl:apply-templates select=".//html:div/html:ul/html:li"/>
 	<xsl:apply-templates select=".//html:*[@typeof = 'rdf:Alt']" />
 	<xsl:apply-templates select=".//html:*[contains(@class, 'wrong')]" mode="wrong"/>
-	<!-- 
-	 -->
-	<xsl:apply-templates select=".//html:*[contains(@class, 'claim') or contains(@class, 'premise') or contains(@class, 'conclusion')]" mode="infer"/>
+	<xsl:apply-templates select="." mode="infer"/>
 	<xsl:apply-templates select="." mode="rewrite"/>
 	<xsl:apply-templates select="." mode="question"/>
 </xsl:template>
-
-<xsl:template match="*[@class = 'premise']" mode="premise">
-	<premise><xsl:value-of select="concat('&lt;', @about, '&gt;')"/></premise>
-</xsl:template>
-
-
-<xsl:template match="*[@class = 'conclusion']" mode="conclusion">
-	<xsl:value-of select="concat('&lt;', @about, '&gt;')"/>
-</xsl:template>
-
-
-<xsl:template match="*" mode="premise"/>
-<xsl:template match="*" mode="conclusion"/>
 
 
 <xsl:template match="*[@typeof = 'rdf:Alt']">

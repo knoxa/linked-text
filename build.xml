@@ -14,7 +14,7 @@
 		<!--
 		<xslt in="reasoning/germanicus.xhtml" out="output/dialogue.xhtml" style="xsl/add-uri.xsl" force="yes"/>
 		-->
-		<xslt in="reasoning/roman/rewrite.xhtml" out="output/dialogue.xhtml" style="xsl/add-uri.xsl" force="yes"/>
+		<xslt in="reasoning/roman/family.xhtml" out="output/dialogue.xhtml" style="xsl/add-uri.xsl" force="yes"/>
 	</target>
 
 	<target name="aif" description="make AIF">

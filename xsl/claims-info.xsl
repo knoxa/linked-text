@@ -5,7 +5,6 @@
 <xsl:import href="file:///D:/GitHub/eleatics/argumentation/xsl/aif.xsl"/>
 <xsl:import href="file:///D:/GitHub/eleatics/xsl-utils/stringhash.xsl"/>
 
-
 <xsl:template match="html:*[contains(@class, 'claim') or contains(@class, 'premise')  or contains(@class, 'conclusion')  or contains(@class, 'question')  or contains(@class, 'rewrite')]" mode="list">
 	<xsl:variable name="text">
 		<xsl:choose>
@@ -20,6 +19,10 @@
 	</xsl:call-template>
 	<xsl:apply-templates select="*" mode="list"/>
 </xsl:template>
+
+
+<!-- Anything with class 'refer' is referring to another argument, so nothing to do in this case. -->
+<xsl:template match="html:*[contains(@class, 'refer')]" mode="list"/>
 
 
 <xsl:template match="html:blockquote" mode="list">

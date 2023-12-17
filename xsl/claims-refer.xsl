@@ -7,10 +7,11 @@
 	<xsl:apply-templates select="." mode="so" />
 </xsl:template>
 
+<!-- 
 <xsl:template match="html:li[html:span[.//html:span]]">
 <xsl:message>TO DO: <xsl:value-of select="@about"/></xsl:message>
-	<!--  to do  -->
 </xsl:template>
+ -->
 
 
 <xsl:template match="html:li">
