@@ -82,11 +82,6 @@
 <xsl:template match="graphml:node[graphml:data[@key = 'text'][1] = '?']" mode="findparent">
 </xsl:template>
 
-<!-- filter out duplicate nodes -->
-<xsl:template match="graphml:node[preceding::graphml:node[./@id = current()/@id]]">
-	<xsl:message>removing duplicate node - why do we get these?</xsl:message>
-</xsl:template>
-
 
 <!-- filter out duplicate edges -->
 <xsl:template match="graphml:edge[preceding::graphml:edge[./@source = current()/@source and ./@target = current()/@target]]">

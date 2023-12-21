@@ -22,12 +22,17 @@
 
 <xsl:template match="html:*[@class = 'marriage']" mode="node">
 	<graphml:node id="{../@about}" typeof="time:Interval">
-		<graphml:data key="text" property="rdfs:label"><xsl:value-of select=".."/></graphml:data>
+		<graphml:data key="text" property="rdfs:label"><xsl:value-of select="normalize-space(..)"/></graphml:data>
+		<!-- Mark the node 'unwanted' if this same marriage appears earlier in the document -->
+		<xsl:if test="preceding::html:*[@class = 'marriage'][../html:*[@class = 'person'] = current()/../html:*[@class = 'person'][1] and ../html:*[@class = 'person'] = current()/../html:*[@class = 'person'][2]]">
+			<graphml:data key="status"><xsl:value-of select="'unwanted'"/></graphml:data>
+		</xsl:if>
 	</graphml:node>
 </xsl:template>
 
 
 <xsl:template match="html:*[@class = 'marriage']" mode="edge">
+	<!-- For each spouse, link this marriage to the next one that mentions the same spouse -->
 	<xsl:variable name="source" select="../@about"/>
 	<xsl:for-each select="../html:*[@class = 'person']">
 		<xsl:apply-templates select="following::html:*[@class = 'marriage']" mode="link">
@@ -41,9 +46,9 @@
 <xsl:template match="html:*[@class = 'marriage']" mode="link">
 	<xsl:param name="source"/>
 	<xsl:param name="person"/>
-	<xsl:message><xsl:value-of select="$person"/></xsl:message>
 	<xsl:if test="../html:*[@class = 'person'][. = $person] and not($source = ../@about)">
 		<graphml:edge source="{$source}" target="{../@about}">
+			<graphml:data key="entity"><xsl:value-of select="$person"/></graphml:data>
 		</graphml:edge>
 	</xsl:if>
 </xsl:template>
