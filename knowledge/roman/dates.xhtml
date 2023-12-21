@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:time="http://www.w3.org/2006/time#"
+    xmlns:ies="http://ies.data.gov.uk/ies4#"
+    xmlns:dbp="http://dbpedia.org/resource/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
+<meta name="DC.identifier" content="Roman" />
+<title>Experimenting ...</title>
+</head>
+<body>
+
+<article about="dbp:Augustus" typeof="time:Interval">
+	<h2 property="skos:prefLabel">Augustus</h2>
+	<p>
+		<span rel="time:hasBeginning">
+			<span typeof="time:Instant"><span property="rdfs:label" content="the birth of Augustus">birth</span></span>
+		</span> - 
+		<span rel="time:hasEnd">
+			<span typeof="time:Instant"><span property="rdfs:label" content="the death of Augustus">death</span>.</span>
+		</span>
+	</p>
+</article>
+
+<article about="#consulship" typeof="skos:Concept">
+	<h2 property="skos:prefLabel">Roman Consulship</h2>
+</article>
+
+<article>
+	<p typeof="time:Interval"><span property="rdfs:label">The <span rel="skos:broader" resource="#consulship">consulship</span> of <span class="person">Sextus Pompeius</span> and <span class="person">Sextus Apuleius</span> (<span property="time:inXSDYear" content="0014">14 AD</span>).</span></p>
+	<p typeof="time:Interval"><span property="rdfs:label">The <span rel="skos:broader" resource="#consulship">consulship</span> of <span class="person">Drusus Caesar</span> and <span class="person">Caius Norbanus</span>.</span></p>
+</article>
+
+</body>
+</html>

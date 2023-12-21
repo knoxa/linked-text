@@ -27,10 +27,11 @@
 	</target>
 
 	<target name="family" description="family tree">
-		<xslt in="reasoning/roman/family.xhtml" out="output/family.xhtml" style="xsl/family.xsl" force="yes"/>
+		<xslt in="/C:/workspaces/development/ArgumentationScratch/dump.xml" out="output/family.xhtml" style="xsl/family.xsl" force="yes"/>
 		<xslt in="output/family.xhtml" out="output/id.xhtml" style="xsl/add-uri.xsl" force="yes"/>
-		<xslt in="output/id.xhtml" out="output/family-raw.graphml" style="xsl/graph.xsl" force="yes"/>
-		<xslt in="output/family-raw.graphml" out="output/family.graphml" style="xsl/graph-clean1.xsl" force="yes"/>
+		<xslt in="output/id.xhtml" out="output/family-raw.graphml" style="xsl/family-graph.xsl" force="yes"/>
+		<xslt in="output/family-raw.graphml" out="output/family.graphml" style="xsl/graph-clean.xsl" force="yes"/>
+		<xslt in="output/id.xhtml" out="output/marriage1.graphml" style="xsl/marriage.xsl" force="yes"/>
 	</target>
 
 	<target name="RDFa" description="extract RDFa mark-up">
@@ -47,8 +48,16 @@
 		<!-- Partial ordering of events -->
 	    <xslt in="C:\workspaces\development\LookingGlassCakes\dump.xml" out="output/temp.xml" style="xsl/event-format.xsl" force="yes"/>
 	    <xslt in="output/temp.xml" out="output/temporal.xml" style="xsl/event-sort.xsl" force="yes"/>
-	    <xslt in="output/temporal.xml" out="output/events.graphml" style="xsl/time-graphml.xsl" force="yes"/>
+	    <xslt in="output/temporal.xml" out="output/events-raw.graphml" style="xsl/time-graphml.xsl" force="yes"/>
+		<xslt in="output/events-raw.graphml" out="output/events.graphml" style="xsl/graphml/covers.xsl" force="yes"/>
 	</target>
+	
+	<target name="testing">
+		<!--
 
+		<xslt in="output/events-raw.graphml" out="output/events.graphml" style="xsl/graphml/covers.xsl" force="yes"/>
+		-->
+		<xslt in="output/id.xhtml" out="output/marriage1.graphml" style="xsl/marriage.xsl" force="yes"/>
+	</target>
 
 </project>
