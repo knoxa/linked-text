@@ -33,4 +33,12 @@
 	</xsl:copy>
 </xsl:template>
 
+<xsl:template match="html:article[not(@about)]">
+	<xsl:copy>
+		<xsl:copy-of select="@*"/>
+		<xsl:attribute name="about"><xsl:value-of select="concat('_:', generate-id())"/></xsl:attribute>
+    	<xsl:apply-templates select="*|@*|comment()|processing-instruction()|text()"/>
+	</xsl:copy>
+</xsl:template>
+
 </xsl:stylesheet>

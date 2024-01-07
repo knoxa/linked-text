@@ -60,5 +60,12 @@
 		<xslt in="output/id.xhtml" out="output/marriage1.graphml" style="xsl/marriage-graph.xsl" force="yes"/>
 		<xslt in="output/marriage1.graphml" out="output/m.graphml" style="xsl/graphml/covers.xsl" force="yes"/>
 	</target>
+	
+	<target name="chronology">
+		<xslt in="reasoning/roman/chronology.xhtml" out="output/temp.xml" style="xsl/chronology.xsl" force="yes"/>
+	    <xslt in="output/temp.xml" out="output/temporal.xml" style="xsl/event-sort.xsl" force="yes"/>
+	    <xslt in="output/temporal.xml" out="output/events-raw.graphml" style="xsl/time-graphml.xsl" force="yes"/>
+		<xslt in="output/events-raw.graphml" out="output/events.graphml" style="xsl/graphml/covers.xsl" force="yes"/>
+	</target>
 
 </project>

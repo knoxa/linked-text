@@ -36,13 +36,24 @@
 	<xsl:apply-templates select="*" mode="list"/>
 </xsl:template>
 
-
-<xsl:template match="html:article" mode="list">
+<!-- 
+ <xsl:template match="html:article" mode="list">
 	<xsl:variable name="text">
-		<xsl:value-of select="normalize-space(./html:p[@class = 'ref'][1])"/>
+		<xsl:value-of select="normalize-space(.//html:p[@class = 'ref'][1])"/>
 	</xsl:variable>
 	<xsl:call-template name="aif-inode">
 		<xsl:with-param name="nodeid" select="concat('&lt;', @about, '&gt;')"/>
+		<xsl:with-param name="claimText" select="$text"/>
+	</xsl:call-template>
+	<xsl:apply-templates select="*" mode="list"/>
+</xsl:template>
+ -->
+<xsl:template match="html:*[@class = 'ref']" mode="list">
+	<xsl:variable name="text">
+		<xsl:value-of select="normalize-space()"/>
+	</xsl:variable>
+	<xsl:call-template name="aif-inode">
+		<xsl:with-param name="nodeid" select="concat('&lt;', ../@about, '&gt;')"/>
 		<xsl:with-param name="claimText" select="$text"/>
 	</xsl:call-template>
 	<xsl:apply-templates select="*" mode="list"/>

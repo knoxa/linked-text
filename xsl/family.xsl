@@ -113,6 +113,12 @@
 	</xsl:apply-templates>
 </xsl:template>
 
+<xsl:template match="aif:claimText[contains(., 'marries')]">
+	<xsl:apply-templates select="." mode="marriage">
+		<xsl:with-param name="relationship" select="'marries'"/>
+	</xsl:apply-templates>
+</xsl:template>
+
 
 <xsl:template match="aif:claimText[contains(., ' refers to ')]">
 	<!--  ignore -->

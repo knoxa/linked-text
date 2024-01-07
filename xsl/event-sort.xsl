@@ -10,8 +10,8 @@
 <xsl:template match="temporal">
 <xsl:copy>
 	<xsl:apply-templates select="event">
-		<xsl:sort select="@fm" data-type="text" order="ascending"/>
-		<xsl:sort select="@to" data-type="text" order="descending"/>
+		<xsl:sort select="@fm" data-type="number" order="ascending"/>
+		<xsl:sort select="@to" data-type="number" order="descending"/>
 	</xsl:apply-templates>
 </xsl:copy>
 </xsl:template>

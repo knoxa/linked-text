@@ -1,0 +1,1446 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:dc="http://purl.org/dc/elements/1.1/" 
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link type="text/css" href="../master.css" rel="stylesheet"/>
+<title>Chronology</title>
+<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"/>
+<meta name="DC.source" content="The Elephant and the Fly"/>
+<meta name="DC.identifier" content="Example ..."/>
+</head>
+<body typeof="rdf:Seq">
+
+<h2>A chronology of events.</h2>
+
+<p class="note">
+We use OWL:Time and RDFa to model the chronology as a sequence of disjoint Intervals. Each Interval is a container for instants that represent events. The Intervals are in time order.
+</p>
+
+<p class="note">
+	Each Interval is an HTML article. Events within an HTML article are inside the Interval.
+</p>
+
+<article typeof="time:Interval">
+
+<div about="urn:cts:latinLit:phi1348.abo014.perseus-eng1:8">
+
+<p class="ref"><a href="http://data.perseus.org/citations/urn:cts:latinLit:phi1348.abo014.perseus-eng1:8">Suet. Cal. 8</a>:</p>
+<blockquote>
+Caius Caesar was born on the day before the calends of September, at the time his father and Caius Fonteius Capito were consuls.
+</blockquote>
+<!-- 12 AD -->
+	<div class="analysis">
+		<ul>
+			<li class="claim">
+				<span class="person">Germanicus</span> and <span class="person">Caius Fonteius Capito</span> are consuls.
+			</li>
+			<li class="claim">
+				The birth of <span class="person">Caligula</span>.
+			</li>
+		</ul>
+	</div>
+</div>
+
+</article>
+
+<article typeof="time:Interval">
+
+<div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:1.5">
+<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book1.xhtml#5">Tacitus, Annals 1.5</a>:</p>
+<blockquote>
+For Livia had surrounded the house and its approaches with a strict watch, and favourable bulletins were published from time to time, till, provision having been made for the demands of the crisis, one and the same report told men that <span class="event">Augustus was dead and that Tiberius Nero was master of the State</span>.
+</blockquote>
+	<div class="analysis">
+		<ul>
+			<li class="claim">
+				The death of <span class="person">Augustus</span>.
+			</li>
+			<li class="claim">
+				<span class="person">Tiberius</span> becomes emperor.
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:1.6">
+<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book1.xhtml#6">Tacitus, Annals 1.6</a>:</p>
+<blockquote>
+The first crime of the new reign was <span class="event">the murder of Postumus Agrippa</span>.
+</blockquote>
+	<div class="analysis">
+		<ul>
+			<li class="claim">
+				The death of <span class="person">Postumus Agrippa</span>.
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:1.7">
+	<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book1.xhtml#6">Tacitus, Annals 1.7</a>:</p>
+	<blockquote>
+	<span class="event">Sextus Pompeius and Sextus Apuleius, the consuls, were the first to swear allegiance to Tiberius Caesar</span>.
+	</blockquote>
+	<div class="analysis">
+		<ul>
+			<li class="claim">
+				<span class="person">Sextus Pompeius</span> and <span class="person">Sextus Apuleius</span> are consuls.
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:1.16">
+<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book1.xhtml#16">Tacitus, Annals 1.16</a>:</p>
+<blockquote>
+This was the state of affairs at Rome when <span class="event">a mutiny broke out in the legions of Pannonia</span>, which could be traced to no fresh cause except the change of emperors and the prospect it held out of license in tumult and of profit from a civil war.
+</blockquote>
+	<div class="analysis">
+		<ul>
+			<li class="claim">
+				Mutiny in Pannonia.
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:1.31">
+<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book1.xhtml#16">Tacitus, Annals 1.31</a>:</p>
+<blockquote>
+About the same time, from the same causes, <span class="event">the legions of Germany rose in mutiny</span>, <span class="ellipsis"> ... </span>
+</blockquote>
+	<div class="analysis">
+		<ul>
+			<li class="claim">
+				Mutiny in Germany.
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:1.53">
+<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book1.xhtml#53">Tacitus, Annals 1.53</a>:</p>
+<blockquote>
+That same year <span class="event">Julia ended her days</span>.
+</blockquote>
+	<div class="analysis">
+		<ul>
+			<li class="claim">
+				The death of <span class="person">Julia the Elder</span>.
+			</li>
+		</ul>
+	</div>
+<blockquote>
+<span class="ellipsis">... </span>deprived of all hope after the murder of Postumus Agrippa,<span class="ellipsis"> ...</span>
+</blockquote>
+	<div class="analysis">
+		<ul>
+			<li class="premise">
+				The death of <span class="person">Julia the Elder</span> is after the death of <span class="person">Postumus Agrippa</span>.
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:1.54">
+<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book1.xhtml#54">Tacitus, Annals 1.54</a>:</p>
+<blockquote>
+The same year witnessed <span class="event">the establishment of religious ceremonies in a new priesthood of the brotherhood of the Augustales</span>, just as in former days Titus Tatius, to retain the rites of the Sabines, had instituted the Titian brotherhood.
+</blockquote>
+	<div class="analysis">
+		<ul>
+			<li class="claim">
+				The establishment of the Sodales Augustales.
+			</li>
+		</ul>
+	</div>
+</div>
+
+</article>
+
+<hr/>
+
+<article typeof="time:Interval">
+<div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:1.55">
+<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book1.xhtml#55">Tacitus, Annals 1.55</a>:</p>
+<blockquote>
+<span class="event">In the consulship of Drusus Caesar and Caius Norbanus</span>, <span class="event">Germanicus had a triumph decreed him</span>, though war still lasted.
+</blockquote>
+	<div class="analysis">
+		<ul>
+			<li class="claim">
+				<span class="person">Drusus Caesar</span> and <span class="person">Caius Norbanus</span> are consuls.
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:1.56">
+<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book1.xhtml#56">Tacitus, Annals 1.56</a>:</p>
+<blockquote>
+After burning Mattium, the capital of the tribe, and ravaging the open country, Germanicus marched back towards the Rhine, the enemy not daring to harass the rear of the retiring army, which was his usual practice whenever he fell back by way of stratagem rather than from panic.</blockquote>
+</div>
+</article>
+
+<hr/>
+
+<article typeof="time:Interval">
+
+<div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:2.1">
+
+	<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book2.xhtml#1">Tacitus, Annals 2.1</a>:</p>
+
+	<blockquote>
+	IN the consulship of Sisenna Statilius Taurus and Lucius Libo there was a commotion in the kingdoms and Roman provinces of the East.
+	</blockquote>
+
+	<div class="analysis">
+		<ul>
+			<li class="claim">
+				<span class="person">Sisenna Statilius Taurus</span> and <span class="person">Lucius Libo</span> are consuls.
+			</li>
+		</ul>
+	</div>
+
+</div>
+
+<div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:2.47">
+
+	<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book2.xhtml#47">Tacitus, Annals 2.47</a>:</p>
+
+	<blockquote>
+	That same year twelve famous cities of Asia fell by an earthquake in the night, <span class="ellipsis"> ...</span>
+	</blockquote>
+
+	<div class="analysis">
+		<ul>
+			<li class="claim">
+				The Lydia earthquake.
+			</li>
+		</ul>
+	</div>
+
+</div>
+
+<div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:2.52">
+
+	<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book2.xhtml#52">Tacitus, Annals 2.52</a>:</p>
+
+	<blockquote>
+	In this same year <span class="event">a war broke out in Africa</span>, where the enemy was led by Tacfarinas.
+	</blockquote>
+
+	<div class="analysis">
+		<ul>
+			<li class="claim">
+				<span class="person">Tacfarinas</span>' revolt begins.
+			</li>
+		</ul>
+	</div>
+
+	<blockquote>
+	<span class="ellipsis">... </span>Furius Camillus, pro-consul of Africa, united in one force a legion and all the regularly enlisted allies, and, with an army insignificant indeed compared with the multitude of the Numidians and Moors, marched against the enemy.
+	</blockquote>
+
+	<div class="analysis">
+		<ul>
+			<li class="claim">
+				<span class="person">Furius Camillus</span> defeats<span class="person">Tacfarinas</span> in battle.
+			</li>
+		</ul>
+	</div>
+
+</div>
+
+</article>
+
+<hr/>
+
+<article typeof="time:Interval">
+
+<div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:2.53">
+
+	<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book2.xhtml#53">Tacitus, Annals 2.53</a>:</p>
+
+	<blockquote>
+	In the following year Tiberius held his third, Germanicus his second, consulship.
+	</blockquote>
+
+	<div class="analysis">
+		<ul>
+			<li class="claim">
+				<span class="person">Tiberius</span> and <span class="person">Germanicus</span> are consuls.
+			</li>
+		</ul>
+	</div>
+
+</div>
+
+<div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:2.54">
+
+	<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book2.xhtml#54">Tacitus, Annals 2.54</a>:</p>
+
+	<blockquote>
+	Thence he directed his course to Euboea and crossed to Lesbos, <span class="event">where Agrippina for the last time was confined and gave birth to Julia</span>.
+	</blockquote>
+
+	<div class="analysis">
+		<ul>
+			<li class="claim">
+				The birth of <span class="person">Julia the Younger</span>.
+			</li>
+		</ul>
+	</div>
+
+</div>
+
+</article>
+
+<hr/>
+
+<article typeof="time:Interval">
+
+<div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:2.59">
+
+	<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book2.xhtml#59">Tacitus, Annals 2.59</a>:</p>
+
+	<blockquote>
+	In the consulship of Marcus Silanus and Lucius Norbanus,<span class="ellipsis"> ...</span>
+	</blockquote>
+
+	<div class="analysis">
+		<ul>
+			<li class="claim">
+				<span class="person">Marcus Silanus</span> and <span class="person">Lucius Norbanus</span> are consuls.
+			</li>
+		</ul>
+	</div>
+
+</div>
+
+
+<div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:2.72">
+
+	<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book2.xhtml#72">Tacitus, Annals 2.72</a>:</p>
+
+	<blockquote>
+	Soon afterwards he expired,<span class="ellipsis"> ...</span>
+	</blockquote>
+
+	<div class="analysis">
+		<ul>
+			<li class="claim">
+				The death of <span class="person">Germanicus</span>.
+			</li>
+		</ul>
+	</div>
+
+</div>
+
+</article>
+
+<hr/>
+
+<article typeof="time:Interval">
+
+<div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:3.2">
+
+	<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book3.xhtml#2">Tacitus, Annals 3.2</a>:</p>
+
+	<blockquote>
+	Marcus Valerius and Caius Aurelius, the consuls,<span class="ellipsis"> ...</span>
+	</blockquote>
+
+	<div class="analysis">
+		<ul>
+			<li class="claim">
+				<span class="person">Marcus Valerius</span> and <span class="person">Caius Aurelius</span> are consuls.
+			</li>
+		</ul>
+	</div>
+
+</div>
+
+<div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:3.20">
+
+	<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book3.xhtml#20">Tacitus, Annals 3.20</a>:</p>
+
+	<blockquote>
+	That same year Tacfarinas who had been defeated, as I have related, by Camillus in the previous summer, renewed hostilities in Africa,<span class="ellipsis"> ...</span>
+	</blockquote>
+
+	<div class="analysis">
+		<ul>
+			<li class="claim">
+				<span class="person">Tacfarinas</span> renews hostilies.
+			</li>
+		</ul>
+		<p class="question">Is this correct? ("previous summer" needs lining up with earlier mention. [Tacitus, Annals 2.52])</p>
+	</div>
+
+</div>
+
+</article>
+
+<hr/>
+
+<article typeof="time:Interval">
+
+<div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:3.31">
+
+	<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book3.xhtml#31">Tacitus, Annals 3.31</a>:</p>
+
+	<blockquote>
+	Next followed Tiberius's fourth, Drusus's second consulship,<span class="ellipsis"> ...</span>
+	</blockquote>
+
+	<div class="analysis">
+		<ul>
+			<li class="claim">
+				<span class="person">Tiberius</span> and <span class="person">Drusus Julius Caesar</span> are consuls.
+			</li>
+		</ul>
+	</div>
+
+</div>
+
+</article>
+
+<hr/>
+
+<article typeof="time:Interval">
+
+<div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:3.52">
+
+	<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book3.xhtml#52">Tacitus, Annals 3.52</a>:</p>
+
+	<blockquote>
+	Caius Sulpicius and Didius Haterius were the next consuls.
+	</blockquote>
+
+	<div class="analysis">
+		<ul>
+			<li class="claim">
+				<span class="person">Caius Sulpicius</span> and <span class="person">Didius Haterius</span> are consuls.
+			</li>
+		</ul>
+	</div>
+
+</div>
+
+</article>
+
+<hr/>
+
+<article typeof="time:Interval">
+
+<div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:4.1">
+
+	<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book4.xhtml#1">Tacitus, Annals 4.1</a>:</p>
+
+	<blockquote>
+	THE year when Caius Asinius and Caius Antistius were consuls was the ninth of Tiberius's reign,<span class="ellipsis"> ...</span>
+	</blockquote>
+
+	<div class="analysis">
+		<ul>
+			<li class="claim">
+				<span class="person">Caius Asinius</span> and <span class="person">Caius Antistius</span> are consuls.
+			</li>
+		</ul>
+	</div>
+
+</div>
+
+</article>
+
+<hr/>
+
+<article typeof="time:Interval">
+
+<div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:4.17">
+
+	<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book4.xhtml#17">Tacitus, Annals 4.17</a>:</p>
+
+	<blockquote>
+	In the consulship of Cornelius Cethegus and Visellius Varro,<span class="ellipsis"> ...</span>
+	</blockquote>
+
+	<div class="analysis">
+		<ul>
+			<li class="claim">
+				<span class="person">Cornelius Cethegus</span> and <span class="person">Visellius Varro</span> are consuls.
+			</li>
+		</ul>
+	</div>
+
+</div>
+
+<div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:4.23">
+
+	<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book4.xhtml#23">Tacitus, Annals 4.23</a>:</p>
+
+	<blockquote>
+	This year at last released Rome from her long contest with the Numidian Tacfarinas.
+	</blockquote>
+
+	<div class="analysis">
+		<ul>
+			<li>
+				<span class="claim"><span class="person">Tacfarinas</span>' revolt ends.</span>
+			</li>
+		</ul>
+	</div>
+
+</div>
+</article>
+
+<div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:4.25">
+
+	<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book4.xhtml#25">Tacitus, Annals 4.25</a>:</p>
+
+	<blockquote>
+	Tacfarinas, his guards slain round him, his son a prisoner, and the Romans bursting on him from every side, rushed on the darts, and by a death which was not unavenged, escaped captivity.
+	</blockquote>
+
+	<div class="analysis">
+		<ul>
+			<li>
+				<span class="claim">The death of <span class="person">Tacfarinas</span>.</span>
+			</li>
+		</ul>
+	</div>
+
+</div>
+</article>
+
+<hr/>
+
+<article typeof="time:Interval">
+
+<div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:4.34">
+
+	<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book4.xhtml#34">Tacitus, Annals 4.34</a>:</p>
+
+	<blockquote>
+	In the year of the consulship of Cornelius Cossus and Asinius Agrippa,<span class="ellipsis"> ...</span>
+	</blockquote>
+
+	<div class="analysis">
+		<ul>
+			<li class="claim">
+				<span class="person">Cornelius Cossus</span> and <span class="person">Asinius Agrippa</span> are consuls.
+			</li>
+		</ul>
+	</div>
+
+</div>
+
+</article>
+
+<hr/>
+
+<article typeof="time:Interval">
+
+<div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:4.46">
+
+	<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book4.xhtml#46">Tacitus, Annals 4.46</a>:</p>
+
+	<blockquote>
+	In the consulship of Lentulus Gaetulicus and Caius Calvisius,<span class="ellipsis"> ...</span>
+	</blockquote>
+
+	<div class="analysis">
+		<ul>
+			<li class="claim">
+				<span class="person">Lentulus Gaetulicus</span> and <span class="person">Caius Calvisius</span> are consuls.
+			</li>
+		</ul>
+	</div>
+
+</div>
+
+</article>
+
+<hr/>
+
+<article typeof="time:Interval">
+
+<div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:4.62">
+
+	<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book4.xhtml#62">Tacitus, Annals 4.62</a>:</p>
+
+	<blockquote>
+	In the year of the consulship of Marcus Licinius and Lucius Calpurnius,<span class="ellipsis"> ...</span>
+	</blockquote>
+
+	<div class="analysis">
+		<ul>
+			<li class="claim">
+				<span class="person">Marcus Licinius</span> and <span class="person">Lucius Calpurnius</span> are consuls.
+			</li>
+		</ul>
+	</div>
+
+</div>
+
+</article>
+
+<hr/>
+
+<article typeof="time:Interval">
+
+<div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:4.68">
+
+	<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book4.xhtml#68">Tacitus, Annals 4.68</a>:</p>
+
+	<blockquote>
+	The year of the consulship of Silanus and Silius Nerva opened with a foul beginning.
+	</blockquote>
+
+	<div class="analysis">
+		<ul>
+			<li class="claim">
+				<span class="person">Silanus</span> and <span class="person">Silius Nerva</span> are consuls.
+			</li>
+		</ul>
+	</div>
+
+</div>
+
+</article>
+
+<hr/>
+
+<article typeof="time:Interval">
+
+<div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:5.1">
+
+	<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book5.xhtml#1">Tacitus, Annals 5.1</a>:</p>
+
+	<blockquote>
+	IN the consulship of Rubellius and Fufius, both of whom had the surname Geminus, died in an advanced old age Julia Augusta. 
+	</blockquote>
+
+	<div class="analysis">
+		<ul>
+			<li class="claim">
+				<span class="person">Rubellius Geminus</span> and <span class="person">Fufius Geminus</span> are consuls.
+			</li>
+			<li class="claim">
+				The death of <span class="person" content="Livia Drusilla">Julia Augusta</span>.
+			</li>
+		</ul>
+	</div>
+
+</div>
+
+</article>
+
+<hr/>
+<p class="note">There's a 12 year gap in Tacitus' Annals at this point ...</p>
+<hr/>
+
+<article typeof="time:Interval">
+
+<div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:6.1">
+
+	<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book6.xhtml#1">Tacitus, Annals 6.1</a>:</p>
+
+	<blockquote>
+	CNEIUS Domitius and Camillus Scribonianus had entered on the consulship<span class="ellipsis"> ...</span>
+	</blockquote>
+
+	<div class="analysis">
+		<ul>
+			<li class="claim">
+				<span class="person">Cneius Domitius</span> and <span class="person">Camillus Scribonianus</span> are consuls.
+			</li>
+		</ul>
+	</div>
+
+</div>
+
+</article>
+
+<hr/>
+
+<article typeof="time:Interval">
+
+<div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:6.15">
+
+	<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book6.xhtml#15">Tacitus, Annals 6.15</a>:</p>
+
+	<blockquote>
+	In the consulship of Servius Galba and Lucius Sulla, the emperor, after having long considered whom he was to choose to be husbands for his granddaughters, now that the maidens were of marriageable age, selected Lucius Cassius and Marcus Vinicius. <span class="ellipsis"> ... </span> To him and to Vinicius the emperor married respectively Drusilla and Julia, Germanicus's daughters,<span class="ellipsis"> ...</span>
+	</blockquote>
+
+	<div class="analysis">
+		<ul>
+			<li class="claim">
+				<span class="person">Servius Galba</span> and <span class="person">Lucius Sulla</span> are consuls.
+			</li>
+			<li class="claim">
+				<span class="person">Drusilla</span> marries <span class="person">Lucius Cassius</span>.
+			</li>
+			<li class="claim">
+				<span class="person">Julia Livilla</span> marries <span class="person">Marcus Vinicius</span>.
+			</li>
+		</ul>
+	</div>
+
+</div>
+
+</article>
+
+<hr/>
+
+<article typeof="time:Interval">
+
+<div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:6.28">
+
+	<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book6.xhtml#28">Tacitus, Annals 6.28</a>:</p>
+
+	<blockquote>
+	During the consulship of Paulus Fabius and Lucius Vitellius, the bird called the phoenix, after a long succession of ages, appeared in Egypt<span class="ellipsis"> ...</span>
+	</blockquote>
+
+	<div class="analysis">
+		<ul>
+			<li class="claim">
+				<span class="person">Paulus Fabius</span> and <span class="person">Lucius Vitellius</span> are consuls.
+			</li>
+			<li class="claim">
+				The phoenix appears in Egypt.
+			</li>
+		</ul>
+	</div>
+
+</div>
+
+</article>
+
+<hr/>
+
+<article typeof="time:Interval">
+
+<div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:6.31">
+
+	<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book6.xhtml#31">Tacitus, Annals 6.31</a>:</p>
+
+	<blockquote>
+	In the consulship of Caius Cestius and Marcus Servilius,<span class="ellipsis"> ...</span>
+	</blockquote>
+
+	<div class="analysis">
+		<ul>
+			<li class="claim">
+				<span class="person">Caius Cestius</span> and <span class="person">Marcus Servilius</span> are consuls.
+			</li>
+		</ul>
+	</div>
+
+</div>
+
+</article>
+
+<hr/>
+
+<article typeof="time:Interval">
+
+<div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:6.40">
+
+	<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book6.xhtml#40">Tacitus, Annals 6.40</a>:</p>
+
+	<blockquote>
+	Quintus Plautius and Sextus Papinius were the next consuls.
+	</blockquote>
+
+	<div class="analysis">
+		<ul>
+			<li class="claim">
+				<span class="person">Quintus Plautius</span> and <span class="person">Sextus Papinius</span> are consuls.
+			</li>
+		</ul>
+	</div>
+
+</div>
+
+</article>
+
+<hr/>
+
+<article typeof="time:Interval">
+
+<div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:6.45">
+
+	<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book6.xhtml#45">Tacitus, Annals 6.45</a>:</p>
+
+	<blockquote>
+	For soon afterwards Tiberius's last consuls, Cneius Acerronius and Caius Pontius, entered on office,<span class="ellipsis"> ...</span>
+	</blockquote>
+
+	<div class="analysis">
+		<ul>
+			<li class="claim">
+				<span class="person">Cneius Acerronius</span> and <span class="person">Caius Pontius</span> are consuls.
+			</li>
+			<li class="claim">
+				The death of <span class="person">Tiberius</span>.
+			</li>
+		</ul>
+	</div>
+
+</div>
+
+</article>
+
+<hr/>
+<p class="note">Another break in Tacitus' narrative here ...</p>
+<hr/>
+
+<article typeof="time:Interval">
+
+<div about="urn:cts:latinLit:phi1348.abo016.perseus-eng1:6">
+
+	<p class="ref"><a href="http://data.perseus.org/citations/urn:cts:latinLit:phi1348.abo016.perseus-eng1:6">Suet. Nero 6</a>:</p>
+
+	<blockquote>
+	Nero was born at Antium, nine months after the death of Tiberius, upon the eighteenth of the calends of January [15th December], just as the sun rose, so that its beams touched him before they could well reach the earth.
+	</blockquote>
+	<!-- 39 AD ? -->
+
+	<div class="analysis">
+		<ul>
+			<li class="claim">
+				The birth of <span class="person">Nero</span>.
+			</li>
+		</ul>
+	</div>
+
+</div>
+</article>
+
+<hr/>
+
+<article typeof="time:Interval">
+
+<div about="urn:cts:latinLit:phi1348.abo014.perseus-eng1:59">
+
+	<p class="ref"><a href="http://data.perseus.org/citations/urn:cts:latinLit:phi1348.abo014.perseus-eng1:59">Suet. Cal. 59</a>:</p>
+
+	<blockquote>
+	He lived twenty-nine years, and reigned three years, ten months and eight days. 
+	</blockquote>
+	<!-- Jan 41 AD  -->
+
+	<div class="analysis">
+		<ul>
+			<li typeof="rdf:Seq">
+				<span class="claim">The death of <span class="person">Caligula</span>. </span>
+				<span class="claim"><span class="person">Claudius</span> becomes emperor.</span>
+			</li>
+		</ul>
+	</div>
+
+</div>
+</article>
+
+<hr/>
+
+<article typeof="time:Interval">
+
+<div about="urn:cts:latinLit:phi1348.abo015.perseus-eng1:27">
+
+	<p class="ref"><a href="http://data.perseus.org/citations/urn:cts:latinLit:phi1348.abo015.perseus-eng1:27">Suet. Cl. 27</a>:</p>
+
+	<blockquote>
+	Britannicus was born upon the twentieth day of his reign, and in his second consulship.
+	</blockquote>
+	<!-- 41/42 AD ? -->
+
+	<div class="analysis">
+		<ul>
+			<li class="claim">
+				The birth of <span class="person">Britannicus</span>.
+			</li>
+		</ul>
+	</div>
+
+</div>
+</article>
+
+<hr/>
+
+<article typeof="time:Interval">
+
+<div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:11.11">
+
+	<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book11.xhtml#11">Tacitus, Annals 11.11</a>:</p>
+
+	<blockquote>
+	It was during this consulship, in the eight hundredth year after the foundation of Rome and the sixty-fourth after their celebration by Augustus that the secular games were exhibited.
+	</blockquote>
+	<!-- 47 AD ? -->
+
+</div>
+
+</article>
+
+<hr/>
+
+<article typeof="time:Interval">
+
+<div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:11.23">
+
+	<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book11.xhtml#23">Tacitus, Annals 11.23</a>:</p>
+
+	<blockquote>
+	In the consulship of Aulus Vitellius and Lucius Vipstanus<span class="ellipsis"> ...</span>
+	</blockquote>
+	<!-- 48 AD -->
+
+	<div class="analysis">
+		<ul>
+			<li class="claim">
+				<span class="person">Aulus Vitellius</span> and <span class="person">Lucius Vipstanus</span> are consuls.
+			</li>
+		</ul>
+	</div>
+
+</div>
+
+</article>
+
+<hr/>
+
+<article typeof="time:Interval">
+
+<div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:12.5">
+
+	<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book12.xhtml#5">Tacitus, Annals 12.5</a>:</p>
+
+	<blockquote>
+	In the year of the consulship of Caius Pompeius and Quintus Veranius,<span class="ellipsis"> ...</span>
+	</blockquote>
+
+	<div class="analysis">
+		<ul>
+			<li class="claim">
+				<span class="person">Caius Pompeius</span> and <span class="person">Quintus Veranius</span> are consuls.
+			</li>
+		</ul>
+	</div>
+
+</div>
+
+</article>
+
+<hr/>
+
+<article typeof="time:Interval">
+
+<div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:12.25">
+
+	<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book12.xhtml#25">Tacitus, Annals 12.25</a>:</p>
+
+	<blockquote>
+	In the consulship of Caius Antistius and Marcus Suilius,<span class="ellipsis"> ...</span>
+	</blockquote>
+
+	<div class="analysis">
+		<ul>
+			<li class="claim">
+				<span class="person">Caius Antistius</span> and <span class="person">Marcus Suilius</span> are consuls.
+			</li>
+		</ul>
+	</div>
+
+</div>
+
+</article>
+
+<hr/>
+
+<article typeof="time:Interval">
+
+<div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:12.41">
+
+	<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book12.xhtml#41">Tacitus, Annals 12.41</a>:</p>
+
+	<blockquote>
+	In the fifth consulship of Tiberius Claudius with Sextius Cornelius Orfitus for his colleague,<span class="ellipsis"> ...</span>
+	</blockquote>
+
+	<div class="analysis">
+		<ul>
+			<li class="claim">
+				<span class="person">Claudius</span> and <span class="person">Sextius Cornelius Orfitus</span> are consuls.
+			</li>
+		</ul>
+	</div>
+
+</div>
+
+</article>
+
+<hr/>
+
+<article typeof="time:Interval">
+
+<div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:12.52">
+
+	<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book12.xhtml#52">Tacitus, Annals 12.52</a>:</p>
+
+	<blockquote>
+	In the consulship of Faustus Sulla and Salvius Otho,<span class="ellipsis"> ...</span>
+	</blockquote>
+
+	<div class="analysis">
+		<ul>
+			<li class="claim">
+				<span class="person">Faustus Sulla</span> and <span class="person">Salvius Otho</span> are consuls.
+			</li>
+		</ul>
+	</div>
+
+</div>
+
+</article>
+
+<hr/>
+
+<article typeof="time:Interval">
+
+<div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:12.58">
+
+	<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book12.xhtml#58">Tacitus, Annals 12.58</a>:</p>
+
+	<blockquote>
+	In the consulship of Didius Junius and Quintus Haterius, Nero, now sixteen years of age, married Octavia, the emperor's daughter.
+	</blockquote>
+
+	<div class="analysis">
+		<ul>
+			<li class="claim">
+				<span class="person">Didius Junius</span> and <span class="person">Quintus Haterius</span> are consuls.
+			</li>
+			<li class="claim">
+				<span class="person">Nero</span> is married to <span class="person">Octavia</span>.
+			</li>
+		</ul>
+	</div>
+
+</div>
+
+</article>
+
+<hr/>
+
+<article typeof="time:Interval">
+
+<div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:12.64">
+
+	<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book12.xhtml#64">Tacitus, Annals 12.64</a>:</p>
+
+	<blockquote>
+	In the year of the consulship of Marcus Asinius and Manius Acilius<span class="ellipsis"> ...</span>
+	</blockquote>
+
+	<div class="analysis">
+		<ul>
+			<li class="claim">
+				<span class="person">Marcus Asinius</span> and <span class="person">Manius Acilius</span> are consuls.
+			</li>
+			<li class="claim">
+				The death of <span class="person">Claudius</span>.
+			</li>
+			<li class="claim">
+				<span class="person">Nero</span> becomes emperor.
+			</li>
+		</ul>
+	</div>
+
+</div>
+
+</article>
+
+<hr/>
+
+<article typeof="time:Interval">
+
+<div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:13.11">
+
+	<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book13.xhtml#11">Tacitus, Annals 13.11</a>:</p>
+
+	<blockquote>
+	In the year of his consulship with Lucius Antistius<span class="ellipsis"> ...</span>
+	</blockquote>
+
+	<div class="analysis">
+		<ul>
+			<li class="claim">
+				<span class="person">Nero</span> and <span class="person">Lucius Antistius</span> are consuls.
+			</li>
+		</ul>
+	</div>
+
+</div>
+
+<div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:13.17">
+
+	<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book13.xhtml#17">Tacitus, Annals 13.17</a>:</p>
+
+	<blockquote>
+	One and the same night witnessed Britannicus's death and funeral,<span class="ellipsis"> ...</span>
+	</blockquote>
+
+	<div class="analysis">
+		<ul>
+			<li class="claim">
+				The death of <span class="person">Britannicus</span>.
+			</li>
+		</ul>
+	</div>
+
+</div>
+
+</article>
+
+<hr/>
+
+<article typeof="time:Interval">
+
+<div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:13.25">
+
+	<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book13.xhtml#25">Tacitus, Annals 13.25</a>:</p>
+
+	<blockquote>
+	In the consulship of Quintus Volusius and Publius Scipio,<span class="ellipsis"> ...</span>
+	</blockquote>
+
+	<div class="analysis">
+		<ul>
+			<li class="claim">
+				<span class="person">Quintus Volusius</span> and <span class="person">Publius Scipio</span> are consuls.
+			</li>
+		</ul>
+	</div>
+
+</div>
+
+</article>
+
+<hr/>
+
+<article typeof="time:Interval">
+
+<div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:13.31">
+
+	<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book13.xhtml#31">Tacitus, Annals 13.31</a>:</p>
+
+	<blockquote>
+	During Nero's second consulship with Lucius Piso for his colleague,<span class="ellipsis"> ...</span>
+	</blockquote>
+
+	<div class="analysis">
+		<ul>
+			<li class="claim">
+				<span class="person">Nero</span> and <span class="person">Lucius Piso</span> are consuls.
+			</li>
+		</ul>
+	</div>
+
+</div>
+
+</article>
+
+<hr/>
+
+<article typeof="time:Interval">
+
+<div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:13.34">
+
+	<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book13.xhtml#34">Tacitus, Annals 13.34</a>:</p>
+
+	<blockquote>
+	Nero entered on his third consulship with Valerius Messala,<span class="ellipsis"> ...</span>
+	</blockquote>
+
+	<div class="analysis">
+		<ul>
+			<li class="claim">
+				<span class="person">Nero</span> and <span class="person">Valerius Messala</span> are consuls.
+			</li>
+		</ul>
+	</div>
+
+</div>
+
+</article>
+
+<hr/>
+
+<article typeof="time:Interval">
+
+<div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:14.1">
+
+	<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book14.xhtml#1">Tacitus, Annals 14.1</a>:</p>
+
+	<blockquote>
+	IN the year of the consulship of Caius Vipstanus and Caius Fonteius,<span class="ellipsis"> ...</span>
+	</blockquote>
+
+	<div class="analysis">
+		<ul>
+			<li class="claim">
+				<span class="person">Caius Vipstanus</span> and <span class="person">Caius Fonteius</span> are consuls.
+			</li>
+		</ul>
+	</div>
+
+</div>
+
+<div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:14.8">
+
+	<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book14.xhtml#8">Tacitus, Annals 14.8</a>:</p>
+
+	<blockquote>
+	Then, as the centurion bared his sword for the fatal deed presenting her person, she exclaimed, "Smite my womb," and with many wounds she was slain.
+	</blockquote>
+
+	<div class="analysis">
+		<ul>
+			<li class="claim">
+				The death of <span class="person">Agrippina the Younger</span>.
+			</li>
+		</ul>
+	</div>
+
+</div>
+
+</article>
+
+<hr/>
+
+<article typeof="time:Interval">
+
+<div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:14.20">
+
+	<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book14.xhtml#20">Tacitus, Annals 14.20</a>:</p>
+
+	<blockquote>
+	In Nero's fourth consulship with Cornelius Cossus for his colleague,<span class="ellipsis"> ...</span>
+	</blockquote>
+
+	<div class="analysis">
+		<ul>
+			<li class="claim">
+				<span class="person">Nero</span> and <span class="person">Cornelius Cossus</span> are consuls.
+			</li>
+		</ul>
+	</div>
+
+</div>
+
+</article>
+
+<hr/>
+
+<article typeof="time:Interval">
+
+<div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:14.29">
+
+	<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book14.xhtml#29">Tacitus, Annals 14.29</a>:</p>
+
+	<blockquote>
+	In the consulship of Caesonius Paetus and Petronius Turpilianus,<span class="ellipsis"> ...</span>
+	</blockquote>
+
+	<div class="analysis">
+		<ul>
+			<li class="claim">
+				<span class="person">Caesonius Paetus</span> and <span class="person">Petronius Turpilianus</span> are consuls.
+			</li>
+		</ul>
+	</div>
+
+</div>
+
+</article>
+
+<hr/>
+
+<article typeof="time:Interval">
+
+<div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:14.48">
+
+	<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book14.xhtml#48">Tacitus, Annals 14.48</a>:</p>
+
+	<blockquote>
+	In the consulship of Publius Marius and Lucius Asinius,<span class="ellipsis"> ...</span>
+	</blockquote>
+
+	<div class="analysis">
+		<ul>
+			<li class="claim">
+				<span class="person">Publius Marius</span> and <span class="person">Lucius Asinius</span> are consuls.
+			</li>
+		</ul>
+	</div>
+
+</div>
+
+
+<div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:14.64">
+
+	<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book14.xhtml#64">Tacitus, Annals 14.64</a>:</p>
+
+	<blockquote>
+	She was then tightly bound with cords, and the veins of every limb were opened; but as her blood was congealed by terror and flowed too slowly, she was killed outright by the steam of an intensely hot bath.
+	</blockquote>
+
+	<div class="analysis">
+		<ul>
+			<li class="claim">
+				The death of <span class="person">Octavia</span>.
+			</li>
+		</ul>
+	</div>
+
+</div>
+
+</article>
+
+<hr/>
+
+<article typeof="time:Interval">
+
+<div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:15.23">
+
+	<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book15.xhtml#23">Tacitus, Annals 15.23</a>:</p>
+
+	<blockquote>
+	During the consulship of Memmius Regulus and Verginius Rufus,<span class="ellipsis"> ...</span>
+	</blockquote>
+
+	<div class="analysis">
+		<ul>
+			<li class="claim">
+				<span class="person">Memmius Regulus</span> and <span class="person">Verginius Rufus</span> are consuls.
+			</li>
+		</ul>
+	</div>
+
+</div>
+
+</article>
+
+<hr/>
+
+<article typeof="time:Interval">
+
+<div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:15.33">
+
+	<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book15.xhtml#33">Tacitus, Annals 15.33</a>:</p>
+
+	<blockquote>
+	In the year of the consulship of Caius Laecanius and Marcus Licinius<span class="ellipsis"> ...</span>
+	</blockquote>
+
+	<div class="analysis">
+		<ul>
+			<li class="claim">
+				<span class="person">Caius Laecanius</span> and <span class="person">Marcus Licinius</span> are consuls.
+			</li>
+		</ul>
+	</div>
+
+</div>
+
+</article>
+
+<hr/>
+
+<article typeof="time:Interval">
+
+<div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:15.48">
+
+	<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book15.xhtml#48">Tacitus, Annals 15.48</a>:</p>
+
+	<blockquote>
+	Silius Nerva and Atticus Vestinus then entered on the consulship,<span class="ellipsis"> ...</span>
+	</blockquote>
+
+	<div class="analysis">
+		<ul>
+			<li class="claim">
+				<span class="person">Silius Nerva</span> and <span class="person">Atticus Vestinus</span> are consuls.
+			</li>
+		</ul>
+	</div>
+
+</div>
+
+</article>
+
+<hr/>
+
+<article typeof="time:Interval">
+
+<div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:16.14">
+
+	<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book16.xhtml#14">Tacitus, Annals 16.14</a>:</p>
+
+	<blockquote>
+	In the consulship of Caius Suetonius and Lucius Telesinus,<span class="ellipsis"> ...</span>
+	</blockquote>
+
+	<div class="analysis">
+		<ul>
+			<li class="claim">
+				<span class="person">Caius Suetonius</span> and <span class="person">Lucius Telesinus</span> are consuls.
+			</li>
+		</ul>
+	</div>
+
+</div>
+
+</article>
+
+<hr/>
+<p class="note">Tacitus ends here (66 AD)</p>
+<hr/>
+
+
+<article typeof="time:Interval">
+
+<div about="urn:cts:latinLit:phi1348.abo016.perseus-eng1:57">
+
+	<p class="ref"><a href="http://data.perseus.org/citations/urn:cts:latinLit:phi1348.abo016.perseus-eng1:57">Suet. Nero 57</a>:</p>
+
+	<blockquote>
+	He died in the thirty-second year of his age, upon the same day on which he had formerly put Octavia to death;<span class="ellipsis"> ...</span>
+	</blockquote>
+	<!-- 69 AD -->
+
+	<div class="analysis">
+		<ul>
+			<li class="claim">
+				The death of <span class="person">Nero</span>.
+			</li>
+		</ul>
+	</div>
+
+</div>
+
+</article>
+
+
+</body>
+</html>

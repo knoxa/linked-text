@@ -42,10 +42,14 @@ Make a graph of entities linked in time order
 	<!-- 
 	the same source node should also link to any intervals that start within this interval 
 	 -->
-	<xsl:apply-templates select="following-sibling::event[./@fm &gt;= current()/@fm][./@fm &lt;= current()/@to]" mode="link">
+	<xsl:apply-templates select="following-sibling::event[./@fm &gt;= current()/@fm][./@fm &lt;= current()/@to]" mode="also">
 		<xsl:with-param name="source" select="$source"/>
-	</xsl:apply-templates>
-	 
+	</xsl:apply-templates>	 
+</xsl:template>
+
+<xsl:template match="event" mode="also">
+	<xsl:param name="source"/>
+	<edge source="{$source}" target="{@id}" />
 </xsl:template>
 
 </xsl:stylesheet>
