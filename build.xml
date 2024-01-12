@@ -49,7 +49,7 @@
 	    <xslt in="C:\workspaces\development\LookingGlassCakes\dump.xml" out="output/temp.xml" style="xsl/event-format.xsl" force="yes"/>
 	    <xslt in="output/temp.xml" out="output/temp2.xml" style="xsl/chronology/make-sortable.xsl" force="yes"/>
 	    <xslt in="output/temp2.xml" out="output/temporal.xml" style="xsl/chronology/sort.xsl" force="yes"/>
-	    <xslt in="output/temporal.xml" out="output/events-raw.graphml" style="xsl/chronology/events-graphml.xsl" force="yes"/>
+	    <xslt in="output/temporal.xml" out="output/events-raw.graphml" style="xsl/chronology/time-graphml.xsl" force="yes"/>
 		<xslt in="output/events-raw.graphml" out="output/events.graphml" style="xsl/graphml/covers.xsl" force="yes"/>
 	</target>
 	
