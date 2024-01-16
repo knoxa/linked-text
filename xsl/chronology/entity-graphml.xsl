@@ -2,7 +2,9 @@
 <xsl:stylesheet xmlns:graphml="http://graphml.graphdrawing.org/xmlns" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0" exclude-result-prefixes="html">
 
 <!-- 
-	Make GraphML 
+	Make GraphML. Nodes are events, edges are links between events related to a common entity. The assumption is that events
+	are sorted in (increasing) time order. A link is made between an event and the next that contains the same entity.
+	Edges in the graph are labelled with the name of the entity.
  -->
 
 <xsl:output method="xml" encoding="UTF-8" indent="yes"/>
@@ -37,9 +39,16 @@
 
 
 <xsl:template match="entity" mode="edge">
+	<!-- link to the next event that contains the entity -->
 	<xsl:apply-templates select="../following::entity[. = current()][1]" mode="link">
 		<xsl:with-param name="source" select="../@uri"/>
 	</xsl:apply-templates>
+	<!-- If there is no subsequent entity, then this event links to itself -->
+	<xsl:if test="not(../following::entity[. = current()][1])">
+		<graphml:edge source="{../@uri}" target="{../@uri}">
+			<graphml:data key="entity"><xsl:value-of select="."/></graphml:data>
+		</graphml:edge>
+	</xsl:if>
 </xsl:template>
 
 

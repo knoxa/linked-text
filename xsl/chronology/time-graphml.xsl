@@ -26,6 +26,7 @@ Make a graph of events linked in time order
 	<node id="{@uri}">
 		<data key="id"><xsl:value-of select="@uri"/></data>
 		<data key="text"><xsl:value-of select="@label"/></data>
+		<data key="url"><xsl:value-of select="@uri"/></data>
 	</node>
 </xsl:template>
 
