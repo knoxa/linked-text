@@ -17,23 +17,6 @@
 
 <h2>A chronology of events.</h2>
 
-<p class="note">
-I use OWL:Time and RDFa to model the chronology as a sequence of disjoint intervals. Each interval is a container for instants or intervals that represent events.
-</p>
-
-<p class="note">
-	Each container interval is an HTML article. Events within an HTML article are inside the interval. Any interval or instant inside an HTML article is
-	'before' all intervals or instants in subsequent HTML article. An interval or instant inside an HTML article is before another in the same article if explicitly 
-	stated. In this example, we also assume that two events relating to the same person are presented in order occurrence. Otherwise, events in the same HTML article are
-	not comparable.
-</p>
-
-<p class="note">
-	Ideally, the HTML articles represent contiguous periods of time. This does not need to be made explicit. Instead, each article may describe a single interval of 
-	some common type, such as the span of a calendar year, or the reign of a monarch; so that applying the ordering rules to these intervals results in a <a href="https://en.wikipedia.org/wiki/Total_order#Chains">chain</a>.
-	In this example, each HTML article represents a consulship.
-</p>
-
 <article typeof="time:Interval">
 
 <div about="urn:cts:latinLit:phi1348.abo014.perseus-eng1:8">
