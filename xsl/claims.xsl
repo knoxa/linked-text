@@ -14,16 +14,14 @@
 
 <xsl:template match="/">
 <!-- 
-	<xsl:apply-templates select="//html:article[@about = 'urn:cts:latinLit:phi1348.abo012.perseus-eng1:62']"/>
+	<xsl:apply-templates select="//html:article[@about = 'urn:cts:latinLit:phi1351.phi005.perseus-eng1:4.75']"/>
  -->
-	<xsl:apply-templates select="//html:article[@about = 'urn:cts:latinLit:phi1348.abo012.perseus-eng1:61']"/>
+	<xsl:apply-templates select="//html:article[@about = 'urn:cts:latinLit:phi1351.phi005.perseus-eng1:4.75']"/>
 </xsl:template>
 
 <xsl:template match="html:article">
 	<xsl:apply-templates select="." mode="list"/>
-	<xsl:apply-templates select=".//html:blockquote" mode="list"/>
 	<xsl:apply-templates select="." mode="quote"/>
-	<xsl:apply-templates select=".//html:blockquote" mode="quote"/>
 	<!-- 
 
 	 -->

@@ -18,11 +18,20 @@
 <h2>A chronology of events.</h2>
 
 <p class="note">
-We use OWL:Time and RDFa to model the chronology as a sequence of disjoint Intervals. Each Interval is a container for instants that represent events. The Intervals are in time order.
+I use OWL:Time and RDFa to model the chronology as a sequence of disjoint intervals. Each interval is a container for instants or intervals that represent events.
 </p>
 
 <p class="note">
-	Each Interval is an HTML article. Events within an HTML article are inside the Interval.
+	Each container interval is an HTML article. Events within an HTML article are inside the interval. Any interval or instant inside an HTML article is
+	'before' all intervals or instants in subsequent HTML article. An interval or instant inside an HTML article is before another in the same article if explicitly 
+	stated. In this example, we also assume that two events relating to the same person are presented in order occurrence. Otherwise, events in the same HTML article are
+	not comparable.
+</p>
+
+<p class="note">
+	Ideally, the HTML articles represent contiguous periods of time. This does not need to be made explicit. Instead, each article may describe a single interval of 
+	some common type, such as the span of a calendar year, or the reign of a monarch; so that applying the ordering rules to these intervals results in a <a href="https://en.wikipedia.org/wiki/Total_order#Chains">chain</a>.
+	In this example, each HTML article represents a consulship.
 </p>
 
 <article typeof="time:Interval">
@@ -55,16 +64,16 @@ Caius Caesar was born on the day before the calends of September, at the time hi
 <blockquote>
 For Livia had surrounded the house and its approaches with a strict watch, and favourable bulletins were published from time to time, till, provision having been made for the demands of the crisis, one and the same report told men that <span class="event">Augustus was dead and that Tiberius Nero was master of the State</span>.
 </blockquote>
+
 	<div class="analysis">
 		<ul>
-			<li class="claim">
-				The death of <span class="person">Augustus</span>.
-			</li>
-			<li class="claim">
-				<span class="person">Tiberius</span> becomes emperor.
+			<li typeof="rdf:Seq">
+				<span class="claim">The death of <span class="person">Augustus</span>. </span>
+				<span class="claim" about="#newreign"><span class="person">Tiberius</span> succeeds <span class="person">Augustus</span> as emperor.</span>
 			</li>
 		</ul>
 	</div>
+
 </div>
 
 <div about="urn:cts:latinLit:phi1351.phi005.perseus-eng1:1.6">
@@ -76,6 +85,9 @@ The first crime of the new reign was <span class="event">the murder of Postumus 
 		<ul>
 			<li class="claim">
 				The death of <span class="person">Postumus Agrippa</span>.
+			</li>
+			<li typeof="rdf:Seq">
+				<span class="claim" about="#newreign">The succession of Tiberius</span> is before <span class="claim">the death of <span class="person">Postumus Agrippa</span>.</span>
 			</li>
 		</ul>
 	</div>
@@ -140,8 +152,8 @@ That same year <span class="event">Julia ended her days</span>.
 </blockquote>
 	<div class="analysis">
 		<ul>
-			<li class="premise">
-				The death of <span class="person">Julia the Elder</span> is after the death of <span class="person">Postumus Agrippa</span>.
+			<li typeof="rdf:Seq">
+				<span class="claim">The death of <span class="person">Postumus Agrippa</span></span> is before <span class="claim">the death of <span class="person">Julia the Elder</span>.</span>
 			</li>
 		</ul>
 	</div>
@@ -789,8 +801,9 @@ After burning Mattium, the capital of the tribe, and ravaging the open country, 
 			<li class="claim">
 				<span class="person">Cneius Acerronius</span> and <span class="person">Caius Pontius</span> are consuls.
 			</li>
-			<li class="claim">
-				The death of <span class="person">Tiberius</span>.
+			<li typeof="rdf:Seq">
+				<span class="claim">The death of <span class="person">Tiberius</span>. </span>
+				<span class="claim"><span class="person">Caligula</span> succeeds <span class="person">Tiberius</span> as emperor.</span>
 			</li>
 		</ul>
 	</div>
@@ -842,7 +855,7 @@ After burning Mattium, the capital of the tribe, and ravaging the open country, 
 		<ul>
 			<li typeof="rdf:Seq">
 				<span class="claim">The death of <span class="person">Caligula</span>. </span>
-				<span class="claim"><span class="person">Claudius</span> becomes emperor.</span>
+				<span class="claim"><span class="person">Claudius</span> succeeds <span class="person">Caligula</span> as emperor.</span>
 			</li>
 		</ul>
 	</div>
@@ -949,13 +962,16 @@ After burning Mattium, the capital of the tribe, and ravaging the open country, 
 	<p class="ref"><a href="https://knoxa.github.io/text/tacitus/annals/book12.xhtml#25">Tacitus, Annals 12.25</a>:</p>
 
 	<blockquote>
-	In the consulship of Caius Antistius and Marcus Suilius,<span class="ellipsis"> ...</span>
+	In the consulship of Caius Antistius and Marcus Suilius, the adoption of Domitius was hastened on by the influence of Pallas.
 	</blockquote>
 
 	<div class="analysis">
 		<ul>
 			<li class="claim">
 				<span class="person">Caius Antistius</span> and <span class="person">Marcus Suilius</span> are consuls.
+			</li>
+			<li class="claim">
+				<span class="person">Claudius</span> adopts <span class="person">Nero</span>.
 			</li>
 		</ul>
 	</div>
@@ -1056,11 +1072,9 @@ After burning Mattium, the capital of the tribe, and ravaging the open country, 
 			<li class="claim">
 				<span class="person">Marcus Asinius</span> and <span class="person">Manius Acilius</span> are consuls.
 			</li>
-			<li class="claim">
-				The death of <span class="person">Claudius</span>.
-			</li>
-			<li class="claim">
-				<span class="person">Nero</span> becomes emperor.
+			<li typeof="rdf:Seq">
+				<span class="claim">The death of <span class="person">Claudius</span>. </span>
+				<span class="claim"><span class="person">Nero</span> succeeds <span class="person">Claudius</span> as emperor.</span>
 			</li>
 		</ul>
 	</div>

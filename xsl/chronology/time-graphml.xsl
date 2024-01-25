@@ -17,6 +17,7 @@ Make a graph of events linked in time order
 	<graph>
 		<xsl:apply-templates select="//event" mode="node" />
 		<xsl:apply-templates select="//event" mode="edge" />
+		<xsl:apply-templates select="//link" />
 	</graph>
 </graphml>
 </xsl:template>
@@ -51,6 +52,11 @@ Make a graph of events linked in time order
 <xsl:template match="event" mode="also">
 	<xsl:param name="source"/>
 	<edge source="{$source}" target="{@uri}" />
+</xsl:template>
+
+
+<xsl:template match="link">
+	<edge source="{@fm}" target="{@to}" />
 </xsl:template>
 
 </xsl:stylesheet>
