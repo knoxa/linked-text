@@ -62,8 +62,11 @@
 		<xslt in="output/events-raw.graphml" out="output/events.graphml" style="xsl/graphml/covers.xsl" force="yes"/>
 	</target>
 	
+	<!--
+		<xslt in="/D:/GitHub/knoxa.github.io/examples/chronology/example.xhtml" out="output/dialogue.xhtml" style="xsl/add-uri.xsl" force="yes"/>
+	-->
 	<target name="chronology">
-		<xslt in="reasoning/roman/example.xhtml" out="output/dialogue.xhtml" style="xsl/add-uri.xsl" force="yes"/>
+		<xslt in="reasoning/roman/chronology.xhtml" out="output/dialogue.xhtml" style="xsl/add-uri.xsl" force="yes"/>
 		<xslt in="output/dialogue.xhtml" out="output/temp.xml" style="xsl/chronology.xsl" force="yes"/>
 	    <xslt in="output/temp.xml" out="output/temporal.xml" style="xsl/chronology/sort.xsl" force="yes"/>
 	    <xslt in="output/temporal.xml" out="output/events-raw.graphml" style="xsl/chronology/time-graphml.xsl" force="yes"/>

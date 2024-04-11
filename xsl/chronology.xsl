@@ -8,7 +8,9 @@
 <temporal>
 	<xsl:apply-templates select="//html:article"/>
 	<xsl:apply-templates select="//html:*[@typeof = 'rdf:Seq']"/>
+	<!-- 
 	<xsl:apply-templates select="//html:article" mode="entity"/>
+	 -->
 </temporal>
 </xsl:template>
 
@@ -23,7 +25,7 @@
 <xsl:template match="html:*[@class = 'claim'][contains(., 'consul') or contains(., 'birth') or contains(., 'death') or contains(., 'emperor')]">
  -->
 
-<xsl:template match="html:*[@class = 'claim'][contains(., 'consul')]">
+<xsl:template match="html:*[@class = 'claim']">
 	<xsl:param name="posn"/>
 	<event uri="{@about}" label="{normalize-space(.)}">
 		<interval  fm="{$posn}" to="{$posn}" />
