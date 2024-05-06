@@ -8,9 +8,6 @@
 <temporal>
 	<xsl:apply-templates select="//html:article"/>
 	<xsl:apply-templates select="//html:*[@typeof = 'rdf:Seq']"/>
-	<!-- 
-	<xsl:apply-templates select="//html:article" mode="entity"/>
-	 -->
 </temporal>
 </xsl:template>
 
@@ -27,8 +24,10 @@
 
 <xsl:template match="html:*[@class = 'claim']">
 	<xsl:param name="posn"/>
-	<event uri="{@about}" label="{normalize-space(.)}">
+	<event uri="{@about}">
+		<text><xsl:value-of select="normalize-space(.)"/></text>
 		<interval  fm="{$posn}" to="{$posn}" />
+		<xsl:apply-templates select="html:span[@class]" mode="entity"/>
 	</event>
 </xsl:template>
 
@@ -50,22 +49,19 @@
 
 <xsl:template match="html:*"/>
 
-<xsl:template match="html:article" mode="entity">
-	<xsl:apply-templates select=".//html:span[@class = 'person']" mode="entity"/>
-</xsl:template>
+<xsl:template match="html:span[@class = 'claim']" mode="entity"/>
 
-<xsl:template match="html:span" mode="entity">
-	<xsl:apply-templates select="following::html:span[@class = 'person'][. = current()][1]" mode="entitylink">
-		<xsl:with-param name="uri" select="../@about"/>
-	</xsl:apply-templates>
-</xsl:template>
-
-
-<xsl:template match="html:span" mode="entitylink">
-	<xsl:param name="uri"/>
-	<xsl:if test="not($uri = ../@about)">
-		<link fm="{$uri}" to="{../@about}"/>
-	</xsl:if>
+<xsl:template match="html:span[@class]" mode="entity">
+	<entity type="{@class}">
+		<xsl:choose>
+			<xsl:when test="@content">
+				<xsl:value-of select="@content"/>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:value-of select="."/>
+			</xsl:otherwise>
+		</xsl:choose>
+	</entity>
 </xsl:template>
 
 </xsl:stylesheet>
