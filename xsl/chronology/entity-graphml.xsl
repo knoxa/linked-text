@@ -39,15 +39,17 @@
 
 
 <xsl:template match="entity" mode="edge">
-	<!-- link to the next event that contains the entity -->
-	<xsl:apply-templates select="../following::entity[. = current()][1]" mode="link">
-		<xsl:with-param name="source" select="../@uri"/>
-	</xsl:apply-templates>
-	<!-- If there is no subsequent entity, then this event links to itself -->
-	<xsl:if test="not(../following::entity[. = current()][1])">
-		<graphml:edge source="{../@uri}" target="{../@uri}">
-			<graphml:data key="entity"><xsl:value-of select="."/></graphml:data>
-		</graphml:edge>
+	<!-- link to the next event that contains the entity, if we haven't already -->
+	<xsl:if test="not(preceding-sibling::entity[. = current()])">
+		<xsl:apply-templates select="../following::entity[. = current()][1]" mode="link">
+			<xsl:with-param name="source" select="../@uri"/>
+		</xsl:apply-templates>
+		<!-- If there is no subsequent entity, then this event links to itself -->
+		<xsl:if test="not(../following::entity[. = current()][1])">
+			<graphml:edge source="{../@uri}" target="{../@uri}">
+				<graphml:data key="entity"><xsl:value-of select="."/></graphml:data>
+			</graphml:edge>
+		</xsl:if>
 	</xsl:if>
 </xsl:template>
 
