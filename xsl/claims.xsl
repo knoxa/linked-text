@@ -16,7 +16,7 @@
 <!-- 
 	<xsl:apply-templates select="//html:article[@about = 'urn:cts:latinLit:phi1351.phi005.perseus-eng1:4.75']"/>
  -->
-	<xsl:apply-templates select="//html:article[@about = 'urn:cts:latinLit:phi1351.phi005.perseus-eng1:4.75']"/>
+	<xsl:apply-templates select="//html:article"/>
 </xsl:template>
 
 <xsl:template match="html:article">
