@@ -15,6 +15,7 @@
     <graphml:key attr.name="date"   attr.type="string" for="node" id="date"/>
     <graphml:key attr.name="tag"    attr.type="string" for="node" id="tag"/>
     <graphml:key attr.name="url"    attr.type="string" for="node" id="url"/>
+    <graphml:key attr.name="source" attr.type="string" for="node" id="source"/>
     <graphml:key attr.name="entity" attr.type="string" for="edge" id="entity"/>
     <graphml:graph>
 		<xsl:apply-templates select="//event" mode="node"/>
@@ -25,6 +26,7 @@
 
 <xsl:template match="event" mode="node">
 	<graphml:node id="{@uri}">
+		<xsl:apply-templates select="@source"/>
 		<graphml:data key="text"><xsl:value-of select="normalize-space(text)"/></graphml:data>
 		<graphml:data key="date"><xsl:value-of select="@date"/></graphml:data>
 		<graphml:data key="tag"><xsl:value-of select="tag[1]"/></graphml:data>
@@ -59,6 +61,11 @@
 	<graphml:edge source="{$source}" target="{../@uri}">
 		<graphml:data key="entity"><xsl:value-of select="."/></graphml:data>
 	</graphml:edge>
+</xsl:template>
+
+
+<xsl:template match="@source">
+	<graphml:data key="source"><xsl:value-of select="."/></graphml:data>
 </xsl:template>
 
 
