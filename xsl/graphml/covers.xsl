@@ -25,8 +25,8 @@
 				delete this edge if there is also a path (two or more edges) between this source and target
 			 -->
 			 <xsl:variable name="path">
-				 <xsl:apply-templates select="//graphml:edge[./@source = current()/@source and ./@target != current()/@target]" mode="trace">
-				 	<xsl:with-param name="target" select="@target"/>
+				 <xsl:apply-templates select="//graphml:edge[./@source != current()/@source and ./@target = current()/@target]" mode="trace">
+				 	<xsl:with-param name="source" select="@source"/>
 				 	<xsl:with-param name="count"  select="number(0)"/>
 				 </xsl:apply-templates>
 			 </xsl:variable>
@@ -46,18 +46,18 @@
 	Search recursively back through incoming links to find the source node specified
  -->
 <xsl:template match="graphml:edge" mode="trace">
-	<xsl:param name="target"/>
+	<xsl:param name="source"/>
 	<xsl:param name="count"/>
 	<xsl:choose>
-		<xsl:when test="./@target = $target">
+		<xsl:when test="./@source = $source">
 			<xsl:value-of select="'FOUND'"/>
 		</xsl:when>
 		<xsl:when test="$count &gt; $maxpath">
 			<xsl:value-of select="'TIMEOUT'"/>
 		</xsl:when>
 		<xsl:otherwise>
-			<xsl:apply-templates select="//graphml:edge[./@source = current()/@target]" mode="trace">
-			 	<xsl:with-param name="target" select="$target"/>
+			<xsl:apply-templates select="//graphml:edge[./@target = current()/@source]" mode="trace">
+			 	<xsl:with-param name="source" select="$source"/>
 			 	<xsl:with-param name="count"  select="$count + 1"/>
 			</xsl:apply-templates>
 		</xsl:otherwise>
