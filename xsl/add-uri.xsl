@@ -28,7 +28,7 @@
 		<xsl:attribute name="about"><xsl:value-of select="concat('_:', $hash)"/></xsl:attribute>
 		<xsl:attribute name="about"><xsl:value-of select="concat('urn:string:md5:', $hash)"/></xsl:attribute>
 		 -->
-		<xsl:attribute name="about"><xsl:value-of select="concat('urn:string:md5:', $hash)"/></xsl:attribute>
+		<xsl:attribute name="about"><xsl:value-of select="concat('urn:eleatics:md5:', $hash)"/></xsl:attribute>
 		<xsl:apply-templates select="*|comment()|text()"/>
 	</xsl:copy>
 </xsl:template>
