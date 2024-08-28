@@ -14,7 +14,9 @@
 
 <xsl:template match="/">
 <!-- 
-	<xsl:apply-templates select="//html:article[@about = 'urn:cts:latinLit:phi1351.phi005.perseus-eng1:4.75']"/>
+	<xsl:apply-templates select="//html:article[html:div/@about = 'urn:cts:latinLit:phi1351.phi005.perseus-eng1:2.42']"/>
+	<xsl:apply-templates select="//html:article[@about = 'urn:cts:latinLit:phi1351.phi005.perseus-eng1:2.42']"/>
+	<xsl:apply-templates select="//html:article"/>
  -->
 	<xsl:apply-templates select="//html:article"/>
 </xsl:template>
@@ -26,6 +28,7 @@
 
 	 -->
 	<xsl:apply-templates select=".//html:div/html:ul/html:li"/>
+	<xsl:apply-templates select=".//html:div/html:ol/html:li"/>
 	<xsl:apply-templates select=".//html:*[@typeof = 'rdf:Alt']" />
 	<xsl:apply-templates select=".//html:*[contains(@class, 'wrong')]" mode="wrong"/>
 	<xsl:apply-templates select="." mode="infer"/>

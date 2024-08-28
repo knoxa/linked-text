@@ -9,6 +9,9 @@
 
 <xsl:template match="html:blockquote" mode="quote">
 	<xsl:choose>
+	<!-- 
+		Make this ancestor:::html:blockquote? i.e. require that quotes from quotes are nested ...
+	 -->
 		<xsl:when test="preceding-sibling::html:blockquote">
 		<xsl:call-template name="aif-ranode">
 			<xsl:with-param name="nodeid" select="concat('_:', generate-id(), 'Q')"/>
@@ -26,7 +29,7 @@
 			<xsl:with-param name="nodeid" select="concat('_:', generate-id(), 'Q1')"/>
 			<xsl:with-param name="claimText" select="'source quote'"/>
 			<xsl:with-param name="premises">
-				<premise><xsl:value-of select="concat('&lt;', ancestor-or-self::html:article[1]/@about, '&gt;')"/></premise>
+				<premise><xsl:value-of select="concat('&lt;', ancestor::html:*[@about][1]/@about, '&gt;')"/></premise>
 			</xsl:with-param>
 			<xsl:with-param name="conclusion">
 				<xsl:value-of select="concat('&lt;', @about, '&gt;')"/>

@@ -14,6 +14,8 @@
 		<xsl:with-param name="claimText" select="'default support'"/>
 		<xsl:with-param name="premises">
 			<xsl:apply-templates select="../*" mode="premise"/>
+			<!-- Make the rule a premise -->
+			<xsl:apply-templates select=".." mode="premise"/>
 		</xsl:with-param>
 		<xsl:with-param name="conclusion">
 			<xsl:apply-templates select="../*" mode="conclusion"/>
