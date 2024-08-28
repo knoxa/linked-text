@@ -13,8 +13,9 @@
 	<target name="identify" description="add URI to claims">
 		<!--
 		<xslt in="reasoning/germanicus.xhtml" out="output/dialogue.xhtml" style="xsl/add-uri.xsl" force="yes"/>
-		-->
 		<xslt in="reasoning/roman/family.xhtml" out="output/dialogue.xhtml" style="xsl/add-uri.xsl" force="yes"/>
+		-->
+		<xslt in="/D:/GitHub/knoxa.github.io/history/roman/chronology.xhtml" out="output/dialogue.xhtml" style="xsl/add-uri.xsl" force="yes"/>
 	</target>
 
 	<target name="aif" description="make AIF">
@@ -23,6 +24,8 @@
 
 	<target name="AIF-to-GraphML">
 		<!-- Convert AIF to GraphML -->
+		<!--
+		-->
 	    <xslt in="C:\workspaces\development\LookingGlassCakes\dump.xml" out="output/aif.graphml" style="${xsl-map}/aif-to-graphml2.xsl" force="yes"/>
 	</target>
 
@@ -59,19 +62,31 @@
 		<xslt in="output/id.xhtml" out="output/marriage1.graphml" style="xsl/marriage-graph.xsl" force="yes"/>
 		<xslt in="output/marriage1.graphml" out="output/m.graphml" style="xsl/graphml/covers.xsl" force="yes"/>
 		-->
-		<xslt in="output/life-events2.graphml" out="output/temp.graphml" style="xsl/graphml/covers.xsl" force="yes"/>
+		<xslt in="output/events-raw2.graphml" out="output/temp.graphml" style="xsl/graphml/covers.xsl" force="yes"/>
 	</target>
 	
-	<!--
-		<xslt in="/D:/GitHub/knoxa.github.io/examples/chronology/example.xhtml" out="output/dialogue.xhtml" style="xsl/add-uri.xsl" force="yes"/>
-	-->
 	<target name="chronology">
-		<xslt in="reasoning/roman/chronology.xhtml" out="output/dialogue.xhtml" style="xsl/add-uri.xsl" force="yes"/>
+		<xslt in="${data}/chronology.xhtml" out="output/dialogue.xhtml" style="xsl/add-uri.xsl" force="yes"/>
 		<xslt in="output/dialogue.xhtml" out="output/temp.xml" style="xsl/chronology.xsl" force="yes"/>
 	    <xslt in="output/temp.xml" out="output/temporal.xml" style="xsl/chronology/sort.xsl" force="yes"/>
 	    <xslt in="output/temporal.xml" out="output/events-raw.graphml" style="xsl/chronology/time-graphml.xsl" force="yes"/>
 		<xslt in="output/events-raw.graphml" out="output/events-raw2.graphml" style="xsl/graphml/filter-duplicate-edge.xsl" force="yes"/>
-		<xslt in="output/events-raw.graphml" out="output/events.graphml" style="xsl/graphml/covers.xsl" force="yes"/>
+		<xslt in="output/events-raw2.graphml" out="output/events.graphml" style="xsl/graphml/covers.xsl" force="yes"/>
+	</target>
+	
+	<target name="state">
+		<!--
+		<xslt in="${data}/places.xhtml" out="output/dialogue.xhtml" style="xsl/add-uri.xsl" force="yes"/>
+		-->
+		<xslt in="${data}/places.xhtml" out="output/temp.xml" style="xsl/state.xsl" force="yes"/>
+	</target>
+	
+	<target name="collect-info">
+		<xslt in="${data}/top.html" out="output/collect.xml" style="xsl/info-extract.xsl" force="yes"/>
+	</target>
+	
+	<target name="collect-dictionary">
+		<xslt in="${data}/top.html" out="output/collect.txt" style="xsl/info-concepts.xsl" force="yes"/>
 	</target>
 
 	<!--
@@ -81,4 +96,29 @@
 		<xslt in="output/family.graphml" out="output/life1.graphml" style="xsl/life-events.xsl" force="yes"/>
 		<xslt in="output/life1.graphml" out="output/life-events.graphml" style="xsl/graphml/covers.xsl" force="yes"/>
 	</target>
+
+	<!--
+		organizational relationships
+		<xslt in="/D:/GitHub/history/events/conflict/ww2/italy.xhtml" out="output/aif.txt" style="/D:/GitHub/eleatics/xsl-utils/rdfa-ntriples.xsl" force="yes"/>
+		<xslt in="/D:/GitHub/history/events/formation.xhtml" out="output/aif.txt" style="/D:/GitHub/eleatics/xsl-utils/rdfa-ntriples.xsl" force="yes"/>
+
+		<xslt in="/D:/GitHub/history/events/formation.xhtml" out="output/aif.txt" style="/D:/GitHub/eleatics/xsl-utils/rdfa-ntriples.xsl" force="yes"/>
+	-->
+	<target name="part-of">
+		<xslt in="/D:/GitHub/history/events/formation.xhtml" out="output/aif.txt" style="xsl/state-rdfa.xsl" force="yes"/>
+	</target>
+	<target name="part-of-rdf">
+		<xslt in="/C:/workspaces/development/LookingGlassCakes/dump1.xml" out="output/collect.xml" style="xsl/rdfstate.xsl" force="yes"/>
+	    <xslt in="output/collect.xml" out="output/temporal.xml" style="xsl/chronology/sort.xsl" force="yes"/>
+	    <xslt in="output/temporal.xml" out="output/events-raw.graphml" style="xsl/chronology/time-graphml.xsl" force="yes"/>
+		<xslt in="output/events-raw.graphml" out="output/events-raw2.graphml" style="xsl/graphml/filter-duplicate-edge.xsl" force="yes"/>
+		<xslt in="output/events-raw2.graphml" out="output/events.graphml" style="xsl/graphml/covers.xsl" force="yes"/>
+	</target>
+	<target name="part-of-chrono">
+		<xslt in="/D:/GitHub/history/events/formation.xhtml" out="output/temp.xml" style="xsl/chronology.xsl" force="yes"/>
+	</target>
+	
+	<!--
+		conflict events
+	-->
 </project>
