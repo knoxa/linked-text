@@ -4,7 +4,7 @@
 
 <!-- 
 
-Make a graph of events linked in time order
+Make a graph of events linked in time order. Input events must have been sorted in time order.
 
  -->
 
@@ -26,7 +26,7 @@ Make a graph of events linked in time order
 <xsl:template match="event" mode="node">
 	<node id="{@uri}">
 		<data key="id"><xsl:value-of select="@uri"/></data>
-		<data key="text"><xsl:value-of select="text"/></data>
+		<data key="text"><xsl:value-of select="@label"/></data>
 		<data key="url"><xsl:value-of select="@uri"/></data>
 	</node>
 </xsl:template>
@@ -43,24 +43,17 @@ Make a graph of events linked in time order
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:variable>
-	<xsl:choose>
-		<xsl:when test="$eventType = 'interval'">
-		<!-- An interval, intervals are open real intervals,  so are "before" their end instant, and we want ">=" -->
-			<xsl:apply-templates select="following-sibling::event[interval[1]/@fm &gt;= current()/interval[1]/@to][1]" mode="link">
-				<xsl:with-param name="source" select="@uri">
-					<xsl:with-param name="eventType" select="$eventType"/>
-				</xsl:with-param>
-			</xsl:apply-templates>
-		</xsl:when>
-		<xsl:otherwise>
-		<!-- An instant, an instant can't be "before" the same instant, and we want ">" -->
-			<xsl:apply-templates select="following-sibling::event[interval[1]/@fm &gt; current()/interval[1]/@to][1]" mode="link">
-				<xsl:with-param name="source" select="@uri">
-					<xsl:with-param name="eventType" select="$eventType"/>
-				</xsl:with-param>
-			</xsl:apply-templates>
-		</xsl:otherwise>
-	</xsl:choose>
+	<!-- 
+		Intervals are open real intervals,  so are "before" their end instant, and we want to link to the first interval
+		with start "greater than or equals" to the end of the current interval.
+		
+		For the purposes here, instants are treated as intervals that start and end at the same time.
+	-->
+	<xsl:apply-templates select="following-sibling::event[interval[1]/@fm &gt;= current()/interval[1]/@to][1]" mode="link">
+		<xsl:with-param name="source" select="@uri">
+			<xsl:with-param name="eventType" select="$eventType"/>
+		</xsl:with-param>
+	</xsl:apply-templates>
 </xsl:template>
 
 
