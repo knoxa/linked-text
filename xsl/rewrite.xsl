@@ -30,7 +30,6 @@
 			<xsl:otherwise><xsl:value-of select="normalize-space(translate(., '.,', ''))"/></xsl:otherwise>
 		</xsl:choose>
 	</xsl:variable>
-	<xsl:message><xsl:value-of select="@about"/> - <xsl:value-of select="$text"/></xsl:message>
 	<xsl:call-template name="aif-inode">
 		<xsl:with-param name="nodeid" select="concat('&lt;', @about, '&gt;')"/>
 		<xsl:with-param name="claimText" select="$text"/>
