@@ -15,18 +15,20 @@
 </xsl:template>
 
 
-<xsl:template match="event">
+<xsl:template match="event[@fm][@to]">
 	<xsl:copy>
 		<xsl:apply-templates select="*|@*|comment()|processing-instruction()|text()"/>
 		
 		<xsl:variable name="fm">
 		<xsl:call-template name="getDateAsSortableInteger">
 			<xsl:with-param name="text" select="@fm"/>
+			<xsl:with-param name="padding" select="'0000'"/>
 		</xsl:call-template>
 		</xsl:variable>
 		<xsl:variable name="to">
 			<xsl:call-template name="getDateAsSortableInteger">
 				<xsl:with-param name="text" select="@to"/>
+			<xsl:with-param name="padding" select="'9999'"/>
 			</xsl:call-template>
 		</xsl:variable>
 		
@@ -39,11 +41,12 @@
 <xsl:template name="getDateAsSortableInteger">
 	<!-- 
 		Taking the '-' characters out of a YYYY-MM-DD format date gives an 8 digit number that preserves the date order. 
-		However, we might get 'YYYY-MM', or just 'YYYY', so we append '0000' and take the first 8 digits. We then always have
-		8 digit numbers to compare.
+		However, we might get 'YYYY-MM', or just 'YYYY', so we append the supplied padding (which should be either '0000' or '9999') 
+		and take the first 8 digits. We then always have 8 digit numbers to compare.
 	 -->
 	 <xsl:param name="text"/>
-	<xsl:variable name="temp" select="concat(translate(normalize-space($text), '-', ''), '0000')"/>
+	 <xsl:param name="padding" select="'0000'"/>
+	<xsl:variable name="temp" select="concat(translate(normalize-space($text), '-:', ''), $padding)"/>
 	<xsl:value-of select="number(substring($temp, 0, 9))"/>
 </xsl:template>
 
