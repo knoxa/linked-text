@@ -7,7 +7,7 @@
 <xsl:template match="/">
 <temporal>
 	<xsl:apply-templates select="//html:article"/>
-	<xsl:apply-templates select="//html:*[@typeof = 'rdf:Seq']"/>
+	<xsl:apply-templates select="//html:*[@typeof = 'rdf:Seq']" mode="sequence" />
 </temporal>
 </xsl:template>
 
@@ -32,7 +32,7 @@
 </xsl:template>
 
 
-<xsl:template match="html:*[@typeof = 'rdf:Seq']">
+<xsl:template match="html:*[@typeof = 'rdf:Seq']" mode="sequence">
 	<xsl:apply-templates select="./html:*[@class = 'claim']" mode="linkfm"/>
 </xsl:template>
 
