@@ -1,0 +1,1 @@
+Text files that are lists of named entities of the same type. For use in somple dictionary-based NER.
