@@ -9,13 +9,17 @@
 
 
 <xsl:template match="html:*[@class = 'support']" mode="infer">
+	<xsl:variable name="nodeid">
+		<xsl:choose>
+			<xsl:when test="@about"><xsl:value-of select="concat('&lt;', @about, '&gt;')"/></xsl:when>
+			<xsl:otherwise><xsl:value-of select="concat('_:', generate-id())"/></xsl:otherwise>
+		</xsl:choose>
+	</xsl:variable>
 	<xsl:call-template name="aif-ranode">
-		<xsl:with-param name="nodeid" select="concat('_:', generate-id())"/>
+		<xsl:with-param name="nodeid" select="$nodeid"/>
 		<xsl:with-param name="claimText" select="'default support'"/>
 		<xsl:with-param name="premises">
-			<xsl:apply-templates select="../*" mode="premise"/>
-			<!-- Make the rule a premise -->
-			<xsl:apply-templates select=".." mode="premise"/>
+			<xsl:apply-templates select="../descendant-or-self::*" mode="premise"/>
 		</xsl:with-param>
 		<xsl:with-param name="conclusion">
 			<xsl:apply-templates select="../*" mode="conclusion"/>
@@ -29,7 +33,7 @@
 		<xsl:with-param name="nodeid" select="concat('_:', generate-id())"/>
 		<xsl:with-param name="claimText" select="'default conflict'"/>
 		<xsl:with-param name="premises">
-			<xsl:apply-templates select="../*" mode="premise"/>
+			<xsl:apply-templates select="../descendant-or-self::*" mode="premise"/>
 		</xsl:with-param>
 		<xsl:with-param name="conclusion">
 			<xsl:apply-templates select="../*" mode="conclusion"/>
@@ -43,7 +47,7 @@
 </xsl:template>
 
 
-<xsl:template match="html:*[contains(@class,'conclusion')]" mode="conclusion">
+<xsl:template match="html:*[contains(@class,'conclusion') or contains(@class,'undercut')]" mode="conclusion">
 	<xsl:value-of select="concat('&lt;', @about, '&gt;')"/>
 </xsl:template>
 

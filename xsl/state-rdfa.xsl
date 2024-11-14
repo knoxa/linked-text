@@ -4,6 +4,10 @@
 
 <xsl:import href="file:///D:/GitHub/eleatics/xsl-utils/rdfa-ntriples.xsl"/>
 
+<!-- 
+	Applies the eleatics RDFa extraction stylesheet, then adds a rdfs:label for each State.
+ -->
+
 <xsl:template match="/">
 	<xsl:apply-imports/>
 	<xsl:apply-templates select="//*[@typeof = 'ies:State']" mode="label"/>

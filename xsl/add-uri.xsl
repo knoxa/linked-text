@@ -3,6 +3,7 @@
 <xsl:output method="xml" encoding="utf-8" />
 
 <xsl:import href="file:///D:/GitHub/eleatics/xsl-utils/stringhash.xsl"/>
+<xsl:import href="file:///D:/GitHub/eleatics/xsl-utils/expand-iri.xsl"/>
 
 <xsl:template match="/|*|@*|comment()|processing-instruction()|text()">
   <xsl:copy>
@@ -10,7 +11,7 @@
   </xsl:copy>
 </xsl:template>
 
-<xsl:template match="*[not(@about) and (contains(@class, 'claim') or contains(@class, 'premise') or contains(@class, 'conclusion') or contains(@class, 'question') or contains(@class, 'rewrite'))] | html:blockquote | html:span[not(@about) and (@class = 'person' or @class = 'child' or @class = 'parent')]">
+<xsl:template match="*[not(@about) and (contains(@class, 'claim') or contains(@class, 'premise') or contains(@class, 'conclusion') or contains(@class, 'question') or contains(@class, 'rewrite'))] | html:blockquote[not(@about)] | html:span[not(@about) and (@class = 'person' or @class = 'child' or @class = 'parent')]">
 	<xsl:copy>
 		<xsl:copy-of select="@*"/>
 		<xsl:variable name="text">
@@ -39,6 +40,14 @@
 		<xsl:attribute name="about"><xsl:value-of select="concat('_:', generate-id())"/></xsl:attribute>
     	<xsl:apply-templates select="*|@*|comment()|processing-instruction()|text()"/>
 	</xsl:copy>
+</xsl:template>
+
+<xsl:template match="@about">
+	<xsl:attribute name="about">
+		<xsl:call-template name="expandNamespace">
+			<xsl:with-param name="name" select="."/>
+		</xsl:call-template>
+	</xsl:attribute>
 </xsl:template>
 
 </xsl:stylesheet>

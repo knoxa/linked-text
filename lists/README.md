@@ -1,1 +1,1 @@
-Text files that are lists of named entities of the same type. For use in somple dictionary-based NER.
+Text files that are lists of named entities of the same type. These are for use in dictionary-based Named Entity Recognition (NER).

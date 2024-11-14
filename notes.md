@@ -49,9 +49,18 @@ Take a series of "X is in Y" claims. Make them a sequence. This means they must 
 I want to be able to recover all claims from "workbooks". Then process like "WebPage". I want the text of the claim labelled by URI as a "short document".
 * Ned some sort of "index" document. How does this affect something like "chronology"?
 
+# Input chunking
+
+If I operate with whole claims, I can do things like associate a person with a role when there is just one mention of each entity type. Often there will be more than one person or role in the sentence. If there's only one role, or only one person, then its reasonable to assume the role is related to each person, or the person related to each role. I can't make this assumption if there are multiple people and roles (a list of cabinet appointments say). Regardless,
+I can do FCA on all claims that mention people and roles, with the events as objects and the entities mentioned as attributes. If there are any events that just relate a given person to a given role, then they will be the objects at the meet of the the person and role attributes.
+
+... FCA for entities, use meets to define relationships.
+
 # TO DO
 
 *. Need a named template from add-uri to make a hash code.
 
 Take entities in a workbook and make a dictionary from spans and @content attributes. Maybe make SKOS concept and the a 'concept dictionary'? Have I already done this?
 SKOS concepts from DBpedia
+
+noun phrase chunking - create an entity list of vessels as WW1 "knowledge"? - 

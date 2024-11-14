@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <xsl:stylesheet xmlns:graphml="http://graphml.graphdrawing.org/xmlns" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0" exclude-result-prefixes="html">
 
-<xsl:param name="maxpath" select="'10'"/>
+<xsl:param name="maxpath" select="'15'"/>
 
 <!--
 	The input must be a directed acyclic graph representing a partially order set. This stylesheet removes any edges from the graph that 

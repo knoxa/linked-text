@@ -19,17 +19,18 @@
 
 <xsl:template match="html:blockquote" mode="list">
 	<xsl:variable name="text">
-		<xsl:value-of select="normalize-space(.)"/>
+		<xsl:apply-templates select="." mode="ellipsis" />
 	</xsl:variable>
 	<xsl:call-template name="aif-inode">
 		<xsl:with-param name="nodeid" select="concat('&lt;', @about, '&gt;')"/>
-		<xsl:with-param name="claimText" select="$text"/>
+		<xsl:with-param name="claimText" select="normalize-space($text)"/>
 	</xsl:call-template>
 	<xsl:apply-templates select="*" mode="list"/>
 </xsl:template>
 
 
 <xsl:template match="html:*[@class = 'ref']" mode="list">
+<!-- 
 	<xsl:variable name="text">
 		<xsl:value-of select="normalize-space()"/>
 	</xsl:variable>
@@ -38,6 +39,7 @@
 		<xsl:with-param name="claimText" select="$text"/>
 	</xsl:call-template>
 	<xsl:apply-templates select="*" mode="list"/>
+ -->
 </xsl:template>
 
 
@@ -45,5 +47,14 @@
 	<xsl:apply-templates select="*" mode="list"/>
 </xsl:template>
 
+<xsl:template match="html:*" mode="ellipsis">
+	<xsl:apply-templates select="*|text()" mode="ellipsis"/>
+</xsl:template>
+
+<xsl:template match="text()" mode="ellipsis">
+	<xsl:value-of select="."/>
+</xsl:template>
+
+<xsl:template match="html:span[@class = 'ellipsis']" mode="ellipsis"/>
 
 </xsl:stylesheet>

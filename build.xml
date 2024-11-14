@@ -14,8 +14,9 @@
 		<!--
 		<xslt in="reasoning/germanicus.xhtml" out="output/dialogue.xhtml" style="xsl/add-uri.xsl" force="yes"/>
 		<xslt in="reasoning/roman/family.xhtml" out="output/dialogue.xhtml" style="xsl/add-uri.xsl" force="yes"/>
-		-->
 		<xslt in="/D:/GitHub/knoxa.github.io/history/roman/chronology.xhtml" out="output/dialogue.xhtml" style="xsl/add-uri.xsl" force="yes"/>
+		-->
+		<xslt in="${data}/places.xhtml" out="output/dialogue.xhtml" style="xsl/add-uri.xsl" force="yes"/>
 	</target>
 
 	<target name="aif" description="make AIF">
@@ -82,11 +83,15 @@
 	</target>
 	
 	<target name="collect-info">
-		<xslt in="${data}/top.html" out="output/collect.xml" style="xsl/info-extract.xsl" force="yes"/>
+		<xslt in="${data}" out="output/collect.xml" style="xsl/info-extract.xsl" force="yes"/>
 	</target>
 	
-	<target name="collect-dictionary">
-		<xslt in="${data}/top.html" out="output/collect.txt" style="xsl/info-concepts.xsl" force="yes"/>
+	<target name="collect-dictionary-1">
+		<xslt in="${data}" out="output/collect.txt" style="xsl/info-concepts.xsl" force="yes"/>
+	</target>
+	
+	<target name="collect-dictionary-2">
+		<xslt in="/C:/workspaces/development/Tigers/output/lattice-filtered.xml" out="output/collect.txt" style="xsl/info-concepts2.xsl" force="yes"/>
 	</target>
 
 	<!--
@@ -95,6 +100,14 @@
 	<target name="life-events">
 		<xslt in="output/family.graphml" out="output/life1.graphml" style="xsl/life-events.xsl" force="yes"/>
 		<xslt in="output/life1.graphml" out="output/life-events.graphml" style="xsl/graphml/covers.xsl" force="yes"/>
+	</target>
+
+
+	<!--
+		Take a lattice produced by Names.java and consolidate equivalent names
+	-->
+	<target name="names">
+		<xslt in="/C:/workspaces/development/LookingGlassCakes/lattice.xml" out="output/context.xml" style="xsl/names.xsl" force="yes"/>
 	</target>
 
 	<!--

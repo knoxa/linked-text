@@ -13,6 +13,9 @@
 </xsl:template>
  -->
 
+<xsl:template match="html:li[contains(@class, 'aside')]">
+	<!--  do nothing  -->
+</xsl:template>
 
 <xsl:template match="html:li">
 	<xsl:variable name="claim" select="@about"/>
