@@ -11,6 +11,7 @@
 <xsl:import href="claims-quote.xsl"/>
 <xsl:import href="claims-question.xsl"/>
 <xsl:import href="claims-rewrite.xsl"/>
+<xsl:import href="claims-answer.xsl"/>
 
 <xsl:template match="/">
 <!-- 
@@ -34,6 +35,7 @@
 	<xsl:apply-templates select="." mode="infer"/>
 	<xsl:apply-templates select="." mode="rewrite"/>
 	<xsl:apply-templates select="." mode="question"/>
+	<xsl:apply-templates select="." mode="answer"/>
 </xsl:template>
 
 

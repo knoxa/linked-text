@@ -22,7 +22,7 @@
 			<xsl:apply-templates select="../descendant-or-self::*" mode="premise"/>
 		</xsl:with-param>
 		<xsl:with-param name="conclusion">
-			<xsl:apply-templates select="../*" mode="conclusion"/>
+			<xsl:apply-templates select="../descendant-or-self::*" mode="conclusion"/>
 		</xsl:with-param>
 	</xsl:call-template>	
 </xsl:template>

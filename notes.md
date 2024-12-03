@@ -56,9 +56,23 @@ I can do FCA on all claims that mention people and roles, with the events as obj
 
 ... FCA for entities, use meets to define relationships.
 
+# People (named entities)
+
+When a span of text is a _name_, it may be the name of a person. A person may have more than one name. Two different people may have the same name. A person may be introduced in a text with their full name, then referred to later by a shorter version of the name.
+
+Collect sets of strings that represent names of a person. Make one of these a preferred label (terminal object). Need some way of determining preferredLabel if one isn't assigned: longest name, or first/last in sort order. Can take a set of names and make a SKOS Concept.
+
+We may have a co-reference link between two names. Treat this is as an equivalence relationship and form a set - then as above.
+
+## processing XHTML
+
+The aim is to generate SKOS Concepts from HTML span elements. The span element may have a @content attribute. If it does, then this is assumed to be the preferredLabel of a SKOS concept and the surface text is the altLabel. If it doesn't, then the surface text is assumed to be the preferredLabel.
+
+A span of text may _reference_ a person without necessarily be in a name.
+
 # TO DO
 
-*. Need a named template from add-uri to make a hash code.
+1. Need a named template from add-uri to make a hash code.
 
 Take entities in a workbook and make a dictionary from spans and @content attributes. Maybe make SKOS concept and the a 'concept dictionary'? Have I already done this?
 SKOS concepts from DBpedia

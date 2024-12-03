@@ -13,10 +13,6 @@
 		<xsl:with-param name="nodeid" select="concat('_:', generate-id())"/>
 		<xsl:with-param name="claimText" select="'questioning'"/>
 		<xsl:with-param name="premises">
-		<!-- 
-			<premise><xsl:value-of select="concat('&lt;', preceding::*[contains(@class, 'claim')][1]/@about, '&gt;')"/></premise>
-			<premise><xsl:value-of select="concat('&lt;', preceding-sibling::*[@about][1]/@about, '&gt;')"/></premise>
-		 -->
 			<premise><xsl:value-of select="concat('&lt;', ancestor::*[@about][1]/@about, '&gt;')"/></premise>
 		</xsl:with-param>
 		<xsl:with-param name="conclusion">

@@ -7,6 +7,10 @@
  -->
 
 
+<xsl:template match="html:blockquote[contains(@class, 'aside')]" mode="quote">
+	<!--  do nothing  -->
+</xsl:template>
+
 <xsl:template match="html:blockquote" mode="quote">
 	<xsl:choose>
 	<!-- 
