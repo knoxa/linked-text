@@ -26,9 +26,16 @@ Extract intervals and instants from RDF/XML
 </xsl:if>
 </xsl:template>
 
-
+<!-- 
 <xsl:template match="*[@rdf:about][time:hasBeginning or time:hasEnd]">
 	<event uri="{@rdf:about}" fm="{normalize-space(time:hasBeginning/time:Instant/time:*)}" to="{normalize-space(time:hasEnd/time:Instant/time:*)}" type="interval" label="{skos:prefLabel|rdfs:label[1]}"/>
+</xsl:template>
+<xsl:template match="*[@rdf:about][time:hasBeginning or time:hasEnd]">
+	<event uri="{@rdf:about}" fm="{normalize-space(time:hasBeginning//time:inXSDDate[1])}" to="{normalize-space(time:hasEnd///time:inXSDDate[1])}" type="interval" label="{skos:prefLabel|rdfs:label[1]}"/>
+</xsl:template>
+ -->
+<xsl:template match="*[@rdf:about][time:hasBeginning or time:hasEnd]">
+	<event uri="{@rdf:about}" fm="{normalize-space(time:hasBeginning//time:inXSDDate)}" to="{normalize-space(time:hasEnd/*/time:*)}" type="interval" label="{skos:prefLabel|rdfs:label[1]}"/>
 </xsl:template>
 
 
