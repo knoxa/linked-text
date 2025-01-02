@@ -26,7 +26,7 @@ Make a graph of events linked in time order. Input events must have been sorted 
 <xsl:template match="event" mode="node">
 	<node id="{@uri}">
 		<data key="id"><xsl:value-of select="@uri"/></data>
-		<data key="text"><xsl:value-of select="@label"/></data>
+		<data key="text"><xsl:call-template name="getLabel"/></data>
 		<data key="url"><xsl:value-of select="@uri"/></data>
 	</node>
 </xsl:template>
@@ -104,6 +104,17 @@ Make a graph of events linked in time order. Input events must have been sorted 
 
 <xsl:template match="link">
 	<edge source="{@fm}" target="{@to}" />
+</xsl:template>
+
+<xsl:template name="getLabel">
+	<xsl:choose>
+		<xsl:when test="@label">
+			<xsl:value-of select="@label"/>
+		</xsl:when>
+		<xsl:otherwise>
+			<xsl:value-of select="text"/>
+		</xsl:otherwise>
+	</xsl:choose>
 </xsl:template>
 
 </xsl:stylesheet>
