@@ -65,6 +65,14 @@
 		<xslt in="output/events-raw.graphml" out="output/events.graphml" style="xsl/graphml/covers.xsl" force="yes"/>
 	</target>
 	
+	<target name="Events-within">
+		<!-- Partial ordering of events (after manual merge of sources) -->
+	    <xslt in="output/temp.xml" out="output/temp2.xml" style="xsl/chronology/make-sortable.xsl" force="yes"/>
+	    <xslt in="output/temp2.xml" out="output/temporal.xml" style="xsl/chronology/sort-within.xsl" force="yes"/>
+	    <xslt in="output/temporal.xml" out="output/events-raw.graphml" style="xsl/chronology/within-graphml.xsl" force="yes"/>
+		<xslt in="output/events-raw.graphml" out="output/events.graphml" style="xsl/graphml/covers.xsl" force="yes"/>
+	</target>
+	
 	<target name="testing">
 		<!--
 
