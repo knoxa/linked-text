@@ -70,6 +70,11 @@ The aim is to generate SKOS Concepts from HTML span elements. The span element m
 
 A span of text may _reference_ a person without necessarily be in a name.
 
+## XML
+
+The processes covered here both consume and produce XML data. They can be linked via XSL Transformations. I'll use standard formats where possible (XHTML, RDF/XML etc)
+but occassionaly  simple bespoke formats for intermediate files. The use of these is for review later.
+
 # TO DO
 
 1. Need a named template from add-uri to make a hash code.

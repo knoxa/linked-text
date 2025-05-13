@@ -20,7 +20,7 @@
 <xsl:template match="graphml:edge">
 	<xsl:choose>
 	<!-- delete duplicate edges -->
-		<xsl:when test="following-sibling::graphml:edge[./@source = current()/@source and ./@target = current()/@target]">
+		<xsl:when test="following::graphml:edge[@source = current()/@source and @target = current()/@target]">
 			<!--  a duplicate edge - do nothing  -->
 		</xsl:when>
 		<xsl:otherwise>

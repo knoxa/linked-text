@@ -17,17 +17,12 @@
 <!-- 
 	Remove unwanted edges from the graph
  -->
-<xsl:template match="graphml:edge">
-	<xsl:choose>
-	<!-- delete self edges -->
-		<xsl:when test="@source = @target">
-			<!--  a self edge - do nothing  -->
-		</xsl:when>
-		<xsl:otherwise>
-			<xsl:copy-of select="."/>
-		</xsl:otherwise>
-	</xsl:choose>
+<xsl:template match="graphml:edge[@source = @target]">
+	<!--  a self edge - do nothing  -->
 </xsl:template>
 
+<xsl:template match="graphml:edge">
+	<xsl:copy-of select="."/>
+</xsl:template>
 
 </xsl:stylesheet>

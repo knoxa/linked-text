@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+
+<project name="War Diary" basedir=".">
+
+	<property file="ant.properties"/>
+
+	<description>
+		Information Extraction from WW1 War Diaries.
+	</description>
+
+	<target name="movements-work" description="Extract HTML articles covering 4 Div movement tables">
+		<xslt in="work/movements.xml" out="${temp}/work.xhtml" style="xsl/work/movements.xsl" force="yes"/>
+	</target>
+
+	<target name="messages-work" description="Extract HTML articles covering messages and signals">
+		<xslt in="work/messages.xml" out="${temp}/work.xhtml" style="xsl/work/messages.xsl" force="yes"/>
+	</target>
+
+	<target name="summary-work" description="Extract HTML articles covering messages and signals">
+		<xslt in="work/summary.xml" out="${temp}/work.xhtml" style="xsl/work/summary.xsl" force="yes"/>
+	</target>
+
+	<target name="movements" description="Make events from 4 Div movements" depends="movements-work">
+		<xslt in="${temp}/work.xhtml" out="${temp}/events.xml" style="xsl/movements.xsl" force="yes"/>
+	    <xslt in="${temp}/events.xml" out="${temp}/temporal.xml" style="${chronology}/sort.xsl" force="yes"/>
+	    <xslt in="${temp}/temporal.xml" out="${temp}/events-raw.graphml" style="${chronology}/time-graphml.xsl" force="yes"/>
+		<xslt in="${temp}/events-raw.graphml" out="${temp}/events.graphml" style="${graph}/covers.xsl" force="yes"/>
+	</target>
+	
+	
+	<target name="entities">
+		<xslt in="${temp}/work.xhtml" out="${temp}/entities.xml" style="${extract}/entities.xsl" force="true"/>
+	</target>
+	
+	<target name="messages">
+		<xslt in="/D:/GitHub/war-diary/11-Bde/1914/1914-10-Appendix55.xhtml" out="${temp}/messages.html" style="xsl/messages.xsl" force="true"/>
+	</target>
+
+
+</project>

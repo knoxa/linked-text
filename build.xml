@@ -107,7 +107,7 @@
 	</target>
 	
 	<target name="collect-dictionary-2">
-		<xslt in="/C:/workspaces/development/Tigers/output/lattice-filtered.xml" out="output/collect.txt" style="xsl/info-concepts2.xsl" force="yes"/>
+		<xslt in="output/filtered.xml" out="output/collect.txt" style="xsl/info-concepts2.xsl" force="yes"/>
 	</target>
 
 	<!--

@@ -50,4 +50,15 @@
 	<xsl:value-of select="number(substring($temp, 0, 9))"/>
 </xsl:template>
 
+<xsl:template name="getDatetimeAsSortableInteger">
+	<!-- 
+		Taking the '-', space and ':' characters out of a YYYY-MM-DD HH:MM format datetime gives a 12 digit number that preserves the datetime order. 
+		However, we might get 'YYYY-MM-DD', so we append '0000' as padding and take the first 12 digits. We then always have 12 digit numbers to compare.
+	 -->
+	<xsl:param name="text"/>
+	<xsl:variable name="temp" select="concat(translate(normalize-space($text), '-: ', ''), '0000')"/>
+	<xsl:value-of select="number(substring($temp, 0, 13))"/>
+</xsl:template>
+
+
 </xsl:stylesheet>
