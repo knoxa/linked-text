@@ -118,14 +118,6 @@
 		<xslt in="output/life1.graphml" out="output/life-events.graphml" style="xsl/graphml/covers.xsl" force="yes"/>
 	</target>
 
-
-	<!--
-		Take a lattice produced by Names.java and consolidate equivalent names
-	-->
-	<target name="names">
-		<xslt in="/C:/workspaces/development/LookingGlassCakes/lattice.xml" out="output/context.xml" style="xsl/names.xsl" force="yes"/>
-	</target>
-
 	<!--
 		organizational relationships
 		<xslt in="/D:/GitHub/history/events/conflict/ww2/italy.xhtml" out="output/aif.txt" style="/D:/GitHub/eleatics/xsl-utils/rdfa-ntriples.xsl" force="yes"/>

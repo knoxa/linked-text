@@ -49,28 +49,4 @@
 		<xslt in="${temp}/raw.graphml" out="${temp}/events.graphml" style="${graph}/covers.xsl" force="true"/>
 	</target>
 
-	<target name="lattice-up">
-		<xslt in="/C:/workspaces/development/LookingGlassCakes/lattice.xml" out="/C:/workspaces/development/Tigers/output/context.xml" style="${lattice}/names.xsl" force="true"/>
-	</target>
-	
-	<target name="lattice-down">
-		<xslt in="/C:/workspaces/development/LookingGlassCakes/lattice.xml" out="${temp}/context.xml" style="${lattice}/down.xsl" force="true"/>
-	</target>
-	
-	<target name="lattice-facts">
-		<xslt in="/C:/workspaces/development/LookingGlassCakes/lattice.xml" out="/C:/workspaces/development/Tigers/output/context.xml" style="${lattice}/facts.xsl" force="true"/>
-	</target>
-	
-	<target name="lattice-scratch">
-		<xslt in="/C:/workspaces/development/LookingGlassCakes/lattice.xml" out="${temp}/scratch.xml" style="${lattice}/scratch.xsl" force="true"/>
-	</target>
-	
-	<target name="lattice-meet">
-		<xslt in="${temp}/scratch.xml" out="${temp}/meet.xml" style="${lattice}/scratch-meet.xsl" force="true"/>
-	</target>
-
-	<target name="FCA">
-		<xslt in="${temp}/filtered.xml" out="/C:/workspaces/development/Tigers/output/context.xml" style="${extract}/context.xsl" force="true"/>
-	</target>
-
 </project>

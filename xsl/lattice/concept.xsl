@@ -27,4 +27,17 @@
 </xsl:template>
 
 
+<xsl:template name="getAttributesBelow">
+<!--
+	
+-->
+	<xsl:copy-of select=".//attribute"/>
+	<xsl:for-each select="//edge[./@to = current()/@id]">
+		<xsl:for-each select="//extent[./@id = current()/@from]">
+			<xsl:call-template name="getAttributesBelow"/>
+		</xsl:for-each>
+	</xsl:for-each>
+</xsl:template>
+
+
 </xsl:stylesheet>

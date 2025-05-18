@@ -1,0 +1,1262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<context>
+	<description>Mentions of people in WW1 chronologies at https://tigersmuseum.github.io/history/docs/ww1.html. Each object is a person, with mentions of that person as attributes.</description>
+	<object>
+		<attribute>Baron Goto</attribute>
+		<attribute>Gotō Shinpei</attribute>
+	</object>
+	<object>
+		<attribute>Dr. J. de Castro</attribute>
+		<attribute>Dr. Jose de Castro</attribute>
+	</object>
+	<object>
+		<attribute>Mohtashim ed Douleh</attribute>
+		<attribute>Mohtashem ed Douleh</attribute>
+	</object>
+	<object>
+		<attribute>Abbas II.</attribute>
+	</object>
+	<object>
+		<attribute>Mushaver ul Mamalek</attribute>
+	</object>
+	<object>
+		<attribute>Herr Erzberger</attribute>
+	</object>
+	<object>
+		<attribute>General de Wet</attribute>
+		<attribute>De Wet</attribute>
+		<attribute>Christiaan de Wet</attribute>
+	</object>
+	<object>
+		<attribute>General Sir W. Robertson</attribute>
+		<attribute>Sir William Robertson</attribute>
+		<attribute>LieutGeneral Sir W. Robertson</attribute>
+		<attribute>LieutGeneral Sir William Robertson</attribute>
+	</object>
+	<object>
+		<attribute>Prince Louis of Battenberg</attribute>
+	</object>
+	<object>
+		<attribute>M. Malinov</attribute>
+	</object>
+	<object>
+		<attribute>Mr. Arthur Balfour</attribute>
+		<attribute>Arthur Balfour</attribute>
+		<attribute>Sir Arthur Balfour</attribute>
+		<attribute>Mr. Balfour</attribute>
+	</object>
+	<object>
+		<attribute>Beyers</attribute>
+		<attribute>Christiaan Frederik Beyers</attribute>
+		<attribute>General Beyers</attribute>
+	</object>
+	<object>
+		<attribute>Lieut.-General Sir R. C. Maxwell</attribute>
+	</object>
+	<object>
+		<attribute>Talaat Pasha</attribute>
+	</object>
+	<object>
+		<attribute>Lieut-General Wild von Hohenborn</attribute>
+		<attribute>Lieut.-General Wild von Hohenborn</attribute>
+		<attribute>Adolf Wild von Hohenborn</attribute>
+	</object>
+	<object>
+		<attribute>Admiral Souchon</attribute>
+	</object>
+	<object>
+		<attribute>Prince Sixte of Bourbon</attribute>
+	</object>
+	<object>
+		<attribute>Dr. A. Augusto da Costa</attribute>
+		<attribute>Dr. A. A. da Costa</attribute>
+	</object>
+	<object>
+		<attribute>Dr. Artur von Zimmermann</attribute>
+		<attribute>Dr. Artur Zimmermann</attribute>
+	</object>
+	<object>
+		<attribute>Sir Rosslyn Wemyss</attribute>
+		<attribute>Admiral Sir Rosslyn Wemyss</attribute>
+		<attribute>Vice-Admiral Sir Rosslyn Wemyss</attribute>
+	</object>
+	<object>
+		<attribute>General Ironside</attribute>
+	</object>
+	<object>
+		<attribute>Mr. Montagu</attribute>
+	</object>
+	<object>
+		<attribute>Tanaka Giichi</attribute>
+		<attribute>Lieut.-General Giichi Tanaka</attribute>
+	</object>
+	<object>
+		<attribute>Prince Golitsin</attribute>
+		<attribute>M. Golitzine</attribute>
+	</object>
+	<object>
+		<attribute>Lieut.-General Kenichi Oshima</attribute>
+	</object>
+	<object>
+		<attribute>Emperor of Austria</attribute>
+		<attribute>Emperor Francis Joseph of Austria</attribute>
+		<attribute>Francis Joseph</attribute>
+		<attribute>Francis Joseph of Austria</attribute>
+	</object>
+	<object>
+		<attribute>M. J. Davignon</attribute>
+		<attribute>M. Davignon</attribute>
+	</object>
+	<object>
+		<attribute>Sir David Beatty</attribute>
+		<attribute>Beatty</attribute>
+		<attribute>Admiral Sir David Beatty</attribute>
+	</object>
+	<object>
+		<attribute>Field-Marshal Conrad von Hötzendorff</attribute>
+	</object>
+	<object>
+		<attribute>Khedive Abbas Hilmi</attribute>
+	</object>
+	<object>
+		<attribute>Prince Max</attribute>
+		<attribute>Prince Max of Baden</attribute>
+	</object>
+	<object>
+		<attribute>Admiral Kolchak</attribute>
+		<attribute>Kolchak</attribute>
+	</object>
+	<object>
+		<attribute>Sir Arthur Arnold Barrett</attribute>
+		<attribute>General Sir Arthur Barrett</attribute>
+		<attribute>Lieut.-General Sir A. Barrett</attribute>
+	</object>
+	<object>
+		<attribute>Prince Boris</attribute>
+		<attribute>King Boris of Bulgaria</attribute>
+	</object>
+	<object>
+		<attribute>General Birdwood</attribute>
+		<attribute>General Sir William Birdwood</attribute>
+		<attribute>Sir William Birdwood</attribute>
+	</object>
+	<object>
+		<attribute>Signor Boselli</attribute>
+	</object>
+	<object>
+		<attribute>Dr. von Seidler</attribute>
+		<attribute>Dr. Ernst Ritter von Seidler</attribute>
+	</object>
+	<object>
+		<attribute>Count Luxburg</attribute>
+	</object>
+	<object>
+		<attribute>Count Terauchi</attribute>
+		<attribute>Marshal-Count Masakata Terauchi</attribute>
+	</object>
+	<object>
+		<attribute>Dr. Dumba</attribute>
+	</object>
+	<object>
+		<attribute>M. Miliukoff</attribute>
+		<attribute>M. Milyukov</attribute>
+	</object>
+	<object>
+		<attribute>Admiral du Fournet</attribute>
+	</object>
+	<object>
+		<attribute>Dr. B. L. Machado Guimarães</attribute>
+		<attribute>Dr. Machado Guimãraes</attribute>
+		<attribute>Dr. Machado Guimarães</attribute>
+	</object>
+	<object>
+		<attribute>Ali Dinar</attribute>
+	</object>
+	<object>
+		<attribute>General Plumer</attribute>
+		<attribute>Plumer</attribute>
+		<attribute>Herbert Plumer</attribute>
+	</object>
+	<object>
+		<attribute>Admiral Spee</attribute>
+		<attribute>Admiral von Spee</attribute>
+	</object>
+	<object>
+		<attribute>Ain ed Douleh</attribute>
+	</object>
+	<object>
+		<attribute>Admiral Sir F. Doveton Sturdee</attribute>
+	</object>
+	<object>
+		<attribute>Lieut.-General Sir C. F. N. Macready</attribute>
+	</object>
+	<object>
+		<attribute>General Skoropadski</attribute>
+	</object>
+	<object>
+		<attribute>Sir Julian Byng</attribute>
+		<attribute>Byng</attribute>
+	</object>
+	<object>
+		<attribute>Captain Fryatt</attribute>
+	</object>
+	<object>
+		<attribute>Viscount Milner</attribute>
+		<attribute>Alfred Milner</attribute>
+		<attribute>Lord Milner</attribute>
+	</object>
+	<object>
+		<attribute>The Tsar</attribute>
+		<attribute>the Tsar</attribute>
+	</object>
+	<object>
+		<attribute>General Liman von Sanders</attribute>
+	</object>
+	<object>
+		<attribute>M. Stürmer</attribute>
+	</object>
+	<object>
+		<attribute>General Cunliffe</attribute>
+		<attribute>Frederick Hugh Cunliffe</attribute>
+	</object>
+	<object>
+		<attribute>General Horne</attribute>
+	</object>
+	<object>
+		<attribute>General Sir H. Smith-Dorrien</attribute>
+		<attribute>Sir H. Smith-Dorrien</attribute>
+	</object>
+	<object>
+		<attribute>Hindenburg</attribute>
+		<attribute>Field-Marshal von Hindenburg</attribute>
+		<attribute>General Hindenburg</attribute>
+		<attribute>General von Hindenburg</attribute>
+		<attribute>Paul von Hindenburg</attribute>
+	</object>
+	<object>
+		<attribute>Lieut.-General Sir Percy Lake</attribute>
+		<attribute>Sir Percy Lake</attribute>
+	</object>
+	<object>
+		<attribute>Senhor J. P. Chagas</attribute>
+	</object>
+	<object>
+		<attribute>Queen Mary</attribute>
+	</object>
+	<object>
+		<attribute>Herr von Jagow</attribute>
+	</object>
+	<object>
+		<attribute>General Brusilov</attribute>
+		<attribute>Brussiloff</attribute>
+		<attribute>General Brussiloff</attribute>
+	</object>
+	<object>
+		<attribute>Sir Roger Keyes</attribute>
+		<attribute>Vice-Admiral Sir Roger Keyes</attribute>
+	</object>
+	<object>
+		<attribute>Sir Stanley Maude</attribute>
+		<attribute>General Maude</attribute>
+		<attribute>General Sir Stanley Maude</attribute>
+		<attribute>General Sir S. Maude</attribute>
+	</object>
+	<object>
+		<attribute>Prince Firman Firma</attribute>
+	</object>
+	<object>
+		<attribute>General Dunsterville</attribute>
+	</object>
+	<object>
+		<attribute>Edith Cavell</attribute>
+		<attribute>Miss Edith Cavell</attribute>
+	</object>
+	<object>
+		<attribute>M. G. Cooreman</attribute>
+		<attribute>M. Cooreman</attribute>
+	</object>
+	<object>
+		<attribute>Emperor Karl</attribute>
+	</object>
+	<object>
+		<attribute>Lieut.-General Sir James Grierson</attribute>
+		<attribute>Sir James Grierson</attribute>
+	</object>
+	<object>
+		<attribute>Count Zeppelin</attribute>
+	</object>
+	<object>
+		<attribute>General Mangin</attribute>
+	</object>
+	<object>
+		<attribute>Herr Michaelis</attribute>
+		<attribute>Dr. Michaelis</attribute>
+	</object>
+	<object>
+		<attribute>General Dukhonin</attribute>
+	</object>
+	<object>
+		<attribute>Field-Marshal Earl Kitchener</attribute>
+		<attribute>Lord Kitchener</attribute>
+	</object>
+	<object>
+		<attribute>Jan Kemp</attribute>
+		<attribute>Kemp</attribute>
+	</object>
+	<object>
+		<attribute>Prince Alexander</attribute>
+		<attribute>Alexander</attribute>
+	</object>
+	<object>
+		<attribute>Mustaufi ul Mamalek</attribute>
+	</object>
+	<object>
+		<attribute>Prince Lvov</attribute>
+		<attribute>Prince Lvoff</attribute>
+	</object>
+	<object>
+		<attribute>Colonel von Lettow-Vorbeck</attribute>
+	</object>
+	<object>
+		<attribute>Takashi Hara</attribute>
+	</object>
+	<object>
+		<attribute>King Constantine</attribute>
+		<attribute>King of Greece</attribute>
+		<attribute>King Constantine of Greece</attribute>
+	</object>
+	<object>
+		<attribute>General Marshall</attribute>
+		<attribute>Lieut.-General Marshall</attribute>
+		<attribute>Sir William Raine Marshall</attribute>
+		<attribute>Lieut.-General Sir W. R. Marshall</attribute>
+	</object>
+	<object>
+		<attribute>Lieut.-General A. de Ceuninck</attribute>
+	</object>
+	<object>
+		<attribute>Count Tisza</attribute>
+	</object>
+	<object>
+		<attribute>Admiral von Tirpitz</attribute>
+		<attribute>Grand Admiral von Tirpitz</attribute>
+	</object>
+	<object>
+		<attribute>Mr. J. R. Clynes</attribute>
+	</object>
+	<object>
+		<attribute>Feng-Kuo-Chang</attribute>
+	</object>
+	<object>
+		<attribute>General Sukhomlinov</attribute>
+	</object>
+	<object>
+		<attribute>Lieut.-General Sir G. M. W. Maedonogh</attribute>
+	</object>
+	<object>
+		<attribute>Prince Ahmed Fuad</attribute>
+	</object>
+	<object>
+		<attribute>General Galliéni</attribute>
+	</object>
+	<object>
+		<attribute>Sir Ian Hamilton</attribute>
+		<attribute>General Sir Ian Hamilton</attribute>
+	</object>
+	<object>
+		<attribute>General Dmitrieff</attribute>
+		<attribute>Dmitrieff</attribute>
+	</object>
+	<object>
+		<attribute>General Pimenta da Castro</attribute>
+		<attribute>General da Castro</attribute>
+	</object>
+	<object>
+		<attribute>Field-Marshal Earl Roberts</attribute>
+		<attribute>Lord Roberts</attribute>
+	</object>
+	<object>
+		<attribute>Major-General J. L. van Deventer</attribute>
+		<attribute>General van Deventer</attribute>
+	</object>
+	<object>
+		<attribute>Khedive Ismail Pasha</attribute>
+	</object>
+	<object>
+		<attribute>von Eckhardt</attribute>
+	</object>
+	<object>
+		<attribute>Major-General J. Pershing</attribute>
+		<attribute>Major-General Pershing</attribute>
+		<attribute>General Pershing</attribute>
+	</object>
+	<object>
+		<attribute>M. Delacroix</attribute>
+		<attribute>M. L. Delacroix</attribute>
+		<attribute>L. Delacroix</attribute>
+	</object>
+	<object>
+		<attribute>Kerenski</attribute>
+		<attribute>M. Kerenski</attribute>
+	</object>
+	<object>
+		<attribute>Sir Douglas Haig</attribute>
+		<attribute>General Sir Douglas Haig</attribute>
+		<attribute>Sir D. Haig</attribute>
+		<attribute>Field Marshal Sir Douglas Haig</attribute>
+	</object>
+	<object>
+		<attribute>von Bethmann-Hollweg</attribute>
+		<attribute>Theobald von Bethmann Hollweg</attribute>
+		<attribute>Herr von Bethmann-Holweg</attribute>
+	</object>
+	<object>
+		<attribute>Li-Yuan-Hung</attribute>
+	</object>
+	<object>
+		<attribute>Senhor V. H. d'Azevedo Coutinho</attribute>
+		<attribute>Senhor Coutinho</attribute>
+	</object>
+	<object>
+		<attribute>General Guchkov</attribute>
+	</object>
+	<object>
+		<attribute>Lord Fisher</attribute>
+	</object>
+	<object>
+		<attribute>Sir John Jellicoe</attribute>
+		<attribute>Admiral Sir John Jellicoe</attribute>
+	</object>
+	<object>
+		<attribute>Commodore Tyrwhitt</attribute>
+	</object>
+	<object>
+		<attribute>Count Stürgkh</attribute>
+		<attribute>Count Sturgkh</attribute>
+	</object>
+	<object>
+		<attribute>Lieut.-General Oka</attribute>
+	</object>
+	<object>
+		<attribute>General C. M. Dobell</attribute>
+		<attribute>General Dobell</attribute>
+		<attribute>Charles Macpherson Dobell</attribute>
+	</object>
+	<object>
+		<attribute>Colonel Tafel</attribute>
+		<attribute>Captain Tafel</attribute>
+	</object>
+	<object>
+		<attribute>Lord Derby</attribute>
+	</object>
+	<object>
+		<attribute>Rasputin</attribute>
+	</object>
+	<object>
+		<attribute>Lieut.-General Smuts</attribute>
+		<attribute>General Smuts</attribute>
+		<attribute>Lieut.-General J. Smuts</attribute>
+	</object>
+	<object>
+		<attribute>Admiral Peirse</attribute>
+	</object>
+	<object>
+		<attribute>Signor Nitti</attribute>
+	</object>
+	<object>
+		<attribute>Lord Pirrie</attribute>
+	</object>
+	<object>
+		<attribute>King Ferdinand of Bulgaria</attribute>
+	</object>
+	<object>
+		<attribute>Bolo Pasha</attribute>
+	</object>
+	<object>
+		<attribute>M. Skouloudis</attribute>
+		<attribute>M. Skouloudhis</attribute>
+	</object>
+	<object>
+		<attribute>Dr. Addison</attribute>
+	</object>
+	<object>
+		<attribute>General Foch</attribute>
+		<attribute>General F. Foch</attribute>
+		<attribute>Marshal Foch</attribute>
+		<attribute>Foch</attribute>
+	</object>
+	<object>
+		<attribute>Yuan-Shih-Kai</attribute>
+	</object>
+	<object>
+		<attribute>General Guillaumet</attribute>
+		<attribute>General Guillaumat</attribute>
+	</object>
+	<object>
+		<attribute>General Allenby</attribute>
+	</object>
+	<object>
+		<attribute>King Peter of Serbia</attribute>
+	</object>
+	<object>
+		<attribute>Admiral von Hintze</attribute>
+	</object>
+	<object>
+		<attribute>Count Berchtold</attribute>
+	</object>
+	<object>
+		<attribute>Viscount Ishii</attribute>
+	</object>
+	<object>
+		<attribute>Sir John French</attribute>
+		<attribute>Lord French</attribute>
+		<attribute>Field-Marshal Sir John French</attribute>
+		<attribute>Field-Marshal Lord French</attribute>
+		<attribute>Sir J. French</attribute>
+	</object>
+	<object>
+		<attribute>Sir H. Howard</attribute>
+	</object>
+	<object>
+		<attribute>Baron von Richthoven</attribute>
+	</object>
+	<object>
+		<attribute>Vossuq ed Douleh</attribute>
+	</object>
+	<object>
+		<attribute>Mackensen</attribute>
+		<attribute>Field-Marshal Mackensen</attribute>
+	</object>
+	<object>
+		<attribute>Baron Beyens</attribute>
+	</object>
+	<object>
+		<attribute>General Diaz</attribute>
+	</object>
+	<object>
+		<attribute>Joffre</attribute>
+		<attribute>General Joffre</attribute>
+	</object>
+	<object>
+		<attribute>Ibu Sa'ud</attribute>
+	</object>
+	<object>
+		<attribute>Lieut.-General The Hon. Sir H. A. Lawrence</attribute>
+	</object>
+	<object>
+		<attribute>Mushir ed Douleh</attribute>
+	</object>
+	<object>
+		<attribute>M. Ustemovich</attribute>
+	</object>
+	<object>
+		<attribute>Baron de Broqueville</attribute>
+	</object>
+	<object>
+		<attribute>M. Trotski</attribute>
+		<attribute>Trotsky</attribute>
+	</object>
+	<object>
+		<attribute>Lieut.-General Sir T. E. Clarke</attribute>
+	</object>
+	<object>
+		<attribute>King Charles of Rumania</attribute>
+		<attribute>King of Rumania</attribute>
+	</object>
+	<object>
+		<attribute>Mr. Wilson</attribute>
+		<attribute>President Wilson</attribute>
+	</object>
+	<object>
+		<attribute>The Grand Duke Nicholas</attribute>
+		<attribute>Grand Duke Nicholas</attribute>
+	</object>
+	<object>
+		<attribute>General Ivanoff</attribute>
+	</object>
+	<object>
+		<attribute>Lenin</attribute>
+		<attribute>M. Lenin</attribute>
+	</object>
+	<object>
+		<attribute>Field Marshal von Eichhorn</attribute>
+		<attribute>Hermann von Eichhorn</attribute>
+		<attribute>Field-Marshal von Eichhorn</attribute>
+	</object>
+	<object>
+		<attribute>David Alfred Thomas, 1st Viscount Rhondda</attribute>
+		<attribute>Lord Rhondda</attribute>
+		<attribute>Viscount Rhondda</attribute>
+	</object>
+	<object>
+		<attribute>Nikolaos Kalogeropoulos</attribute>
+		<attribute>M. Kalogeropoulos</attribute>
+		<attribute>Kalogeropoulos</attribute>
+	</object>
+	<object>
+		<attribute>M. Hyams</attribute>
+	</object>
+	<object>
+		<attribute>Admiral Sir R. Wemyss</attribute>
+	</object>
+	<object>
+		<attribute>Sir Henry Jackson</attribute>
+		<attribute>Admiral Sir Henry Jackson</attribute>
+	</object>
+	<object>
+		<attribute>General Sir John Maxwell</attribute>
+	</object>
+	<object>
+		<attribute>Senhor J. T. de Souza Barboza</attribute>
+		<attribute>Senhor J. T. de Sousa Barboza</attribute>
+	</object>
+	<object>
+		<attribute>Von Papen</attribute>
+	</object>
+	<object>
+		<attribute>Mr. Austen Chamberlain</attribute>
+		<attribute>Austen Chamberlain</attribute>
+		<attribute>Mr. Chamberlain</attribute>
+	</object>
+	<object>
+		<attribute>Sir E. Grey</attribute>
+		<attribute>Lord Grey</attribute>
+		<attribute>Viscount Grey</attribute>
+		<attribute>Grey</attribute>
+	</object>
+	<object>
+		<attribute>Baron Sonnino</attribute>
+	</object>
+	<object>
+		<attribute>General Kornilov</attribute>
+		<attribute>General Korniloff</attribute>
+	</object>
+	<object>
+		<attribute>Ensign Krilenko</attribute>
+	</object>
+	<object>
+		<attribute>Count Mirbach</attribute>
+	</object>
+	<object>
+		<attribute>M. Pilsudski</attribute>
+	</object>
+	<object>
+		<attribute>Major-General Tighe</attribute>
+		<attribute>General Tighe</attribute>
+	</object>
+	<object>
+		<attribute>General Alexeieff</attribute>
+		<attribute>General Alexeiev</attribute>
+	</object>
+	<object>
+		<attribute>Lord Robert Cecil</attribute>
+	</object>
+	<object>
+		<attribute>General Murray</attribute>
+		<attribute>Lieut-General Sir A. J. Murray</attribute>
+		<attribute>General Sir A. J. Murray</attribute>
+		<attribute>Lieut.-General Sir A. J. Murray</attribute>
+		<attribute>General Sir A. Murray</attribute>
+		<attribute>Archibald Murray</attribute>
+		<attribute>Sir A. Murray</attribute>
+		<attribute>LieutGeneral Sir Archibald Murray</attribute>
+	</object>
+	<object>
+		<attribute>the Duke of Westminster</attribute>
+		<attribute>Hugh Richard Arthur Grosvenor</attribute>
+	</object>
+	<object>
+		<attribute>M. Doumerguef</attribute>
+	</object>
+	<object>
+		<attribute>General Sir J. Wolfe Murray</attribute>
+	</object>
+	<object>
+		<attribute>Captain Boelcke</attribute>
+	</object>
+	<object>
+		<attribute>Senhor Antunes</attribute>
+	</object>
+	<object>
+		<attribute>M. Messimy</attribute>
+	</object>
+	<object>
+		<attribute>Sir Eric Geddes</attribute>
+	</object>
+	<object>
+		<attribute>Immelman</attribute>
+	</object>
+	<object>
+		<attribute>Dr. S. Cardosa da Paes</attribute>
+		<attribute>Dr. da Silva Paes</attribute>
+		<attribute>Dr. S. B. C. da Paes</attribute>
+	</object>
+	<object>
+		<attribute>Hussein Kamel</attribute>
+		<attribute>Prince Hussein Kamel Pasha</attribute>
+	</object>
+	<object>
+		<attribute>Mr. Winston Churchill</attribute>
+		<attribute>Winston Churchill</attribute>
+		<attribute>Mr. Churchill</attribute>
+	</object>
+	<object>
+		<attribute>LieutGeneral von Falkenhayn</attribute>
+		<attribute>Falkenhayn</attribute>
+		<attribute>Erich von Falkenhayn</attribute>
+		<attribute>General Falkenhayn</attribute>
+		<attribute>General von Falkenhayn</attribute>
+	</object>
+	<object>
+		<attribute>Baron Burian</attribute>
+	</object>
+	<object>
+		<attribute>General von Moltke</attribute>
+		<attribute>von Moltke</attribute>
+	</object>
+	<object>
+		<attribute>M. Radoslavov</attribute>
+	</object>
+	<object>
+		<attribute>Lieut.-General Sir L. E. Kiggell</attribute>
+		<attribute>Lieut.-General L. E. Kiggell</attribute>
+	</object>
+	<object>
+		<attribute>Count Yasuya Uchida</attribute>
+	</object>
+	<object>
+		<attribute>General Petlyura</attribute>
+	</object>
+	<object>
+		<attribute>Dr. A. J. d'Almeida</attribute>
+	</object>
+	<object>
+		<attribute>Lieut.-General Sir G. H. Fowke</attribute>
+	</object>
+	<object>
+		<attribute>Samsam es Sultaneh</attribute>
+	</object>
+	<object>
+		<attribute>General Débeney</attribute>
+	</object>
+	<object>
+		<attribute>General Franchet D'Esperey</attribute>
+		<attribute>General Franchet d'Esperey</attribute>
+	</object>
+	<object>
+		<attribute>Koos de la Rey</attribute>
+		<attribute>De la Rey</attribute>
+	</object>
+	<object>
+		<attribute>Lieut.-General von Stein</attribute>
+		<attribute>Hermann von Stein</attribute>
+		<attribute>Major-General von Stein</attribute>
+	</object>
+	<object>
+		<attribute>M. Petrov</attribute>
+	</object>
+	<object>
+		<attribute>Lieut.-General Sir George Milne</attribute>
+	</object>
+	<object>
+		<attribute>Sir Henry Wilson</attribute>
+		<attribute>General Sir H. H. Wilson</attribute>
+	</object>
+	<object>
+		<attribute>General Nivelle</attribute>
+	</object>
+	<object>
+		<attribute>the ex-Khedive Ismail</attribute>
+	</object>
+	<object>
+		<attribute>Essad Pasha</attribute>
+	</object>
+	<object>
+		<attribute>General Stewart</attribute>
+		<attribute>General J. Stewart</attribute>
+	</object>
+	<object>
+		<attribute>M. Clemenceau</attribute>
+		<attribute>M. Clémenceau</attribute>
+	</object>
+	<object>
+		<attribute>Admiral Scheer</attribute>
+	</object>
+	<object>
+		<attribute>M. Stephen Pichon</attribute>
+	</object>
+	<object>
+		<attribute>Mr. John Redmond</attribute>
+	</object>
+	<object>
+		<attribute>Archduke Karl</attribute>
+	</object>
+	<object>
+		<attribute>M. Viviani</attribute>
+	</object>
+	<object>
+		<attribute>Bernardino Machado</attribute>
+	</object>
+	<object>
+		<attribute>General Aitken</attribute>
+	</object>
+	<object>
+		<attribute>M. Goremikin</attribute>
+	</object>
+	<object>
+		<attribute>Dr. Manoel Arriaga</attribute>
+	</object>
+	<object>
+		<attribute>Count Andrassy</attribute>
+	</object>
+	<object>
+		<attribute>Count Czernin</attribute>
+	</object>
+	<object>
+		<attribute>Lieut.-General Sir H. C. Sclater</attribute>
+	</object>
+	<object>
+		<attribute>Sipahsalar A'zam</attribute>
+	</object>
+	<object>
+		<attribute>M. Métin</attribute>
+		<attribute>M. Metin</attribute>
+	</object>
+	<object>
+		<attribute>M. Cochin</attribute>
+		<attribute>M. Denys Cochin</attribute>
+	</object>
+	<object>
+		<attribute>M. Supilo</attribute>
+	</object>
+	<object>
+		<attribute>Roger Casement</attribute>
+		<attribute>Sir Roger Casement</attribute>
+	</object>
+	<object>
+		<attribute>M. Pokrovski</attribute>
+	</object>
+	<object>
+		<attribute>Count Karolyi</attribute>
+	</object>
+	<object>
+		<attribute>Sultan Mohammed V</attribute>
+		<attribute>Mohmed V.</attribute>
+	</object>
+	<object>
+		<attribute>Maritz</attribute>
+		<attribute>Manie Maritz</attribute>
+	</object>
+	<object>
+		<attribute>Hsuan-Fung</attribute>
+		<attribute>Manchu Emperor</attribute>
+		<attribute>Manchu Emperor (Hsuan-Fung)</attribute>
+	</object>
+	<object>
+		<attribute>Dr. A. Jose d'Almeida</attribute>
+	</object>
+	<object>
+		<attribute>Admiral von Essen</attribute>
+	</object>
+	<object>
+		<attribute>M. Gounaris</attribute>
+	</object>
+	<object>
+		<attribute>Signor Salandra</attribute>
+	</object>
+	<object>
+		<attribute>Dr. Wekerle</attribute>
+	</object>
+	<object>
+		<attribute>M. Briand</attribute>
+	</object>
+	<object>
+		<attribute>Field-Marshal von der Goltz</attribute>
+	</object>
+	<object>
+		<attribute>Pope Pius X</attribute>
+	</object>
+	<object>
+		<attribute>Alexandra Feodorovna</attribute>
+		<attribute>ex-Tsaritsa</attribute>
+	</object>
+	<object>
+		<attribute>Ala es Sultaneh</attribute>
+	</object>
+	<object>
+		<attribute>General Marushevski</attribute>
+	</object>
+	<object>
+		<attribute>Launcelot Kiggell</attribute>
+	</object>
+	<object>
+		<attribute>M. Marghiloman</attribute>
+	</object>
+	<object>
+		<attribute>Talaat Bey</attribute>
+	</object>
+	<object>
+		<attribute>Boy-Ed</attribute>
+	</object>
+	<object>
+		<attribute>Kaiser Wilhelm II</attribute>
+		<attribute>The Kaiser</attribute>
+		<attribute>the Kaiser</attribute>
+	</object>
+	<object>
+		<attribute>Muavin ed Douleh</attribute>
+	</object>
+	<object>
+		<attribute>Professor Masaryk</attribute>
+	</object>
+	<object>
+		<attribute>General Pétain</attribute>
+	</object>
+	<object>
+		<attribute>M. Zaimis</attribute>
+	</object>
+	<object>
+		<attribute>Sa'id Halim</attribute>
+	</object>
+	<object>
+		<attribute>The Archduke Franz Ferdinand</attribute>
+	</object>
+	<object>
+		<attribute>M. Jonnart</attribute>
+	</object>
+	<object>
+		<attribute>Herr Scheidemann</attribute>
+	</object>
+	<object>
+		<attribute>General Botha</attribute>
+		<attribute>Botha</attribute>
+	</object>
+	<object>
+		<attribute>M. Chichérin</attribute>
+	</object>
+	<object>
+		<attribute>General Townshend</attribute>
+		<attribute>Sir Charles Vere Ferrers Townshend</attribute>
+	</object>
+	<object>
+		<attribute>General Wapshare</attribute>
+	</object>
+	<object>
+		<attribute>Viscount Motono</attribute>
+	</object>
+	<object>
+		<attribute>M. Bratianu</attribute>
+		<attribute>M. Bratiano</attribute>
+	</object>
+	<object>
+		<attribute>Professor Lambros</attribute>
+	</object>
+	<object>
+		<attribute>M. Jaurès</attribute>
+	</object>
+	<object>
+		<attribute>Sir Edward Carson</attribute>
+		<attribute>Sir E. Carson</attribute>
+	</object>
+	<object>
+		<attribute>Admiral Sims</attribute>
+	</object>
+	<object>
+		<attribute>Mr. Bryan</attribute>
+		<attribute>Lieut.-General Sir Bryan Mahon</attribute>
+	</object>
+	<object>
+		<attribute>Mr. Birrell</attribute>
+	</object>
+	<object>
+		<attribute>Mr. Breitung</attribute>
+	</object>
+	<object>
+		<attribute>M. Millerand</attribute>
+	</object>
+	<object>
+		<attribute>Izzet Pasha</attribute>
+	</object>
+	<object>
+		<attribute>Senhor J. Pinheiro Chagas</attribute>
+	</object>
+	<object>
+		<attribute>Herr von Kuhlmann</attribute>
+		<attribute>Herr Richard von Kuhlmann</attribute>
+		<attribute>Herr von Kühlmann</attribute>
+		<attribute>Richard von Kühlmann</attribute>
+	</object>
+	<object>
+		<attribute>Dr. J. Braga</attribute>
+		<attribute>Dr. Joaquim T. Braga</attribute>
+	</object>
+	<object>
+		<attribute>Admiral Kato</attribute>
+		<attribute>Viscount Kato</attribute>
+	</object>
+	<object>
+		<attribute>Colonel Brits</attribute>
+	</object>
+	<object>
+		<attribute>General Sir Charles Monro</attribute>
+		<attribute>Sir Charles Monro</attribute>
+	</object>
+	<object>
+		<attribute>Major-General Sir H. M. Trenchard</attribute>
+	</object>
+	<object>
+		<attribute>M. Stoyan Protich</attribute>
+	</object>
+	<object>
+		<attribute>Herr Ebert</attribute>
+	</object>
+	<object>
+		<attribute>General Averescu</attribute>
+	</object>
+	<object>
+		<attribute>General F. C. Poole</attribute>
+	</object>
+	<object>
+		<attribute>Prince Lichnowsky</attribute>
+	</object>
+	<object>
+		<attribute>General Shuvaev</attribute>
+	</object>
+	<object>
+		<attribute>General Byelyaev</attribute>
+	</object>
+	<object>
+		<attribute>M. Constantino Arian</attribute>
+		<attribute>M. Arian</attribute>
+	</object>
+	<object>
+		<attribute>General Kaledin</attribute>
+	</object>
+	<object>
+		<attribute>Sir John Eccles Nixon</attribute>
+		<attribute>General Sir John Nixon</attribute>
+		<attribute>General Nixon</attribute>
+	</object>
+	<object>
+		<attribute>General Sarrail</attribute>
+	</object>
+	<object>
+		<attribute>M. Tereshchenko</attribute>
+	</object>
+	<object>
+		<attribute>General Mannerheim</attribute>
+	</object>
+	<object>
+		<attribute>M. Lehrun</attribute>
+	</object>
+	<object>
+		<attribute>Benedict XV</attribute>
+	</object>
+	<object>
+		<attribute>M. Poincaré</attribute>
+	</object>
+	<object>
+		<attribute>Sarim ed Douleh</attribute>
+	</object>
+	<object>
+		<attribute>M. Delcassé</attribute>
+	</object>
+	<object>
+		<attribute>M. Albert Thomas</attribute>
+	</object>
+	<object>
+		<attribute>M. Trepoff</attribute>
+		<attribute>M. Trepov</attribute>
+	</object>
+	<object>
+		<attribute>Sir Horace Plunkett</attribute>
+	</object>
+	<object>
+		<attribute>Baron von Flotow</attribute>
+	</object>
+	<object>
+		<attribute>Sir L. Worthington-Evans</attribute>
+	</object>
+	<object>
+		<attribute>Sir R. Borden</attribute>
+	</object>
+	<object>
+		<attribute>Lord Lansdowne</attribute>
+	</object>
+	<object>
+		<attribute>Mohammed VI</attribute>
+	</object>
+	<object>
+		<attribute>Mr. Gerrard</attribute>
+	</object>
+	<object>
+		<attribute>General Horvat</attribute>
+	</object>
+	<object>
+		<attribute>Mr. Harcourt</attribute>
+	</object>
+	<object>
+		<attribute>Lieut. W. L. Robinson</attribute>
+	</object>
+	<object>
+		<attribute>Count Bernstorff</attribute>
+	</object>
+	<object>
+		<attribute>Vice-Admiral Gauchet</attribute>
+	</object>
+	<object>
+		<attribute>General Ludendorff</attribute>
+		<attribute>General von Ludendorff</attribute>
+	</object>
+	<object>
+		<attribute>Lord Cavan</attribute>
+	</object>
+	<object>
+		<attribute>Count Esterhazy</attribute>
+	</object>
+	<object>
+		<attribute>Count Heinrich Clam-Martinitz</attribute>
+		<attribute>Count Clam-Martinitz</attribute>
+	</object>
+	<object>
+		<attribute>Lord R. Cecil</attribute>
+	</object>
+	<object>
+		<attribute>General Polivanov</attribute>
+	</object>
+	<object>
+		<attribute>M. Venizelos</attribute>
+	</object>
+	<object>
+		<attribute>Lieut.-General Sir Nevil Macready</attribute>
+	</object>
+	<object>
+		<attribute>General Currie</attribute>
+	</object>
+	<object>
+		<attribute>Mr. Lansing</attribute>
+	</object>
+	<object>
+		<attribute>Captain Cromie</attribute>
+	</object>
+	<object>
+		<attribute>Mr. Baker</attribute>
+	</object>
+	<object>
+		<attribute>M. Tonisson</attribute>
+	</object>
+	<object>
+		<attribute>General Hoskins</attribute>
+		<attribute>Major-General Hoskins</attribute>
+	</object>
+	<object>
+		<attribute>General Roques</attribute>
+	</object>
+	<object>
+		<attribute>Said Kalim</attribute>
+	</object>
+	<object>
+		<attribute>King George V.</attribute>
+	</object>
+	<object>
+		<attribute>Dr. von Körber</attribute>
+		<attribute>Dr. E. von Körber</attribute>
+	</object>
+	<object>
+		<attribute>Marquis di San Giuliano</attribute>
+	</object>
+	<object>
+		<attribute>General Bliss</attribute>
+	</object>
+	<object>
+		<attribute>General Coanda</attribute>
+	</object>
+	<object>
+		<attribute>Marquis Okuma</attribute>
+	</object>
+	<object>
+		<attribute>Carl Lody</attribute>
+	</object>
+	<object>
+		<attribute>Lieut. Warneford</attribute>
+		<attribute>Sub-Lieut. R. A. J. Warneford</attribute>
+	</object>
+	<object>
+		<attribute>Mr. Lloyd George</attribute>
+	</object>
+	<object>
+		<attribute>Prince William of Wied</attribute>
+	</object>
+	<object>
+		<attribute>Rear-Admiral Rodman</attribute>
+	</object>
+	<object>
+		<attribute>M. Pasich</attribute>
+	</object>
+	<object>
+		<attribute>M. Sazonov</attribute>
+	</object>
+	<object>
+		<attribute>Signor Orlando</attribute>
+	</object>
+	<object>
+		<attribute>M. Painlevé</attribute>
+	</object>
+	<object>
+		<attribute>Hsu-Shih-Chang</attribute>
+	</object>
+	<object>
+		<attribute>M. Masson</attribute>
+	</object>
+	<object>
+		<attribute>M. Moraczewski</attribute>
+	</object>
+	<object>
+		<attribute>Herr Bauer</attribute>
+	</object>
+	<object>
+		<attribute>Mr. Asquith</attribute>
+	</object>
+	<object>
+		<attribute>M. Barthou</attribute>
+	</object>
+	<object>
+		<attribute>General Gouraud</attribute>
+	</object>
+	<object>
+		<attribute>Count Hertling</attribute>
+	</object>
+	<object>
+		<attribute>General Cadorna</attribute>
+	</object>
+	<object>
+		<attribute>Admiral von Capelle</attribute>
+	</object>
+	<object>
+		<attribute>King of the Hejaz</attribute>
+	</object>
+	<object>
+		<attribute>Major-General Scheuch</attribute>
+	</object>
+	<object>
+		<attribute>M. Ribot</attribute>
+	</object>
+	<object>
+		<attribute>General Sir C. Douglas</attribute>
+	</object>
+	<object>
+		<attribute>General Castelnau</attribute>
+	</object>
+	<object>
+		<attribute>Lord Devonport</attribute>
+	</object>
+	<object>
+		<attribute>Vice-Admiral von Behnke</attribute>
+	</object>
+	<object>
+		<attribute>Sultan of Turkey</attribute>
+	</object>
+	<object>
+		<attribute>Nicholas II</attribute>
+	</object>
+</context>
