@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<project name="Linked Text" basedir=".">
+
+	<property file="ant.properties"/>
+
+	<description>
+		Information extraction from (controlled vocabulary) claims.
+	</description>
+	
+	<target name="claims-nlp">
+		<xslt in="${temp}/claims.xml" out="${temp}/dict-pref.xml" style="xsl/dictionary-map-pref.xsl" force="true"/>
+		<xslt in="${temp}/claims.xml" out="${temp}/dict-part.xml" style="xsl/dictionary-map-part.xsl" force="true"/>
+	</target>
+
+</project>
