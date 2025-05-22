@@ -16,7 +16,7 @@
 </xsl:template>
 
 <xsl:template match="html:div">
-	<xsl:apply-templates select=".//html:p[not(@class = 'date')]"/>
+	<xsl:apply-templates select=".//html:p[not(@class = 'date' or html:span/@class = 'date')]"/>
 </xsl:template>
 
 <xsl:template match="html:p">
