@@ -44,12 +44,12 @@ Make a graph of events linked in time order. Input events must have been sorted 
 		</xsl:choose>
 	</xsl:variable>
 	<!-- 
-		Intervals are open real intervals,  so are "before" their end instant, and we want to link to the first interval
-		with start "greater than or equals" to the end of the current interval.
+		Intervals are open real intervals,  so are "before" their end instant, and we want to link to preceding intervals
+		with start "greater than or equals" and end "less than or equals" to the end of the current interval.
 		
 		For the purposes here, instants are treated as intervals that start and end at the same time.
 	-->
-	<xsl:apply-templates select="preceding-sibling::event[interval[1]/@fm &lt;= current()/interval[1]/@fm and interval[1]/@to &gt;= current()/interval[1]/@to][1]" mode="link">
+	<xsl:apply-templates select="preceding-sibling::event[interval[1]/@fm &lt;= current()/interval[1]/@fm and interval[1]/@to &gt;= current()/interval[1]/@to]" mode="link">
 		<xsl:with-param name="source" select="@uri">
 			<xsl:with-param name="eventType" select="$eventType"/>
 		</xsl:with-param>
@@ -63,15 +63,6 @@ Make a graph of events linked in time order. Input events must have been sorted 
 	<edge source="{$source}" target="{@uri}">
 		<data key="entity"><xsl:value-of select="interval[1]/@datefm"/></data>
 	</edge>
-	<!-- 
-	the same source node should also link to any intervals that start within this interval 
-	 -->
-	<xsl:if test="interval[1]/@fm &lt; interval[1]/@to">
-		<xsl:apply-templates select="following-sibling::event[./interval[1]/@fm &gt;= current()/interval[1]/@fm][./interval[1]/@fm &lt; current()/interval[1]/@to][1]" mode="also">
-			<xsl:with-param name="source" select="$source"/>
-				<xsl:with-param name="limit" select="number(interval[1]/@to)"/>
-		</xsl:apply-templates>	 
-	</xsl:if>	 
 </xsl:template>
 
 
