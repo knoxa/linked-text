@@ -4,7 +4,7 @@
 <xsl:param name="maxpath" select="'15'"/>
 
 <!--
-	The input must be a directed acyclic graph representing a partially order set. This stylesheet removes any edges from the graph that 
+	The input must be a directed acyclic graph representing a partially ordered set. This stylesheet removes any edges from the graph that 
 	aren't covering relations.
  -->
 
