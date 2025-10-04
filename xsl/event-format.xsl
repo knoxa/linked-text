@@ -11,7 +11,8 @@ Extract intervals and instants from RDF/XML
 <xsl:template match="/">
 <temporal>    
 	<xsl:apply-templates select="//time:Instant" />
-	<xsl:apply-templates select="//*[@rdf:about][time:hasBeginning or time:hasEnd]" />
+	<xsl:apply-templates select="//*[@rdf:about][time:hasBeginning or time:hasEnd or time:hasEnd]" />
+	<xsl:apply-templates select="//*[@rdf:about][time:intervalEquals]" />
 </temporal>
 </xsl:template>
 
@@ -35,8 +36,11 @@ Extract intervals and instants from RDF/XML
 </xsl:template>
  -->
 <xsl:template match="*[@rdf:about][time:hasBeginning or time:hasEnd]">
-	<event uri="{@rdf:about}" fm="{normalize-space(time:hasBeginning/time:Instant/time:inXSDDate)}" to="{normalize-space(time:hasEnd/*/time:*)}" type="interval" label="{skos:prefLabel|rdfs:label[1]}"/>
+	<event uri="{@rdf:about}" fm="{normalize-space(time:hasBeginning/*/time:*)}" to="{normalize-space(time:hasEnd/*/time:*)}" type="interval" label="{skos:prefLabel|rdfs:label[1]}"/>
 </xsl:template>
 
+<xsl:template match="*[@rdf:about][time:intervalEquals]">
+	<event uri="{@rdf:about}" fm="{normalize-space(time:intervalEquals/*/time:*[1])}" to="{normalize-space(time:intervalEquals/*/time:*[last()])}" type="interval" label="{skos:prefLabel|rdfs:label[1]}"/>
+</xsl:template>
 
 </xsl:stylesheet>

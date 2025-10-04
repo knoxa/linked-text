@@ -10,6 +10,8 @@
 	
 	<target name="entities">
 		<xslt in="work/events.xml" out="${temp}/entities.xml" style="xsl/entities.xsl" force="true"/>
+		<xslt in="${temp}/entities.xml" out="${temp}/entity-type-map.xml" style="${extract}/map-type.xsl" force="true"/>
+		<xslt in="${temp}/entities.xml" out="${temp}/entity-name-map.xml" style="${extract}/map-name.xsl" force="true"/>
 	</target>
 	
 	<target name="events">
@@ -38,7 +40,6 @@
 	</target>
 	
 	<target name="graph-pruned" depends="graph-entity">
-
 		<xslt in="${temp}/raw.graphml" out="${temp}/selfless.graphml" style="${graph}/filter-self-edge.xsl" force="true"/>
 		<xslt in="${temp}/selfless.graphml" out="${temp}/pruned.graphml" style="${graph}/filter-duplicate-edge.xsl" force="true"/>
 		<xslt in="${temp}/pruned.graphml" out="${temp}/events.graphml" style="${graph}/covers.xsl" force="true"/>
@@ -47,6 +48,15 @@
 	<target name="graph-time">
 		<xslt in="${temp}/filtered.xml" out="${temp}/raw.graphml" style="${chronology}/time-graphml.xsl" force="true"/>
 		<xslt in="${temp}/raw.graphml" out="${temp}/events.graphml" style="${graph}/covers.xsl" force="true"/>
+	</target>
+	
+	<target name="operations">
+		<xslt in="work/operations.xml" out="${temp}/events.xml" style="xsl/work.xsl" force="true"/>
+		<xslt in="${temp}/events.xml" out="${temp}/sortable.xml" style="${chronology}/make-sortable.xsl" force="true"/>
+		<xslt in="${temp}/sortable.xml" out="${temp}/sorted.xml" style="${chronology}/sort.xsl" force="true"/>
+		<xslt in="${temp}/sorted.xml" out="${temp}/filtered.xml" style="filters/op.xsl" force="true"/>
+		<xslt in="${temp}/filtered.xml" out="${temp}/raw.graphml" style="${chronology}/entity-graphml.xsl" force="true"/>
+		<xslt in="${temp}/raw.graphml" out="output/operations.xhtml" style="xsl/report-op.xsl" force="true"/>
 	</target>
 
 </project>

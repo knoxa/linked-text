@@ -6,9 +6,9 @@
 <xsl:import href="../../../xsl/extract/entities.xsl"/>
 
 <xsl:template match="/">
-<temporal>
+<bag>
     <xsl:apply-templates select="//item"/>
-</temporal>
+</bag>
 </xsl:template>
 
 
@@ -17,7 +17,7 @@
 </xsl:template>
 
 
-<xsl:template match="html:span[@class = 'person']">
+<xsl:template match="html:span[@class = 'person' or @class = 'op' or @class = 'vessel' or @class = 'polity']">
 	<xsl:apply-imports/>
 </xsl:template>
 

@@ -126,7 +126,8 @@
 		<xslt in="/D:/GitHub/history/events/formation.xhtml" out="output/aif.txt" style="/D:/GitHub/eleatics/xsl-utils/rdfa-ntriples.xsl" force="yes"/>
 	-->
 	<target name="part-of">
-		<xslt in="/D:/GitHub/history/events/formation.xhtml" out="output/aif.txt" style="xsl/state-rdfa.xsl" force="yes"/>
+		<xslt in="/D:/GitHub/history/events/formation.xhtml" out="output/filtered.xhtml" style="xsl/filter/unit.xsl" force="yes"/>
+		<xslt in="output/filtered.xhtml" out="output/aif.txt" style="xsl/state-rdfa.xsl" force="yes"/>
 	</target>
 	<target name="part-of-rdf">
 		<xslt in="/C:/workspaces/development/LookingGlassCakes/dump1.xml" out="output/collect.xml" style="xsl/rdfstate.xsl" force="yes"/>
@@ -138,8 +139,48 @@
 	<target name="part-of-chrono">
 		<xslt in="/D:/GitHub/history/events/formation.xhtml" out="output/temp.xml" style="xsl/chronology.xsl" force="yes"/>
 	</target>
+	<target name="part-of-composition">
+		<xslt in="/C:/workspaces/development/LookingGlassCakes/dump1.xml" out="output/map.xml" style="xsl/rdfparts.xsl" force="yes"/>
+	</target>
 	
+	<target name="terms">
+		<xslt in="/D:/GitHub/history/events/formation.xhtml" out="output/terms.txt" style="xsl/terms.xsl" force="yes"/>
+	</target>
+
 	<!--
 		conflict events
 	-->
+	
+	<target name="event-rdf">
+		<xslt in="/D:/GitHub/history/events/conflict/ww2/normandy.xhtml" out="output/aif.txt" style="/D:/GitHub/eleatics/xsl-utils/rdfa-ntriples.xsl" force="yes"/>
+	</target>
+
+	<!--
+		Add MD5 hash
+	-->
+	<target name="hash">
+		<xslt in="/D:/Tigers/database/ADVERTISER/advertiser.xhtml" out="/D:/Tigers/database/ADVERTISER/hash.xhtml" style="xsl/add-hash.xsl" force="yes"/>
+	</target>
+
+	<!--
+	
+	Cleanup XHTML documents
+	
+	-->
+	<target name="format">
+		<xslt in="/C:/workspaces/development/Tigers/output/content.xhtml" out="output/contents.xhtml" style="xsl/html/fold.xsl" force="yes"/>
+	</target>
+
+	<target name="battle-honours">
+		<xslt in="/D:/GitHub/history/battle-honours/battle-honours-pre-ww1.xhtml" out="output/out.txt" style="/D:/GitHub/history/battle-honours/list.xsl" force="yes"/>
+	</target>
+
+	<target name="instants">
+		<xslt in="/D:/GitHub/history/units/reforms.xhtml" out="output/collect.xml" style="xsl/reforms.xsl" force="yes"/>
+	    <xslt in="output/collect.xml" out="output/temporal.xml" style="xsl/chronology/sort.xsl" force="yes"/>
+	    <xslt in="output/temporal.xml" out="output/events-raw.graphml" style="xsl/chronology/time-graphml.xsl" force="yes"/>
+		<xslt in="output/events-raw.graphml" out="output/events-raw2.graphml" style="xsl/graphml/filter-duplicate-edge.xsl" force="yes"/>
+		<xslt in="output/events-raw2.graphml" out="output/events.graphml" style="xsl/graphml/covers.xsl" force="yes"/>
+	</target>
+
 </project>

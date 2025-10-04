@@ -17,6 +17,7 @@
 	<event uri="{@rdf:about}" label="{rdfs:label}">
 		<text><xsl:value-of select="rdfs:label"/></text>
 		<xsl:apply-templates select="time:inside" mode="inside"/>
+		<xsl:apply-templates select="skos:related"/>
 	</event>
 </xsl:template>
 
@@ -95,6 +96,10 @@
 		</xsl:call-template>
 	</xsl:variable>	
 	<interval fm="{$fm}" to="{$to}"/>	
+</xsl:template>
+
+<xsl:template match="skos:related">
+	<entity uri="{@rdf:resource}"><xsl:value-of select="@rdf:resource"/></entity>
 </xsl:template>
 
 </xsl:stylesheet>
