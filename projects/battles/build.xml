@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+
+<project name="Battle Honours" basedir=".">
+
+	<property file="ant.properties" />
+
+	<description>
+		Battle Honours of the British and Imperial Armies.
+	</description>
+
+	<target name="fetch">
+		<get src="https://tigersmuseum.github.io/history/battle-honours/battle-honours-ww1.xhtml" dest="${temp}/battle-honours-ww1.xhtml"/>
+	</target>
+	
+	<target name="events">
+		<xslt in="${temp}/battle-honours-ww1.xhtml" out="${temp}/events.xml" style="xsl/events-bh.xsl" force="true" />
+		<xslt in="${temp}/events.xml" out="${temp}/sortable.xml" style="${chronology}/make-sortable.xsl" force="true"/>
+		<xslt in="${temp}/sortable.xml" out="${temp}/sorted.xml" style="${chronology}/sort.xsl" force="true"/>
+		<xslt in="${temp}/sorted.xml" out="${temp}/ordered.xml" style="${chronology}/event-order.xsl" force="true"/>
+		<xslt in="${temp}/ordered.xml" out="${temp}/events.graphml" style="${chronology}/order-graphml.xsl" force="true"/>
+	</target>
+
+	<target name="partitioned">
+		<xslt in="${temp}/sorted.xml" out="${temp}/partitioned.xml" style="${chronology}/partition.xsl" force="true"/>
+		<xslt in="${temp}/partitioned.xml" out="${temp}/ordered.xml" style="${chronology}/event-order.xsl" force="true"/>
+		<xslt in="${temp}/ordered.xml" out="${temp}/events.graphml" style="${chronology}/order-graphml.xsl" force="true"/>
+	</target>
+	
+</project>
