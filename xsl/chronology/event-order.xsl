@@ -18,12 +18,16 @@
 		<xsl:copy-of select="@*"/>
 		<xsl:apply-templates select="//event" mode="node"/>
 		<xsl:apply-templates select="*" mode="edge"/>
+		<xsl:apply-templates select="//partition" mode="state"/>
 	</xsl:copy>
 </xsl:template>
 
 
 <xsl:template match="event" mode="node">
-	<xsl:copy-of select="."/>
+	<xsl:if test="not(preceding::event[./@uri = current()/@uri])">
+	<!-- need to check because same node may appear in more than one partition -->
+		<xsl:copy-of select="."/>
+	</xsl:if>
 </xsl:template>
 
 
@@ -90,6 +94,18 @@
 
 <xsl:template match="partition" mode="edge">
 	<xsl:apply-templates select="*" mode="edge"/>
+</xsl:template>
+
+
+<xsl:template match="partition" mode="state">
+	<!-- 
+		Make the last event in a partition link to itself.
+		If the nodes are about changes in the state of an entity, then the links are the entity.
+	 -->
+	<xsl:variable name="reason" select="@name"/>
+	<xsl:for-each select="./event[last()]">
+		<link fm="{@uri}" to="{@uri}" reason="{$reason}"/>
+	</xsl:for-each>
 </xsl:template>
 
 
