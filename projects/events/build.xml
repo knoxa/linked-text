@@ -3,60 +3,57 @@
 <project name="Events of World War I" basedir=".">
 
 	<property file="ant.properties"/>
+	
+	<import file="../build-common.xml"/>
 
 	<description>
 		Information Extraction from WW1 Chronologies.
 	</description>
 	
-	<target name="entities">
-		<xslt in="work/events.xml" out="${temp}/entities.xml" style="xsl/entities.xsl" force="true"/>
-		<xslt in="${temp}/entities.xml" out="${temp}/entity-type-map.xml" style="${extract}/map-type.xsl" force="true"/>
-		<xslt in="${temp}/entities.xml" out="${temp}/entity-name-map.xml" style="${extract}/map-name.xsl" force="true"/>
-	</target>
 	
-	<target name="events">
-		<xslt in="work/events.xml" out="${temp}/events.xml" style="xsl/work.xsl" force="true"/>
-	</target>
-	
-	<target name="events-sort" depends="events">
-		<xslt in="${temp}/events.xml" out="${temp}/sortable.xml" style="${chronology}/make-sortable.xsl" force="true"/>
-		<xslt in="${temp}/sortable.xml" out="${temp}/sorted.xml" style="${chronology}/sort.xsl" force="true"/>
-	</target>
-	
-	<target name="vessels" depends="events">
-		<xslt in="${temp}/events.xml" out="${temp}/filtered.xml" style="filters/maritime.xsl" force="true"/>
-	</target>
-	
-	<target name="china" depends="events-sort">
+	<target name="china" depends="events, events-sort">
 		<xslt in="${temp}/sorted.xml" out="${temp}/filtered.xml" style="filters/china.xsl" force="true"/>
 	</target>
 	
-	<target name="polity" depends="events-sort">
+	<target name="polity" depends="events, events-sort">
 		<xslt in="${temp}/sorted.xml" out="${temp}/filtered.xml" style="filters/polity.xsl" force="true"/>
 	</target>
 	
 	<target name="graph-entity">
-		<xslt in="${temp}/filtered.xml" out="${temp}/raw.graphml" style="${chronology}/entity-graphml.xsl" force="true"/>
+		<xslt in="${temp}/filtered.xml" out="${temp}/ordered.xml" style="${chronology}/event-order.xsl" force="true"/>
+		<xslt in="${temp}/ordered.xml" out="${temp}/events.graphml" style="${chronology}/order-graphml.xsl" force="true"/>
 	</target>
 	
-	<target name="graph-pruned" depends="graph-entity">
-		<xslt in="${temp}/raw.graphml" out="${temp}/selfless.graphml" style="${graph}/filter-self-edge.xsl" force="true"/>
-		<xslt in="${temp}/selfless.graphml" out="${temp}/pruned.graphml" style="${graph}/filter-duplicate-edge.xsl" force="true"/>
-		<xslt in="${temp}/pruned.graphml" out="${temp}/events.graphml" style="${graph}/covers.xsl" force="true"/>
-	</target>
 	
-	<target name="graph-time">
-		<xslt in="${temp}/filtered.xml" out="${temp}/raw.graphml" style="${chronology}/time-graphml.xsl" force="true"/>
-		<xslt in="${temp}/raw.graphml" out="${temp}/events.graphml" style="${graph}/covers.xsl" force="true"/>
-	</target>
+	<!-- Vessels -->
 	
-	<target name="operations">
-		<xslt in="work/operations.xml" out="${temp}/events.xml" style="xsl/work.xsl" force="true"/>
-		<xslt in="${temp}/events.xml" out="${temp}/sortable.xml" style="${chronology}/make-sortable.xsl" force="true"/>
-		<xslt in="${temp}/sortable.xml" out="${temp}/sorted.xml" style="${chronology}/sort.xsl" force="true"/>
-		<xslt in="${temp}/sorted.xml" out="${temp}/filtered.xml" style="filters/op.xsl" force="true"/>
-		<xslt in="${temp}/filtered.xml" out="${temp}/raw.graphml" style="${chronology}/entity-graphml.xsl" force="true"/>
-		<xslt in="${temp}/raw.graphml" out="output/operations.xhtml" style="xsl/report-op.xsl" force="true"/>
+	<target name="vessels" depends="vessels-prep, order, draw"/>
+	
+	<target name="vessels-prep" depends="events, events-sort">
+		<xslt in="${temp}/sorted.xml" out="${temp}/filtered.xml" style="filters/maritime.xsl" force="true"/>
+		<xslt in="${temp}/filtered.xml" out="${temp}/prepared.xml" style="${chronology}/partition.xsl" force="true"/>
 	</target>
 
+	
+	<!-- Operations -->
+	
+	<target name="operations-html" depends="operations-work, events-sort, operations-prep, order, draw">
+		<xslt in="${temp}/ordered.xml" out="output/operations.xhtml" style="xsl/report-op.xsl" force="true"/>
+	</target>
+	
+	<target name="operations-work">
+		<xslt in="work/operations.xml" out="${temp}/events.xml" style="xsl/work.xsl" force="true"/>
+	</target>
+	
+	<target name="operations-prep">
+		<xslt in="${temp}/sorted.xml" out="${temp}/filtered.xml" style="filters/op.xsl" force="true"/>
+		<xslt in="${temp}/filtered.xml" out="${temp}/prepared.xml" style="${chronology}/partition.xsl" force="true"/>
+	</target>
+
+	<target name="operations-graph" depends="operations-graph-prep, events-sort, prepare-null, order, draw"/>
+
+	<target name="operations-graph-prep">
+		<xslt in="output/operations.xhtml" out="${temp}/events.xml" style="xsl/html-event.xsl" force="true"/>
+	</target>
+	
 </project>

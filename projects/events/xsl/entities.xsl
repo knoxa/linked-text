@@ -17,7 +17,7 @@
 </xsl:template>
 
 
-<xsl:template match="html:span[@class = 'person' or @class = 'op' or @class = 'vessel' or @class = 'polity']">
+<xsl:template match="html:span[@class != 'date' and @class != 'ref']">
 	<xsl:apply-imports/>
 </xsl:template>
 
