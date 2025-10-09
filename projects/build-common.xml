@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+
+<project name="Common" basedir=".">
+
+	<description>
+		Component tasks
+	</description>
+	
+	<target name="entities">
+		<xslt in="work/events.xml" out="${temp}/entities.xml" style="xsl/entities.xsl" force="true"/>
+		<xslt in="${temp}/entities.xml" out="${temp}/entity-type-map.xml" style="${extract}/map-type.xsl" force="true"/>
+		<xslt in="${temp}/entities.xml" out="${temp}/entity-name-map.xml" style="${extract}/map-name.xsl" force="true"/>
+	</target>
+
+	<target name="events">
+		<xslt in="work/events.xml" out="${temp}/events.xml" style="xsl/work.xsl" force="true"/>
+	</target>
+
+	<target name="events-sort">
+		<xslt in="${temp}/events.xml" out="${temp}/sortable.xml" style="${chronology}/make-sortable.xsl" force="true"/>
+		<xslt in="${temp}/sortable.xml" out="${temp}/sorted.xml" style="${chronology}/sort.xsl" force="true"/>
+	</target>
+	
+	<target name="prepare-null">
+		<copy file="${temp}/sorted.xml" tofile="${temp}/prepared.xml" force="true"/>
+	</target>
+
+	<target name="order">
+		<xslt in="${temp}/prepared.xml" out="${temp}/ordered.xml" style="${chronology}/event-order.xsl" force="true"/>
+	</target>
+
+	<target name="draw">
+		<xslt in="${temp}/ordered.xml" out="${temp}/events.graphml" style="${chronology}/order-graphml.xsl" force="true"/>
+	</target>
+
+</project>
