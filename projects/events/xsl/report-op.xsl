@@ -21,9 +21,7 @@
 	</head>
 	<body>
 		<h1>Principle Events 1914-1918: Military Operations</h1>
-		<table>
-			<xsl:apply-templates select="//link[@fm = @to]"/>
-		</table>
+		<xsl:apply-templates select="//link[@fm = @to]"/>
 	</body>
 </html>
 </xsl:template>
@@ -31,17 +29,19 @@
 
 <xsl:template match="link[@fm = @to]">
 	<xsl:variable name="opname" select="@reason"/>
-	<tr>
-		<td class="op" colspan="2"><xsl:value-of select="$opname"/></td>
-	</tr>
-	<xsl:apply-templates select="." mode="trace"/>
-	<xsl:apply-templates select="//event[./@uri = current()/@to]"/>
+	<table>
+		<tr>
+			<td class="op" colspan="2"><xsl:value-of select="$opname"/></td>
+		</tr>
+		<xsl:apply-templates select="." mode="trace"/>
+		<xsl:apply-templates select="//event[./@uri = current()/@to]"/>
+	</table>
 </xsl:template>
 
 <xsl:template match="link" mode="trace">
 	<xsl:choose>
-		<xsl:when test="//link[./@to = current()/@fm and ./@fm != current()/@fm and text  = current()/text][1]">
-			<xsl:apply-templates select="//link[./@to != ./@fm and ./@to = current()/@fm and ./text  = current()/text][1]" mode="trace"/>
+		<xsl:when test="//link[./@to = current()/@fm and ./@fm != current()/@fm and @reason = current()/@reason][1]">
+			<xsl:apply-templates select="//link[./@to != ./@fm and ./@to = current()/@fm and ./@reason = current()/@reason][1]" mode="trace"/>
 		</xsl:when>
 		<xsl:otherwise>
 			<xsl:apply-templates select="//event[./@uri = current()/@fm]"/>
