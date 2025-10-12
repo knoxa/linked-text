@@ -13,6 +13,9 @@
 	</target>
 	
 	<target name="events">
+	<!--
+		Get the "campaigns" from Battle Honours XHTML and make a partial order of events in time.
+	-->
 		<xslt in="${temp}/battle-honours-ww1.xhtml" out="${temp}/events.xml" style="xsl/events-bh.xsl" force="true" />
 		<xslt in="${temp}/events.xml" out="${temp}/sortable.xml" style="${chronology}/make-sortable.xsl" force="true"/>
 		<xslt in="${temp}/sortable.xml" out="${temp}/sorted.xml" style="${chronology}/sort.xsl" force="true"/>
@@ -21,6 +24,11 @@
 	</target>
 
 	<target name="partitioned">
+	<!--
+		The source battle honours are grouped by div elements into theatres of operation.
+		The events extracted from the XHTML have the id of the div element containing them as an entity of type "theatre".
+		Partition by this entity and draw the graph so that each "theatre" is a different graph component.
+	-->
 		<xslt in="${temp}/sorted.xml" out="${temp}/partitioned.xml" style="${chronology}/partition.xsl" force="true"/>
 		<xslt in="${temp}/partitioned.xml" out="${temp}/ordered.xml" style="${chronology}/event-order.xsl" force="true"/>
 		<xslt in="${temp}/ordered.xml" out="${temp}/events.graphml" style="${chronology}/order-graphml.xsl" force="true"/>
