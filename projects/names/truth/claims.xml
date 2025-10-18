@@ -52,6 +52,11 @@
 		<attribute>Sir William Robertson</attribute>
 	</object>
 	<object
+		name="&quot;Sir W. R. Marshall&quot; is the same person as &quot;Sir William Raine Marshall&quot;.">
+		<attribute>General Sir W. Robertson</attribute>
+		<attribute>Sir William Robertson</attribute>
+	</object>
+	<object
 		name="&quot;Dr. J. de Castro&quot; is the same person as &quot;Dr. Jose de Castro&quot;.">
 		<attribute>Dr. J. de Castro</attribute>
 		<attribute>Dr. Jose de Castro</attribute>

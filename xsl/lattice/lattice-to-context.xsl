@@ -16,7 +16,7 @@
 	</object>
 </xsl:template>
 
-<xsl:template match="extent" mode="attributes">
+<xsl:template match="concept" mode="attributes">
 	<xsl:call-template name="getConceptAttributes"/>
 </xsl:template>
 

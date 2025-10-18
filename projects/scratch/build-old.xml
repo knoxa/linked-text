@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+
+<project name="Disambiguating person names (from Events of World War I)" basedir=".">
+
+	<property file="ant.properties"/>
+
+	<description>
+		Disambiguating person names.
+	</description>
+	
+	<target name="lattice-up">
+		<xslt in="/C:/workspaces/development/LookingGlassCakes/lattice.xml" out="/C:/workspaces/development/Tigers/output/context.xml" style="${lattice}/names.xsl" force="true"/>
+	</target>
+	
+	<target name="lattice-down">
+		<xslt in="results/lattice/normal.xml" out="results/hypothesis/normal.xml" style="${lattice}/down.xsl" force="true">
+			<param name="prefix" expression="N"/>
+		</xslt>
+		<xslt in="results/lattice/soundex.xml" out="results/hypothesis/soundex.xml" style="${lattice}/down.xsl" force="true">
+			<param name="prefix" expression="S"/>
+		</xslt>
+		<xslt in="results/lattice/metaphone.xml" out="results/hypothesis/metaphone.xml" style="${lattice}/down.xsl" force="true">
+			<param name="prefix" expression="M"/>
+		</xslt>
+	</target>
+	
+	<target name="lattice-facts">
+		<xslt in="/C:/workspaces/development/LookingGlassCakes/lattice.xml" out="/C:/workspaces/development/Tigers/output/context.xml" style="${lattice}/facts.xsl" force="true"/>
+	</target>
+	
+	<target name="lattice-scratch">
+		<xslt in="/C:/workspaces/development/LookingGlassCakes/lattice.xml" out="${temp}/scratch.xml" style="${lattice}/scratch.xsl" force="true"/>
+	</target>
+	
+	<target name="lattice-assert">
+		<xslt in="/C:/workspaces/development/LookingGlassCakes/lattice.xml" out="${temp}/scratch.xml" style="${lattice}/assert.xsl" force="true"/>
+	</target>
+	
+	<target name="lattice-meet">
+		<xslt in="${temp}/scratch.xml" out="${temp}/meet.xml" style="${lattice}/scratch-meet.xsl" force="true"/>
+	</target>
+
+	<target name="FCA">
+		<xslt in="${temp}/filtered.xml" out="/C:/workspaces/development/Tigers/output/context.xml" style="${extract}/context.xsl" force="true"/>
+	</target>
+	
+	<target name="lattice-agree">
+		<xslt in="/C:/workspaces/development/LookingGlassCakes/lattice.xml" out="results/agreement.xml" style="${lattice}/agree.xsl" force="true">
+			<param name="numAgents" expression="3"/>
+		</xslt>
+	</target>
+	
+	<target name="lattice-isomorphic">
+		<xslt in="/C:/workspaces/development/LookingGlassCakes/lattice.xml" out="${temp}/context-a2.xml" style="${lattice}/isomorphic.xsl" force="true"/>
+	</target>
+	
+	<target name="lattice-edit">
+		<xslt in="${temp}/resolved.graphml" out="${temp}/result.xml" style="${lattice}/graphml-to-xml.xsl" force="true"/>
+	</target>
+	
+	<target name="apply-edit" depends="lattice-edit">
+		<xslt in="/C:/workspaces/development/LookingGlassCakes/lattice.xml" out="${temp}/edited.xml" style="${temp}/result.xml" force="true"/>
+		<xslt in="${temp}/edited.xml" out="/C:/workspaces/development/Tigers/output/context.xml" style="${lattice}/lattice-to-context.xsl" force="true"/>
+	</target>
+	
+	<target name="lattice-x">
+		<xslt in="${temp}/copy.graphml" out="${temp}/lattice-x.xml" style="${lattice}/graphml-to-lattice.xsl" force="true"/>
+	</target>
+	
+	<target name="merge">
+		<xslt in="work/contexts.xml" out="results/hypothesis/multiagent.xml" style="xsl/merge.xsl" force="true"/>
+	</target>
+
+</project>

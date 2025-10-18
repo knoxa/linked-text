@@ -10,6 +10,17 @@
 		Information Extraction from WW1 Chronologies.
 	</description>
 	
+	<!-- Data Preparation -->
+	
+	<target name="entities">
+		<xslt in="work/events.xml" out="${temp}/entities.xml" style="xsl/entities.xsl" force="true"/>
+		<xslt in="${temp}/entities.xml" out="${results}/entity-type-map.xml" style="${extract}/map-type.xsl" force="true"/>
+		<xslt in="${temp}/entities.xml" out="${results}/entity-name-map.xml" style="${extract}/map-name.xsl" force="true"/>
+	</target>
+
+	<target name="events">
+		<xslt in="work/events.xml" out="${temp}/events.xml" style="xsl/work.xsl" force="true"/>
+	</target>	
 	
 	<target name="china" depends="events, events-sort">
 		<xslt in="${temp}/sorted.xml" out="${temp}/filtered.xml" style="filters/china.xsl" force="true"/>

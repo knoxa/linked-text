@@ -7,7 +7,7 @@
 -->
 	<xsl:copy-of select=".//attribute"/>
 	<xsl:for-each select="//edge[./@from = current()/@id]">
-		<xsl:for-each select="//extent[./@id = current()/@to]">
+		<xsl:for-each select="//concept[./@id = current()/@to]">
 			<xsl:call-template name="getConceptAttributes"/>
 		</xsl:for-each>
 	</xsl:for-each>
@@ -20,7 +20,7 @@
 -->
 	<xsl:copy-of select=".//object"/>
 	<xsl:for-each select="//edge[./@to = current()/@id]">
-		<xsl:for-each select="//extent[./@id = current()/@from]">
+		<xsl:for-each select="//concept[./@id = current()/@from]">
 			<xsl:call-template name="getConceptObjects"/>
 		</xsl:for-each>
 	</xsl:for-each>
@@ -33,7 +33,7 @@
 -->
 	<xsl:copy-of select=".//attribute"/>
 	<xsl:for-each select="//edge[./@to = current()/@id]">
-		<xsl:for-each select="//extent[./@id = current()/@from]">
+		<xsl:for-each select="//concept[./@id = current()/@from]">
 			<xsl:call-template name="getAttributesBelow"/>
 		</xsl:for-each>
 	</xsl:for-each>

@@ -2,6 +2,10 @@
 
 <xsl:output method="xml" encoding="utf-8" />
 
+<!-- 
+	Make objects ...
+ -->
+
 <xsl:template match="lattice">
 <context>
 	<xsl:apply-templates select="//extent" mode="roots"/>
@@ -10,11 +14,13 @@
 
 <xsl:template match="extent" mode="roots">
 	<xsl:if test="not(//edge[@to = current()/@id])">
+		<!-- No incoming edges -->
 		<xsl:apply-templates select="." mode="find"/>
 	</xsl:if>
 </xsl:template>
 
 <xsl:template match="extent[attribute]" mode="find">
+	<!-- Make an object.  -->
 	<object name="{@id}">
 		<xsl:apply-templates select="." mode="attributes"/>
 	</object>
@@ -26,6 +32,7 @@
 </xsl:template>
 
 <xsl:template match="extent" mode="attributes">
+	<!-- Copy attributes into the current object, and continue down -->
 	<xsl:copy-of select=".//attribute"/>
 	<xsl:apply-templates select="//edge[./@from = current()/@id]" mode="follow"/>
 </xsl:template>
