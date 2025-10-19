@@ -8,4 +8,4 @@
 
 ## Results
 
-* [Military Operations](output/operations.xhtml)
+* [Military Operations](results/operations.xhtml)
