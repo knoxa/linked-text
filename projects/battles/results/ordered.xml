@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?><temporal xmlns:html="http://www.w3.org/1999/xhtml">
+<event uri="#N66332" fm="1914-08-04" to="1918-11-11">
+<text>Service in France and Flanders 1914-1918</text>
+<entity type="theatre">france-flanders</entity>
+<interval fm="19140804" to="19181111"/>
+</event>
+<event uri="#N65589" fm="1914-08-23" to="1914-09-05">
+<text>The Retreat from Mons</text>
+<entity type="theatre">france-flanders</entity>
+<interval fm="19140823" to="19140905"/>
+</event>
+<event uri="#N65617" fm="1914-09-07" to="1914-09-15">
+<text>The Advance to the Aisne</text>
+<entity type="theatre">france-flanders</entity>
+<interval fm="19140907" to="19140915"/>
+</event>
+<event uri="#N65642" fm="1914-10-10" to="1914-11-11">
+<text>Operations in Flanders 1914</text>
+<entity type="theatre">france-flanders</entity>
+<interval fm="19141010" to="19141111"/>
+</event>
+<event uri="#N65682" fm="1914-11-23" to="1915-01-25">
+<text>Winter Operations 1914-15</text>
+<entity type="theatre">france-flanders</entity>
+<interval fm="19141123" to="19150125"/>
+</event>
+<event uri="#N65707" fm="1915-03-10" to="1915-10-08">
+<text>Summer Operations 1915</text>
+<entity type="theatre">france-flanders</entity>
+<interval fm="19150310" to="19151008"/>
+</event>
+<event uri="#N65759" fm="1916-06-02" to="1916-06-13">
+<text>Local Operations 1916</text>
+<entity type="theatre">france-flanders</entity>
+<interval fm="19160602" to="19160613"/>
+</event>
+<event uri="#N65781" fm="1916-07-01" to="1916-11-18">
+<text>Operations on the Somme</text>
+<entity type="theatre">france-flanders</entity>
+<interval fm="19160701" to="19161118"/>
+</event>
+<event uri="#N65842" fm="1917-03-17" to="1917-03-17">
+<text>German Retreat to the Hindenburg Line</text>
+<entity type="theatre">france-flanders</entity>
+<interval fm="19170317" to="19170317"/>
+</event>
+<event uri="#N65860" fm="1917-04-09" to="1917-05-04">
+<text>The Arras Offensive</text>
+<entity type="theatre">france-flanders</entity>
+<interval fm="19170409" to="19170504"/>
+</event>
+<event uri="#N65909" fm="1917-04-11" to="1917-05-17">
+<text>Flanking Operations round Bullecourt</text>
+<entity type="theatre">france-flanders</entity>
+<interval fm="19170411" to="19170517"/>
+</event>
+<event uri="#N65953" fm="1917-06-07" to="1917-11-10">
+<text>The Flanders Offensive</text>
+<entity type="theatre">france-flanders</entity>
+<interval fm="19170607" to="19171110"/>
+</event>
+<event uri="#N65891" fm="1917-06-28" to="1917-06-28">
+<text>Capture of Oppy Wood</text>
+<entity type="theatre">france-flanders</entity>
+<interval fm="19170628" to="19170628"/>
+</event>
+<event uri="#N65931" fm="1917-08-15" to="1917-08-25">
+<text>Flanking Operations towards Lens</text>
+<entity type="theatre">france-flanders</entity>
+<interval fm="19170815" to="19170825"/>
+</event>
+<event uri="#N65999" fm="1917-11-20" to="1917-12-03">
+<text>The Cambrai Operations</text>
+<entity type="theatre">france-flanders</entity>
+<interval fm="19171120" to="19171203"/>
+</event>
+<event uri="#N66021" fm="1918-03-21" to="1918-04-05">
+<text>The German Offensive in Picardy</text>
+<entity type="theatre">france-flanders</entity>
+<interval fm="19180321" to="19180405"/>
+</event>
+<event uri="#N66104" fm="1918-04-09" to="1918-04-29">
+<text>The German Offensive in Flanders</text>
+<entity type="theatre">france-flanders</entity>
+<interval fm="19180409" to="19180429"/>
+</event>
+<event uri="#N66064" fm="1918-04-24" to="1918-04-25">
+<text>Actions of Villers Bretonneux</text>
+<entity type="theatre">france-flanders</entity>
+<interval fm="19180424" to="19180425"/>
+</event>
+<event uri="#N66147" fm="1918-05-27" to="1918-06-06">
+<text>The German Offensive in Champagne</text>
+<entity type="theatre">france-flanders</entity>
+<interval fm="19180527" to="19180606"/>
+</event>
+<event uri="#N66086" fm="1918-07-04" to="1918-07-04">
+<text>Capture of Hamel</text>
+<entity type="theatre">france-flanders</entity>
+<interval fm="19180704" to="19180704"/>
+</event>
+<event uri="#N66175" fm="1918-07-20" to="1918-08-02">
+<text>The Counter Attack in Champagne</text>
+<entity type="theatre">france-flanders</entity>
+<interval fm="19180720" to="19180802"/>
+</event>
+<event uri="#N66203" fm="1918-08-21" to="1918-09-03">
+<text>The Advance in Picardy</text>
+<entity type="theatre">france-flanders</entity>
+<interval fm="19180821" to="19180903"/>
+</event>
+<event uri="#N66243" fm="1918-08-26" to="1918-10-09">
+<text>The Breaking of the Hindenburg Line</text>
+<entity type="theatre">france-flanders</entity>
+<interval fm="19180826" to="19181009"/>
+</event>
+<event uri="#N66292" fm="1918-09-29" to="1918-11-11">
+<text>The Final Advance</text>
+<entity type="theatre">france-flanders</entity>
+<interval fm="19180929" to="19181111"/>
+</event>
+<event uri="#N67859" fm="1914-08-04" to="1918-11-11">
+<text>Service by Volunteers</text>
+<entity type="theatre">volunteers</entity>
+<interval fm="19140804" to="19181111"/>
+</event>
+<event uri="#N67830" fm="1914-08-06" to="1916-02-17">
+<text>Service in the Cameroons 1914-16</text>
+<entity type="theatre">cameroons</entity>
+<interval fm="19140806" to="19160217"/>
+</event>
+<event uri="#N67761" fm="1914-08-08" to="1914-08-26">
+<text>Advance to Kamina</text>
+<entity type="theatre">cameroons</entity>
+<interval fm="19140808" to="19140826"/>
+</event>
+<event uri="#N67783" fm="1914-08-08" to="1914-08-26">
+<text>Duala Operations</text>
+<entity type="theatre">cameroons</entity>
+<interval fm="19140808" to="19140826"/>
+</event>
+<event uri="#N67805" fm="1915-05-31" to="1915-11-06">
+<text>Operations for the Central Plateau</text>
+<entity type="theatre">cameroons</entity>
+<interval fm="19150531" to="19151106"/>
+</event>
+<event uri="#N67885" fm="1914-08-06" to="1916-02-17">
+<text>Service out of Canada 1914-18</text>
+<entity type="theatre">outofcanada</entity>
+<interval fm="19140806" to="19160217"/>
+</event>
+<event uri="#N67648" fm="1914-08-15" to="1918-11-25">
+<text>Service in East Africa 1914-18</text>
+<entity type="theatre">africa-e</entity>
+<interval fm="19140815" to="19181125"/>
+</event>
+<event uri="#N67601" fm="1916-01-03" to="1916-01-04">
+<text>Advance to the Rufiji</text>
+<entity type="theatre">africa-e</entity>
+<interval fm="19160103" to="19160104"/>
+</event>
+<event uri="#N67579" fm="1916-03-05" to="1916-03-21">
+<text>Kilimanjaro Operations</text>
+<entity type="theatre">africa-e</entity>
+<interval fm="19160305" to="19160321"/>
+</event>
+<event uri="#N67623" fm="1917-07-19" to="1917-10-19">
+<text>Operations in the Kilwa and Lindi Areas, and advance to the Portuguese Frontier</text>
+<entity type="theatre">africa-e</entity>
+<interval fm="19170719" to="19171019"/>
+</event>
+<event uri="#N67729" fm="1914-08-20" to="1915-07-09">
+<text>Service in South-West Africa 1914-15</text>
+<entity type="theatre">africa-sw</entity>
+<interval fm="19140820" to="19150709"/>
+</event>
+<event uri="#N67707" fm="1915-04-25" to="1915-04-26">
+<text>Southern Operations</text>
+<entity type="theatre">africa-sw</entity>
+<interval fm="19150425" to="19150426"/>
+</event>
+<event uri="#N67553" fm="1914-09-12" to="1914-09-21">
+<text>Operations of the Australian Naval and Military Expeditionary Force</text>
+<entity type="theatre">pacific</entity>
+<interval fm="19140912" to="19140921"/>
+</event>
+<event uri="#N67527" fm="1914-09-23" to="1914-11-07">
+<text>Siege of Tsing-Tau</text>
+<entity type="theatre">china</entity>
+<interval fm="19140923" to="19141107"/>
+</event>
+<event uri="#N67028" fm="1914-11-06" to="1915-04-14">
+<text>Basra Operations</text>
+<entity type="theatre">mesopotamia</entity>
+<interval fm="19141106" to="19150414"/>
+</event>
+<event uri="#N67071" fm="1914-11-06" to="1916-04-28">
+<text>Advance on Baghdad 1915</text>
+<entity type="theatre">mesopotamia</entity>
+<interval fm="19141106" to="19160428"/>
+</event>
+<event uri="#N67206" fm="1914-11-06" to="1918-10-31">
+<text>Service in Mesopotamia 1914-18</text>
+<entity type="theatre">mesopotamia</entity>
+<interval fm="19141106" to="19181031"/>
+</event>
+<event uri="#N67053" fm="1915-09-28" to="1915-09-28">
+<text>Advance up the Tigris 1915</text>
+<entity type="theatre">mesopotamia</entity>
+<interval fm="19150928" to="19150928"/>
+</event>
+<event uri="#N67096" fm="1916-01-04" to="1916-04-24">
+<text>Attempts to relieve Kut</text>
+<entity type="theatre">mesopotamia</entity>
+<interval fm="19160104" to="19160424"/>
+</event>
+<event uri="#N67118" fm="1917-01-09" to="1917-02-24">
+<text>The Operations for the Capture of Kut</text>
+<entity type="theatre">mesopotamia</entity>
+<interval fm="19170109" to="19170224"/>
+</event>
+<event uri="#N67140" fm="1917-02-25" to="1917-04-30">
+<text>Operations for the consolidation of the position at Baghdad</text>
+<entity type="theatre">mesopotamia</entity>
+<interval fm="19170225" to="19170430"/>
+</event>
+<event uri="#N67162" fm="1917-03-26" to="1917-03-27">
+<text>Euphrates Operations 1917-18</text>
+<entity type="theatre">mesopotamia</entity>
+<interval fm="19170326" to="19170327"/>
+</event>
+<event uri="#N67184" fm="1918-10-28" to="1918-10-30">
+<text>Advance on Mosul</text>
+<entity type="theatre">mesopotamia</entity>
+<interval fm="19181028" to="19181030"/>
+</event>
+<event uri="#N67334" fm="1914-11-28" to="1917-08-10">
+<text>Service on the North-West Frontier 1914-17</text>
+<entity type="theatre">india</entity>
+<interval fm="19141128" to="19170810"/>
+</event>
+<event uri="#N67296" fm="1915-01-10" to="1919-08-08">
+<text>Service in Persia and Central Asia 1915-19</text>
+<entity type="theatre">persia</entity>
+<interval fm="19150110" to="19190808"/>
+</event>
+<event uri="#N67274" fm="1918-08-26" to="1918-09-15">
+<text>Caspian Operations</text>
+<entity type="theatre">persia</entity>
+<interval fm="19180826" to="19180915"/>
+</event>
+<event uri="#N67256" fm="1918-11-01" to="1918-11-01">
+<text>Operations in Trans-Caspasi against the Bolsheviks</text>
+<entity type="theatre">persia</entity>
+<interval fm="19181101" to="19181101"/>
+</event>
+<event uri="#N66770" fm="1915-01-26" to="1917-12-31">
+<text>Service in Egypt 1915-17</text>
+<entity type="theatre">egypt</entity>
+<interval fm="19150126" to="19171231"/>
+</event>
+<event uri="#N66717" fm="1915-02-03" to="1915-08-05">
+<text>Defence of the Suez Canal</text>
+<entity type="theatre">egypt</entity>
+<interval fm="19150203" to="19150805"/>
+</event>
+<event uri="#N66699" fm="1916-02-26" to="1916-02-26">
+<text>Operations agains the Senussi</text>
+<entity type="theatre">egypt</entity>
+<interval fm="19160226" to="19160226"/>
+</event>
+<event uri="#N66742" fm="1916-12-23" to="1918-01-09">
+<text>Operations in the Sinai Peninsula</text>
+<entity type="theatre">egypt</entity>
+<interval fm="19161223" to="19180109"/>
+</event>
+<event uri="#N66596" fm="1915-04-25" to="1915-06-06">
+<text>Helles Operations</text>
+<entity type="theatre">gallipoli</entity>
+<interval fm="19150425" to="19150606"/>
+</event>
+<event uri="#N66624" fm="1915-04-25" to="1915-08-27">
+<text>Anzac and Suvla Operations</text>
+<entity type="theatre">gallipoli</entity>
+<interval fm="19150425" to="19150827"/>
+</event>
+<event uri="#N66670" fm="1915-04-25" to="1916-01-09">
+<text>Service in the Dardanelles 1915-16</text>
+<entity type="theatre">gallipoli</entity>
+<interval fm="19150425" to="19160109"/>
+</event>
+<event uri="#N67375" fm="1915-06-01" to="1918-04-08">
+<text>Service in Baluchistan 1915-16</text>
+<entity type="theatre">baluchistan</entity>
+<interval fm="19150601" to="19180408"/>
+</event>
+<event uri="#N67002" fm="1915-07-03" to="1918-10-31">
+<text>Defence of Aden</text>
+<entity type="theatre">aden</entity>
+<interval fm="19150703" to="19181031"/>
+</event>
+<event uri="#N66552" fm="1915-10-05" to="1918-09-30">
+<text>Service in Macedonia 1915-18</text>
+<entity type="theatre">macedonia</entity>
+<interval fm="19151005" to="19180930"/>
+</event>
+<event uri="#N66464" fm="1915-12-07" to="1915-12-31">
+<text>Retreat from Serbia on Salonika</text>
+<entity type="theatre">macedonia</entity>
+<interval fm="19151207" to="19151231"/>
+</event>
+<event uri="#N66486" fm="1916-09-30" to="1916-10-31">
+<text>Operations in the Struma Valley</text>
+<entity type="theatre">macedonia</entity>
+<interval fm="19160930" to="19161031"/>
+</event>
+<event uri="#N66508" fm="1917-04-24" to="1917-05-09">
+<text>1917 Offensive</text>
+<entity type="theatre">macedonia</entity>
+<interval fm="19170424" to="19170509"/>
+</event>
+<event uri="#N66530" fm="1918-09-18" to="1918-09-19">
+<text>1918 Offensive</text>
+<entity type="theatre">macedonia</entity>
+<interval fm="19180918" to="19180919"/>
+</event>
+<event uri="#N66808" fm="1917-03-26" to="1917-04-19">
+<text>The First Offensive</text>
+<entity type="theatre">palestine</entity>
+<interval fm="19170326" to="19170419"/>
+</event>
+<event uri="#N66973" fm="1917-03-26" to="1918-10-31">
+<text>Service in Palestine 1917-18</text>
+<entity type="theatre">palestine</entity>
+<interval fm="19170326" to="19181031"/>
+</event>
+<event uri="#N66833" fm="1917-10-27" to="1917-11-13">
+<text>The Second Offensive</text>
+<entity type="theatre">palestine</entity>
+<interval fm="19171027" to="19171113"/>
+</event>
+<event uri="#N66861" fm="1917-11-17" to="1917-12-22">
+<text>Jerusalem Operations</text>
+<entity type="theatre">palestine</entity>
+<interval fm="19171117" to="19171222"/>
+</event>
+<event uri="#N66889" fm="1918-02-19" to="1918-03-30">
+<text>Operations in and beyond the Jordan Valley</text>
+<entity type="theatre">palestine</entity>
+<interval fm="19180219" to="19180330"/>
+</event>
+<event uri="#N66920" fm="1918-03-08" to="1918-03-12">
+<text>Local Operations 1918</text>
+<entity type="theatre">palestine</entity>
+<interval fm="19180308" to="19180312"/>
+</event>
+<event uri="#N66942" fm="1918-09-19" to="1918-10-01">
+<text>The Final Offensive</text>
+<entity type="theatre">palestine</entity>
+<interval fm="19180919" to="19181001"/>
+</event>
+<event uri="#N66435" fm="1917-05-12" to="1918-11-04">
+<text>Service in Italy 1917-18</text>
+<entity type="theatre">italy</entity>
+<interval fm="19170512" to="19181104"/>
+</event>
+<event uri="#N66391" fm="1918-06-15" to="1918-06-24">
+<text>The Austrian Offensive 1918</text>
+<entity type="theatre">italy</entity>
+<interval fm="19180615" to="19180624"/>
+</event>
+<event uri="#N66413" fm="1918-10-24" to="1918-11-04">
+<text>The Italian Offensive 1918</text>
+<entity type="theatre">italy</entity>
+<interval fm="19181024" to="19181104"/>
+</event>
+<event uri="#N67404" fm="1918-06-29" to="1919-10-12">
+<text>Service in Murman 1918-18</text>
+<entity type="theatre">russia</entity>
+<interval fm="19180629" to="19191012"/>
+</event>
+<event uri="#N67447" fm="1918-08-01" to="1919-09-27">
+<text>Service in Archangel 1918-19</text>
+<entity type="theatre">russia</entity>
+<interval fm="19180801" to="19190927"/>
+</event>
+<event uri="#N67429" fm="1919-08-10" to="1919-08-10">
+<text>Operations to cover withdrawal</text>
+<entity type="theatre">russia</entity>
+<interval fm="19190810" to="19190810"/>
+</event>
+<event uri="#N67501" fm="1918-08-08" to="1919-06-01">
+<text>Service in Siberia 1918-19</text>
+<entity type="theatre">siberia</entity>
+<interval fm="19180808" to="19190601"/>
+</event>
+<event uri="#N67479" fm="1918-08-23" to="1918-08-24">
+<text>Ussuri Operations</text>
+<entity type="theatre">siberia</entity>
+<interval fm="19180823" to="19180824"/>
+</event>
+<event uri="#N67941" fm="1919-05-06" to="1919-08-08">
+<text>Operations in Afghanistan 1919</text>
+<entity type="theatre">afghanistan</entity>
+<interval fm="19190506" to="19190808"/>
+</event>
+<link fm="#N65589" to="#N65617" reason="france-flanders"/>
+<link fm="#N65617" to="#N65642" reason="france-flanders"/>
+<link fm="#N65642" to="#N65682" reason="france-flanders"/>
+<link fm="#N65682" to="#N65707" reason="france-flanders"/>
+<link fm="#N65707" to="#N65759" reason="france-flanders"/>
+<link fm="#N65759" to="#N65781" reason="france-flanders"/>
+<link fm="#N65781" to="#N65842" reason="france-flanders"/>
+<link fm="#N65842" to="#N65860" reason="france-flanders"/>
+<link fm="#N65842" to="#N65909" reason="france-flanders"/>
+<link fm="#N65860" to="#N65953" reason="france-flanders"/>
+<link fm="#N65860" to="#N65891" reason="france-flanders"/>
+<link fm="#N65909" to="#N65953" reason="france-flanders"/>
+<link fm="#N65909" to="#N65891" reason="france-flanders"/>
+<link fm="#N65953" to="#N65999" reason="france-flanders"/>
+<link fm="#N65891" to="#N65931" reason="france-flanders"/>
+<link fm="#N65931" to="#N65999" reason="france-flanders"/>
+<link fm="#N65999" to="#N66021" reason="france-flanders"/>
+<link fm="#N66021" to="#N66104" reason="france-flanders"/>
+<link fm="#N66021" to="#N66064" reason="france-flanders"/>
+<link fm="#N66104" to="#N66147" reason="france-flanders"/>
+<link fm="#N66064" to="#N66147" reason="france-flanders"/>
+<link fm="#N66147" to="#N66086" reason="france-flanders"/>
+<link fm="#N66086" to="#N66175" reason="france-flanders"/>
+<link fm="#N66175" to="#N66203" reason="france-flanders"/>
+<link fm="#N66175" to="#N66243" reason="france-flanders"/>
+<link fm="#N66203" to="#N66292" reason="france-flanders"/>
+<link fm="#N67761" to="#N67805" reason="cameroons"/>
+<link fm="#N67783" to="#N67805" reason="cameroons"/>
+<link fm="#N67601" to="#N67579" reason="africa-e"/>
+<link fm="#N67579" to="#N67623" reason="africa-e"/>
+<link fm="#N67028" to="#N67053" reason="mesopotamia"/>
+<link fm="#N67071" to="#N67118" reason="mesopotamia"/>
+<link fm="#N67053" to="#N67096" reason="mesopotamia"/>
+<link fm="#N67096" to="#N67118" reason="mesopotamia"/>
+<link fm="#N67118" to="#N67140" reason="mesopotamia"/>
+<link fm="#N67118" to="#N67162" reason="mesopotamia"/>
+<link fm="#N67140" to="#N67184" reason="mesopotamia"/>
+<link fm="#N67162" to="#N67184" reason="mesopotamia"/>
+<link fm="#N67274" to="#N67256" reason="persia"/>
+<link fm="#N66717" to="#N66699" reason="egypt"/>
+<link fm="#N66699" to="#N66742" reason="egypt"/>
+<link fm="#N66464" to="#N66486" reason="macedonia"/>
+<link fm="#N66486" to="#N66508" reason="macedonia"/>
+<link fm="#N66508" to="#N66530" reason="macedonia"/>
+<link fm="#N66808" to="#N66833" reason="palestine"/>
+<link fm="#N66833" to="#N66861" reason="palestine"/>
+<link fm="#N66861" to="#N66889" reason="palestine"/>
+<link fm="#N66861" to="#N66920" reason="palestine"/>
+<link fm="#N66889" to="#N66942" reason="palestine"/>
+<link fm="#N66920" to="#N66942" reason="palestine"/>
+<link fm="#N66391" to="#N66413" reason="italy"/>
+<link fm="#N66292" to="#N66292" reason="france-flanders"/>
+<link fm="#N67859" to="#N67859" reason="volunteers"/>
+<link fm="#N67805" to="#N67805" reason="cameroons"/>
+<link fm="#N67885" to="#N67885" reason="outofcanada"/>
+<link fm="#N67623" to="#N67623" reason="africa-e"/>
+<link fm="#N67707" to="#N67707" reason="africa-sw"/>
+<link fm="#N67553" to="#N67553" reason="pacific"/>
+<link fm="#N67527" to="#N67527" reason="china"/>
+<link fm="#N67184" to="#N67184" reason="mesopotamia"/>
+<link fm="#N67334" to="#N67334" reason="india"/>
+<link fm="#N67256" to="#N67256" reason="persia"/>
+<link fm="#N66742" to="#N66742" reason="egypt"/>
+<link fm="#N66670" to="#N66670" reason="gallipoli"/>
+<link fm="#N67375" to="#N67375" reason="baluchistan"/>
+<link fm="#N67002" to="#N67002" reason="aden"/>
+<link fm="#N66530" to="#N66530" reason="macedonia"/>
+<link fm="#N66942" to="#N66942" reason="palestine"/>
+<link fm="#N66413" to="#N66413" reason="italy"/>
+<link fm="#N67429" to="#N67429" reason="russia"/>
+<link fm="#N67479" to="#N67479" reason="siberia"/>
+<link fm="#N67941" to="#N67941" reason="afghanistan"/>
+</temporal>
