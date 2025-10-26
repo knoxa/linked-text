@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+
+<project name="Disambiguating person names (from Events of World War I)" basedir=".">
+
+	<property file="ant.properties"/>
+
+	<description>
+		Mentions of places in WW1 Events.
+	</description>
+
+	<!--
+		Roughly suggesting places that are part of places.
+		
+		The input is a FCA lattice from results/context.xml, which has entries from places.txt as objects, and entries
+		from places.txt as attributes, where attributes are are proper substrings of objects.
+		 
+		The proposition is that country or region names are more common as attributes than towns or cities. These appear
+		on concepts at the top of the lattice. I assume these top concepts represent objects, then adjust the results so that
+		the identity of the new object is the first mentioned (country or region) attribute, with the remaining places as its attributes.
+		Each object now represents the hypothesis that the object is a larger region, and attributes are places within that region.
+		
+		The results are not always correct, but are they correct enough to be useful? Can they be confirmed or denied?
+	-->
+	
+	<target name="regions">
+		<xslt in="results/lattice.xml" out="${temp}/places.xml" style="${lattice}/down.xsl" force="true"/>
+		<xslt in="${temp}/places.xml" out="results/hypothesis.xml" style="xsl/region.xsl" force="true"/>
+	</target>
+		
+
+</project>

@@ -1,0 +1,672 @@
+<?xml version="1.0" encoding="UTF-8"?><context>
+<object name="AFRICA">
+<attribute>EAST AFRICA</attribute>
+<attribute>GERMAN EAST AFRICA</attribute>
+<attribute>NEU LANGENBURG</attribute>
+<attribute>LAKE TANGANYIKA</attribute>
+<attribute>IRINGA</attribute>
+<attribute>BISMARCKBURG</attribute>
+<attribute>TANGA</attribute>
+<attribute>KILOSA</attribute>
+<attribute>KIONGA</attribute>
+<attribute>MAFIA ISLAND</attribute>
+<attribute>KILIMATINDE</attribute>
+<attribute>NYANGAO</attribute>
+<attribute>HANDENI</attribute>
+<attribute>VICTORIA NYANZA</attribute>
+<attribute>MWITI VALLEY</attribute>
+<attribute>MPWAPWA</attribute>
+<attribute>SALAAM</attribute>
+<attribute>MOROGORO</attribute>
+<attribute>THE RUFIJI RIVER</attribute>
+<attribute>RUFIJI RIVER</attribute>
+<attribute>KONDOA IRANGI</attribute>
+<attribute>JASIN</attribute>
+<attribute>BEHO-BEHO</attribute>
+<attribute>MOSHI</attribute>
+<attribute>NEW MOSHI</attribute>
+<attribute>KAHE</attribute>
+<attribute>LATEMA NEK</attribute>
+<attribute>NARUNGOMBE</attribute>
+<attribute>KILIMANJARO</attribute>
+<attribute>TAVETA</attribute>
+<attribute>TSAVO</attribute>
+<attribute>NYAMAKURA</attribute>
+<attribute>GERMAN SOUTH-WEST AFRICA</attribute>
+<attribute>SOUTH-WEST AFRICA</attribute>
+<attribute>WINDHUK</attribute>
+<attribute>JAKALSWATER</attribute>
+<attribute>OTAVIFONTEIN</attribute>
+<attribute>AUS</attribute>
+<attribute>SWAKOPMUND</attribute>
+<attribute>PORTUGUESE WEST AFRICA</attribute>
+<attribute>ANGOLA</attribute>
+<attribute>SOUTH AFRICA</attribute>
+<attribute>UPINGTON</attribute>
+</object>
+<object name="PERSIA">
+<attribute>WEST PERSIA</attribute>
+<attribute>NORTH-WEST PERSIA</attribute>
+<attribute>RESHT</attribute>
+<attribute>KASVIN</attribute>
+<attribute>KARIND</attribute>
+<attribute>WESTERN PERSIA</attribute>
+<attribute>QASR-I-SHIRIN</attribute>
+<attribute>KANGAVAR</attribute>
+<attribute>SHIRIN</attribute>
+<attribute>QASR-I-SHIRIN</attribute>
+<attribute>NORTH PERSIA</attribute>
+<attribute>TABRIZ</attribute>
+<attribute>URMIA</attribute>
+<attribute>DILMAN</attribute>
+<attribute>KIRMANSHAH</attribute>
+<attribute>HAMADAN</attribute>
+<attribute>ENZELI</attribute>
+<attribute>SOUTH PERSIA</attribute>
+<attribute>BUSHIRE</attribute>
+<attribute>SHIRAZ</attribute>
+<attribute>EAST PERSIA</attribute>
+<attribute>BIRJAND</attribute>
+<attribute>KWASH</attribute>
+<attribute>MESHED</attribute>
+<attribute>KIRMAN</attribute>
+<attribute>TEHERAN</attribute>
+<attribute>BAKHTIARI</attribute>
+</object>
+<object name="MESOPOTAMIA">
+<attribute>SHARQAT</attribute>
+<attribute>MUSHAIDIYA</attribute>
+<attribute>FALAHIYA</attribute>
+<attribute>RAMADI</attribute>
+<attribute>NORTHERN MESOPOTAMIA</attribute>
+<attribute>ROWANDUZ</attribute>
+<attribute>QURNA</attribute>
+<attribute>NASIRIYA</attribute>
+<attribute>KIRKUK</attribute>
+<attribute>MOSUL</attribute>
+<attribute>AMARA</attribute>
+<attribute>THE WADI</attribute>
+<attribute>SAIHAN</attribute>
+<attribute>ANA</attribute>
+<attribute>ISTABULAT</attribute>
+<attribute>BASRA</attribute>
+<attribute>SAHIL</attribute>
+<attribute>HANNA</attribute>
+<attribute>KHAN BAGHDADI</attribute>
+<attribute>CTESIPHON</attribute>
+<attribute>SHAIBA</attribute>
+<attribute>BAIT AISSA</attribute>
+<attribute>SAMARRA</attribute>
+<attribute>TIKRIT</attribute>
+</object>
+<object name="SERBIA">
+<attribute>SOUTH SERBIA</attribute>
+<attribute>GEVGELI</attribute>
+<attribute>DOIRAN</attribute>
+<attribute>PRILEP</attribute>
+<attribute>PRISTINA</attribute>
+<attribute>MITROVITZA</attribute>
+<attribute>OKHRIDA</attribute>
+<attribute>DEBRA</attribute>
+<attribute>KRAGUJEVATZ</attribute>
+<attribute>NORTH SERBIA</attribute>
+<attribute>PRIZREN</attribute>
+<attribute>MONASTIR</attribute>
+<attribute>NISH</attribute>
+<attribute>VRANJE</attribute>
+<attribute>ISHTIP</attribute>
+<attribute>KOLUBARA</attribute>
+<attribute>JADAR</attribute>
+<attribute>SEMENDRIA</attribute>
+<attribute>KACHANIK</attribute>
+</object>
+<object name="RUSSIA">
+<attribute>NORTH RUSSIA</attribute>
+<attribute>KADISH</attribute>
+<attribute>PECHENGA</attribute>
+<attribute>OBOZERSKAYA</attribute>
+<attribute>KEM</attribute>
+<attribute>SOUTH RUSSIA</attribute>
+<attribute>KHARKOV</attribute>
+<attribute>NICOLAIEV</attribute>
+<attribute>POLTAVA</attribute>
+<attribute>EKATERINOSLAV</attribute>
+<attribute>ROSTOV</attribute>
+<attribute>EAST RUSSIA</attribute>
+<attribute>KAZAN</attribute>
+<attribute>STERLITAMAK</attribute>
+<attribute>PERM</attribute>
+<attribute>BIRSK</attribute>
+<attribute>LAKE NAROCH</attribute>
+<attribute>WHITE RUSSIA</attribute>
+</object>
+<object name="YPRES">
+<attribute>ST. JULIEN</attribute>
+<attribute>YPRES FRONT</attribute>
+<attribute>GRAVENSTAFEL RIDGE</attribute>
+<attribute>MOUNT SORREL</attribute>
+<attribute>FREZENBERG RIDGE</attribute>
+<attribute>FREZENBERG</attribute>
+<attribute>NONNEBOSCHEN</attribute>
+<attribute>POLYGON WOOD</attribute>
+<attribute>GHELUVELT</attribute>
+<attribute>MENIN ROAD RIDGE</attribute>
+<attribute>MENIN</attribute>
+<attribute>MENIN ROAD</attribute>
+<attribute>HILL 60</attribute>
+<attribute>PASSCHENDAELE</attribute>
+<attribute>BROODSEINDE</attribute>
+<attribute>POELCAPELLE</attribute>
+<attribute>BELLEWAERDE RIDGE</attribute>
+<attribute>PILCKEM RIDGE</attribute>
+</object>
+<object name="GALICIA">
+<attribute>STRYJ</attribute>
+<attribute>BRODY</attribute>
+<attribute>LUTKOW</attribute>
+<attribute>THE SAN</attribute>
+<attribute>TARNAVKA</attribute>
+<attribute>ZALESZCZYKI</attribute>
+<attribute>HALICZ</attribute>
+<attribute>JAROSLAW</attribute>
+<attribute>CHYROW</attribute>
+<attribute>LEMBERG</attribute>
+</object>
+<object name="SOMME">
+<attribute>GINCHY</attribute>
+<attribute>8 MILES SOUTH OF THE SOMME</attribute>
+<attribute>SOUTH OF THE SOMME</attribute>
+<attribute>LIHONS</attribute>
+<attribute>THIEPVAL</attribute>
+<attribute>THIEPVAL RIDGE</attribute>
+<attribute>TRANSLOY RIDGES</attribute>
+<attribute>VILLERS-BRETONNEUX</attribute>
+<attribute>FLERS-COURCELETTE</attribute>
+<attribute>COURCELETTE</attribute>
+<attribute>FLERS</attribute>
+<attribute>ANCRE HEIGHTS</attribute>
+<attribute>POZIÈRES</attribute>
+<attribute>POZIÈRES RIDGE</attribute>
+<attribute>DELVILLE WOOD</attribute>
+<attribute>GUILLEMONT</attribute>
+<attribute>MORVAL</attribute>
+<attribute>BAZENTIN RIDGE</attribute>
+</object>
+<object name="POLAND">
+<attribute>NORTH POLAND</attribute>
+<attribute>PULTUSK</attribute>
+<attribute>OSOVETS</attribute>
+<attribute>BENDZIN</attribute>
+<attribute>RUSSIAN POLAND</attribute>
+<attribute>TCHENSTOCHOWA</attribute>
+<attribute>KALISH</attribute>
+<attribute>NOVO-GEORGIEVSK</attribute>
+<attribute>VLODAVA</attribute>
+<attribute>KRASNIK</attribute>
+<attribute>MLAWA</attribute>
+<attribute>BREST-LITOVSK</attribute>
+<attribute>BREST</attribute>
+<attribute>IVANGOROD</attribute>
+<attribute>SYEDLETS</attribute>
+<attribute>BYELOSTOK</attribute>
+</object>
+<object name="CAMEROONS">
+<attribute>NGAUNDERE</attribute>
+<attribute>OYEM</attribute>
+<attribute>YAUNDE</attribute>
+<attribute>BANYO</attribute>
+<attribute>DUALA</attribute>
+<attribute>EDEA</attribute>
+<attribute>YABASI</attribute>
+<attribute>GARUA</attribute>
+<attribute>MORA</attribute>
+</object>
+<object name="PALESTINE">
+<attribute>ES SALT</attribute>
+<attribute>HAIFA, ACRE, AND ES SALT</attribute>
+<attribute>ACRE</attribute>
+<attribute>HAIFA</attribute>
+<attribute>BEISAN</attribute>
+<attribute>NAZARETH AND BEISAN</attribute>
+<attribute>NAZARETH</attribute>
+<attribute>AMMAN</attribute>
+<attribute>EL MUGHAR</attribute>
+<attribute>JAFFA</attribute>
+</object>
+<object name="ARMENIA">
+<attribute>MAMUKHATUN</attribute>
+<attribute>KEUPRI-KEUI</attribute>
+<attribute>RAYAT</attribute>
+<attribute>MAMAKHATUN</attribute>
+<attribute>MUSH</attribute>
+<attribute>ERZINJAN</attribute>
+</object>
+<object name="BALTIC">
+<attribute>DAGÖ ISLAND</attribute>
+<attribute>MOON ISLAND</attribute>
+<attribute>LIBAU</attribute>
+<attribute>BALTIC PROVINCES</attribute>
+<attribute>SHAVLI</attribute>
+<attribute>JAKOBSTADT</attribute>
+<attribute>OSEL ISLAND</attribute>
+</object>
+<object name="ARABIA">
+<attribute>LAHEJ</attribute>
+<attribute>SOUTH ARABIA</attribute>
+<attribute>SOUTHERN ARABIA</attribute>
+<attribute>HODEIDA</attribute>
+<attribute>EASTERN ARABIA</attribute>
+<attribute>MUSCAT</attribute>
+<attribute>WEJH</attribute>
+<attribute>AQABA</attribute>
+<attribute>JIDDA</attribute>
+</object>
+<object name="SYRIA">
+<attribute>TRIPOLI</attribute>
+<attribute>BEIRUT</attribute>
+<attribute>HOMS</attribute>
+<attribute>ALEXANDRETTA</attribute>
+<attribute>ALEPPO</attribute>
+<attribute>SIDON</attribute>
+</object>
+<object name="MACEDONIA">
+<attribute>FLORINA</attribute>
+<attribute>VARDAR</attribute>
+<attribute>GREEK FRONTIER OF MACEDONIA</attribute>
+<attribute>FORT RUPEL</attribute>
+<attribute>DOBROPOLJE</attribute>
+<attribute>LEGEN</attribute>
+<attribute>KRIVOLAK</attribute>
+</object>
+<object name="RUMANIA">
+<attribute>CRAIOVA</attribute>
+<attribute>FOCSANI</attribute>
+<attribute>BRAILA</attribute>
+<attribute>ARGES</attribute>
+<attribute>MARASESTI</attribute>
+</object>
+<object name="MONTENEGRO">
+<attribute>PODGORITZA</attribute>
+<attribute>IPEK</attribute>
+<attribute>ANTIVARI</attribute>
+<attribute>MOUNT LOVCHEN</attribute>
+<attribute>CETINJE</attribute>
+</object>
+<object name="DARDANELLES">
+<attribute>SARI BAIR</attribute>
+<attribute>KRITHIA</attribute>
+<attribute>GULLY RAVINE</attribute>
+<attribute>KUM KALE</attribute>
+</object>
+<object name="GEORGIA">
+<attribute>POTI</attribute>
+<attribute>ALEXANDROPOL</attribute>
+<attribute>KARS</attribute>
+<attribute>BATUM</attribute>
+<attribute>TIFLIS</attribute>
+</object>
+<object name="SIBERIA">
+<attribute>EASTERN SIBERIA</attribute>
+<attribute>DUKHOVSKAYA</attribute>
+<attribute>KHABAROVSK</attribute>
+<attribute>OMSK</attribute>
+<attribute>IRKUTSK</attribute>
+<attribute>BLAGOVYESCHENSK</attribute>
+</object>
+<object name="EGYPT">
+<attribute>WESTERN EGYPT</attribute>
+<attribute>WADI MAJID</attribute>
+<attribute>AGAGIYA</attribute>
+<attribute>SOLLUM</attribute>
+<attribute>WEST EGYPT</attribute>
+<attribute>DAKHLA OASIS</attribute>
+<attribute>SIWA</attribute>
+<attribute>SIWA OASIS</attribute>
+</object>
+<object name="ALBANIA">
+<attribute>SAN GIOVANNI</attribute>
+<attribute>SAN GIOVANNI DI MEDUA</attribute>
+<attribute>ELBASAN</attribute>
+<attribute>BERAT</attribute>
+</object>
+<object name="LYS">
+<attribute>KEMMEL</attribute>
+<attribute>KEMMEL RIDGE</attribute>
+<attribute>BAILLEUL</attribute>
+<attribute>HAZEBROUCK</attribute>
+<attribute>BETHUNE</attribute>
+</object>
+<object name="CAUCASUS">
+<attribute>SARIKAMISH</attribute>
+<attribute>RUSSIAN CAUCASUS</attribute>
+<attribute>KURDAMIR</attribute>
+<attribute>EAST CAUCASUS</attribute>
+<attribute>KARA URGAN</attribute>
+</object>
+<object name="DOBRUDJA">
+<attribute>SILISTRA</attribute>
+<attribute>CONSTANZA</attribute>
+<attribute>TUTRAKAN</attribute>
+<attribute>CERNAVODA</attribute>
+</object>
+<object name="BUKOVINA">
+<attribute>CZERNOWITZ</attribute>
+<attribute>KIMPOLUNG</attribute>
+<attribute>SOUTHERN BUKOVINA</attribute>
+<attribute>RADAUTZ</attribute>
+</object>
+<object name="SINAI">
+<attribute>MAGDHABA</attribute>
+<attribute>RAFAH</attribute>
+<attribute>RUMANI</attribute>
+<attribute>EL ARISH</attribute>
+</object>
+<object name="ARRAS">
+<attribute>BETWEEN ARRAS AND ALBERT</attribute>
+<attribute>AYETTE</attribute>
+<attribute>ALBERT</attribute>
+<attribute>5 MILES SOUTH OF ARRAS</attribute>
+<attribute>MERCATEL</attribute>
+<attribute>ARLEUX</attribute>
+</object>
+<object name="VERDUN">
+<attribute>FORT VAUX</attribute>
+<attribute>FORT DOUAUMONT</attribute>
+<attribute>DOUAUMONT</attribute>
+<attribute>FORT THIAUMONT</attribute>
+<attribute>THIAUMONT</attribute>
+</object>
+<object name="CARPATHIANS">
+<attribute>JABLONICA PASS</attribute>
+<attribute>THE PLOSKA HEIGHT</attribute>
+</object>
+<object name="RHODESIA">
+<attribute>ABERCORN</attribute>
+<attribute>KASAMA</attribute>
+<attribute>CHAMBEZI RIVER</attribute>
+</object>
+<object name="TRANSYLVANIA">
+<attribute>BRASOV</attribute>
+<attribute>ALBA-JULIA</attribute>
+<attribute>SIBIU</attribute>
+</object>
+<object name="EAST PRUSSIA">
+<attribute>MEMEL</attribute>
+<attribute>MASURIA</attribute>
+<attribute>GAWAITEN-GUMBINNEN</attribute>
+</object>
+<object name="FINLAND">
+<attribute>SOUTH FINLAND</attribute>
+<attribute>FREDERICKSHAMN</attribute>
+<attribute>VIBORG</attribute>
+<attribute>HELSINGFORS</attribute>
+</object>
+<object name="TREBIZOND">
+<attribute>BLACK SEA</attribute>
+<attribute>ERZERUM</attribute>
+<attribute>BAIBURT</attribute>
+<attribute>BETWEEN ERZERUM AND TREBIZOND</attribute>
+<attribute>ASIA MINOR</attribute>
+</object>
+<object name="TRANS-CASPIA">
+<attribute>KAAKHKA</attribute>
+<attribute>DUSHAK</attribute>
+<attribute>BAIRAM ALI</attribute>
+</object>
+<object name="FRANCE">
+<attribute>ST. OMER</attribute>
+<attribute>THE AVRE</attribute>
+</object>
+<object name="ADRIATIC">
+<attribute>PREMUDA ISLAND</attribute>
+<attribute>PELAGOSA</attribute>
+</object>
+<object name="PACIFIC">
+<attribute>YAP ISLAND</attribute>
+<attribute>MOPELIA ISLAND</attribute>
+</object>
+<object name="LAKE NYASSA">
+<attribute>MANUNGA</attribute>
+<attribute>160 MILES SOUTH OF LAKE NYASSA</attribute>
+<attribute>SPHINXHAVEN</attribute>
+</object>
+<object name="LENS">
+<attribute>LIÉVIN</attribute>
+<attribute>THE WESTERN SUBURB OF LENS</attribute>
+<attribute>CITÉ ST. PIERRE</attribute>
+<attribute>NORTH-WEST OF LENS</attribute>
+</object>
+<object name="KOLOMEA"/>
+<object name="BULGARIA">
+<attribute>DEDE AGATCH</attribute>
+<attribute>YAMBOL</attribute>
+</object>
+<object name="NORTH-WEST FRONTIER OF INDIA">
+<attribute>INDIA</attribute>
+<attribute>MIRANSHAH</attribute>
+<attribute>HAFIZ KOR</attribute>
+</object>
+<object name="STANISLAU">
+<attribute>TYSMIENICA</attribute>
+<attribute>NEAR STANISLAU</attribute>
+</object>
+<object name="MOLDAVIAN REPUBLIC">
+<attribute>BESSARABIA</attribute>
+<attribute>INDEPENDENT MOLDAVIAN REPUBLIC</attribute>
+</object>
+<object name="NEBI SAMWIL">
+<attribute>MIZPEH</attribute>
+<attribute>THE NEBI SAMWIL RIDGE</attribute>
+</object>
+<object name="ESTONIA">
+<attribute>DORPAT</attribute>
+<attribute>NARVA</attribute>
+</object>
+<object name="DARFUR">
+<attribute>GYUBA</attribute>
+<attribute>BERINGIYA</attribute>
+</object>
+<object name="SUVLA">
+<attribute>SCIMITAR HILL</attribute>
+</object>
+<object name="MURMAN FRONT">
+<attribute>UKHTINSKAYA</attribute>
+<attribute>PYAVOZERO LAKE</attribute>
+</object>
+<object name="ALSACE">
+<attribute>MULHOUSE</attribute>
+<attribute>THE HARTMANNSWEILERKOPF</attribute>
+</object>
+<object name="BITLIS">
+<attribute>LAKE VAN</attribute>
+<attribute>SOUTH-WEST OF LAKE VAN</attribute>
+</object>
+<object name="VAUX">
+<attribute>FORT VAUX</attribute>
+<attribute>NEAR CHÂTEAU-THIERRY</attribute>
+<attribute>CHÂTEAU-THIERRY</attribute>
+</object>
+<object name="TRENTINO">
+<attribute>THE COL DI LANA</attribute>
+<attribute>ROVERETO</attribute>
+</object>
+<object name="VA.">
+<attribute>HAMPTON ROADS</attribute>
+</object>
+<object name="VAN">
+<attribute>LAKE VAN</attribute>
+<attribute>SOUTH-WEST OF LAKE VAN</attribute>
+</object>
+<object name="ARCHANGEL">
+<attribute>ARCHANGEL FRONT</attribute>
+<attribute>CHAMOVA</attribute>
+</object>
+<object name="SCUTARI">
+<attribute>SHKODRA</attribute>
+</object>
+<object name="NORFOLK">
+<attribute>YARMOUTH</attribute>
+</object>
+<object name="ADAMELLO DISTRICT">
+<attribute>THE MONTICELLO PASS</attribute>
+<attribute>IN THE ADAMELLO DISTRICT</attribute>
+</object>
+<object name="WALNEY ISLAND">
+<attribute>BARROW-IN-FURNESS</attribute>
+</object>
+<object name="NEWPORT">
+<attribute>UNITED STATES</attribute>
+<attribute>NEWPORT NEWS</attribute>
+<attribute>UNITED STATES OF AMERICA</attribute>
+</object>
+<object name="GERMAN GUINEA">
+<attribute>BISMARCK ARCHIPELAGO</attribute>
+</object>
+<object name="BAHREIN ISLANDS">
+<attribute>PERSIAN GULF</attribute>
+</object>
+<object name="ADEN">
+<attribute>IMAD</attribute>
+</object>
+<object name="EAST OF MONCHY">
+<attribute>MONCHY</attribute>
+<attribute>INFANTRY HILL</attribute>
+</object>
+<object name="ATLANTIC COAST">
+<attribute>FIRE ISLAND</attribute>
+</object>
+<object name="SABOR">
+<attribute>CROATION CONGRESS</attribute>
+</object>
+<object name="KILDA">
+<attribute>HEBRIDES</attribute>
+</object>
+<object name="CASPIAN SEA">
+<attribute>BAKU</attribute>
+</object>
+<object name="ÆGEAN">
+<attribute>CHIOS</attribute>
+</object>
+<object name="KHANAQIN">
+<attribute>NORTH-EAST OF BAGHDAD</attribute>
+<attribute>BAGHDAD</attribute>
+</object>
+<object name="VILNA">
+<attribute>EAST OF VILNA</attribute>
+<attribute>LAKE NAROTCH</attribute>
+</object>
+<object name="CAROLINE ISLANDS">
+<attribute>PONAPE</attribute>
+</object>
+<object name="HEJAZ">
+<attribute>TAIF</attribute>
+</object>
+<object name="HARTLEPOOL">
+<attribute>EAST COAST OF ENGLAND</attribute>
+<attribute>ENGLAND</attribute>
+</object>
+<object name="GRICOURT">
+<attribute>NEAR ST. QUENTIN</attribute>
+<attribute>ST. QUENTIN</attribute>
+</object>
+<object name="NYASSALAND">
+<attribute>KARONGA</attribute>
+</object>
+<object name="BAGAMOYO">
+<attribute>GERMAN EAST AFRICAN COAST</attribute>
+</object>
+<object name="CAPO SILE">
+<attribute>NORTH OF THE VENETIAN LAGOONS</attribute>
+<attribute>THE VENETIAN LAGOONS</attribute>
+</object>
+<object name="LJUBLJANA">
+<attribute>LAIBACH</attribute>
+</object>
+<object name="ORSOVA">
+<attribute>HUNGARY</attribute>
+</object>
+<object name="KAMINA">
+<attribute>TOGOLAND</attribute>
+</object>
+<object name="FUNCHAL">
+<attribute>MADEIRA</attribute>
+</object>
+<object name="MONTDIDIER">
+<attribute>AMIENS</attribute>
+<attribute>COMPIÈGNE</attribute>
+<attribute>BETWEEN AMIENS AND COMPIÈGNE</attribute>
+</object>
+<object name="BELGIUM">
+<attribute>TERMONDE</attribute>
+</object>
+<object name="SEMLIN">
+<attribute>SYRMIA</attribute>
+</object>
+<object name="TSINGTAU">
+<attribute>KIAO-CHAU</attribute>
+</object>
+<object name="SCARBOROUGH">
+<attribute>YORKSHIRE</attribute>
+</object>
+<object name="VENETIA">
+<attribute>UDINE</attribute>
+</object>
+<object name="PONTA DELGADA">
+<attribute>AZORES</attribute>
+</object>
+<object name="SHARON AND NABLUS">
+<attribute>MEGIDDO</attribute>
+</object>
+<object name="GREECE">
+<attribute>JANINA</attribute>
+</object>
+<object name="CUMBERLAND">
+<attribute>WHITEHAVEN</attribute>
+</object>
+<object name="TRANS CASPIA">
+<attribute>MERV</attribute>
+</object>
+<object name="BREMEN">
+<attribute>GERMANY</attribute>
+</object>
+<object name="SUFFOLK">
+<attribute>LOWESTOFT</attribute>
+</object>
+<object name="GALLIPOLI">
+<attribute>GALLIPOLI PENINSULA</attribute>
+<attribute>HELLES</attribute>
+</object>
+<object name="SOVDEP">
+<attribute>MURMAN SOVIET</attribute>
+</object>
+<object name="STAVANGER">
+<attribute>NORWAY</attribute>
+</object>
+<object name="MONFALCONE">
+<attribute>ISOUZO</attribute>
+</object>
+<object name="CORONEL">
+<attribute>CHILE</attribute>
+</object>
+<object name="UKRAINE">
+<attribute>KIEV</attribute>
+</object>
+<object name="LIBERIA">
+<attribute>MONROVIA</attribute>
+</object>
+<object name="BLAAVANDS HUK">
+<attribute>DENMARK</attribute>
+</object>
+<object name="TALASSIA">
+<attribute>NEU POMMERN</attribute>
+</object>
+<object name="KRONSTADT">
+<attribute>BRASSO</attribute>
+</object>
+<object name="AISNE">
+<attribute>CRAONNE</attribute>
+</object>
+<object name="MORTAGNE">
+<attribute>VOSGES</attribute>
+</object>
+</context>
