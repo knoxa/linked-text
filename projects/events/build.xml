@@ -21,6 +21,10 @@
 	<target name="events">
 		<xslt in="work/events.xml" out="${temp}/events.xml" style="xsl/work.xsl" force="true"/>
 	</target>	
+
+	<target name="events-hants">
+		<xslt in="/D:/GitHub/history/events/rhants/eventdiary.xhtml" out="${temp}/events-hants.xml" style="/D:/GitHub/history/events/rhants/eventdiary.xsl" force="true"/>
+	</target>	
 	
 	<target name="china" depends="events, events-sort">
 		<xslt in="${temp}/sorted.xml" out="${temp}/filtered.xml" style="filters/china.xsl" force="true"/>
