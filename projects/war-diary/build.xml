@@ -2,6 +2,8 @@
 
 <project name="War Diary" basedir=".">
 
+	<import file="../build-common.xml"/>
+
 	<property file="ant.properties"/>
 
 	<description>
@@ -10,6 +12,7 @@
 
 	<target name="movements-work" description="Extract HTML articles covering 4 Div movement tables">
 		<xslt in="work/movements.xml" out="${temp}/work.xhtml" style="xsl/work/movements.xsl" force="yes"/>
+		<xslt in="${temp}/work.xhtml" out="${temp}/events.xml" style="xsl/movements.xsl" force="yes"/>
 	</target>
 
 	<target name="messages-work" description="Extract HTML articles covering messages and signals">
@@ -20,13 +23,7 @@
 		<xslt in="work/summary.xml" out="${temp}/work.xhtml" style="xsl/work/summary.xsl" force="yes"/>
 	</target>
 
-	<target name="movements" description="Make events from 4 Div movements" depends="movements-work">
-		<xslt in="${temp}/work.xhtml" out="${temp}/events.xml" style="xsl/movements.xsl" force="yes"/>
-	    <xslt in="${temp}/events.xml" out="${temp}/temporal.xml" style="${chronology}/sort.xsl" force="yes"/>
-	    <xslt in="${temp}/temporal.xml" out="${temp}/events-raw.graphml" style="${chronology}/time-graphml.xsl" force="yes"/>
-		<xslt in="${temp}/events-raw.graphml" out="${temp}/events.graphml" style="${graph}/covers.xsl" force="yes"/>
-	</target>
-	
+	<target name="movements" description="Make events from 4 Div movements" depends="movements-work, events-sort, prepare-null, order, draw"/>
 	
 	<target name="entities">
 		<xslt in="${temp}/work.xhtml" out="${temp}/entities.xml" style="${extract}/entities.xsl" force="true"/>
