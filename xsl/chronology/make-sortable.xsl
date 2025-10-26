@@ -37,6 +37,10 @@
 	</xsl:copy>
 </xsl:template>
 
+<xsl:template match="event[interval]">
+	<!--  Just copy through if event already has an interval element -->
+	<xsl:copy-of select="."/>
+</xsl:template>
 
 <xsl:template name="getDateAsSortableInteger">
 	<!-- 
