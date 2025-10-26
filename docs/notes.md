@@ -70,10 +70,18 @@ The aim is to generate SKOS Concepts from HTML span elements. The span element m
 
 A span of text may _reference_ a person without necessarily be in a name.
 
-## XML
+# XML
 
 The processes covered here both consume and produce XML data. They can be linked via XSL Transformations. I'll use standard formats where possible (XHTML, RDF/XML etc)
 but occassionaly  simple bespoke formats for intermediate files. The use of these is for review later.
+
+## Events
+
+
+
+## Context
+
+This is a context in the FCA sense. Objects are identified by URI. You can specify multiple objects with the same URI and they will represent the same object. 
 
 # TO DO
 
