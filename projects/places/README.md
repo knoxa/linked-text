@@ -19,13 +19,11 @@ I apply FCA to [context.xml](results/context.xml) to produce [lattice.xml](resul
 The concepts at the "top" of this lattice are associated with the most common attributes, which tend to be the more often mentioned regions and countries.
 
 I assume that each top concept represents a region or country, and that attributes below that concept represent places with that region.
-I make a new context accordingly: [hypothesis.xml](results/hypothesis.xml). Effectively, this makes a series of claims:
-
-	{attribute} is a place in {parent object}
+I make a series of claims accordingly: [hypothesis.xhtml](results/hypothesis.xhtml).
 
 These claims are not always correct. The aim now is to confirm or deny them.
 
 You can see from the FCA lattice that we often have a town within a region, then that region within a country.
 This structure is collapsed by the processing above, so that we know that both town and region are in the country, but lose the information that the town is in the region.
-We can address that loss later.
+I can address that loss later.
 
