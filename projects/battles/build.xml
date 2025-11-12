@@ -10,6 +10,7 @@
 
 	<target name="fetch">
 		<get src="https://tigersmuseum.github.io/history/battle-honours/battle-honours-ww1.xhtml" dest="${temp}/battle-honours-ww1.xhtml"/>
+		<get src="https://tigersmuseum.github.io/history/battle-honours/battle-honours-ww2.xhtml" dest="${temp}/battle-honours-ww2.xhtml"/>
 	</target>
 	
 	<target name="events">
@@ -32,6 +33,13 @@
 		<xslt in="${temp}/sorted.xml" out="${temp}/partitioned.xml" style="${chronology}/partition.xsl" force="true"/>
 		<xslt in="${temp}/partitioned.xml" out="${temp}/ordered.xml" style="${chronology}/event-order.xsl" force="true"/>
 		<xslt in="${temp}/ordered.xml" out="${temp}/events.graphml" style="${chronology}/order-graphml.xsl" force="true"/>
+	</target>
+	
+	<target name="list">
+	<!--
+		Make a simple list of Battle Honours.
+	-->
+		<xslt in="${temp}/battle-honours-ww1.xhtml" out="${temp}/battle-honours.txt" style="xsl/list-bh.xsl" force="true" />
 	</target>
 	
 </project>
