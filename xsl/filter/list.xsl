@@ -10,7 +10,7 @@
   <xsl:apply-templates select="*"/>
 </xsl:template>
 
-<xsl:template match="html:span[@content]">
+<xsl:template match="html:span[@content]|html:tr[@content]|html:p[@content]">
 	<xsl:value-of select="@content"/>
 	<xsl:text>&#10;</xsl:text>
 </xsl:template>
