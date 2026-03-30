@@ -1,6 +1,6 @@
 # Places
 
-Disambiguating mentions of people in a WW1 chronology.
+Disambiguating mentions of places in a WW1 chronology.
 
 ## Input
 
@@ -12,7 +12,7 @@ Disambiguating mentions of people in a WW1 chronology.
 Places in text are often mentioned in relation to other places. Many of the entries in **places.txt** have other entries as substrings.
 Often, a town or city name is given with the name of a larger region or country in brackets. There is an implied "this place is part of that place" relationship that I can try to pull out.
 
-I can process **places.txt** to make [context.xml](results/context.xml). The objects and attributes are entries from **places.txt", with attributes being 
+I can process **places.txt** to make [context.xml](results/context.xml). The objects and attributes are entries from **places.txt**, with attributes being 
 entries that are proper substrings of the object string.
 
 I apply FCA to [context.xml](results/context.xml) to produce [lattice.xml](results/lattice.xml).
