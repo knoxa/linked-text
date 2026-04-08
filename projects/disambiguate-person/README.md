@@ -1,6 +1,6 @@
 # Entity Disambiguation
 
-Disambiguating mentions of people in a WW1 chronology.
+Disambiguating mentions of people in a WW1 chronology. See also, [The Elephant and the Fly](https://knoxa.github.io/examples/names/).
 
 ## Input
 
