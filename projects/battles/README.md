@@ -1,5 +1,6 @@
 # Battle Honours
 
+Simple transformations of XHTML.
 
 ## Input
 
@@ -8,4 +9,5 @@
 
 ## Results
 
-* WW1 Campaigns as events ordered in time and partitioned by theatre of operation: [XML data](results/ordered.xml) and [corresponding diagram](results/campaigns.svg).
+* WW1 campaigns as events ordered in time and partitioned by theatre of operation: [XML data](results/ordered.xml) and [corresponding diagram](results/campaigns.svg).
+* A simple list of [battle honours](results/battle-honours.txt).
