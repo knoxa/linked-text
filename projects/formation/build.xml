@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+
+<project name="Fact Extraction from XHTML+RDFa" basedir=".">
+
+	<property file="ant.properties"/>
+
+	<description>
+		Building structured data from research notes.
+	</description>
+	
+	<target name="test">
+		<xslt in="/D:/GitHub/history/units/test.xhtml" out="${temp}/scratch.txt" style="${rdfa}/rdfa-ntriples.xsl" force="true"/>
+	</target>
+
+	<target name="events">
+		<xslt in="input/formation.xml" out="${temp}/events.xml" style="xsl/nlp-event.xsl" force="true"/>
+	</target>	
+
+	<target name="parse">
+		<xslt in="input/formation.xml" out="${temp}/temp1.xml" style="${parser}/utilities/annotation-token.xsl" force="yes"/>
+		<xslt in="${temp}/temp1.xml" out="${temp}/temp2.xml" style="${parser}/utilities/sort.xsl" force="yes"/>
+		<xslt in="${temp}/temp2.xml" out="${temp}/temp3.xml" style="${parser}/utilities/select.xsl" force="yes"/>
+		<xslt in="${temp}/temp3.xml" out="${temp}/temp4.xml" style="${parser}/ATN/rules/net-npvp.xsl" force="yes"/>
+		<xslt in="${temp}/temp4.xml" out="${temp}/parsed.xml" style="xsl/atn-interval.xsl" force="yes"/>
+	</target>
+	
+</project>
