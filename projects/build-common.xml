@@ -23,4 +23,10 @@
 		<xslt in="${temp}/ordered.xml" out="${temp}/events.graphml" style="${chronology}/order-graphml.xsl" force="true"/>
 	</target>
 
+	<target name="clean" description="clean up temporary files">
+		<delete includeemptydirs="true">
+			<fileset dir="${temp}" includes="**/*"/>
+		</delete>
+	</target>
+
 </project>
