@@ -53,7 +53,7 @@
 	<!-- Operations -->
 	
 	<target name="operations-html" depends="operations-work, events-sort, operations-prep, order, draw">
-		<xslt in="${temp}/ordered.xml" out="output/operations.xhtml" style="xsl/report-op.xsl" force="true"/>
+		<xslt in="${temp}/ordered.xml" out="${temp}/operations.xhtml" style="xsl/report-op.xsl" force="true"/>
 	</target>
 	
 	<target name="operations-work">
