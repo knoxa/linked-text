@@ -30,7 +30,7 @@
 		The events extracted from the XHTML have the id of the div element containing them as an entity of type "theatre".
 		Partition by this entity and draw the graph so that each "theatre" is a different graph component.
 	-->
-		<xslt in="${temp}/sorted.xml" out="${temp}/partitioned.xml" style="${chronology}/partition.xsl" force="true"/>
+		<xslt in="${temp}/sorted.xml" out="${temp}/partitioned.xml" style="${chronology}/timeline.xsl" force="true"/>
 		<xslt in="${temp}/partitioned.xml" out="${temp}/ordered.xml" style="${chronology}/event-order.xsl" force="true"/>
 		<xslt in="${temp}/ordered.xml" out="${temp}/events.graphml" style="${chronology}/order-graphml.xsl" force="true"/>
 	</target>

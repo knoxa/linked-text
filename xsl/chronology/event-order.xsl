@@ -5,7 +5,7 @@
 <!-- 
 
 	Make a graph of events linked in time order. Input events must have been sorted in time order.
-	If the input is partitioned, edges will only be made between nodes in the same partition.
+	If the input is grouped into timelines, edges will only be made between nodes in the same timeline.
 
  -->
 
@@ -18,14 +18,14 @@
 		<xsl:copy-of select="@*"/>
 		<xsl:apply-templates select="//event" mode="node"/>
 		<xsl:apply-templates select="*" mode="edge"/>
-		<xsl:apply-templates select="//partition" mode="state"/>
+		<xsl:apply-templates select="//timeline" mode="state"/>
 	</xsl:copy>
 </xsl:template>
 
 
 <xsl:template match="event" mode="node">
 	<xsl:if test="not(preceding::event[./@uri = current()/@uri])">
-	<!-- need to check because same node may appear in more than one partition -->
+	<!-- need to check because same node may appear in more than one timeline -->
 		<xsl:copy-of select="."/>
 	</xsl:if>
 </xsl:template>
@@ -76,13 +76,13 @@
 <xsl:template match="event" mode="linkFrom">
 	<xsl:param name="source"/>
 	<link fm="{$source}" to="{@uri}">
-		<!-- Add "link reason" to this link if the event is in a partion  -->
-		<xsl:apply-templates select="ancestor::partition[1]"/>
+		<!-- Add "link reason" to this link if the event is in a timeline  -->
+		<xsl:apply-templates select="ancestor::timeline[1]"/>
 	</link>
 </xsl:template>
 
 
-<xsl:template match="partition">
+<xsl:template match="timeline">
 	<xsl:attribute name="reason"><xsl:value-of select="@name"/></xsl:attribute>
 </xsl:template>
 
@@ -92,14 +92,14 @@
 </xsl:template>
 
 
-<xsl:template match="partition" mode="edge">
+<xsl:template match="timeline" mode="edge">
 	<xsl:apply-templates select="*" mode="edge"/>
 </xsl:template>
 
 
-<xsl:template match="partition" mode="state">
+<xsl:template match="timeline" mode="state">
 	<!-- 
-		Make the last event in a partition link to itself.
+		Make the last event in a timeline link to itself.
 		If the nodes are about changes in the state of an entity, then the links are the entity.
 	 -->
 	<xsl:variable name="reason" select="@name"/>

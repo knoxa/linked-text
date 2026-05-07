@@ -4,7 +4,8 @@
 
 <!-- 
 
-Partition events by entity.
+Create a timeline for each entity.
+Events that are about more than one entity are copied into more than one timeline.
 
  -->
 
@@ -22,9 +23,9 @@ Partition events by entity.
 <xsl:template match="entity"/>
 
 <xsl:template match="entity[not(preceding::entity[. = current()])]">
-	<partition name="{.}">
+	<timeline name="{.}">
 		<xsl:copy-of select="//event[entity = current()]"/>
-	</partition>
+	</timeline>
 </xsl:template>
 
 

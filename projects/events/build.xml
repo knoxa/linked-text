@@ -46,7 +46,7 @@
 	
 	<target name="vessels-prep" depends="events, events-sort">
 		<xslt in="${temp}/sorted.xml" out="${temp}/filtered.xml" style="filters/maritime.xsl" force="true"/>
-		<xslt in="${temp}/filtered.xml" out="${temp}/prepared.xml" style="${chronology}/partition.xsl" force="true"/>
+		<xslt in="${temp}/filtered.xml" out="${temp}/prepared.xml" style="${chronology}/timeline.xsl" force="true"/>
 	</target>
 
 	
@@ -62,7 +62,7 @@
 	
 	<target name="operations-prep">
 		<xslt in="${temp}/sorted.xml" out="${temp}/filtered.xml" style="filters/op.xsl" force="true"/>
-		<xslt in="${temp}/filtered.xml" out="${temp}/prepared.xml" style="${chronology}/partition.xsl" force="true"/>
+		<xslt in="${temp}/filtered.xml" out="${temp}/prepared.xml" style="${chronology}/timeline.xsl" force="true"/>
 	</target>
 
 	<target name="operations-graph" depends="operations-graph-prep, events-sort, prepare-null, order, draw"/>
