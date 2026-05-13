@@ -8,8 +8,7 @@ Save the text content to a Text Database with the same identifier.
 
 NLP operates on the Text database.
 
-- Shallow parse Text database - Operate on text strings covered by HTML paragraph elements: Sentence splitting, tokenization and POS tagging.
-
+- Shallow parse Text database - Operate on text strings covered by HTML paragraph (article?) elements: Sentence splitting, tokenization and POS tagging.
 
 - Annotate text - Database matching: For names of people, for names of civilians (so names that aren't of interest can be found and removed from further consideration).
 For ranks and titles.
@@ -40,3 +39,32 @@ This is simply a list of mentions of person name.
 In context they are mentions of people, but out of context there is no way of knowing if an entry in the dictionary refers to one individual or several. 
 An individual may be referred to by many entries in the dictionary.
 Applying the dictionary to text gives context to the mentions.
+
+
+## Identity
+
+I can construct a master list of entities as XHTML+RDFa.
+At minimum, I need a URI and a label. Preferably, I have a URI and multiple labels, one of which is a preferred label.
+Optionally, an entity type.
+
+I construct these artifacts:
+
+* A list of labels. This is for dictionary lookup.
+* A map of label to URI. This map has the label as key, and a set of URI's as value.
+The reason for the value being a set is that the same label might be used by two different entities - it might be ambiguous. 
+* A map of URI to preferred label. This map also has a set of labels as its value, though there should only be one.
+
+### In XHTML
+
+On a HTML *span*:
+
+* If I have a *@class* attribute that identifies an entity type, I can make a blank node identifier (in place of URI) and make the span contents a *skos:altLabel*.
+* If I also have the *@about* attribute, I make that the URI.
+* If I also have the *@content* attribute, I make the value of that the *skos:prefLabel*.
+
+### Recording results
+
+I can put plain text through NLP, find and identify entities though dictionary match and lookup, and record the results as XHTML+RDFa.
+I can save lookup as XML that can easily desearialized for us in NLP.
+Should I do both?
+
