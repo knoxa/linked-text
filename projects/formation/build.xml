@@ -23,7 +23,8 @@
 	</target>
 	
 	<target name="prepare">
-		<xslt in="${temp}/sorted.xml" out="${temp}/prepared.xml" style="${chronology}/timeline.xsl" force="true"/>
+		<xslt in="${temp}/sorted.xml" out="${temp}/filtered.xml" style="xsl/filter.xsl" force="true"/>
+		<xslt in="${temp}/filtered.xml" out="${temp}/prepared.xml" style="${chronology}/timeline.xsl" force="true"/>
 	</target>
 
 	<target name="events">

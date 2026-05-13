@@ -1,6 +1,8 @@
 <?xml version="1.0"?>
 <xsl:stylesheet xmlns:nlp="http://uk.gov.dstl/baleen/parse" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0" exclude-result-prefixes="nlp">
 
+<xsl:import href="file:///D:/GitHub/eleatics/xsl-utils/stringhash.xsl"/>
+
 <!-- 
 	Convert Baleen XML to events
  -->
@@ -36,12 +38,23 @@
 </xsl:template>
 
 <xsl:template match="nlp:sentence">
+
+	<xsl:variable name="text">
+		<xsl:value-of select="normalize-space(substring(../nlp:text, @begin + 1, @end - @begin))"/>
+	</xsl:variable>
+
+	<xsl:variable name="hash">
+		<xsl:call-template name="hashMD5">
+			<xsl:with-param name="text" select="$text"/>
+		</xsl:call-template>
+	</xsl:variable>
+
 	<event uri="{generate-id()}">
 	<xsl:apply-templates select="nlp:token[nlp:lemma[@type = 'DATE' or @penn = 'CD' or @type = 'INTERVAL']]" mode="date" />
 	<xsl:apply-templates select="nlp:token[nlp:surface = 'the First World War']" mode="interval" />
 	<xsl:apply-templates select="nlp:token[nlp:surface = 'the Second World War']" mode="interval" />
-		<text><xsl:value-of select="normalize-space(substring(../nlp:text, @begin + 1, @end - @begin))"/></text>
-		<xsl:apply-templates select="nlp:token[nlp:lemma[@type = 'UNIT']]" mode="unit"/>
+		<text hash="{$hash}"><xsl:value-of select="$text"/></text>
+		<xsl:apply-templates select=".//nlp:token[nlp:lemma[@type = 'UNIT']]" mode="unit"/>
 	</event>
 </xsl:template>
 
@@ -104,6 +117,10 @@
 
 <xsl:template match="nlp:token[nlp:surface = 'the Second World War'][preceding-sibling::nlp:token[2][./nlp:lemma = 'start'] and preceding-sibling::nlp:token[1][./nlp:lemma = 'of']]" mode="interval">
 	<xsl:attribute name="fm"><xsl:value-of select="'1939'"/></xsl:attribute>
+</xsl:template>
+
+<xsl:template match="nlp:token[nlp:surface = 'the First World War'][preceding-sibling::nlp:token[2][./nlp:lemma = 'start'] and preceding-sibling::nlp:token[1][./nlp:lemma = 'of']]" mode="interval">
+	<xsl:attribute name="fm"><xsl:value-of select="'1914-07-28'"/></xsl:attribute>
 </xsl:template>
 
 <xsl:template match="nlp:token[nlp:lemma[@type = 'UNIT']]" mode="unit">

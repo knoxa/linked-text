@@ -22,6 +22,29 @@
 	</xsl:apply-templates>
 </xsl:template>
 
+<xsl:template match="nlp:token[nlp:lemma = 'start' or nlp:lemma = 'end']" mode="adposition">
+	<xsl:apply-templates select="following-sibling::nlp:token[1]" mode="of-interval">
+		<xsl:with-param name="lemma" select="nlp:lemma"/>	
+	</xsl:apply-templates>
+</xsl:template>
+
+<xsl:template match="nlp:token[nlp:lemma = 'be']" mode="adposition">
+	<xsl:apply-templates select="following-sibling::nlp:token[1]" mode="vp"/>
+</xsl:template>
+
+<xsl:template match="nlp:token[nlp:lemma = 'of']" mode="of-interval">
+	<xsl:param name="lemma"/>
+	<xsl:apply-templates select="following-sibling::nlp:token[1]" mode="interval">
+		<xsl:with-param name="lemma" select="$lemma"/>	
+	</xsl:apply-templates>
+</xsl:template>
+
+<xsl:template match="nlp:token[nlp:lemma/@type = 'Noun']" mode="vp">
+	<xsl:apply-templates select="following-sibling::nlp:token[1]" mode="of">
+		<xsl:with-param name="lemma" select="nlp:lemma"/>	
+	</xsl:apply-templates>
+</xsl:template>
+
 <xsl:template match="nlp:token[nlp:lemma[1][@type = 'Noun' or @type = 'NP' or @type = 'CD']]" mode="interval">
 	<xsl:param name="lemma"/>
 	<flag:finish pos="{@end}">
@@ -29,7 +52,17 @@
 	</flag:finish>
 </xsl:template>
 
+<xsl:template match="nlp:token[nlp:lemma[1][@type = 'Adposition']]" mode="of">
+	<xsl:param name="lemma"/>
+	<flag:finish pos="{@end}">
+		<flag:lemma type="VP"><xsl:value-of select="$lemma"/></flag:lemma>
+	</flag:finish>
+</xsl:template>
+
 <xsl:template match="nlp:token" mode="adposition"/>
 <xsl:template match="nlp:token" mode="interval"/>
+<xsl:template match="nlp:token" mode="of"/>
+<xsl:template match="nlp:token" mode="of-interval"/>
+<xsl:template match="nlp:token" mode="vp"/>
 
 </xsl:stylesheet>
