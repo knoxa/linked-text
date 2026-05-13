@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<project name="HTML" basedir=".">
+
+	<property file="ant.properties"/>
+
+	<description>
+		Presenting the results of NLP as HTML.
+	</description>
+	
+	<target name="parse-tree">
+		<xslt in="${temp}/parsed.xml" out="${temp}/results.html" style="xsl/nlp-html.xsl" force="true"/>
+	</target>
+	
+	<target name="html">
+		<xslt in="${temp}/parsed.xml" out="${temp}/states.html" style="xsl/test.xsl" force="true"/>
+	</target>
+	
+	<target name="layout" depends="html">
+		<xslt in="${temp}/states.html" out="${temp}/results.html" style="xsl/fold.xsl" force="true"/>
+	</target>
+	
+</project>
