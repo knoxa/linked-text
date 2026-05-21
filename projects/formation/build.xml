@@ -26,12 +26,20 @@
 		<xslt in="${temp}/sorted.xml" out="${temp}/filtered.xml" style="xsl/filter.xsl" force="true"/>
 		<xslt in="${temp}/filtered.xml" out="${temp}/prepared.xml" style="${chronology}/timeline.xsl" force="true"/>
 	</target>
+	
+	<target name="prepare-select">
+		<xslt in="${temp}/sorted.xml" out="${temp}/prepared.xml" style="xsl/filter-select.xsl" force="true"/>
+	</target>
 
 	<target name="events">
 		<xslt in="${temp}/parsed.xml" out="${temp}/events.xml" style="xsl/nlp-event.xsl" force="true"/>
 	</target>	
 
-	<target name="output" depends="events-sort, prepare, order, draw" />
+	<target name="output" depends="events-sort, prepare-null, order, draw" />
 	<target name="just-draw" depends="order, draw" />
+
+	<target name="covers">
+		<xslt in="${temp}/events.graphml" out="${temp}/pruned.graphml" style="${graph}/covers.xsl" force="true"/>
+	</target>	
 	
 </project>
