@@ -33,50 +33,52 @@
 
 <xsl:template match="event" mode="edge">
 
-	<!-- Find the next interval (in the sort order) that is after this one -->
-	<xsl:variable name="after" select="following-sibling::event[interval/@fm &gt;= current()/interval/@to][1]" />
-
-	<!-- 
-		Set "limit" to the end of the first following interval that doesn't itself contain an interval.
-		Need to search recursively, starting with "after" and descending recursively through the first contained interval. 
+	<!--
+		Find the next and previous intervals, ignoring those that have the same start and end as this interval.
 	-->
-	<xsl:variable name="limit">
-		<xsl:apply-templates select="$after" mode="limit"/>
-	</xsl:variable>
+	<xsl:variable name="after"  select="following-sibling::event[interval/@fm &gt;= current()/interval/@to and not(interval/@fm = current()/interval/@fm and interval/@to = current()/interval/@to)][1]" />
+	<xsl:variable name="before" select="preceding-sibling::event[interval/@to &lt;= current()/interval/@fm and not(interval/@fm = current()/interval/@fm and interval/@to = current()/interval/@to)][1]" />
 	
 	<!-- 
-		Link to all the all intervals that start between the start of "after" and the limit.
-		If "after" doesn't have any nested intervals, the limit will be the end of "after". In this case, the interval must start before the end of "after" if "after" isn't an instant.
+		Link to next interval (and any of the the same span)
 	 -->
-	<xsl:apply-templates select="following-sibling::event[interval/@fm &gt;= $after/interval/@fm and interval/@fm &lt;= number($limit) and (interval/@fm &lt; $after/interval/@to or $after/interval/@fm = $after/interval/@to)]" mode="linkFrom">
+	<xsl:apply-templates select="following-sibling::event[interval/@fm = $after/interval/@fm and interval/@to = $after/interval/@to]" mode="linkFrom">
 		<xsl:with-param name="source" select="@uri"/>
 	</xsl:apply-templates>
-	
-</xsl:template>
 
+	<!-- 
+		Link to previous interval (and any of the same span).
+		This will create some duplicate edges - so need to apply 'filter-duplicate-edge.xsl' to the results of this transform.
+	 -->
+	<xsl:apply-templates select="preceding-sibling::event[interval/@fm = $before/interval/@fm and interval/@to = $before/interval/@to]" mode="linkTo">
+		<xsl:with-param name="target" select="@uri"/>
+	</xsl:apply-templates>
 
-<xsl:template match="event" mode="limit">
-
-	<!--  get first contained interval -->
-	<xsl:variable name="nested" select="following-sibling::event[interval/@fm &gt; current()/interval/@fm and interval/@to &lt;= current()/interval/@to][1]" />
-	
-	<xsl:choose>
-		<xsl:when test="$nested">
-			<!-- If it exists, recursively call this same template with the contained interval -->
-			<xsl:apply-templates select="$nested" mode="limit"/>
-		</xsl:when>
-		<xsl:otherwise>
-			<!-- No child interval, end of recursion, report the end of this one  -->
-			<xsl:text><xsl:value-of select="interval[1]/@to"/></xsl:text>
-		</xsl:otherwise>
-	</xsl:choose>
 </xsl:template>
 
 
 <xsl:template match="event" mode="linkFrom">
 	<xsl:param name="source"/>
-	<link fm="{$source}" to="{@uri}">
-		<!-- Add "link reason" to this link if the event is in a timeline  -->
+	<xsl:apply-templates select="." mode="makelink">
+		<xsl:with-param name="source" select="$source"/>
+		<xsl:with-param name="target" select="@uri"/>
+	</xsl:apply-templates>
+</xsl:template>
+
+
+<xsl:template match="event" mode="linkTo">
+	<xsl:param name="target"/>
+	<xsl:apply-templates select="." mode="makelink">
+		<xsl:with-param name="source" select="@uri"/>
+		<xsl:with-param name="target" select="$target"/>
+	</xsl:apply-templates>
+</xsl:template>
+
+
+<xsl:template match="event" mode="makelink">
+	<xsl:param name="source"/>
+	<xsl:param name="target"/>
+	<link fm="{$source}" to="{$target}">
 		<xsl:apply-templates select="ancestor::timeline[1]"/>
 	</link>
 </xsl:template>
