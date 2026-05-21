@@ -16,6 +16,13 @@
 
 
 <xsl:template match="event[@fm][@to]">
+	<!-- 
+		Construct interval element. The @fm and @to attributes on 'event' are dates of the form:
+		YYYY-MM-DD, YYYY-MM or YYYY (XSDDate, XSDMonth or XSDYear).
+		The @fm and @to elements on 'interval' must be 8 digit integers, so padding characters are added when the date is XSDMonth or XSDYear.
+		Depending on the interpretation, @to (or @from) a month (or year) might mean to the beginning of the month, or to the end of the month.
+		Different padding can be used for different interpretations. 
+	 -->
 	<xsl:copy>
 		<xsl:apply-templates select="*|@*|comment()|processing-instruction()|text()"/>
 		
