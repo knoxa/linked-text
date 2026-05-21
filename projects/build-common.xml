@@ -20,7 +20,8 @@
 	</target>
 
 	<target name="draw">
-		<xslt in="${temp}/ordered.xml" out="${temp}/events.graphml" style="${chronology}/order-graphml.xsl" force="true"/>
+		<xslt in="${temp}/ordered.xml" out="${temp}/events-int.graphml" style="${chronology}/order-graphml.xsl" force="true"/>
+		<xslt in="${temp}/events-int.graphml" out="${temp}/events.graphml" style="${graph}/filter-duplicate-edge.xsl" force="true"/>
 	</target>
 
 	<target name="clean" description="clean up temporary files">
