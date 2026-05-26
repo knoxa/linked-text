@@ -1,6 +1,6 @@
 
 
-_intput/dictionary.txt_ - A list of proper names extracted from [formation.xhtml](https://tigersmuseum.github.io/history/units/formation.xhtml) and [units.xhtml](https://tigersmuseum.github.io/history/units/units.xhtml)(https://tigersmuseum.github.io/history/units/units.xhtml).
+_intput/dictionary.txt_ - A list of proper names extracted from [formation.xhtml](https://tigersmuseum.github.io/history/units/formation.xhtml) and [units.xhtml](https://tigersmuseum.github.io/history/units/units.xhtml).
 
 
 _input/formation.xml_ - The output from NLP of text from [formation.xhtml](https://tigersmuseum.github.io/history/units/formation.xhtml):

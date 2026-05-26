@@ -19,7 +19,8 @@
 		<xslt in="${temp}/temp1.xml" out="${temp}/temp2.xml" style="${parser}/utilities/sort.xsl" force="yes"/>
 		<xslt in="${temp}/temp2.xml" out="${temp}/temp3.xml" style="${parser}/utilities/select.xsl" force="yes"/>
 		<xslt in="${temp}/temp3.xml" out="${temp}/temp4.xml" style="${parser}/ATN/rules/net-npvp.xsl" force="yes"/>
-		<xslt in="${temp}/temp4.xml" out="${temp}/parsed.xml" style="xsl/atn-interval.xsl" force="yes"/>
+		<xslt in="${temp}/temp4.xml" out="${temp}/temp5.xml" style="${parser}/ATN/rules/net-list.xsl" force="yes"/>
+		<xslt in="${temp}/temp5.xml" out="${temp}/parsed.xml" style="xsl/atn-interval.xsl" force="yes"/>
 	</target>
 	
 	<target name="prepare">
@@ -30,12 +31,20 @@
 	<target name="prepare-select">
 		<xslt in="${temp}/sorted.xml" out="${temp}/prepared.xml" style="xsl/filter-select.xsl" force="true"/>
 	</target>
+	
+	<target name="prepare-intervals">
+		<xslt in="${temp}/sorted.xml" out="${temp}/prepared.xml" style="xsl/intervals.xsl" force="true"/>
+	</target>
 
 	<target name="events">
 		<xslt in="${temp}/parsed.xml" out="${temp}/events.xml" style="xsl/nlp-event.xsl" force="true"/>
 	</target>	
 
-	<target name="output" depends="events-sort, prepare-null, order, draw" />
+	<target name="part-of">
+		<xslt in="${temp}/parsed.xml" out="${temp}/part.xml" style="xsl/nlp-part.xsl" force="true"/>
+	</target>	
+
+	<target name="output" depends="events-sort, prepare-select, order, draw" />
 	<target name="just-draw" depends="order, draw" />
 
 	<target name="covers">

@@ -17,6 +17,7 @@ World War 2
 WWII
 38th (Irish) Brigade
 85th Brigade
+51st (Graduated) Battalion
 Middlesex Regiment
 186th (2/2nd West Riding) Brigade
 28th Infantry Brigade
@@ -29,8 +30,10 @@ Maj-Gen. Hon. Henry Ponsonby
 11th Infantry Brigade
 Egyptian Expeditionary Force
 116th Brigade
+5th (Reserve) Battalion
 17th (Home Service) Battalion
 46th Infantry Division
+16th (Irish) Division
 Second Army
 231st Brigade
 122nd Brigade
@@ -44,6 +47,7 @@ No. 20 Beach Group
 No. 21 Beach Group
 15th (Hampshire Carabiniers) Battalion
 XVII Corps
+3/5th Battalion
 Gen. Sir Edmund Haythorne, KCB
 147th Regiment Armoured Corps
 Thomas Meredith's Regiment
@@ -52,8 +56,8 @@ Thomas Meredith's Regiment
 Henry Ponsonby's Regiment
 51st (Highland) Division
 2nd (Rawalpindi) Division
-Viscount Hinchinbroke's Regiment
 Lt-Gen. John Fraser
+Viscount Hinchinbroke's Regiment
 4th Cavalry Brigade
 1st Infantry Division
 Connaught Rangers
@@ -61,18 +65,22 @@ Connaught Rangers
 50th Infantry Division
 39th Division
 26th Division
+3/9th Battalion
 29th Brigade
 1st (Guards) Brigade
 28th Brigade
 Hampshire Regiment
+18th (Garrison) Battalion
 7th Division
 2nd Cavalry Brigade
+18th (Home Service) Battalion
 14th (1st Portsmouth) Battalion
 43rd Division
 21st Army Group
 Col. Sir Robert Munro, Bt
 Third Army
 XIII Corps
+1st (Garrison) Battalion
 5th Division
 2nd Infantry Brigade
 41st Division
@@ -82,12 +90,16 @@ XIII Corps
 2nd Infantry Division
 75th Division
 1/9th Battalion
+22nd Division
 Lt-Gen. Thomas Meredith
 Tigris Corps
 British Army of the Rhine (BAOR)
+1/5th Battalion
 Second Boer War
 Portsmouth Brigade
 Brig-Gen. Hon. Robert Murray
+77th Brigade
+201st (2/1st Middlesex) Brigade
 7th (Meerut) Division
 Lt-Gen. Sir Eyre Coote, KB
 7th Infantry Division
@@ -104,6 +116,7 @@ Col. Edward Richard (Montagu), Viscount Hinchinbroke
 11th Brigade
 10th Infantry Brigade
 VIII Corps
+Hampshire Territorial Brigade
 62nd (2nd West Riding) Division
 45th (2nd Wessex) Division
 2/4th Battalion
@@ -113,15 +126,23 @@ Robert Munro's Regiment
 51st (Highland) Infantry Division
 15th (Service) Battalion
 Lewis Dejean's Regiment
+2nd Hampshire Territorial Brigade
+53rd (Young Soldiers) Battalion
+2/9th Battalion
 6th Battalion
 2/7th Battalion
+2/8th Battalion
 2/6th Battalion
 5th Battalion
 4th Battalion
 World War II
 2nd Wessex Division
+12th Brigade
+17th Battalion
 38th Brigade
+18th Battalion
 134th (2/1st Hampshire) Brigade
+1st Garrison Battalion
 11th Battalion
 WW1
 Number 20 Beach Group
@@ -160,13 +181,17 @@ Lt-Gen. Sir George Gray, Bt.
 1st Battalion
 Wessex Division
 Royal Norfolk Regiment
+3/4th Battalion
 Isle of Wight Rifles
 29th Division
 186th Brigade
 Lt-Gen. Hon. James Stuart
 134th Infantry Brigade
 Secunderabad Brigade
+52nd (Graduated) Battalion
 130th Infantry Brigade
+3/8th Battalion
+16th Division
 XII Corps
 EEF
 147 RAC
@@ -185,6 +210,7 @@ XVI Corps
 1/4th Battalion
 Lt-Gen. Lewis Dejean
 7th Battalion
+4th (Reserve) Battalion
 Royal Hampshire Regiment
 27th Division
 50th (Northumbrian) Infantry Division
@@ -196,12 +222,19 @@ Duke of Connaught's Own
 William Windress' Regiment
 Gen. Sir Hew Whiteford Dalrymple, Bt.
 Royal Armoured Corps
+1/8th Battalion
 45th Division
 5th (TA) Battalion
 51st Division
 1st Cavalry Brigade
 1/6th Battalion
+70th (Young Soldiers) Battalion
+1st Guards Brigade
+66th Infantry Brigade
+67th Division
+1st Division
 4th (Quetta) Division
 4th Division
+67th (2nd Home Counties) Division
 3rd Division
 Gen. Hon. Sir Alexander Duff, GCH

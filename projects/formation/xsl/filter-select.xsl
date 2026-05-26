@@ -7,7 +7,7 @@
 </xsl:copy>
 </xsl:template>
 
-<xsl:template match="event[entity = '2/7th Battalion' ]">
+<xsl:template match="event[entity = '2/4th Battalion' ]">
 	<xsl:copy-of select="."/>
 </xsl:template>
 

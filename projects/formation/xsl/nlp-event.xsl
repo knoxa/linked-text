@@ -55,7 +55,7 @@
 	<xsl:apply-templates select="nlp:token[nlp:surface = 'the Second World War']" mode="interval" />
 	<xsl:apply-templates select="nlp:token[nlp:surface = 'the Second Boer War']" mode="interval" />
 		<text hash="{$hash}"><xsl:value-of select="$text"/></text>
-		<xsl:apply-templates select=".//nlp:token[nlp:lemma[@type = 'UNIT']]" mode="unit"/>
+		<xsl:apply-templates select="./nlp:token" mode="unit"/>
 	</event>
 </xsl:template>
 
@@ -128,8 +128,11 @@
 	<entity type="unit"><xsl:value-of select="nlp:lemma"/></entity>
 </xsl:template>
 
+<xsl:template match="nlp:token" mode="unit">
+	<xsl:apply-templates select="nlp:token" mode="unit"/>
+</xsl:template>
+
 <xsl:template match="*" mode="date" />
-<xsl:template match="*" mode="interval" />
 <xsl:template match="*" mode="interval" />
 
 </xsl:stylesheet>
