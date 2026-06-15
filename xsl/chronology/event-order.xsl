@@ -24,7 +24,7 @@
 
 
 <xsl:template match="event" mode="node">
-	<xsl:if test="not(preceding::event[./@uri = current()/@uri])">
+	<xsl:if test="not(preceding::event[./@id = current()/@id])">
 	<!-- need to check because same node may appear in more than one timeline -->
 		<xsl:copy-of select="."/>
 	</xsl:if>
@@ -40,20 +40,61 @@
 	<xsl:variable name="before" select="preceding-sibling::event[interval/@to &lt;= current()/interval/@fm and not(interval/@fm = current()/interval/@fm and interval/@to = current()/interval/@to)][1]" />
 	
 	<!-- 
-		Link to next interval (and any of the the same span)
+		Link to next interval and any others that start at the same instant
 	 -->
-	<xsl:apply-templates select="following-sibling::event[interval/@fm = $after/interval/@fm and interval/@to = $after/interval/@to]" mode="linkFrom">
-		<xsl:with-param name="source" select="@uri"/>
+	<xsl:apply-templates select="following-sibling::event[interval/@fm = $after/interval/@fm]" mode="linkFrom">
+		<xsl:with-param name="source" select="@id"/>
 	</xsl:apply-templates>
 
 	<!-- 
-		Link to previous interval (and any of the same span).
-		This will create some duplicate edges - so need to apply 'filter-duplicate-edge.xsl' to the results of this transform.
+		Link also to the first interval that starts within the bounds of the next interval ...
 	 -->
-	<xsl:apply-templates select="preceding-sibling::event[interval/@fm = $before/interval/@fm and interval/@to = $before/interval/@to]" mode="linkTo">
-		<xsl:with-param name="target" select="@uri"/>
+	 
+	<xsl:apply-templates select="following-sibling::event[interval/@fm &gt; $after/interval/@fm and interval/@fm &lt; $after/interval/@to][1]" mode="linkAlso">
+		<xsl:with-param name="source" select="@id"/>
+		<xsl:with-param name="limit" select="$after/interval/@to"/>
 	</xsl:apply-templates>
 
+	<!-- 
+		If this is an instant, link to intervals that start at the same instant - but not $after, which was linked above.
+	 -->
+	
+	<xsl:if test="interval/@fm = interval/@to">
+		<xsl:apply-templates select="following-sibling::event[interval/@fm = current()/interval/@fm and not(interval/@to = $after/interval/@to)]" mode="linkFrom">
+			<xsl:with-param name="source" select="@id"/>
+		</xsl:apply-templates>
+	</xsl:if>
+
+</xsl:template>
+
+
+<xsl:template match="event" mode="linkAlso">
+
+	<xsl:param name="limit" select="interval/@to"/>
+	<xsl:param name="source"/>	
+	
+	<xsl:apply-templates select="." mode="linkFrom">
+		<xsl:with-param name="source" select="$source"/>
+	</xsl:apply-templates>
+	<xsl:apply-templates select="following-sibling::event[interval/@fm = current()/interval/@fm and interval/@to = current()/interval/@to]" mode="linkFrom">
+		<xsl:with-param name="source" select="@id"/>
+	</xsl:apply-templates>
+	
+	<!--  link (recursively) to a span that starts within this span, and before the end of its containing span -->
+	<xsl:variable name="newLimit">
+		<xsl:choose>
+			<xsl:when test="$limit &gt;= interval/@to">
+				<xsl:value-of select="interval/@to"/>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:value-of select="$limit"/>
+			</xsl:otherwise>
+		</xsl:choose>
+	</xsl:variable>
+	<xsl:apply-templates select="following-sibling::event[interval/@fm &gt; current()/interval/@fm and interval/@fm &lt; $newLimit][1]" mode="linkAlso">
+		<xsl:with-param name="source" select="$source"/>
+		<xsl:with-param name="limit" select="$newLimit"/>
+	</xsl:apply-templates>
 </xsl:template>
 
 
@@ -61,16 +102,7 @@
 	<xsl:param name="source"/>
 	<xsl:apply-templates select="." mode="makelink">
 		<xsl:with-param name="source" select="$source"/>
-		<xsl:with-param name="target" select="@uri"/>
-	</xsl:apply-templates>
-</xsl:template>
-
-
-<xsl:template match="event" mode="linkTo">
-	<xsl:param name="target"/>
-	<xsl:apply-templates select="." mode="makelink">
-		<xsl:with-param name="source" select="@uri"/>
-		<xsl:with-param name="target" select="$target"/>
+		<xsl:with-param name="target" select="@id"/>
 	</xsl:apply-templates>
 </xsl:template>
 
@@ -78,9 +110,9 @@
 <xsl:template match="event" mode="makelink">
 	<xsl:param name="source"/>
 	<xsl:param name="target"/>
-	<link fm="{$source}" to="{$target}">
+	<edge from="{$source}" to="{$target}">
 		<xsl:apply-templates select="ancestor::timeline[1]"/>
-	</link>
+	</edge>
 </xsl:template>
 
 
@@ -89,7 +121,7 @@
 </xsl:template>
 
 
-<xsl:template match="link" mode="edge">
+<xsl:template match="edge" mode="edge">
 	<xsl:copy-of select="."/>
 </xsl:template>
 
@@ -106,7 +138,7 @@
 	 -->
 	<xsl:variable name="reason" select="@name"/>
 	<xsl:for-each select="./event[last()]">
-		<link fm="{@uri}" to="{@uri}" reason="{$reason}"/>
+		<edge from="{@id}" to="{@id}" reason="{$reason}"/>
 	</xsl:for-each>
 </xsl:template>
 
