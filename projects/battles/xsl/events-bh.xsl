@@ -15,7 +15,7 @@
 </xsl:template>
 
 <xsl:template match="html:article">
-	<event uri="{concat('#', generate-id())}" fm="{.//html:datetime[1]/@content}" to="{.//html:datetime[last()]/@content}">
+	<event id="{generate-id()}" fm="{.//html:datetime[1]/@content}" to="{.//html:datetime[last()]/@content}">
 		<text><xsl:value-of select="html:h3"/></text>
 		<entity type="theatre"><xsl:value-of select="ancestor::html:div[1]/@id"/></entity>
 	</event>

@@ -26,8 +26,8 @@
 
 	<target name="partitioned">
 	<!--
-		The source battle honours are grouped by div elements into theatres of operation.
-		The events extracted from the XHTML have the id of the div element containing them as an entity of type "theatre".
+		The source battle honours are grouped by <div> elements into theatres of operation.
+		The events extracted from the XHTML have the @id of the <div> element containing them as an entity of type "theatre".
 		Partition by this entity and draw the graph so that each "theatre" is a different graph component.
 	-->
 		<xslt in="${temp}/sorted.xml" out="${temp}/partitioned.xml" style="${chronology}/timeline.xsl" force="true"/>
