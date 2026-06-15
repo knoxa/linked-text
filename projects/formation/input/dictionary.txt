@@ -14,6 +14,7 @@ World War 1
 Lt-Gen. William Smelt, CB
 World War 2
 7th Brigade
+54th Division
 WWII
 38th (Irish) Brigade
 85th Brigade
@@ -47,8 +48,8 @@ No. 20 Beach Group
 No. 21 Beach Group
 15th (Hampshire Carabiniers) Battalion
 XVII Corps
-3/5th Battalion
 Gen. Sir Edmund Haythorne, KCB
+3/5th Battalion
 147th Regiment Armoured Corps
 Thomas Meredith's Regiment
 10th Division
@@ -81,6 +82,7 @@ Col. Sir Robert Munro, Bt
 Third Army
 XIII Corps
 1st (Garrison) Battalion
+54th (East Anglian) Infantry Division
 5th Division
 2nd Infantry Brigade
 41st Division
@@ -100,6 +102,7 @@ Portsmouth Brigade
 Brig-Gen. Hon. Robert Murray
 77th Brigade
 201st (2/1st Middlesex) Brigade
+6th Armoured Division
 7th (Meerut) Division
 Lt-Gen. Sir Eyre Coote, KB
 7th Infantry Division
@@ -128,6 +131,7 @@ Robert Munro's Regiment
 Lewis Dejean's Regiment
 2nd Hampshire Territorial Brigade
 53rd (Young Soldiers) Battalion
+138th (Lincoln and Leicester) Brigade
 2/9th Battalion
 6th Battalion
 2/7th Battalion
@@ -148,8 +152,8 @@ WW1
 Number 20 Beach Group
 Number 21 Beach Group
 US Fifth Army
-WW2
 Lt-Gen. Sir Charles Ross, Bt.
+WW2
 12th Battalion
 15th Battalion
 Norfolk Regiment
@@ -193,6 +197,7 @@ Secunderabad Brigade
 3/8th Battalion
 16th Division
 XII Corps
+221st Mixed Brigade
 EEF
 147 RAC
 XXX Corps
@@ -200,11 +205,12 @@ XXX Corps
 2nd Battalion
 5th Cavalry Brigade
 II Corps
+Jubbulpore Brigade
 82nd Brigade
 First World War
 128th (Hampshire) Brigade
-11th Security Force Assistance Brigade
 Col. William Windress
+11th Security Force Assistance Brigade
 XVI Corps
 15th (Hampshire Yeomanry) Battalion
 1/4th Battalion
@@ -229,6 +235,7 @@ Royal Armoured Corps
 1st Cavalry Brigade
 1/6th Battalion
 70th (Young Soldiers) Battalion
+138th Brigade
 1st Guards Brigade
 66th Infantry Brigade
 67th Division
@@ -238,3 +245,4 @@ Royal Armoured Corps
 67th (2nd Home Counties) Division
 3rd Division
 Gen. Hon. Sir Alexander Duff, GCH
+1st Independent Brigade Group (Guards)

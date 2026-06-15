@@ -7,7 +7,23 @@
 </xsl:copy>
 </xsl:template>
 
-<xsl:template match="event[entity = '2/4th Battalion' ]">
+<xsl:template match="event[entity = '2nd Battalion' ]">
+	<xsl:copy-of select="."/>
+</xsl:template>
+
+<xsl:template match="event[text = 'Start of the Second World War' ]">
+	<xsl:copy-of select="."/>
+</xsl:template>
+
+<xsl:template match="event[text = 'End of the Second World War' ]">
+	<xsl:copy-of select="."/>
+</xsl:template>
+
+<xsl:template match="event[text = 'Start of the First World War' ]">
+	<xsl:copy-of select="."/>
+</xsl:template>
+
+<xsl:template match="event[text = 'End of the First World War' ]">
 	<xsl:copy-of select="."/>
 </xsl:template>
 

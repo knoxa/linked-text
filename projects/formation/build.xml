@@ -42,9 +42,14 @@
 
 	<target name="part-of">
 		<xslt in="${temp}/parsed.xml" out="${temp}/part.xml" style="xsl/nlp-part.xsl" force="true"/>
+		<xslt in="${temp}/part.xml" out="${temp}/part.graphml" style="${category}/map-graphml.xsl" force="true"/>
 	</target>	
 
-	<target name="output" depends="events-sort, prepare-select, order, draw" />
+	<target name="span">
+		<xslt in="${temp}/ordered.xml" out="${temp}/context.xml" style="xsl/span.xsl" force="true"/>
+	</target>	
+
+	<target name="output" depends="events-sort, prepare-null, order, draw" />
 	<target name="just-draw" depends="order, draw" />
 
 	<target name="covers">
