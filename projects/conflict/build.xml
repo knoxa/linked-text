@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<project name="Conflict" basedir=".">
+
+	<property file="ant.properties" />
+	<import file="../build-common.xml"/>
+
+	<description>
+		Conflict events.
+	</description>
+
+	<target name="rdfa">
+		<xslt in="/D:/GitHub/history/events/conflict/ww1/macedonia.xhtml" out="${temp}/rdfa.txt" style="${xsl-utils}/rdfa-ntriples.xsl" force="true" />
+	</target>
+
+	<target name="event">
+		<xslt in="/C:/workspaces/development/LookingGlassCakes/dumpS.xml" out="${temp}/events.xml" style="../../xsl/event-format.xsl" force="true" />
+	    <xslt in="${temp}/events.xml" out="${temp}/prepared.xml" style="${chronology}/make-sortable.xsl" force="yes"/>
+		<xslt in="/C:/workspaces/development/LookingGlassCakes/dumpS.xml" out="${temp}/part.xml" style="xsl/ies-partof.xsl" force="true" />
+		<xslt in="/C:/workspaces/development/LookingGlassCakes/dumpS.xml" out="${temp}/bh.xml" style="xsl/bh.xsl" force="true" />
+	</target>
+	
+	<target name="output" depends="events-sort, prepare-null, order, draw"/>
+	
+</project>
