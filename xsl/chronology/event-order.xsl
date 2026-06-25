@@ -34,14 +34,14 @@
 <xsl:template match="event" mode="edge">
 
 	<!--
-		Find the next and previous intervals, ignoring those that have the same start and end as this interval.
+		Find the next interval, ignoring those that have the same start and end as this interval.
 	-->
 	<xsl:variable name="after"  select="following-sibling::event[interval/@fm &gt;= current()/interval/@to and not(interval/@fm = current()/interval/@fm and interval/@to = current()/interval/@to)][1]" />
-	<xsl:variable name="before" select="preceding-sibling::event[interval/@to &lt;= current()/interval/@fm and not(interval/@fm = current()/interval/@fm and interval/@to = current()/interval/@to)][1]" />
 	
 	<!-- 
 		Link to next interval and any others that start at the same instant
 	 -->
+	 
 	<xsl:apply-templates select="following-sibling::event[interval/@fm = $after/interval/@fm]" mode="linkFrom">
 		<xsl:with-param name="source" select="@id"/>
 	</xsl:apply-templates>
@@ -60,7 +60,7 @@
 	 -->
 	
 	<xsl:if test="interval/@fm = interval/@to">
-		<xsl:apply-templates select="following-sibling::event[interval/@fm = current()/interval/@fm and not(interval/@to = $after/interval/@to)]" mode="linkFrom">
+		<xsl:apply-templates select="following-sibling::event[interval/@fm != interval/@to and interval/@fm = current()/interval/@fm and not(interval/@to = $after/interval/@to)]" mode="linkFrom">
 			<xsl:with-param name="source" select="@id"/>
 		</xsl:apply-templates>
 	</xsl:if>
@@ -76,9 +76,12 @@
 	<xsl:apply-templates select="." mode="linkFrom">
 		<xsl:with-param name="source" select="$source"/>
 	</xsl:apply-templates>
-	<xsl:apply-templates select="following-sibling::event[interval/@fm = current()/interval/@fm and interval/@to = current()/interval/@to]" mode="linkFrom">
+	
+	<!-- 
+	<xsl:apply-templates select="following-sibling::event[interval/@fm = current()/interval/@fm and interval/@to = current()/interval/@to and not(interval/@fm = interval/@to)]" mode="linkFrom">
 		<xsl:with-param name="source" select="@id"/>
 	</xsl:apply-templates>
+	 -->
 	
 	<!--  link (recursively) to a span that starts within this span, and before the end of its containing span -->
 	<xsl:variable name="newLimit">
