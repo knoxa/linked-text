@@ -7,7 +7,39 @@
 </xsl:copy>
 </xsl:template>
 
-<xsl:template match="event[entity = '2nd Battalion' ]">
+<!-- 
+ 
+<xsl:template match="event[interval/@fm &gt;= 19160405 and interval/@fm &lt;= 19170000]">
+	<xsl:copy-of select="."/>
+</xsl:template>
+
+ -->
+ 
+<xsl:template match="event[entity = '5th Battalion' ]">
+	<xsl:copy-of select="."/>
+</xsl:template>
+ 
+<xsl:template match="event[entity = '1/5th Battalion' ]">
+	<xsl:copy-of select="."/>
+</xsl:template>
+ 
+<xsl:template match="event[entity = '2/5th Battalion' ]">
+	<xsl:copy-of select="."/>
+</xsl:template>
+ 
+<xsl:template match="event[entity = '7th Battalion' ]">
+	<xsl:copy-of select="."/>
+</xsl:template>
+ 
+<xsl:template match="event[entity = '1/7th Battalion' ]">
+	<xsl:copy-of select="."/>
+</xsl:template>
+ 
+<xsl:template match="event[entity = '2/7th Battalion' ]">
+	<xsl:copy-of select="."/>
+</xsl:template>
+ 
+<xsl:template match="event[entity = '5/7th Battalion' ]">
 	<xsl:copy-of select="."/>
 </xsl:template>
 

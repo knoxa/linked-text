@@ -23,10 +23,12 @@
 	<xsl:apply-templates select="nlp:token[nlp:lemma[. = 'part'][@type = 'VP']]" mode="part"/>
 	<xsl:apply-templates select="nlp:token[nlp:lemma[. = 'assign'][@type = 'VP']]" mode="part"/>
 	<xsl:apply-templates select="nlp:token[nlp:lemma[. = 'command']]" mode="part"/>
+	<xsl:apply-templates select="nlp:token[nlp:lemma[. = 'attach']]" mode="part"/>
+	<xsl:apply-templates select="nlp:token[nlp:lemma[. = 'join' or . = 'rejoin']]" mode="part"/>
 </xsl:template>
 
 <xsl:template match="nlp:token" mode="part">
-	<xsl:variable name="target"><xsl:value-of select="following-sibling::nlp:token[1]//nlp:lemma[@type = 'UNIT'][1]"/></xsl:variable>
+	<xsl:variable name="target"><xsl:value-of select="following-sibling::nlp:token[1]//nlp:lemma[@type = 'UNIT' or @type = 'SPAN'][1]"/></xsl:variable>
 	<xsl:choose>
 		<xsl:when test="string-length($target) &gt; 0">
 	<xsl:message><xsl:value-of select="$target"/></xsl:message>
@@ -44,10 +46,30 @@
 </xsl:template>
 
 <xsl:template match="nlp:token[nlp:lemma = 'command']" mode="part">
-	<xsl:variable name="target"><xsl:value-of select="following-sibling::nlp:token[nlp:lemma/@type = 'UNIT'][1]//nlp:lemma[@type = 'UNIT'][1]"/></xsl:variable>
+	<xsl:variable name="target"><xsl:value-of select="following-sibling::nlp:token[nlp:lemma[@type = 'UNIT' or @type = 'SPAN']][1]//nlp:lemma[@type = 'UNIT' or @type = 'SPAN'][1]"/></xsl:variable>
 	<xsl:if test="string-length($target) &gt; 0">
 	<xsl:message><xsl:value-of select="$target"/></xsl:message>
 		<xsl:apply-templates select="preceding-sibling::nlp:token[nlp:lemma/@type = 'UNIT'][1]" mode="entry">
+			<xsl:with-param name="target" select="$target"/>
+		</xsl:apply-templates>
+	</xsl:if>
+</xsl:template>
+
+<xsl:template match="nlp:token[nlp:lemma = 'attach']" mode="part">
+	<xsl:variable name="target"><xsl:value-of select="following-sibling::nlp:token[nlp:lemma[@type = 'UNIT' or @type = 'SPAN']][1]//nlp:lemma[@type = 'UNIT' or @type = 'SPAN'][1]"/></xsl:variable>
+	<xsl:if test="string-length($target) &gt; 0">
+	<xsl:message><xsl:value-of select="$target"/></xsl:message>
+		<xsl:apply-templates select="preceding-sibling::nlp:token[nlp:lemma[@type = 'UNIT' or @type = 'SPAN']][1]" mode="entry">
+			<xsl:with-param name="target" select="$target"/>
+		</xsl:apply-templates>
+	</xsl:if>
+</xsl:template>
+
+<xsl:template match="nlp:token[nlp:lemma = 'join' or nlp:lemma = 'rejoin']" mode="part">
+	<xsl:variable name="target"><xsl:value-of select="following-sibling::nlp:token[nlp:lemma[@type = 'UNIT' or @type = 'SPAN']][1]//nlp:lemma[@type = 'UNIT' or @type = 'SPAN'][1]"/></xsl:variable>
+	<xsl:if test="string-length($target) &gt; 0">
+	<xsl:message><xsl:value-of select="$target"/></xsl:message>
+		<xsl:apply-templates select="preceding-sibling::nlp:token[nlp:lemma[@type = 'UNIT' or @type = 'SPAN']][1]" mode="entry">
 			<xsl:with-param name="target" select="$target"/>
 		</xsl:apply-templates>
 	</xsl:if>
@@ -63,7 +85,7 @@
 <!-- 
 <xsl:template match="nlp:token[nlp:token[nlp:lemma = 'and']]" mode="entry">
 	<xsl:param name="target"/>
-	<xsl:apply-templates select="./nlp:token[nlp:lemma[@type = 'UNIT']]" mode="entry">
+	<xsl:apply-templates select="./nlp:token[nlp:lemma[@type = 'UNIT' or @type = 'SPAN']]" mode="entry">
 		<xsl:with-param name="target" select="$target"/>
 	</xsl:apply-templates>
 </xsl:template>
@@ -71,7 +93,7 @@
 
 <xsl:template match="nlp:token" mode="entry">
 	<xsl:param name="target"/>
-	<xsl:for-each select=".//nlp:lemma[@type = 'UNIT']">
+	<xsl:for-each select=".//nlp:lemma[@type = 'UNIT' or @type = 'SPAN']">
 		<entry key="{.}" value="{$target}"/>
 	</xsl:for-each>
 </xsl:template>

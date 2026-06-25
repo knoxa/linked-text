@@ -4,43 +4,43 @@
 
 <!-- 
 
-Extract intervals and instants from RDF/XML
+Extract intervals and instants from Owl Time RDF/XML
 
  -->
 
 <xsl:template match="/">
-<temporal>    
-	<xsl:apply-templates select="//time:Instant" />
-	<xsl:apply-templates select="//*[@rdf:about][time:hasBeginning or time:hasEnd or time:hasEnd]" />
-	<xsl:apply-templates select="//*[@rdf:about][time:intervalEquals]" />
+<temporal>
+	<xsl:apply-templates select="//*[time:hasBeginning or time:hasEnd]" />
+	<xsl:apply-templates select="//*[time:intervalEquals]" />
+	<xsl:apply-templates select="/rdf:RDF/rdf:Description[time:inXSDDate]" />
 </temporal>
 </xsl:template>
 
-
-<xsl:template match="time:Instant[@rdf:about]">
-	<event uri="{@rdf:about}" fm="{normalize-space(time:*)}" to="{normalize-space(time:*[1])}" type="instant" label="{skos:prefLabel|skos:altLabel|rdfs:label[1]}"/>
+<xsl:template match="*[time:hasBeginning or time:hasEnd]">
+	<xsl:variable name="id"><xsl:call-template name="getId"/></xsl:variable>
+	<event id="{$id}" fm="{normalize-space(time:hasBeginning/*/time:*)}" to="{normalize-space(time:hasEnd/*/time:*)}" label="{skos:prefLabel|rdfs:label[1]}"/>
 </xsl:template>
 
-<xsl:template match="time:Instant">
-<xsl:if test="not(preceding::time:Instant[time:inXSDDate = current()/time:inXSDDate])">
-	<event uri="{generate-id()}" fm="{normalize-space(time:*[1])}" to="{normalize-space(time:*[1])}" type="instant" label="{normalize-space(.)}"/>
-</xsl:if>
+<xsl:template match="*[time:intervalEquals]">
+	<xsl:variable name="id"><xsl:call-template name="getId"/></xsl:variable>
+	<event id="{$id}" fm="{normalize-space(time:intervalEquals/*/time:*[1])}" to="{normalize-space(time:intervalEquals/*/time:*[last()])}" label="{skos:prefLabel|rdfs:label[1]}"/>
 </xsl:template>
 
-<!-- 
-<xsl:template match="*[@rdf:about][time:hasBeginning or time:hasEnd]">
-	<event uri="{@rdf:about}" fm="{normalize-space(time:hasBeginning/time:Instant/time:*)}" to="{normalize-space(time:hasEnd/time:Instant/time:*)}" type="interval" label="{skos:prefLabel|rdfs:label[1]}"/>
-</xsl:template>
-<xsl:template match="*[@rdf:about][time:hasBeginning or time:hasEnd]">
-	<event uri="{@rdf:about}" fm="{normalize-space(time:hasBeginning//time:inXSDDate[1])}" to="{normalize-space(time:hasEnd///time:inXSDDate[1])}" type="interval" label="{skos:prefLabel|rdfs:label[1]}"/>
-</xsl:template>
- -->
-<xsl:template match="*[@rdf:about][time:hasBeginning or time:hasEnd]">
-	<event uri="{@rdf:about}" fm="{normalize-space(time:hasBeginning/*/time:*)}" to="{normalize-space(time:hasEnd/*/time:*)}" type="interval" label="{skos:prefLabel|rdfs:label[1]}"/>
+<xsl:template match="*[time:inXSDDate]">
+	<event id="{generate-id()}" fm="{normalize-space(time:*[1])}" to="{normalize-space(time:*[1])}" label="{skos:prefLabel|rdfs:label[1]}"/>
 </xsl:template>
 
-<xsl:template match="*[@rdf:about][time:intervalEquals]">
-	<event uri="{@rdf:about}" fm="{normalize-space(time:intervalEquals/*/time:*[1])}" to="{normalize-space(time:intervalEquals/*/time:*[last()])}" type="interval" label="{skos:prefLabel|rdfs:label[1]}"/>
+
+<xsl:template name="getId">
+	<xsl:choose>
+		<xsl:when test="@rdf:about">
+			<xsl:value-of select="@rdf:about"/>
+		</xsl:when>
+		<xsl:otherwise>
+			<xsl:value-of select="generate-id()"/>
+		</xsl:otherwise>
+	</xsl:choose>
 </xsl:template>
+
 
 </xsl:stylesheet>

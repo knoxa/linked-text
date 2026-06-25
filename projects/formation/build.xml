@@ -13,6 +13,10 @@
 	<target name="test">
 		<xslt in="/D:/GitHub/history/units/test.xhtml" out="${temp}/scratch.txt" style="${rdfa}/rdfa-ntriples.xsl" force="true"/>
 	</target>
+	
+	<target name="dictionary">
+		<xslt in="work/formations.xml" out="${temp}/prefspan.xml" style="xsl/work.xsl" force="true"/>
+	</target>
 
 	<target name="parse">
 		<xslt in="input/formation.xml" out="${temp}/temp1.xml" style="${parser}/utilities/annotation-token.xsl" force="yes"/>
@@ -49,7 +53,7 @@
 		<xslt in="${temp}/ordered.xml" out="${temp}/context.xml" style="xsl/span.xsl" force="true"/>
 	</target>	
 
-	<target name="output" depends="events-sort, prepare-null, order, draw" />
+	<target name="output" depends="events-sort, prepare-select, order, draw" />
 	<target name="just-draw" depends="order, draw" />
 
 	<target name="covers">

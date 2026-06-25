@@ -95,6 +95,10 @@
 	<xsl:attribute name="fm"><xsl:value-of select="nlp:lemma"/></xsl:attribute>
 </xsl:template>
 
+<xsl:template match="nlp:token[nlp:lemma[@type = 'DATE']][preceding-sibling::nlp:token[2][./nlp:lemma = 'dissolve']][preceding-sibling::nlp:token[1][./nlp:lemma = 'in' or ./nlp:lemma = 'on']]" mode="date">
+	<xsl:attribute name="to"><xsl:value-of select="nlp:lemma"/></xsl:attribute>
+</xsl:template>
+
 <xsl:template match="nlp:token[nlp:lemma[@penn = 'CD']][preceding-sibling::nlp:token[1][./nlp:lemma = 'until']]" mode="date">
 	<xsl:attribute name="to"><xsl:value-of select="nlp:lemma"/></xsl:attribute>
 </xsl:template>
