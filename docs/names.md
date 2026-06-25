@@ -33,6 +33,11 @@ At some point, I can switch to applying just the names dictionary.
 I can serialize the results as HTML, marking up names in the output, and scan the results to assess quality. (xsl/html-new.xsl)
 I can then add or remove entries as I see fit.
 
+I can try applying simple dictionaries to XHTML. I need to at least segment text by sentence because any annotations created by dictionary matching 
+will be nested inside sentences. I can take a serialized collection of document, text, sentence and annotation elements and create HTML for the purpose of visualizing dictionary hits. The generated HTML as an article per document, and a paragraph per sentence. Dictionary hits are spans with the class attribute set.
+(markup-dictionary.xsl).
+
+
 ## Names dictionary
 
 This is simply a list of mentions of person name.
@@ -40,6 +45,33 @@ In context they are mentions of people, but out of context there is no way of kn
 An individual may be referred to by many entries in the dictionary.
 Applying the dictionary to text gives context to the mentions.
 
+## Sources of names
+
+* Assume that a _span_ element with a _class_ attribute labels an entity.
+Assume that a _content_ attribute, if present, specifies a preferred label.
+
+Spans might be used in this way to resolve anaphors. If so, the specified content is likely to be ambiguous outside a narrow scope.
+A narrow context can be acknowledged by only using spans within the sentence or paragraph during NLP.
+However, it may be useful to use spans in a wider context, or from a different document, in which case ambiguity will be an issue. 
+
+* Names may come from RDF models. Entity names are label properties, SKOS or RDFS say.
+A SKOS _prefLabel_ explicitly defines a preferred name.
+
+Preferred names should be unique within the same model, but they might not be.
+Different models of the same domain (with different modellers) may well have different preferred names for the same entity.
+Models generated from XHTML+RFDa are likely to be less 'rigorous' than those directly crafted by knowledge engineers.
+
+### Issues
+
+1. A map of entity label to preferred label may give more than one preferred label if there are multiple sources.
+
+2. One label may be a substring of another.
+
+How these issues are resolved may depend on what some application is trying to achieve.
+
+### Normalization
+
+Make a map from alternate label to preferred label.
 
 ## Identity
 
@@ -65,6 +97,6 @@ On a HTML *span*:
 ### Recording results
 
 I can put plain text through NLP, find and identify entities though dictionary match and lookup, and record the results as XHTML+RDFa.
-I can save lookup as XML that can easily desearialized for us in NLP.
+I can save lookup as XML that can easily deserialized for use in NLP.
 Should I do both?
 
