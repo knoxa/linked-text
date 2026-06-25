@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<project name="NER" basedir=".">
+
+	<property file="ant.properties"/>
+
+	<description>
+		Named Entity Recognition.
+	</description>
+
+	<!--
+	-->
+	
+	<target name="terms">
+		<xslt in="/C:/workspaces/development/DOMEX/kml/diary.kml" out="${temp}/dictionary.xml" style="xsl/dictionary-earth.xsl" force="true"/>
+	</target>
+		
+
+</project>
