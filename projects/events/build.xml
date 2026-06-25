@@ -24,6 +24,11 @@
 
 	<target name="events-hants">
 		<xslt in="/D:/GitHub/history/events/rhants/eventdiary.xhtml" out="${temp}/events-hants.xml" style="/D:/GitHub/history/events/rhants/eventdiary.xsl" force="true"/>
+		<xslt in="/D:/GitHub/history/events/rhants/eventdiary.xhtml" out="${temp}/prefspan.xml" style="${names}/prefer.xsl" force="true"/>
+	</target>	
+
+	<target name="labels">
+		<xslt in="/D:/GitHub/history/units/hants.xhtml" out="${temp}/labels.xml" style="${names}/labels-rdfa.xsl" force="true"/>
 	</target>	
 	
 	<target name="china" depends="events, events-sort">
