@@ -38,8 +38,8 @@
 <!-- 
 	We have an 'in transit' event that mentions a place ...
  -->
-	<xsl:variable name="node" select="concat('_:', generate-id())"/>
-	<event uri="{$node}">
+	<xsl:variable name="node" select="generate-id()"/>
+	<event id="{$node}">
 		<text><xsl:value-of select="normalize-space(.)"/></text>
 		<xsl:apply-templates select="*" mode="place"/>
 	</event>
@@ -51,8 +51,8 @@
 		<xsl:variable name="tonode">
 			<xsl:call-template name="getLinkTo"/>
 		</xsl:variable>
-	<link fm="{$fmnode}" to="{$node}"/>
-	<link fm="{$node}" to="{$tonode}"/>
+	<edge from="{$fmnode}" to="{$node}"/>
+	<edge from="{$node}" to="{$tonode}"/>
 	</xsl:for-each>
 </xsl:template>
 
@@ -92,7 +92,7 @@
 		<!-- 
 			Just one event (doesn't matter what), record it ...
 		 -->
-			<event uri="{concat('_:', generate-id())}" fm="{$fmattr}" to="{$toattr}">
+			<event id="{generate-id()}" fm="{$fmattr}" to="{$toattr}">
 				<text><xsl:value-of select="normalize-space(.)"/></text>
 				<interval fm="{$fmpos}" to="{$topos}"/>
 				<xsl:apply-templates select="*" mode="place"/>
@@ -111,7 +111,7 @@
 	<xsl:param name="toattr"/>
 	<xsl:param name="pos"/>
 	<xsl:variable name="thispos"><xsl:value-of select="concat($pos, '.', position())"/></xsl:variable>
-	<event uri="{concat('_:', generate-id())}" fm="{$fmattr}" to="{$toattr}">
+	<event id="{generate-id()}" fm="{$fmattr}" to="{$toattr}">
 		<text><xsl:value-of select="normalize-space(.)"/></text>
 		<interval fm="{$thispos}" to="{$thispos}"/>
 		<xsl:apply-templates select="*" mode="place"/>
@@ -135,11 +135,11 @@
 
 <xsl:template name="getLinkTo">
 	<!-- 
-		If the text say 'arrived' then the transit event was before this event, otherwise its before the next event that mentions a place.
+		If the text say 'arrived' then the transit event was before this event, otherwise it's before the next event that mentions a place.
 	 -->
 	<xsl:choose>
 		<xsl:when test="html:span[@class = 'place'] and contains(., 'arrived')">
-			<xsl:value-of select="concat('_:', generate-id())"/>
+			<xsl:value-of select="generate-id()"/>
 		</xsl:when>
 		<xsl:otherwise>
 			<xsl:for-each select="following::html:tr[html:td[2]/html:span[@class ='place']][1]/html:td[2]">
@@ -155,10 +155,10 @@
 	 -->
 	<xsl:choose>
 		<xsl:when test="contains(., 'marched')">
-			<xsl:value-of select="concat('_:', generate-id())"/>
+			<xsl:value-of select="generate-id()"/>
 		</xsl:when>
 		<xsl:otherwise>
-			<xsl:value-of select="concat('_:', generate-id(preceding::html:tr[html:td[2]/html:span[@class ='place']][1]/html:td[2]))"/>
+			<xsl:value-of select="generate-id(preceding::html:tr[html:td[2]/html:span[@class ='place']][1]/html:td[2])"/>
 		</xsl:otherwise>
 	</xsl:choose>
 </xsl:template>

@@ -12,7 +12,7 @@
 		<xsl:sort select="interval[1]/@fm" data-type="number" order="ascending"/>
 		<xsl:sort select="interval[1]/@to" data-type="number" order="ascending"/>
 	</xsl:apply-templates>
-	<xsl:copy-of select="link"/>
+	<xsl:copy-of select="edge"/>
 </xsl:copy>
 </xsl:template>
 

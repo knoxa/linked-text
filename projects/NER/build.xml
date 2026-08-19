@@ -15,5 +15,12 @@
 		<xslt in="/C:/workspaces/development/DOMEX/kml/diary.kml" out="${temp}/dictionary.xml" style="xsl/dictionary-earth.xsl" force="true"/>
 	</target>
 		
+	<target name="html-dict" description="Parser output as HTML">
+		<xslt in="/C:/workspaces/development/DOMEX/out.xml" out="${temp}/results.html" style="${html}/markup-dictionary.xsl" force="yes"/>
+	</target>
+	
+	<target name="html-terms" description="Extract dictionary terms from HTML span elelents">
+		<xslt in="/D:/GitHub/war-diary/11-Bde/1914/1914-10-diary.xhtml" out="${temp}/terms.txt" style="${extract}/span-term.xsl" force="yes"/>
+	</target>
 
 </project>

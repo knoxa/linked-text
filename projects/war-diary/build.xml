@@ -19,6 +19,10 @@
 		<xslt in="work/messages.xml" out="${temp}/work.xhtml" style="xsl/work/messages.xsl" force="yes"/>
 	</target>
 
+	<target name="intsum-work" description="Extract HTML articles covering Dail Intelligence Summaries">
+		<xslt in="work/intsum.xml" out="${temp}/work.xhtml" style="xsl/work/intsum.xsl" force="yes"/>
+	</target>
+
 	<target name="summary-work" description="Extract HTML articles covering messages and signals">
 		<xslt in="work/summary.xml" out="${temp}/work.xhtml" style="xsl/work/summary.xsl" force="yes"/>
 	</target>
@@ -29,9 +33,12 @@
 		<xslt in="${temp}/work.xhtml" out="${temp}/entities.xml" style="${extract}/entities.xsl" force="true"/>
 	</target>
 	
-	<target name="messages">
-		<xslt in="/D:/GitHub/war-diary/11-Bde/1914/1914-10-Appendix55.xhtml" out="${temp}/messages.html" style="xsl/messages.xsl" force="true"/>
+	<target name="messages" depends="messages-work">
+		<xslt in="${temp}/work.xhtml" out="${temp}/messages.html" style="xsl/messages.xsl" force="true"/>
 	</target>
 
+	<target name="map" description="convert KML to SVG">
+		<xslt in="/C:/workspaces/development/DOMEX/kml/move4div.kml" out="${temp}/map.svg" style="${geography}/kml-svg.xsl" force="true"/>
+	</target>
 
 </project>

@@ -5,7 +5,20 @@
 
 <xsl:template match="/">
 <html>
-	<head><title>Messages</title></head>
+	<head>
+	<title>Messages</title>
+	
+		<style type="text/css">
+
+		table, th, td {
+			border:	1px dashed;
+			border-collapse: collapse;
+			padding: 5px;
+		}
+		
+		</style>
+	
+	</head>
 	<body>
 		<table>
 			<tr><th>No</th><th>Datetime</th><th>Place</th><th>From</th><th>To</th><th>Ref</th><th>Reply</th><th>TNA Ref</th></tr>
@@ -19,7 +32,7 @@
 
 <xsl:template match="html:time">
 <tr>
-	<td><xsl:value-of select="position()"/><xsl:text>.</xsl:text></td>
+	<td><a href="{ancestor::div[1]/@about}"><xsl:value-of select="position()"/></a><xsl:text>.</xsl:text></td>
 	<td><xsl:value-of select="@datetime"/></td>
 	<xsl:apply-templates select="ancestor::html:table[1]" mode="footer"/>
 	<td><xsl:value-of select="ancestor::html:article[1]/html:p[@class = 'tnaref']"/></td>

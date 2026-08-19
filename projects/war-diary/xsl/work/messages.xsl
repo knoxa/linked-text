@@ -15,7 +15,9 @@
 </xsl:template>
 
 <xsl:template match="item">
+<div about="{.}">
 	<xsl:apply-templates select="document(.)//html:article"/>
+</div>
 </xsl:template>
 
 <xsl:template match="html:article[@typeof = 'mil:message']">
