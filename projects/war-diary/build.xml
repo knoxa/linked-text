@@ -9,6 +9,10 @@
 	<description>
 		Information Extraction from WW1 War Diaries.
 	</description>
+	
+	<xmlcatalog id="html">
+	    <dtd publicId="-//W3C//DTD XHTML 1.0 Transitional//EN" location="dtd/xhtml1-transitional.dtd"/>
+	</xmlcatalog>
 
 	<target name="movements-work" description="Extract HTML articles covering 4 Div movement tables">
 		<xslt in="work/movements.xml" out="${temp}/work.xhtml" style="xsl/work/movements.xsl" force="yes"/>
@@ -20,7 +24,12 @@
 	</target>
 
 	<target name="intsum-work" description="Extract HTML articles covering Dail Intelligence Summaries">
-		<xslt in="work/intsum.xml" out="${temp}/work.xhtml" style="xsl/work/intsum.xsl" force="yes"/>
+		<xslt in="work/intsum.xml" out="${temp}/work-mapref.xhtml" style="xsl/work/intsum-mapref.xsl" force="yes">
+			<xmlcatalog refid="html"/>
+		</xslt>
+		<xslt in="work/intsum.xml" out="${temp}/work.xhtml" style="xsl/work/place.xsl" force="yes">
+			<xmlcatalog refid="html"/>
+		</xslt>
 	</target>
 
 	<target name="summary-work" description="Extract HTML articles covering messages and signals">
