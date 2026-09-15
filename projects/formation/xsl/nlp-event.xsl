@@ -138,8 +138,15 @@
 	<xsl:attribute name="fm"><xsl:value-of select="'1914-07-28'"/></xsl:attribute>
 </xsl:template>
 
-<xsl:template match="nlp:token[nlp:lemma[@type = 'UNIT']]" mode="unit">
-	<entity type="unit"><xsl:value-of select="nlp:lemma"/></entity>
+<xsl:template match="nlp:token[nlp:lemma[@type = 'SPAN']]" mode="unit">
+	<xsl:choose>
+		<xsl:when test="not(nlp:surface = nlp:lemma)">
+			<entity surface="{normalize-space(nlp:surface)}" type="unit"><xsl:value-of select="nlp:lemma"/></entity>
+		</xsl:when>
+		<xsl:otherwise>
+			<entity type="unit"><xsl:value-of select="nlp:lemma"/></entity>
+		</xsl:otherwise>
+	</xsl:choose>
 </xsl:template>
 
 <xsl:template match="nlp:token" mode="unit">
