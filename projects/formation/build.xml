@@ -11,7 +11,7 @@
 	</description>
 	
 	<target name="test">
-		<xslt in="/D:/GitHub/history/units/test.xhtml" out="${temp}/scratch.txt" style="${rdfa}/rdfa-ntriples.xsl" force="true"/>
+		<xslt in="/D:/GitHub/history/units/formation.xhtml" out="${temp}/scratch.xml" style="${events}/html-source.xsl" force="true"/>
 	</target>
 	
 	<target name="dictionary">

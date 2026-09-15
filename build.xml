@@ -135,7 +135,7 @@
 	</target>
 	
 	<target name="terms">
-		<xslt in="/D:/GitHub/history/events/formation.xhtml" out="output/terms.txt" style="xsl/terms.xsl" force="yes"/>
+		<xslt in="/D:/GitHub/history/units/formation.xhtml" out="output/terms.txt" style="xsl/terms.xsl" force="yes"/>
 	</target>
 
 	<!--
