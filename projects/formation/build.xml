@@ -35,10 +35,6 @@
 	<target name="prepare-select">
 		<xslt in="${temp}/sorted.xml" out="${temp}/prepared.xml" style="xsl/filter-select.xsl" force="true"/>
 	</target>
-	
-	<target name="prepare-intervals">
-		<xslt in="${temp}/sorted.xml" out="${temp}/prepared.xml" style="xsl/intervals.xsl" force="true"/>
-	</target>
 
 	<target name="events">
 		<xslt in="${temp}/parsed.xml" out="${temp}/events.xml" style="xsl/nlp-event.xsl" force="true"/>
@@ -53,7 +49,7 @@
 		<xslt in="${temp}/ordered.xml" out="${temp}/context.xml" style="xsl/span.xsl" force="true"/>
 	</target>	
 
-	<target name="output" depends="events-sort, prepare-select, order, draw" />
+	<target name="output" depends="events-sort, prepare-null, order, draw" />
 	<target name="just-draw" depends="order, draw" />
 
 	<target name="covers">

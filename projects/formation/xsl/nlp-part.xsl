@@ -24,6 +24,7 @@
 	<xsl:apply-templates select="nlp:token[nlp:lemma[. = 'assign'][@type = 'VP']]" mode="part"/>
 	<xsl:apply-templates select="nlp:token[nlp:lemma[. = 'command']]" mode="part"/>
 	<xsl:apply-templates select="nlp:token[nlp:lemma[. = 'attach']]" mode="part"/>
+	<xsl:apply-templates select="nlp:token[nlp:lemma[. = 'transfer']]" mode="part"/>
 	<xsl:apply-templates select="nlp:token[nlp:lemma[. = 'join' or . = 'rejoin']]" mode="part"/>
 </xsl:template>
 
@@ -55,7 +56,7 @@
 	</xsl:if>
 </xsl:template>
 
-<xsl:template match="nlp:token[nlp:lemma = 'attach']" mode="part">
+<xsl:template match="nlp:token[nlp:lemma = 'attach' or nlp:lemma = 'transfer']" mode="part">
 	<xsl:variable name="target"><xsl:value-of select="following-sibling::nlp:token[nlp:lemma[@type = 'UNIT' or @type = 'SPAN']][1]//nlp:lemma[@type = 'UNIT' or @type = 'SPAN'][1]"/></xsl:variable>
 	<xsl:if test="string-length($target) &gt; 0">
 	<xsl:message><xsl:value-of select="$target"/></xsl:message>
