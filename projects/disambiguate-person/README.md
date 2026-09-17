@@ -53,7 +53,11 @@ The results of combining agent agreement with inspection and editing to resolve 
 An issue with the agents described above is that none of the agents equate initials with forenames, which means that, for example, *Sir William Robinson* is never equivalent to *Sir W Robinson*.
 This could be fixed by using a different name tokenization method, or it could be addressed by asserting the equivalence as "truth".
 
-The stopwords used above remove titles from names. This is helpful if the title is sometimes used and sometimes not, but unhelpful if the title is way of distinguishing people with similar names. Another reason for using stopwords is that they remove nodes, and a lot edges, from the lattice that would otherwise make it much more difficult to interpret visually. How these extra nodes and edges might materially affect the result needs further experimentation.
+The stopwords used above remove titles from names. This is helpful if the title is sometimes used and sometimes not, but unhelpful if the title is a way of distinguishing people with similar names. Another reason for using stopwords is that they remove nodes, and a lot edges, from the lattice that would otherwise make it much more difficult to interpret visually. How these extra nodes and edges might materially affect the result needs further experimentation.
+
+There is a lot of variation in the way military ranks are expressed. These could be removed as stop words, but they might be important in disambiguation.
+An option here is to normalize any expression of rank as part of the tokenization process.
+This suggests that different disambiguation use cases might have features that could be exploited by 'tactical' agents.
 
 Support and conflict between entity disambiguation agents can be expressed as argument. Arguments constructed from other methods can be brought to bear, perhaps including contextual information that would allow claims to be interpreted differently in different contexts.
 
