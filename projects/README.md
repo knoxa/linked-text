@@ -4,7 +4,8 @@
 
 ## Entity Disambiguation
 
-Disambiguating [people](disambiguate-person) and [places](disambiguate-place).
+* Disambiguating [people](disambiguate-person) and [places](disambiguate-place) in WW1 chronologies.
+* Disambiguating [people](gao) in the [Georgian Army Officers database](https://www.georgianarmyofficers.org/).
 
 ## Knowledge Representation
 
