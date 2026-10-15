@@ -42,12 +42,18 @@ However, there are some names in the dataset that are both surnames and given na
 I have hypotheses where a lone surname is added to sets where it matches a given name, which is wrong.
 I can note some more required corrections:
 
-	"Francis" and "Francis Cooper" are different people.
-	"Francis" and "Francis Crosbie" are different people.
-	"Francis" and "Francis Tripp" are different people.
-	"Francis" and "Francis Drake" are different people.
-	"Francis" and "Francis Agar" are different people.
-	"Francis" and "Francis Croster" are different people.
-	"Francis" and "Francis Richard Dickson" are different people.
+	"Francis", "Francis Cooper", "Francis Crosbie", "Francis Tripp", "Francis Drake", "Francis Agar", "Francis Croster" and "Francis Richard Dickson" are different people.
 	"William Thomas" and "William Thomas Taylor" are different people.
 	
+There's an interesting mistake that's an artifact of the **initials** tokenization. It's caused by ignoring suffixes, so that the last letter of a suffix is interpreted as a surname. This means that "Sir W. Aug. Prevost, K.C.B." becomes `s w a p k c b`, and "Sir William Keppel, K.B." becomes `s w k k b`.
+The tokens of the latter are a subset of the token of the former, so the two names get linked.
+I could do something cleverer with tokenization to get rounf this, or I could just note another correction:
+
+	"Sir W. Aug. Prevost, K.C.B." and "Sir William Keppel, K.B." are different people.
+
+"William Keppel, K.B." get linked to "Sir W. Aug. Prevost, K.C.B." in the same way, so I also need:
+
+	"Sir W. Aug. Prevost, K.C.B." and "William Keppel, K.B." are different people.
+
+
+

@@ -13,4 +13,16 @@
 		<attribute>William Thomas</attribute>
 		<attribute>William Thomas Taylor</attribute>
 	</object>
+	<object name="CC3">
+		<attribute>Sir William Keppel, K.B.</attribute>
+		<attribute>Sir W. Aug. Prevost, K.C.B.</attribute>
+	</object>
+	<object name="CC4">
+		<attribute>William Keppel, K.B.</attribute>
+		<attribute>Sir W. Aug. Prevost, K.C.B.</attribute>
+	</object>
+	<object name="AA1">
+		<attribute>William Aug. Prevost.</attribute>
+		<attribute>Sir W. Aug. Prevost, K.C.B.</attribute>
+	</object>
 </context>
