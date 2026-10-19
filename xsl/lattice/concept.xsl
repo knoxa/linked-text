@@ -13,6 +13,20 @@
 	</xsl:for-each>
 </xsl:template>
 
+<xsl:template name="getConceptAttributes2">
+<!--
+	The concept is associated with attributes for this node in the lattice and all 'above', unless a 'CC' object
+-->
+	<xsl:if test="not(contains(object,'CC'))">
+		<xsl:copy-of select=".//attribute"/>
+		<xsl:for-each select="//edge[./@from = current()/@id]">
+			<xsl:for-each select="//concept[./@id = current()/@to]">
+				<xsl:call-template name="getConceptAttributes2"/>
+			</xsl:for-each>
+		</xsl:for-each>
+	</xsl:if>
+</xsl:template>
+
 
 <xsl:template name="getConceptObjects">
 <!--

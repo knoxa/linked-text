@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <context>
 	<object name="CC1">
-		<attribute>Francis</attribute>
-		<attribute>Francis Crosbie</attribute>
-		<attribute>Francis Tripp</attribute>
-		<attribute>Francis Drake</attribute>
-		<attribute>Francis Agar</attribute>
-		<attribute>Francis Croster</attribute>
-		<attribute>Francis Richard Dickson</attribute>
+		<attribute>Sir W. Aug. Prevost, K.C.B.</attribute>
+		<attribute>Sir William Keppel, K.B.</attribute>
+		<attribute>William Keppel, K.B.</attribute>
 	</object>
 	<object name="CC2">
-		<attribute>William Thomas</attribute>
-		<attribute>William Thomas Taylor</attribute>
+		<attribute>John Wilson</attribute>
+		<attribute>James Wilson</attribute>
 	</object>
 	<object name="CC3">
-		<attribute>Sir William Keppel, K.B.</attribute>
-		<attribute>Sir W. Aug. Prevost, K.C.B.</attribute>
+		<attribute>John Ellis</attribute>
+		<attribute>Joseph Ellis</attribute>
 	</object>
 	<object name="CC4">
-		<attribute>William Keppel, K.B.</attribute>
-		<attribute>Sir W. Aug. Prevost, K.C.B.</attribute>
+		<attribute>John Hanna</attribute>
+		<attribute>Joseph Hanna</attribute>
 	</object>
-	<object name="AA1">
-		<attribute>William Aug. Prevost.</attribute>
-		<attribute>Sir W. Aug. Prevost, K.C.B.</attribute>
+	<object name="CC5">
+		<attribute>John Chambers</attribute>
+		<attribute>[Serj.] James Chambers</attribute>
+	</object>
+	<object name="CC6">
+		<attribute>John Dwyer</attribute>
+		<attribute>James Dwyer</attribute>
 	</object>
 </context>

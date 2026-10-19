@@ -9,12 +9,12 @@ I took distinct values from the `name` field and make a [list of names](input/na
 A couple of the names include strange non-display characters.
 I've left these alone because I'll want to use these names to link my disambiguation results back to the original records.
 
-## Method
+## Overview
 
 I apply the same [FCA](https://en.wikipedia.org/wiki/Formal_concept_analysis) method discussed in some detail in the context of a [WW1 example](../disambiguate-person/README.md).
 
 The method operates on tokenized names to produces sets of names deemed equivalent through sharing common tokens.
-The method is agnostic to the algorithm used for producing tokens from names, but the algorithm will affect the specificity of the results.
+It is agnostic to the algorithm used for producing tokens from names, but the algorithm will affect the specificity of the results.
 For example, simply splitting the names into word tokens is less likely to put together two names that are from different people, but more likely to consider different expressions of a name as belonging to two different people.
 Methods that generalise the tokens, such as Soundex, do the opposite.
 
@@ -28,10 +28,6 @@ This affords the opportunity to notice matches not found directly by the algorit
 Such assertions can be considered as 'expert' hypotheses and given added weight when comparing them to hypotheses produced directly by a tokenization algorithm.
 
 The process is naturally iterative. Each round of generating hypotheses suggests alternative tokenizations that might be applied on the next iteration.
-
-One approach here is to start each iteration with accepted hypotheses generated from the previous one.
-Instead of creating a set of token from one name, I can create a set of tokens from multiple equivalent names.
-This addresses issues like initials and name abbreviation in some expressions. Once an example is included in the set of equivalent names, I end up with an association between (say) initial and forename.
 
 For the sake of discussion, I consider each variation in (tokenization) parameters as being from a different agent.
 A human expert making assertions is also an agent.
