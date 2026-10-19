@@ -1,0 +1,1056 @@
+<?xml version="1.0" encoding="utf-8"?>
+<context>
+	<object name="S16">
+		<attribute>Francis Hales</attribute>
+	</object>
+	<object name="S22">
+		<attribute>Percival, Lt. Col. William�</attribute>
+		<attribute>William Percevall</attribute>
+		<attribute>William Percival</attribute>
+		<attribute>Perceval,Lt.Col. William</attribute>
+		<attribute>Perceval, Lt.Col William</attribute>
+	</object>
+	<object name="S29">
+		<attribute>Prevosl,Col.Wm.Aug.</attribute>
+	</object>
+	<object name="S45">
+		<attribute>James Forde</attribute>
+	</object>
+	<object name="S47" />
+	<object name="S49">
+		<attribute>George Mills</attribute>
+	</object>
+	<object name="S51">
+		<attribute>Edward Gayer</attribute>
+	</object>
+	<object name="S63">
+		<attribute>George Garth</attribute>
+	</object>
+	<object name="S64">
+		<attribute>Russel Wood</attribute>
+		<attribute>Russell Wood</attribute>
+	</object>
+	<object name="S69">
+		<attribute>William Henry Green</attribute>
+		<attribute>Henry Green</attribute>
+		<attribute>William Henry Greeen</attribute>
+	</object>
+	<object name="S74">
+		<attribute>James Armstorng</attribute>
+		<attribute>James Armstrong</attribute>
+		<attribute>James Armstong</attribute>
+	</object>
+	<object name="S76">
+		<attribute>George Cowell</attribute>
+		<attribute>George Cowel</attribute>
+	</object>
+	<object name="S78">
+		<attribute>Herbert Warburton</attribute>
+	</object>
+	<object name="S84">
+		<attribute>- Freeman</attribute>
+		<attribute>Freeman</attribute>
+		<attribute>_ Freeman</attribute>
+	</object>
+	<object name="S85">
+		<attribute>James Bell</attribute>
+		<attribute>Hospital Mate James Bell</attribute>
+	</object>
+	<object name="S87">
+		<attribute>Richard Dickson</attribute>
+		<attribute>Francis Richard Dickson</attribute>
+	</object>
+	<object name="S90">
+		<attribute>Francis Cooper</attribute>
+		<attribute>Cooper</attribute>
+	</object>
+	<object name="S92">
+		<attribute>Thomas Kierander</attribute>
+	</object>
+	<object name="S98">
+		<attribute>J. R. W. Humphreys</attribute>
+	</object>
+	<object name="S104">
+		<attribute>J. T. Bird</attribute>
+		<attribute>J T Bird</attribute>
+	</object>
+	<object name="S113">
+		<attribute>Robert Gilly</attribute>
+		<attribute>Gilly</attribute>
+	</object>
+	<object name="S115">
+		<attribute>Hon. Wm. SmithBernard</attribute>
+	</object>
+	<object name="S120">
+		<attribute>Peter Carig</attribute>
+		<attribute>Peter Craig</attribute>
+	</object>
+	<object name="S125">
+		<attribute>Richard Wilson</attribute>
+	</object>
+	<object name="S128">
+		<attribute>Amherst Goreham</attribute>
+		<attribute>Amhersht Goreham</attribute>
+	</object>
+	<object name="S129">
+		<attribute>William Atherton</attribute>
+	</object>
+	<object name="S130">
+		<attribute>Herring</attribute>
+		<attribute>Patrick Herring</attribute>
+	</object>
+	<object name="S132">
+		<attribute>Nathaniel Jos. Cumberlege</attribute>
+	</object>
+	<object name="S134">
+		<attribute>James M Harg</attribute>
+	</object>
+	<object name="S136">
+		<attribute>J_William Stones</attribute>
+	</object>
+	<object name="S141">
+		<attribute>Mathias Henessey</attribute>
+		<attribute>Mathias Henessy</attribute>
+		<attribute>Mathias Hennessay</attribute>
+		<attribute>Mathaias Henssy</attribute>
+		<attribute>Mathias Henssy</attribute>
+		<attribute>Matthias Hennesy</attribute>
+		<attribute>Mathias Hennessy</attribute>
+	</object>
+	<object name="S143">
+		<attribute>- Hill</attribute>
+		<attribute>Thomas Hall</attribute>
+	</object>
+	<object name="S144">
+		<attribute>Richard Knox</attribute>
+	</object>
+	<object name="S145">
+		<attribute>William Robertson</attribute>
+	</object>
+	<object name="S147">
+		<attribute>Edward Barflow</attribute>
+	</object>
+	<object name="S148">
+		<attribute>George Rea</attribute>
+	</object>
+	<object name="S154">
+		<attribute>Andrew Rutledge</attribute>
+	</object>
+	<object name="S155">
+		<attribute>George David</attribute>
+	</object>
+	<object name="S156">
+		<attribute>John M.Mainwaring</attribute>
+		<attribute>John M. Mainwaring</attribute>
+		<attribute>John M- Mainwaring</attribute>
+	</object>
+	<object name="S164">
+		<attribute>Charles Baisord</attribute>
+	</object>
+	<object name="S166">
+		<attribute>James Biair</attribute>
+	</object>
+	<object name="S167">
+		<attribute>David Duff</attribute>
+	</object>
+	<object name="S169">
+		<attribute>James Sandys</attribute>
+	</object>
+	<object name="S172">
+		<attribute>William Gambel</attribute>
+	</object>
+	<object name="S180">
+		<attribute>Wm. Moore Harrison</attribute>
+	</object>
+	<object name="S183">
+		<attribute>Henry Gibson</attribute>
+	</object>
+	<object name="S184">
+		<attribute>Aaron Blanche</attribute>
+	</object>
+	<object name="S188">
+		<attribute>Hon.William Stewart</attribute>
+		<attribute>Hon. William Stewart</attribute>
+	</object>
+	<object name="S192">
+		<attribute>James M. Wilkinson</attribute>
+		<attribute>James M - Wilkinson</attribute>
+		<attribute>James Wilson</attribute>
+	</object>
+	<object name="S200">
+		<attribute>William Cook</attribute>
+	</object>
+	<object name="S203">
+		<attribute>William Morris</attribute>
+		<attribute>William Morries</attribute>
+	</object>
+	<object name="S206">
+		<attribute>Agar</attribute>
+		<attribute>Francis Agar</attribute>
+	</object>
+	<object name="S212">
+		<attribute>- Tucker</attribute>
+	</object>
+	<object name="S216">
+		<attribute>Edward Wilson</attribute>
+	</object>
+	<object name="S217">
+		<attribute>Thomas Kennedy</attribute>
+	</object>
+	<object name="S219">
+		<attribute>Garret Fitzsimmons</attribute>
+	</object>
+	<object name="S220">
+		<attribute>Henry Bayly</attribute>
+	</object>
+	<object name="S226">
+		<attribute>Hugh Brady</attribute>
+	</object>
+	<object name="S236">
+		<attribute>Francis Crosbie</attribute>
+	</object>
+	<object name="S240">
+		<attribute>John Dwyer</attribute>
+		<attribute>John D'Areey</attribute>
+	</object>
+	<object name="S243">
+		<attribute>John Dowland</attribute>
+	</object>
+	<object name="S247">
+		<attribute>Benjamin Barry</attribute>
+	</object>
+	<object name="S248">
+		<attribute>John Chambers</attribute>
+	</object>
+	<object name="S252">
+		<attribute>James M' Gregor</attribute>
+		<attribute>James M.Gregor</attribute>
+	</object>
+	<object name="S253">
+		<attribute>J Kiernander</attribute>
+	</object>
+	<object name="S255">
+		<attribute>Edward Smith Delemain</attribute>
+		<attribute>- Delamain</attribute>
+		<attribute>Edward Smith Delamain</attribute>
+		<attribute>Edard Smith Delamain</attribute>
+	</object>
+	<object name="S259">
+		<attribute>Samuel Hnakintson</attribute>
+	</object>
+	<object name="S260">
+		<attribute>Beverley</attribute>
+		<attribute>Wm. R- Beverley</attribute>
+		<attribute>Wm. R - Beverley</attribute>
+		<attribute>Wm.R - Beverley</attribute>
+		<attribute>Wm. R-Beverley</attribute>
+		<attribute>Wm. R_Beverley</attribute>
+	</object>
+	<object name="S262">
+		<attribute>John Greenwell</attribute>
+		<attribute>Greenwell</attribute>
+	</object>
+	<object name="S263">
+		<attribute>JohnGelling</attribute>
+	</object>
+	<object name="S269">
+		<attribute>Leonard Crooks</attribute>
+	</object>
+	<object name="S271">
+		<attribute>William Kinloch</attribute>
+		<attribute>Wiliam Kinloch</attribute>
+		<attribute>Kinloch</attribute>
+		<attribute>Willam Kinloch</attribute>
+		<attribute>William Kinlock</attribute>
+	</object>
+	<object name="S273">
+		<attribute>John Maillew</attribute>
+		<attribute>John Manning Maillieue</attribute>
+		<attribute>John Manning Mailleue</attribute>
+		<attribute>John manning Mailleue</attribute>
+		<attribute>John Maiilew</attribute>
+	</object>
+	<object name="S274">
+		<attribute>Jonathan Eliot</attribute>
+	</object>
+	<object name="S282">
+		<attribute>Alex. M�Gregor Murray</attribute>
+		<attribute>Alex.M'GregorMurray</attribute>
+		<attribute>Alex. M'Gregor Murray</attribute>
+	</object>
+	<object name="S288">
+		<attribute>Willam Fuller</attribute>
+		<attribute>William Fuller</attribute>
+	</object>
+	<object name="S289">
+		<attribute>Gerard Samuel F. Moore</attribute>
+	</object>
+	<object name="S296">
+		<attribute>Benj. Jas. Carden Muirson</attribute>
+		<attribute>Moorson</attribute>
+	</object>
+	<object name="S297">
+		<attribute>John D'Arcey</attribute>
+	</object>
+	<object name="S299">
+		<attribute>James Roche</attribute>
+	</object>
+	<object name="S301">
+		<attribute>R B H arrison</attribute>
+	</object>
+	<object name="S306">
+		<attribute>Robert Carey</attribute>
+	</object>
+	<object name="S310">
+		<attribute>Denis Bodkin</attribute>
+	</object>
+	<object name="S312">
+		<attribute>John M Mahon</attribute>
+		<attribute>John M Main waring</attribute>
+	</object>
+	<object name="S313">
+		<attribute>George Duke of Manchester</attribute>
+	</object>
+	<object name="S316">
+		<attribute>Adam Sutherland</attribute>
+	</object>
+	<object name="S317">
+		<attribute>Henry William Williamson</attribute>
+		<attribute>Henry Williamson</attribute>
+	</object>
+	<object name="S319">
+		<attribute>John Gelling</attribute>
+		<attribute>John Geilling</attribute>
+		<attribute>John Geling</attribute>
+	</object>
+	<object name="S321">
+		<attribute>William Rawlins</attribute>
+	</object>
+	<object name="S326">
+		<attribute>Alfred Way Smons</attribute>
+	</object>
+	<object name="S331">
+		<attribute>Perrin</attribute>
+		<attribute>Ens. James Perrin</attribute>
+		<attribute>James Perrrin</attribute>
+	</object>
+	<object name="S332">
+		<attribute>George Thomas</attribute>
+	</object>
+	<object name="S334">
+		<attribute>Moorson</attribute>
+		<attribute>Lieut. Moorsom</attribute>
+	</object>
+	<object name="S338">
+		<attribute>John O'Brien</attribute>
+		<attribute>Hble. Johnn O'Brien</attribute>
+		<attribute>John O'Bryon</attribute>
+		<attribute>John O'Bryen</attribute>
+	</object>
+	<object name="S342">
+		<attribute>James M'Harg</attribute>
+		<attribute>James M`Harg</attribute>
+	</object>
+	<object name="S345">
+		<attribute>Watson Steel</attribute>
+	</object>
+	<object name="S347" />
+	<object name="S353">
+		<attribute>John Stepney</attribute>
+		<attribute>John Stevens</attribute>
+	</object>
+	<object name="S357">
+		<attribute>James M'Phrson</attribute>
+	</object>
+	<object name="S358">
+		<attribute>Thomas Rynd</attribute>
+	</object>
+	<object name="S360">
+		<attribute>William Harley</attribute>
+	</object>
+	<object name="S367">
+		<attribute>Molyneux Marston</attribute>
+	</object>
+	<object name="S370">
+		<attribute>Charles Crosbie</attribute>
+		<attribute>Charles Crosby</attribute>
+		<attribute>Charles Chrosbie</attribute>
+		<attribute>Charles Corsbie</attribute>
+	</object>
+	<object name="S371">
+		<attribute>William Earle</attribute>
+	</object>
+	<object name="S372">
+		<attribute>James Ritchie</attribute>
+	</object>
+	<object name="S375">
+		<attribute>Thomas Kiernander</attribute>
+	</object>
+	<object name="S381">
+		<attribute>Ewart,Lt.Col.John F.</attribute>
+	</object>
+	<object name="S385" />
+	<object name="S391">
+		<attribute>William Cown</attribute>
+		<attribute>William Cowan</attribute>
+		<attribute>William Cowan�</attribute>
+	</object>
+	<object name="S393">
+		<attribute>Hon. George Annesley</attribute>
+	</object>
+	<object name="S394">
+		<attribute>Jeremiah Radcliffe</attribute>
+	</object>
+	<object name="S395">
+		<attribute>George Horsford</attribute>
+	</object>
+	<object name="S399">
+		<attribute>William Webster</attribute>
+		<attribute>William Webstr</attribute>
+	</object>
+	<object name="S401">
+		<attribute>William Chambers</attribute>
+		<attribute>WilIiam Chambers</attribute>
+	</object>
+	<object name="S402">
+		<attribute>John Stratton</attribute>
+	</object>
+	<object name="S403">
+		<attribute>H. W. Simons</attribute>
+	</object>
+	<object name="S411">
+		<attribute>Alexander Pilsold</attribute>
+	</object>
+	<object name="S413">
+		<attribute>John Wilson</attribute>
+	</object>
+	<object name="S416">
+		<attribute>William Aug.Prevosrt</attribute>
+	</object>
+	<object name="S422">
+		<attribute>Wm. Rich. Mooresom</attribute>
+		<attribute>Moorson</attribute>
+	</object>
+	<object name="S423">
+		<attribute>Brinsley Nixon</attribute>
+	</object>
+	<object name="S426">
+		<attribute>John Stockes</attribute>
+		<attribute>John Stokes</attribute>
+	</object>
+	<object name="S427">
+		<attribute>George Blanchard Grey</attribute>
+	</object>
+	<object name="S428">
+		<attribute>Frederick Stock</attribute>
+	</object>
+	<object name="S436">
+		<attribute>Mark Waus</attribute>
+	</object>
+	<object name="S438">
+		<attribute>Alex. Wedd.Mackenzie</attribute>
+		<attribute>Alex. Wedd Mackenzie</attribute>
+		<attribute>Alex. Wedd. Mackenzie</attribute>
+	</object>
+	<object name="S439">
+		<attribute>James Ronald</attribute>
+	</object>
+	<object name="S446">
+		<attribute>mark Watt</attribute>
+		<attribute>Mark watt</attribute>
+		<attribute>Mark Watt</attribute>
+	</object>
+	<object name="S448">
+		<attribute>Alexander Nicoll</attribute>
+		<attribute>Alexander Nicol</attribute>
+	</object>
+	<object name="S453">
+		<attribute>William Rich Moorsom</attribute>
+		<attribute>Moorson</attribute>
+	</object>
+	<object name="S457">
+		<attribute>Charles maxwell</attribute>
+		<attribute>Charles MAXwell</attribute>
+		<attribute>Charles Maxwell</attribute>
+	</object>
+	<object name="S460">
+		<attribute>Arthur Bowen</attribute>
+	</object>
+	<object name="S463">
+		<attribute>Fra. Standish</attribute>
+	</object>
+	<object name="S466">
+		<attribute>Frederick P- Nobel</attribute>
+		<attribute>Frederick P - Noble</attribute>
+		<attribute>Frederick P. Noble</attribute>
+		<attribute>Frederick P.Noble</attribute>
+		<attribute>Frederick P Noble</attribute>
+		<attribute>Frederick P- Noble</attribute>
+		<attribute>Frederick P_Noble</attribute>
+		<attribute>Frederick P-Noble</attribute>
+	</object>
+	<object name="S469">
+		<attribute>Frs. Philip Beddingfield</attribute>
+	</object>
+	<object name="S474">
+		<attribute>Lorimer</attribute>
+		<attribute>James Lorimer</attribute>
+	</object>
+	<object name="S476">
+		<attribute>Thomas Fraser</attribute>
+		<attribute>Thomas Frazser</attribute>
+	</object>
+	<object name="S480">
+		<attribute>Mathis Henesly</attribute>
+	</object>
+	<object name="S481">
+		<attribute>Charles Walker</attribute>
+	</object>
+	<object name="S482">
+		<attribute>Alexander Arbuthnot</attribute>
+	</object>
+	<object name="S484">
+		<attribute>Robert Bligh</attribute>
+	</object>
+	<object name="S485">
+		<attribute>John Clarke</attribute>
+	</object>
+	<object name="S486">
+		<attribute>Edmund Weld</attribute>
+		<attribute>Edmond Weld</attribute>
+	</object>
+	<object name="S491">
+		<attribute>Jones Western Sherley</attribute>
+	</object>
+	<object name="S492">
+		<attribute>Joseph Hassell</attribute>
+	</object>
+	<object name="S496">
+		<attribute>Col. William Swinburne</attribute>
+	</object>
+	<object name="S497">
+		<attribute>John M'Namarsa</attribute>
+	</object>
+	<object name="S499">
+		<attribute>Charles L_Stretch</attribute>
+		<attribute>Charles L- Stretch</attribute>
+		<attribute>Charles L_Stertrch</attribute>
+	</object>
+	<object name="S501">
+		<attribute>John O'Connell</attribute>
+		<attribute>John O'Coonnell</attribute>
+	</object>
+	<object name="S504">
+		<attribute>Gustavus Rochfort</attribute>
+	</object>
+	<object name="S506">
+		<attribute>Jospeh Eliis</attribute>
+	</object>
+	<object name="S508">
+		<attribute>John Craig</attribute>
+		<attribute>John Crake</attribute>
+	</object>
+	<object name="S509">
+		<attribute>William Ronald</attribute>
+	</object>
+	<object name="S515">
+		<attribute>Alexanter Casidy</attribute>
+	</object>
+	<object name="S517">
+		<attribute>Cahrles Moore Harrison</attribute>
+		<attribute>Charles Moore Harrison</attribute>
+		<attribute>Charles Moore Harrsion</attribute>
+	</object>
+	<object name="S518">
+		<attribute>Henry Drisod</attribute>
+	</object>
+	<object name="S520">
+		<attribute>John Elphinstone</attribute>
+	</object>
+	<object name="S522">
+		<attribute>Robert Saunders</attribute>
+		<attribute>Robert Suanders</attribute>
+	</object>
+	<object name="S524">
+		<attribute>Edward barslow</attribute>
+	</object>
+	<object name="S530">
+		<attribute>John Way</attribute>
+	</object>
+	<object name="S532">
+		<attribute>James Adsair</attribute>
+	</object>
+	<object name="S533">
+		<attribute>Wellesley Medlicott</attribute>
+	</object>
+	<object name="S540" />
+	<object name="S543">
+		<attribute>James M'Gregory</attribute>
+		<attribute>James M'Gregor</attribute>
+		<attribute>James M'Gregor�</attribute>
+		<attribute>James M'Gregior</attribute>
+	</object>
+	<object name="S545">
+		<attribute>James M Pherson</attribute>
+	</object>
+	<object name="S547">
+		<attribute>Thomas Mole</attribute>
+		<attribute>Thomas Molye</attribute>
+		<attribute>Thomas Moyle</attribute>
+	</object>
+	<object name="S551">
+		<attribute>Richard Mullins</attribute>
+		<attribute>Richard Mullens</attribute>
+	</object>
+	<object name="S557">
+		<attribute>Hugh Price</attribute>
+	</object>
+	<object name="S563">
+		<attribute>Charles Auber</attribute>
+	</object>
+	<object name="S565">
+		<attribute>Robert Cockerell</attribute>
+		<attribute>Robert Cockereell</attribute>
+		<attribute>Robert Cockerill</attribute>
+	</object>
+	<object name="S567">
+		<attribute>Benjamin Beausoy</attribute>
+		<attribute>Benjamin Bassie</attribute>
+	</object>
+	<object name="S568">
+		<attribute>James Comerford</attribute>
+	</object>
+	<object name="S569">
+		<attribute>John Thomas</attribute>
+	</object>
+	<object name="S572">
+		<attribute>Barton Pym</attribute>
+	</object>
+	<object name="S575">
+		<attribute>Mungo Noble</attribute>
+		<attribute>Munge Nobel</attribute>
+		<attribute>Mungo Nobel</attribute>
+	</object>
+	<object name="S577">
+		<attribute>Robert Sutehrland</attribute>
+		<attribute>Robert Sutherland</attribute>
+	</object>
+	<object name="S579">
+		<attribute>James Kirby</attribute>
+	</object>
+	<object name="S581">
+		<attribute>Walter Hore</attribute>
+	</object>
+	<object name="S590">
+		<attribute>Nathaniel Benjasield</attribute>
+		<attribute>Nathaniel Benjasiled</attribute>
+	</object>
+	<object name="S595">
+		<attribute>Robert Daivs</attribute>
+	</object>
+	<object name="S602">
+		<attribute>Robert Johnston</attribute>
+		<attribute>Robbert Johnstone</attribute>
+		<attribute>Robert Johnstone</attribute>
+	</object>
+	<object name="S605" />
+	<object name="S606">
+		<attribute>Donald Mac Calman</attribute>
+	</object>
+	<object name="S609">
+		<attribute>Alexander Book</attribute>
+		<attribute>Alexander Bock</attribute>
+		<attribute>Alexander Beck</attribute>
+		<attribute>Alexander Beek</attribute>
+	</object>
+	<object name="S612">
+		<attribute>[Serj. Maj.] _ Collis</attribute>
+		<attribute>Collis</attribute>
+		<attribute>- Collis</attribute>
+	</object>
+	<object name="S613">
+		<attribute>Leonard Smelt</attribute>
+	</object>
+	<object name="S614">
+		<attribute>William Hoare</attribute>
+	</object>
+	<object name="S618">
+		<attribute>Duncan Eorbes</attribute>
+	</object>
+	<object name="S620">
+		<attribute>John Reynolds</attribute>
+	</object>
+	<object name="S621">
+		<attribute>Emer Baynbam</attribute>
+	</object>
+	<object name="S623">
+		<attribute>James Tweedale</attribute>
+		<attribute>James Tweedle</attribute>
+	</object>
+	<object name="S629">
+		<attribute>George Cocote</attribute>
+	</object>
+	<object name="S632">
+		<attribute>Thomas Arrow</attribute>
+	</object>
+	<object name="S633">
+		<attribute>George Martin</attribute>
+	</object>
+	<object name="S635">
+		<attribute>Henry Kirwan</attribute>
+	</object>
+	<object name="S636">
+		<attribute>H. C. Johnson</attribute>
+	</object>
+	<object name="S640" />
+	<object name="S642">
+		<attribute>Daniel M'Daniel</attribute>
+		<attribute>Daniel M'Daniell</attribute>
+	</object>
+	<object name="S644">
+		<attribute>St. John Skottowe</attribute>
+	</object>
+	<object name="S645">
+		<attribute>Saville Broom</attribute>
+		<attribute>Seville Broom</attribute>
+	</object>
+	<object name="S646">
+		<attribute>Edward Grayer</attribute>
+	</object>
+	<object name="S651">
+		<attribute>John Gordon</attribute>
+	</object>
+	<object name="S653">
+		<attribute>Francis Drake</attribute>
+	</object>
+	<object name="S658">
+		<attribute>Adam Gorden</attribute>
+		<attribute>Adam Gordan</attribute>
+		<attribute>Adam Gordn</attribute>
+	</object>
+	<object name="S661">
+		<attribute>Campbell Callander</attribute>
+		<attribute>Campbell Callender</attribute>
+		<attribute>Campbell Calender</attribute>
+	</object>
+	<object name="S665">
+		<attribute>Hon. John Meade</attribute>
+		<attribute>John hanna</attribute>
+		<attribute>John Hanna</attribute>
+	</object>
+	<object name="S666">
+		<attribute>George Mathers</attribute>
+	</object>
+	<object name="S669">
+		<attribute>John O Bryen</attribute>
+	</object>
+	<object name="S671">
+		<attribute>Charles Quarterly</attribute>
+	</object>
+	<object name="S673">
+		<attribute>James Seton</attribute>
+	</object>
+	<object name="S674">
+		<attribute>Daniel Hoghton</attribute>
+	</object>
+	<object name="S676">
+		<attribute>Robert Batteridge</attribute>
+		<attribute>Robert Betteridge</attribute>
+	</object>
+	<object name="S677">
+		<attribute>Thomas Gartside</attribute>
+	</object>
+	<object name="S679">
+		<attribute>Alexander Grierson</attribute>
+		<attribute>Alexander Griersson</attribute>
+	</object>
+	<object name="S683">
+		<attribute>Curry</attribute>
+	</object>
+	<object name="S685">
+		<attribute>William Blair</attribute>
+		<attribute>William Balir</attribute>
+	</object>
+	<object name="S688">
+		<attribute>George Dixon</attribute>
+		<attribute>Goerge Dickson</attribute>
+		<attribute>George Dickson</attribute>
+	</object>
+	<object name="S689">
+		<attribute>Roger Parke</attribute>
+	</object>
+	<object name="S691">
+		<attribute>William Hartley</attribute>
+	</object>
+	<object name="S692">
+		<attribute>George Mitchell</attribute>
+		<attribute>Geroge Mitchell</attribute>
+	</object>
+	<object name="S694">
+		<attribute>David Wilkinon</attribute>
+		<attribute>David Wilkinson</attribute>
+	</object>
+	<object name="S696">
+		<attribute>James Blair</attribute>
+	</object>
+	<object name="S698">
+		<attribute>Colin Campbell</attribute>
+		<attribute>_ Collin</attribute>
+	</object>
+	<object name="S701">
+		<attribute>Francis Tripp</attribute>
+	</object>
+	<object name="S703" />
+	<object name="S705">
+		<attribute>William Fergufon</attribute>
+	</object>
+	<object name="S707">
+		<attribute>Marcus Annesley</attribute>
+	</object>
+	<object name="S710">
+		<attribute>Richard James</attribute>
+		<attribute>Richard Janns</attribute>
+	</object>
+	<object name="S713">
+		<attribute>Thomas Nicholles</attribute>
+		<attribute>Thomas Nicholls</attribute>
+	</object>
+	<object name="S715">
+		<attribute>Dominique Rosti</attribute>
+	</object>
+	<object name="S718">
+		<attribute>William Hart Lapsey</attribute>
+	</object>
+	<object name="S724">
+		<attribute>Edward Despard Paalmer</attribute>
+	</object>
+	<object name="S728">
+		<attribute>Henry Richardson</attribute>
+		<attribute>Henry Ricahrdson</attribute>
+	</object>
+	<object name="S730">
+		<attribute>Wm Brewse Kersteman</attribute>
+	</object>
+	<object name="S731">
+		<attribute>John Ellie</attribute>
+	</object>
+	<object name="S732">
+		<attribute>James Cane</attribute>
+	</object>
+	<object name="S735">
+		<attribute>Sir G. Nugent Bt &amp; GCB</attribute>
+	</object>
+	<object name="S742">
+		<attribute>John Snow</attribute>
+	</object>
+	<object name="S744">
+		<attribute>Dominique Rossi</attribute>
+		<attribute>Dominique Rosi</attribute>
+	</object>
+	<object name="S745">
+		<attribute>Charles Wilde</attribute>
+	</object>
+	<object name="S749">
+		<attribute>George Davis</attribute>
+		<attribute>Geroge Davis</attribute>
+		<attribute>George Davies</attribute>
+	</object>
+	<object name="S750">
+		<attribute>Honourable William Stuart</attribute>
+	</object>
+	<object name="S752">
+		<attribute>Samule Huskisson</attribute>
+		<attribute>Samuel Huskisson</attribute>
+		<attribute>Samuel Hukisson</attribute>
+	</object>
+	<object name="S755">
+		<attribute>R - S - Redman</attribute>
+	</object>
+	<object name="S757">
+		<attribute>Joseph Everitt</attribute>
+		<attribute>Joseph Everett</attribute>
+		<attribute>Jospeh Everett</attribute>
+		<attribute>Joseph Everit</attribute>
+	</object>
+	<object name="S759">
+		<attribute>Gustavus Roehsort</attribute>
+		<attribute>Gustavus Rochsort</attribute>
+	</object>
+	<object name="S761">
+		<attribute>Edw Maxwell Brows</attribute>
+	</object>
+	<object name="S764">
+		<attribute>Marquis of Huntly</attribute>
+	</object>
+	<object name="S768">
+		<attribute>William Bowan</attribute>
+	</object>
+	<object name="S770">
+		<attribute>Charles Snakey</attribute>
+		<attribute>Sankey</attribute>
+		<attribute>Charles Sankey</attribute>
+	</object>
+	<object name="S771">
+		<attribute>Samuel Huskinson</attribute>
+	</object>
+	<object name="S774">
+		<attribute>William Bair</attribute>
+		<attribute>Edward Williamn Bray</attribute>
+		<attribute>Edward William Bray</attribute>
+		<attribute>Edward Bray</attribute>
+	</object>
+	<object name="S777">
+		<attribute>David Duss</attribute>
+	</object>
+	<object name="S778">
+		<attribute>Emer Baynham</attribute>
+	</object>
+	<object name="S783">
+		<attribute>E.J.R.Green</attribute>
+	</object>
+	<object name="S784">
+		<attribute>A_K_hutson</attribute>
+	</object>
+	<object name="S786">
+		<attribute>Royston Barton</attribute>
+	</object>
+	<object name="S787">
+		<attribute>Brabazon Disney</attribute>
+	</object>
+	<object name="S788">
+		<attribute>George Rawlings</attribute>
+	</object>
+	<object name="S791">
+		<attribute>Donald Macpherson</attribute>
+		<attribute>Donald Macphersaon</attribute>
+	</object>
+	<object name="S792">
+		<attribute>James Napter</attribute>
+	</object>
+	<object name="S793">
+		<attribute>avid Hunter</attribute>
+	</object>
+	<object name="S797">
+		<attribute>John de Maria</attribute>
+		<attribute>John Moir</attribute>
+	</object>
+	<object name="S807">
+		<attribute>George Leabon</attribute>
+		<attribute>Liabon</attribute>
+	</object>
+	<object name="S810">
+		<attribute>John Macnamamara</attribute>
+		<attribute>John Macnamara</attribute>
+	</object>
+	<object name="S813">
+		<attribute>William A. Creed</attribute>
+	</object>
+	<object name="S818">
+		<attribute>John Villiers George</attribute>
+		<attribute>John Grake</attribute>
+	</object>
+	<object name="S819">
+		<attribute>John Vetch</attribute>
+	</object>
+	<object name="S822">
+		<attribute>Henry Barly</attribute>
+	</object>
+	<object name="S824">
+		<attribute>Charles Langwerth</attribute>
+	</object>
+	<object name="S826">
+		<attribute>George Palmer</attribute>
+	</object>
+	<object name="S829" />
+	<object name="S833">
+		<attribute>Charles Rainsord</attribute>
+		<attribute>Charles Rainssord</attribute>
+	</object>
+	<object name="S835">
+		<attribute>Swist Armstorng</attribute>
+	</object>
+	<object name="S836">
+		<attribute>John Hanns</attribute>
+	</object>
+	<object name="S838">
+		<attribute>Francis Croster</attribute>
+	</object>
+	<object name="S840">
+		<attribute>R. W. M'Don. Callender</attribute>
+		<attribute>RW.M"Don.Callender</attribute>
+	</object>
+	<object name="S842">
+		<attribute>William Owena</attribute>
+	</object>
+	<object name="S846">
+		<attribute>Gethin Kendrick</attribute>
+	</object>
+	<object name="S847">
+		<attribute>Joseph Gubbins</attribute>
+	</object>
+	<object name="S851">
+		<attribute>Robert Dom. Dalton</attribute>
+		<attribute>Robert Denny</attribute>
+	</object>
+	<object name="S853">
+		<attribute>Robert bcaton</attribute>
+	</object>
+	<object name="S856">
+		<attribute>Arthur Poyntz</attribute>
+	</object>
+	<object name="S858">
+		<attribute>Curry</attribute>
+		<attribute>Martin Corry</attribute>
+	</object>
+	<object name="S859">
+		<attribute>William Jones</attribute>
+	</object>
+	<object name="S863">
+		<attribute>W. Collins Burke Jackson</attribute>
+	</object>
+	<object name="S864">
+		<attribute>Richard Butler</attribute>
+	</object>
+	<object name="S865">
+		<attribute>M B Dwyer</attribute>
+	</object>
+	<object name="S870">
+		<attribute>James Thompson</attribute>
+		<attribute>James THompson</attribute>
+	</object>
+	<object name="S878">
+		<attribute>John Butler</attribute>
+	</object>
+	<object name="S884">
+		<attribute>John Hamilton</attribute>
+	</object>
+	<object name="S887">
+		<attribute>Geroge Francis</attribute>
+	</object>
+	<object name="S888">
+		<attribute>Ambrose Morris</attribute>
+	</object>
+	<object name="S890">
+		<attribute>Theobald Butler</attribute>
+	</object>
+	<object name="S896">
+		<attribute>P - Kirwen</attribute>
+	</object>
+	<object name="S908" />
+	<object name="S914">
+		<attribute>Quarter Master Serj. Black</attribute>
+	</object>
+	<object name="S921">
+		<attribute>Matthews Hales</attribute>
+		<attribute>Mathias Hales</attribute>
+	</object>
+	<object name="S926">
+		<attribute>James Cassidy</attribute>
+	</object>
+	<object name="S934">
+		<attribute>Wiliam Franklin</attribute>
+	</object>
+	<object name="S937">
+		<attribute>James Dwyer</attribute>
+	</object>
+</context>

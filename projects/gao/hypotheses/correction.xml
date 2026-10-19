@@ -25,4 +25,8 @@
 		<attribute>John Dwyer</attribute>
 		<attribute>James Dwyer</attribute>
 	</object>
+	<object name="CC7">
+		<attribute>John Cassidy</attribute>
+		<attribute>James Cassidy</attribute>
+	</object>
 </context>

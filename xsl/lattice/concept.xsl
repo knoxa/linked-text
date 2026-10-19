@@ -27,6 +27,20 @@
 	</xsl:if>
 </xsl:template>
 
+<xsl:template name="getConceptAttributes3">
+<!--
+	The concept is associated with attributes for this node in the lattice and all 'above', unless an object
+-->
+	<xsl:if test="object">
+		<xsl:copy-of select=".//attribute"/>
+		<xsl:for-each select="//edge[./@from = current()/@id]">
+			<xsl:for-each select="//concept[./@id = current()/@to]">
+				<xsl:call-template name="getConceptAttributes3"/>
+			</xsl:for-each>
+		</xsl:for-each>
+	</xsl:if>
+</xsl:template>
+
 
 <xsl:template name="getConceptObjects">
 <!--
