@@ -64,9 +64,9 @@ This hypothesis is explicitly incorrect, but it serves as a marker, allowing any
 
 Some of the names in the input data are just surnames.
 These are genuinely ambiguous when there is more than one person with the same surname.
-In such cases, I want the name added to any sets of names that have the same surname.
+In such cases, I want the name added to all sets of names that have the same surname.
 
-A complication is that there are name tokens in the dataset that are surnames for some people, and given names for others, for example "Francis".
+A complication is that there are name tokens in the dataset that are surnames for some people and given names for others, for example "Francis".
 The **normal** agent doesn't take account of token order, so will add a lone surname to any sets that happen to have the same token as either given name or surname.
 The **initials** agent does take account of order in that the last token is treated differently from the rest.
 A lone surname will only get added to a set of names by **initials** if it matches the last token of the name.
@@ -103,16 +103,16 @@ At this stage, I want to derive a consistent set of hypotheses from the combined
 
 To make it easier to follow what's going on, I'll start by filtering out the agreement between the two agents.
 I do this by finding concept nodes in the lattice that have an object from each each.
-I make a new object that has all the attributes in this nodes extent.
+I make a new object that has all the attributes in this node's extent.
 
-I can check the[normal-initials agreement](hypotheses/ni-agree.xml) using FCA.
+I can check the [normal-initials agreement](hypotheses/ni-agree.xml) using FCA.
 I get discrete concept nodes except where different people have the same surname.
 These surnames are legitimately ambiguous. It's simple to recover them from this lattice.
 
 Next, I process the disagreement, with my [corrections](hypotheses/correction.xml) thrown into the mix.
 I [edit](editing.md) the resulting FCA lattice to action the corrections and form a new set of hypotheses from the results. 
 
-I can use FCA to assess these new hypotheses.
+I can use FCA again to assess these new hypotheses.
 I get more singleton concepts indicating agreement.
 I also get a number of clusters, with two or more concepts feeding into a single concept, where the top concept represents an ambiguous name.
 The remaining four clusters are more complex. The simplest two suggest more decisions to make about ambiguity.
@@ -122,8 +122,8 @@ They go away if I say:
 	"William Thomas" is not the same person as "William Thomas Tayler".
 
 The remaining two clusters are for William Augustus Prevost and William Keppel, now separated from each other.
-The extra structure I see comes from the fact that two people are represented by multiple consistent hypotheses.
-I want to merge these consistent hypotheses to make a hypothesis each for Keppel and Prevost.
+The extra structure I see comes from the fact that each of them is represented by multiple consistent hypotheses.
+I want to merge these consistent hypotheses to make a single hypothesis each for Keppel and Prevost.
 I could get what I want to be by assuming each cluster represents a person with all the attributes as names, but that's difficult to justify as part a multi-agent dialogue.
 Instead, I'll add another agent to the dialogue.
 
@@ -169,9 +169,9 @@ I just want hypotheses that give new combinations of names, so I ignore any **so
 I can then compare these [new soundex](hypotheses/soundex-new) hypotheses with [the consensus](hypotheses/lni-consensus.xml) between **long-s**, **normal** and **initials**.
 There are patterns in the resulting concept clusters that I need to assess.
 In lots of cases, I have a cluster consisting of a single **soundex** object point upwards to two or more consensus objects.
-If **soundex** has made a sensible match I can just pull all the attributes together into a single hypothesis.
+If **soundex** has made a sensible match, I can just pull all the attributes together into a single hypothesis.
 I need to check each case though, because **soundex** might make matches I don't like. For example, it equates "Stevens" and "Stepney".
-Another pattern is a concept node that pointed to by both a **soundex** object and a consensus object.
+Another pattern is a concept node that is pointed to by both a **soundex** object and a consensus object.
 In this case, again subject to checking, I should add all attributes of the **soundex** object to the consensus hypothesis.
 
 Coming up with preference rules to create these new hypotheses is straightforward enough, but checking that the quality of the match is acceptable is strictly a matter of judgement as things stand. 

@@ -15,16 +15,16 @@ I apply the same [FCA](https://en.wikipedia.org/wiki/Formal_concept_analysis) me
 
 The method operates on tokenized names to produces sets of names deemed equivalent through sharing common tokens.
 It is agnostic to the algorithm used for producing tokens from names, but the algorithm will affect the specificity of the results.
-For example, simply splitting the names into word tokens is less likely to put together two names that are from different people, but more likely to consider different expressions of a name as belonging to two different people.
+For example, simply splitting the names into word tokens is less likely to put together two names that are from different people, but more likely to consider different expressions of the same name as belonging to two different people.
 Methods that generalise the tokens, such as Soundex, do the opposite.
 
-An advantage of the method is that the output from any single choice of tokenization algorithm can be considered as a set of hypotheses.
+The output from any single choice of tokenization algorithm can be considered as a set of hypotheses.
 Each hypothesis is a set of names (as they appear in the input data) that are deemed to be equivalent.
 Different tokenization choices produce different results, but they can be compared. I use FCA again to compare hypotheses.
 
 The output from FCA is a [lattice](https://en.wikipedia.org/wiki/Lattice_%28order%29) that can be represented as a graph and visualized.
 A nice side effect of the method is that similar names will appear close to each other in the visualization.
-This affords the opportunity to notice matches not found directly by the algorithm and manually assert them.
+I might notice matches not found directly by the algorithm and manually assert them.
 Such assertions can be considered as 'expert' hypotheses and given added weight when comparing them to hypotheses produced directly by a tokenization algorithm.
 
 The process is naturally iterative. Each round of generating hypotheses suggests alternative tokenizations that might be applied on the next iteration.
