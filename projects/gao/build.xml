@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<project name="GAO" basedir=".">
+
+	<property file="ant.properties"/>
+
+	<description>
+		Georgian Officers Database.
+	</description>
+	
+	<target name="group-rows" description="Group together input records for the same person">
+		<xslt in="results/latest-67.xml" out="${data}/person-67th.xml" style="xsl/group.xsl" force="true">
+			<param name="dataset" expression="file://${data}/67th.xml"/>
+		</xslt>
+	</target>
+
+</project>
