@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <context>
+	<description>Each "attribute" below is from the "row.csv" file in the dataset at https://www.dhi.ac.uk/data/britisharmyofficers.
+	It is the value of the "name" column where the "reg_regiment" column has the value "37th Foot".
+	Each "object" represents a set of equivalent names, so each object is a person.</description>
 	<object name="X5">
 		<attribute>John Taylor Duckett</attribute>
 		<attribute>- Duckett</attribute>
