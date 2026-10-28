@@ -16,3 +16,6 @@ Every `col` element has a `name` attribute set to the value of the column name (
 The XSL transform in [group.xsl](../xsl/group.xsl) takes one of the results file as input and the corresponding row data XML file as a parameter. 
 For each `object` (person) in the input, it make a `person` element and copies into it any rows where the "name" column matches any of the attributes.
 See the **group-rows** target in [build.xml](../build.xml).
+
+For records that have been grouped by person, I can apply [make-sortable.xsl](../xsl/make-sortable.xsl) and [sort.xsl](../xsl/sort.xsl) to add a name as a `sort` attribute to the `person` element, and sort by it.
+

@@ -13,5 +13,21 @@
 			<param name="dataset" expression="file://${data}/67th.xml"/>
 		</xslt>
 	</target>
+	
+	<target name="make-sortable">
+		<xslt in="${data}/person-67th.xml" out="${data}/sortable.xml" style="xsl/make-sortable.xsl" force="true"/>
+	</target>
+	
+	<target name="sort">
+		<xslt in="${data}/sortable.xml" out="${data}/sorted.xml" style="xsl/sort.xsl" force="true"/>
+	</target>
+	
+	<target name="select">
+		<xslt in="${data}/sorted.xml" out="${data}/selected.xml" style="xsl/select.xsl" force="true"/>
+	</target>
+	
+	<target name="make-context">
+		<xslt in="${data}/selected.xml" out="/C:/workspaces/development/Tigers/GAO/hypotheses/all.xml" style="xsl/context.xsl" force="true"/>
+	</target>
 
 </project>
