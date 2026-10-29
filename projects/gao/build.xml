@@ -22,12 +22,20 @@
 		<xslt in="${data}/sortable.xml" out="${data}/sorted.xml" style="xsl/sort.xsl" force="true"/>
 	</target>
 	
+	<target name="filter">
+		<xslt in="${data}/sorted.xml" out="${data}/filtered.xml" style="xsl/filter.xsl" force="true"/>
+	</target>
+	
 	<target name="select">
-		<xslt in="${data}/sorted.xml" out="${data}/selected.xml" style="xsl/select.xsl" force="true"/>
+		<xslt in="${data}/filtered.xml" out="${data}/selected.xml" style="xsl/select.xsl" force="true"/>
 	</target>
 	
 	<target name="make-context">
 		<xslt in="${data}/selected.xml" out="/C:/workspaces/development/Tigers/GAO/hypotheses/all.xml" style="xsl/context.xsl" force="true"/>
+	</target>
+	
+	<target name="check">
+		<xslt in="${data}/filtered.xml" out="${data}/checked.xml" style="xsl/check-fileyear.xsl" force="true"/>
 	</target>
 
 </project>

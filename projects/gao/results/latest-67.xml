@@ -285,6 +285,7 @@
 		<attribute>Charles Rainssord</attribute>
 		<attribute>Charles Rainsford</attribute>
 		<attribute>Charles Rainsord</attribute>
+		<attribute>Charles bainsord</attribute>
 	</object>
 	<object name="X81">
 		<attribute>Robert Gilly</attribute>
@@ -581,11 +582,6 @@
 	</object>
 	<object name="X155">
 		<attribute>William Cook</attribute>
-	</object>
-	<object name="X156">
-		<attribute>Samule Huskisson</attribute>
-		<attribute>Samuel Hukisson</attribute>
-		<attribute>Samuel Huskisson</attribute>
 	</object>
 	<object name="X157">
 		<attribute>William Kinlock</attribute>
@@ -1109,9 +1105,6 @@
 	<object name="X294">
 		<attribute>Frederick Stock</attribute>
 	</object>
-	<object name="X295">
-		<attribute>Charles bainsord</attribute>
-	</object>
 	<object name="X296">
 		<attribute>John Burton</attribute>
 	</object>
@@ -1217,6 +1210,7 @@
 	</object>
 	<object name="X324">
 		<attribute>Robert Beaton</attribute>
+		<attribute>Robert bcaton</attribute>
 	</object>
 	<object name="X325">
 		<attribute>Horation Nelson</attribute>
@@ -1439,9 +1433,6 @@
 	<object name="X389">
 		<attribute>John Reynolds</attribute>
 	</object>
-	<object name="X390">
-		<attribute>Emer Baynbam</attribute>
-	</object>
 	<object name="X391">
 		<attribute>George Cocote</attribute>
 	</object>
@@ -1532,6 +1523,7 @@
 	<object name="X417">
 		<attribute>Edward Barstow</attribute>
 		<attribute>[Vol.] Edward Barstow</attribute>
+		<attribute>Edward Bartow</attribute>
 	</object>
 	<object name="X418">
 		<attribute>Roger Parke</attribute>
@@ -1590,9 +1582,6 @@
 	<object name="X435">
 		<attribute>George Mathews</attribute>
 	</object>
-	<object name="X436">
-		<attribute>Edward Bartow</attribute>
-	</object>
 	<object name="X437">
 		<attribute>Patrick M'Grath</attribute>
 	</object>
@@ -1632,11 +1621,15 @@
 	<object name="X449">
 		<attribute>Marquis of Huntly</attribute>
 	</object>
-	<object name="X450">
+	<object name="X156">
 		<attribute>Samuel Huskinson</attribute>
+		<attribute>Samule Huskisson</attribute>
+		<attribute>Samuel Hukisson</attribute>
+		<attribute>Samuel Huskisson</attribute>
 	</object>
 	<object name="X451">
 		<attribute>Emer Baynham</attribute>
+		<attribute>Emer Baynbam</attribute>
 	</object>
 	<object name="X452">
 		<attribute>Samuel Goodwin</attribute>
@@ -1734,9 +1727,6 @@
 	<object name="X483">
 		<attribute>Joseph Gubbins</attribute>
 	</object>
-	<object name="X484">
-		<attribute>Robert bcaton</attribute>
-	</object>
 	<object name="X485">
 		<attribute>Arthur Poyntz</attribute>
 	</object>
@@ -1801,6 +1791,8 @@
 		<attribute>____ Dwyer</attribute>
 		<attribute>Dwyer</attribute>
 		<attribute>- Dwyer</attribute>
+		<attribute>John Dwyer</attribute>
+		<attribute>James Dwyer</attribute>
 	</object>
 	<object name="X498">
 		<attribute>Alexander Nicoll</attribute>
@@ -1934,13 +1926,6 @@
 		<attribute>____ Hales</attribute>
 		<attribute>- Hales</attribute>
 	</object>
-	<object name="X526">
-		<attribute>John Dwyer</attribute>
-		<attribute>_ Dwyer</attribute>
-		<attribute>____ Dwyer</attribute>
-		<attribute>Dwyer</attribute>
-		<attribute>- Dwyer</attribute>
-	</object>
 	<object name="X527">
 		<attribute>John Hamilton</attribute>
 		<attribute>Hamilton</attribute>
@@ -1962,13 +1947,6 @@
 	<object name="X531">
 		<attribute>Theobald Butler</attribute>
 		<attribute>Butler</attribute>
-	</object>
-	<object name="X532">
-		<attribute>James Dwyer</attribute>
-		<attribute>_ Dwyer</attribute>
-		<attribute>____ Dwyer</attribute>
-		<attribute>Dwyer</attribute>
-		<attribute>- Dwyer</attribute>
 	</object>
 	<object name="X533">
 		<attribute>Ewen Cam. M'Pherson</attribute>

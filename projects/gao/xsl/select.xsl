@@ -12,7 +12,7 @@
 </xsl:copy>
 </xsl:template>
 
-<xsl:template match="person[starts-with(@sort, 'Dwyer')]">
+<xsl:template match="person[starts-with(@sort, 'Cassidy')]">
 	<xsl:copy-of select="."/>
 </xsl:template>
 
