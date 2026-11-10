@@ -21,7 +21,7 @@
 <xsl:template match="attribute">
 	<xsl:variable name="name" select="."/>
 		<xsl:message><xsl:value-of select="$name"/></xsl:message>
-	<xsl:apply-templates select="$data//col[@name = 'name' and normalize-space(@value) = $name]"/>
+	<xsl:apply-templates select="$data//col[@name = 'name' and normalize-space(@value) = normalize-space($name)]"/>
 </xsl:template>
 
 <xsl:template match="col">

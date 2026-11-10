@@ -1,0 +1,40 @@
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+
+<xsl:output method="xml" encoding="UTF-8" indent="yes"/>
+
+<xsl:template match="/">
+	  <xsl:apply-templates select="data"/>
+</xsl:template>
+
+<xsl:template match="data">
+<xsl:copy>
+	<xsl:apply-templates select="person"/>
+</xsl:copy>
+</xsl:template>
+
+<xsl:template match="person">
+	<xsl:copy>
+		<xsl:copy-of select="@*"/>
+		<xsl:apply-templates select="row[1]"/>
+	</xsl:copy>
+</xsl:template>
+
+<xsl:template match="row">
+	<xsl:apply-templates select="following-sibling::row[1]" mode="check">
+		<xsl:with-param name="rank" select="col[@name = 'rank_lvl']/@value"/>
+	</xsl:apply-templates>
+</xsl:template>
+
+<xsl:template match="row" mode="check">
+	<xsl:param name="rank" select="number('0')"/>
+	<xsl:if test="number(col[@name = 'rank_lvl']/@value) &lt; $rank">
+		<argument>
+			<claim>A dubious change of rank (<xsl:value-of select="preceding-sibling::row[1]/col[@name = 'reg_rank']/@value"/> to <xsl:value-of select="col[@name = 'reg_rank']/@value"/>) between records <xsl:value-of select="preceding-sibling::row[1]/col[@name = 'idkey']/@value"/> (<xsl:value-of select="preceding-sibling::row[1]/col[@name = 'fileyear']/@value"/>) and <xsl:value-of select="col[@name = 'idkey']/@value"/> (<xsl:value-of select="number(col[@name = 'fileyear']/@value)"/>).</claim>
+			<xsl:copy-of select="preceding::row[1]"/>
+			<xsl:copy-of select="."/>
+		</argument>
+	</xsl:if>
+	<xsl:apply-templates select="."/>
+</xsl:template>
+
+</xsl:stylesheet>

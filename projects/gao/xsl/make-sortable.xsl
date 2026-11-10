@@ -31,6 +31,9 @@
 		<xsl:when test="string-length(col[@name = 'given']/@value) = 0 and following-sibling::row[string-length(col[@name = 'given']/@value) &gt; 0]">
 			<xsl:apply-templates select="following-sibling::row[string-length(col[@name = 'given']/@value) &gt; 0][1]" mode="name"/>
 		</xsl:when>
+		<xsl:when test="string-length(col[@name = 'given']/@value) = 0 and not(following-sibling::row[string-length(col[@name = 'given']/@value) &gt; 0])">
+			<xsl:value-of select="normalize-space(col[@name = 'name']/@value)"/>
+		</xsl:when>
 		<xsl:otherwise>
 			<xsl:value-of select="normalize-space(concat(col[@name = 'surname']/@value, ', ', col[@name = 'given']/@value, ' ', col[@name = 'middlenames']/@value))"/>
 		</xsl:otherwise>

@@ -13,17 +13,22 @@
 </xsl:template>
 
 <xsl:template match="person">
-	<xsl:apply-templates select="row"/>
+	<object name="{@sort}">
+		<xsl:apply-templates select="row"/>
+		<attribute><xsl:value-of select="@sort"/></attribute>
+	</object>
 </xsl:template>
 
 <xsl:template match="row">
-	<object name="{col[@name = 'idkey']/@value}">
-		<xsl:apply-templates select="col[@name = 'reg_rank']"/>
 		<xsl:apply-templates select="col[@name = 'reg_date']"/>
+		<xsl:apply-templates select="col[@name = 'reg_rank']"/>
+		<!-- 
+			<object name="{col[@name = 'idkey']/@value}">
 		<xsl:apply-templates select="col[@name = 'given']"/>
 		<xsl:apply-templates select="col[@name = 'middlenames']"/>
 		<xsl:apply-templates select="col[@name = 'surname']"/>
-	</object>
+		<xsl:apply-templates select="col[@name = 'fileyear']"/>
+		 -->
 </xsl:template>
 
 <xsl:template match="col">

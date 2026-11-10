@@ -28,9 +28,13 @@
 <xsl:template match="row" mode="check">
 	<xsl:param name="date" select="number('0')"/>
 	<xsl:if test="number(col[@name = 'fileyear']/@value) - $date &gt; 1">
-		<xsl:copy-of select="preceding::row[1]"/>
-		<xsl:copy-of select="."/>
+		<argument>
+			<claim>A hole of size <xsl:value-of select="number(col[@name = 'fileyear']/@value) - $date - 1"/> between records <xsl:value-of select="preceding-sibling::row[1]/col[@name = 'idkey']/@value"/> (<xsl:value-of select="$date"/>) and <xsl:value-of select="col[@name = 'idkey']/@value"/> (<xsl:value-of select="number(col[@name = 'fileyear']/@value)"/>).</claim>
+			<xsl:copy-of select="preceding::row[1]"/>
+			<xsl:copy-of select="."/>
+		</argument>
 	</xsl:if>
+	<xsl:apply-templates select="."/>
 </xsl:template>
 
 </xsl:stylesheet>

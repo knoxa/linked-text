@@ -27,15 +27,31 @@
 	</target>
 	
 	<target name="select">
-		<xslt in="${data}/filtered.xml" out="${data}/selected.xml" style="xsl/select.xsl" force="true"/>
+		<xslt in="${data}/sorted.xml" out="${data}/selected.xml" style="xsl/select.xsl" force="true"/>
 	</target>
 	
 	<target name="make-context">
-		<xslt in="${data}/selected.xml" out="/C:/workspaces/development/Tigers/GAO/hypotheses/all.xml" style="xsl/context.xsl" force="true"/>
+		<xslt in="${data}/filtered.xml" out="/C:/workspaces/development/Tigers/GAO/hypotheses/all.xml" style="xsl/context.xsl" force="true"/>
 	</target>
 	
-	<target name="check">
-		<xslt in="${data}/filtered.xml" out="${data}/checked.xml" style="xsl/check-fileyear.xsl" force="true"/>
+	<target name="check-hole">
+		<xslt in="${data}/sorted.xml" out="${data}/checked.xml" style="xsl/check-hole.xsl" force="true"/>
+	</target>
+	
+	<target name="check-repeat">
+		<xslt in="${data}/filtered.xml" out="${data}/checked.xml" style="xsl/check-repeat.xsl" force="true"/>
+	</target>
+	
+	<target name="check-rank">
+		<xslt in="${data}/filtered.xml" out="${data}/checked.xml" style="xsl/check-rank.xsl" force="true"/>
+	</target>
+	
+	<target name="check-date">
+		<xslt in="${data}/filtered.xml" out="${data}/checked.xml" style="xsl/check-date.xsl" force="true"/>
+	</target>
+	
+	<target name="format">
+		<xslt in="${data}/filtered.xml" out="${data}/out.xhtml" style="xsl/format.xsl" force="true"/>
 	</target>
 
 </project>
