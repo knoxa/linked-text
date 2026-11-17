@@ -8,6 +8,8 @@
 		Georgian Officers Database.
 	</description>
 	
+	<target name="all" depends="group-rows, make-sortable, sort, filter, check, format, critique"/>
+	
 	<target name="group-rows" description="Group together input records for the same person">
 		<xslt in="results/latest-67.xml" out="${data}/person-67th.xml" style="xsl/group.xsl" force="true">
 			<param name="dataset" expression="file://${data}/67th.xml"/>
@@ -31,27 +33,38 @@
 	</target>
 	
 	<target name="make-context">
-		<xslt in="${data}/filtered.xml" out="/C:/workspaces/development/Tigers/GAO/hypotheses/all.xml" style="xsl/context.xsl" force="true"/>
+		<xslt in="${data}/selected.xml" out="/C:/workspaces/development/Tigers/GAO/hypotheses/all.xml" style="xsl/context.xsl" force="true"/>
 	</target>
 	
+	<target name="check" depends="check-hole, check-repeat, check-rank, check-date"/>
+	
 	<target name="check-hole">
-		<xslt in="${data}/sorted.xml" out="${data}/checked.xml" style="xsl/check-hole.xsl" force="true"/>
+		<xslt in="${data}/filtered.xml" out="${data}/check-hole.xml" style="xsl/check-hole.xsl" force="true"/>
 	</target>
 	
 	<target name="check-repeat">
-		<xslt in="${data}/filtered.xml" out="${data}/checked.xml" style="xsl/check-repeat.xsl" force="true"/>
+		<xslt in="${data}/filtered.xml" out="${data}/check-repeat.xml" style="xsl/check-repeat.xsl" force="true"/>
 	</target>
 	
 	<target name="check-rank">
-		<xslt in="${data}/filtered.xml" out="${data}/checked.xml" style="xsl/check-rank.xsl" force="true"/>
+		<xslt in="${data}/filtered.xml" out="${data}/check-rank.xml" style="xsl/check-rank.xsl" force="true"/>
 	</target>
 	
 	<target name="check-date">
-		<xslt in="${data}/filtered.xml" out="${data}/checked.xml" style="xsl/check-date.xsl" force="true"/>
+		<xslt in="${data}/filtered.xml" out="${data}/check-date.xml" style="xsl/check-date.xsl" force="true"/>
 	</target>
 	
 	<target name="format">
 		<xslt in="${data}/filtered.xml" out="${data}/out.xhtml" style="xsl/format.xsl" force="true"/>
+	</target>
+	
+	<target name="critique" description="Add arguments">
+		<xslt in="${data}/out.xhtml" out="${data}/out2.xhtml" style="xsl/combine.xsl" force="true">
+			<param name="dataset-date" expression="file://${data}/check-date.xml"/>
+			<param name="dataset-rank" expression="file://${data}/check-rank.xml"/>
+			<param name="dataset-repeat" expression="file://${data}/check-repeat.xml"/>
+			<param name="dataset-hole" expression="file://${data}/check-hole.xml"/>
+		</xslt>
 	</target>
 
 </project>

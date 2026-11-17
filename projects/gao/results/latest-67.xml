@@ -14,6 +14,8 @@
 	<object name="X20">
 		<attribute>William Owen</attribute>
 		<attribute>Wm Owen</attribute>
+		<attribute>William Owena</attribute>
+		<attribute>William Owerr</attribute>
 	</object>
 	<object name="X21">
 		<attribute>- Delamain</attribute>
@@ -104,8 +106,8 @@
 		<attribute>Henry Green</attribute>
 	</object>
 	<object name="X37a">
-		<attribute>William Henry Greeen</attribute>
 		<attribute>William Henry Green</attribute>
+		<attribute>William Henry Greeen</attribute>
 	</object>
 	<object name="X38">
 		<attribute>Robert Denny</attribute>
@@ -115,9 +117,6 @@
 	</object>
 	<object name="X39">
 		<attribute>Averell Lecky</attribute>
-	</object>
-	<object name="X40">
-		<attribute>John Connell</attribute>
 	</object>
 	<object name="X41">
 		<attribute>George Garth</attribute>
@@ -326,6 +325,7 @@
 	</object>
 	<object name="X91a">
 		<attribute>- Hill</attribute>
+	</object>
 	<object name="X92">
 		<attribute>Philip Jenkins</attribute>
 		<attribute>Phillip Jenkins</attribute>
@@ -378,6 +378,8 @@
 	<object name="X105">
 		<attribute>William A-de Maria</attribute>
 		<attribute>William A_de Maria</attribute>
+		<!-- transcription error: "John de Maria" should be "Wm. A. de Maria" -->
+		<attribute>John de Maria</attribute>
 	</object>
 	<object name="X107">
 		<attribute>Miles Chester</attribute>
@@ -411,8 +413,8 @@
 		<attribute>Andrew Rutledge</attribute>
 	</object>
 	<object name="X117">
-		<attribute>Smauel Patrickson</attribute>
 		<attribute>Samuel Patrickson</attribute>
+		<attribute>Smauel Patrickson</attribute>
 	</object>
 	<object name="X119">
 		<attribute>John M.Mainwaring</attribute>
@@ -531,6 +533,7 @@
 		<attribute>John O'Bryen</attribute>
 		<attribute>Hble. Johnn O'Brien</attribute>
 		<attribute>John O'Bryon</attribute>
+		<attribute>John O Bryen</attribute>
 	</object>
 	<object name="X149">
 		<attribute>John Smith</attribute>
@@ -581,15 +584,12 @@
 		<attribute>Agar</attribute>
 		<attribute>Francis Agar</attribute>
 	</object>
-	<object name="X159">
-		<attribute>John de Maria</attribute>
-	</object>
 	<object name="X159a">
 		<attribute>John Moir</attribute>
 	</object>
 	<object name="X160">
-		<attribute>William Bair</attribute>
 		<attribute>William Blair</attribute>
+		<attribute>William Bair</attribute>
 		<attribute>William Balir</attribute>
 	</object>
 	<object name="X161">
@@ -619,9 +619,6 @@
 	</object>
 	<object name="X169">
 		<attribute>Garret Fitzsimmons</attribute>
-	</object>
-	<object name="X170">
-		<attribute>Henry Bayly</attribute>
 	</object>
 	<object name="X171">
 		<attribute>John Gelling</attribute>
@@ -707,6 +704,7 @@
 		<attribute>Wm. R-Beverley</attribute>
 		<attribute>Wm. R_Beverley</attribute>
 		<attribute>Wm. R_ Berverly</attribute>
+		<attribute>Wm.R_Berveley</attribute>
 	</object>
 	<object name="X195">
 		<attribute>John Greenwell</attribute>
@@ -765,8 +763,9 @@
 		<attribute>Frederick P-Noble</attribute>
 	</object>
 	<object name="X207">
-		<attribute>John O'Coonnell</attribute>
 		<attribute>John O'Connell</attribute>
+		<attribute>John Connell</attribute>
+		<attribute>John O'Coonnell</attribute>
 	</object>
 	<object name="X208">
 		<attribute>Willam Fuller</attribute>
@@ -918,9 +917,6 @@
 		<attribute>William Bain</attribute>
 		<attribute>Wm. Bain</attribute>
 	</object>
-	<object name="X251">
-		<attribute>James M'Phrson</attribute>
-	</object>
 	<object name="X252">
 		<attribute>Thomas Rynd</attribute>
 	</object>
@@ -958,8 +954,8 @@
 		<attribute>Foster Fyans</attribute>
 	</object>
 	<object name="X262">
-		<attribute>Chalrles Wale</attribute>
 		<attribute>Charles Wale</attribute>
+		<attribute>Chalrles Wale</attribute>
 	</object>
 	<object name="X263">
 		<attribute>Thomas Kiernander</attribute>
@@ -987,6 +983,9 @@
 	<object name="X270">
 		<attribute>Alexander Pilfold</attribute>
 		<attribute>Alexander Pilsold</attribute>
+		<attribute>Alexander Pilsord</attribute>
+		<attribute>Alex Pilford</attribute>
+		<attribute>Alexander Pilford</attribute>
 	</object>
 	<object name="X271">
 		<attribute>Lucius French</attribute>
@@ -1038,9 +1037,6 @@
 	<object name="X283">
 		<attribute>H. W. Simons</attribute>
 	</object>
-	<object name="X284">
-		<attribute>Brabazon Diasey</attribute>
-	</object>
 	<object name="X285">
 		<attribute>Curry</attribute>
 		<attribute>Martin Corry</attribute>
@@ -1049,11 +1045,6 @@
 		<attribute>Edward Maxwell Brown</attribute>
 		<attribute>Edw. Maxwell Brown</attribute>
 		<attribute>Edw Maxwell Brows</attribute>
-	</object>
-	<object name="X287">
-		<attribute>Alexander Pilsord</attribute>
-		<attribute>Alex Pilford</attribute>
-		<attribute>Alexander Pilford</attribute>
 	</object>
 	<object name="X288">
 		<attribute>John Wilson</attribute>
@@ -1219,6 +1210,7 @@
 	</object>
 	<object name="X340">
 		<attribute>James Adair</attribute>
+		<attribute>James Adsair</attribute>
 	</object>
 	<object name="X343">
 		<attribute>Robert Shelton</attribute>
@@ -1227,8 +1219,8 @@
 		<attribute>John Elphinstone</attribute>
 	</object>
 	<object name="X345">
-		<attribute>Henry Clar. Scarman</attribute>
 		<attribute>Henry Clarence Scarman</attribute>
+		<attribute>Henry Clar. Scarman</attribute>
 	</object>
 	<object name="X346">
 		<attribute>Alexander Stewart</attribute>
@@ -1239,9 +1231,6 @@
 	<object name="X348">
 		<attribute>Alexander Clark</attribute>
 	</object>
-	<object name="X349">
-		<attribute>James Adsair</attribute>
-	</object>
 	<object name="X350">
 		<attribute>Wellesley Medlicott</attribute>
 		<attribute>Wellesley Medicott</attribute>
@@ -1251,17 +1240,14 @@
 		<attribute>Henry Gordon</attribute>
 	</object>
 	<object name="X353">
-		<attribute>Wm. Bennet Mountain</attribute>
 		<attribute>William Bennett Mountain</attribute>
+		<attribute>Wm. Bennet Mountain</attribute>
 	</object>
 	<object name="X354">
-		<attribute>Alexander Book</attribute>
 		<attribute>Alexander Beek</attribute>
+		<attribute>Alexander Book</attribute>
 		<attribute>Alexander Beck</attribute>
 		<attribute>Alexander Bock</attribute>
-	</object>
-	<object name="X355">
-		<attribute>Joseph M'Pherson</attribute>
 	</object>
 	<object name="X356">
 		<attribute>Valentine Fleming</attribute>
@@ -1283,8 +1269,8 @@
 		<attribute>William Plenderleath</attribute>
 	</object>
 	<object name="X362">
-		<attribute>Louse. Bainbridge</attribute>
 		<attribute>Lancelot Bainbridge</attribute>
+		<attribute>Louse. Bainbridge</attribute>
 	</object>
 	<object name="X363">
 		<attribute>Charles Auber</attribute>
@@ -1318,8 +1304,8 @@
 		<attribute>Charles Flood</attribute>
 	</object>
 	<object name="X372">
-		<attribute>Daneil Cudmore</attribute>
 		<attribute>Daniel Cudmore</attribute>
+		<attribute>Daneil Cudmore</attribute>
 	</object>
 	<object name="X373">
 		<attribute>James Kirby</attribute>
@@ -1350,8 +1336,8 @@
 		<attribute>Joseph Hanna</attribute>
 	</object>
 	<object name="X382">
-		<attribute>John hanna</attribute>
 		<attribute>John Hanna</attribute>
+		<attribute>John hanna</attribute>
 		<attribute>John Hanns</attribute>
 	</object>
 	<object name="X382a">
@@ -1411,8 +1397,8 @@
 		<attribute>Francis Drake</attribute>
 	</object>
 	<object name="X403">
-		<attribute>Goerge Dickson</attribute>
 		<attribute>George Dickson</attribute>
+		<attribute>Goerge Dickson</attribute>
 		<attribute>George Dixon</attribute>
 	</object>
 	<object name="X404">
@@ -1421,15 +1407,9 @@
 		<attribute>Joseph Everitt</attribute>
 		<attribute>Jospeh Everett</attribute>
 	</object>
-	<object name="X405">
-		<attribute>Wm.R_Berveley</attribute>
-	</object>
 	<object name="X408">
 		<attribute>E D Hundle</attribute>
 		<attribute>E.D.Hundle</attribute>
-	</object>
-	<object name="X409">
-		<attribute>John O Bryen</attribute>
 	</object>
 	<object name="X410">
 		<attribute>Charles Quarterly</attribute>
@@ -1469,9 +1449,6 @@
 		<attribute>George Mitchell</attribute>
 		<attribute>Geroge Mitchell</attribute>
 	</object>
-	<object name="X422">
-		<attribute>William Owerr</attribute>
-	</object>
 	<object name="X423">
 		<attribute>James Blair</attribute>
 		<attribute>James Biair</attribute>
@@ -1486,8 +1463,8 @@
 		<attribute>Marcus Annesley</attribute>
 	</object>
 	<object name="X427">
-		<attribute>Henry Ricahrdson</attribute>
 		<attribute>Henry Richardson</attribute>
+		<attribute>Henry Ricahrdson</attribute>
 	</object>
 	<object name="X428">
 		<attribute>Pomeroy D'Arcy</attribute>
@@ -1515,8 +1492,8 @@
 		<attribute>Wm Brewse Kersteman</attribute>
 	</object>
 	<object name="X439">
-		<attribute>John Ellie</attribute>
 		<attribute>John Ellis</attribute>
+		<attribute>John Ellie</attribute>
 	</object>
 	<object name="X440">
 		<attribute>James Cane</attribute>
@@ -1575,6 +1552,7 @@
 	</object>
 	<object name="X459">
 		<attribute>Brabazon Disney</attribute>
+		<attribute>Brabazon Diasey</attribute>
 	</object>
 	<object name="X460">
 		<attribute>George Rawlings</attribute>
@@ -1614,6 +1592,7 @@
 	</object>
 	<object name="X474">
 		<attribute>Henry Barly</attribute>
+		<attribute>Henry Bayly</attribute>
 	</object>
 	<object name="X475">
 		<attribute>Charles Langwerth</attribute>
@@ -1625,9 +1604,6 @@
 		<attribute>Swist Armstorng</attribute>
 		<attribute>Swist Armstrong</attribute>
 		<attribute>Swift Armstrong</attribute>
-	</object>
-	<object name="X480">
-		<attribute>William Owena</attribute>
 	</object>
 	<object name="X481">
 		<attribute>Andrew Roe</attribute>
@@ -1666,8 +1642,8 @@
 		<attribute>- Thompson</attribute>
 	</object>
 	<object name="X492">
-		<attribute>Peter Carig</attribute>
 		<attribute>Peter Craig</attribute>
+		<attribute>Peter Carig</attribute>
 		<attribute>Craig</attribute>
 	</object>
 	<object name="X493">
@@ -1675,11 +1651,11 @@
 		<attribute>Jackson</attribute>
 	</object>
 	<object name="X494">
+		<attribute>Alex. Cosby Jackson</attribute>
 		<attribute>Alex.Crosby Jackson</attribute>
 		<attribute>Alex.Cosby Jackson</attribute>
 		<attribute>Alex. Coshy Jackson</attribute>
 		<attribute>Alex.Costby Jackson</attribute>
-		<attribute>Alex. Cosby Jackson</attribute>
 		<attribute>Jackson</attribute>
 	</object>
 	<object name="X495">
@@ -1697,7 +1673,9 @@
 		<attribute>____ Dwyer</attribute>
 		<attribute>Dwyer</attribute>
 		<attribute>- Dwyer</attribute>
+		<!-- transcription error: "John Dwyer" should be "Dwyer" -->
 		<attribute>John Dwyer</attribute>
+		<!-- transcription error: "James Dwyer" should be "Dwyer" -->
 		<attribute>James Dwyer</attribute>
 	</object>
 	<object name="X498">
@@ -1720,8 +1698,8 @@
 		<attribute>Nicoll</attribute>
 	</object>
 	<object name="X502">
-		<attribute>Kirckwood Cassidy</attribute>
 		<attribute>Kirkwood Cassidy</attribute>
+		<attribute>Kirckwood Cassidy</attribute>
 		<attribute>- Cassidy</attribute>
 		<attribute>Cassidy</attribute>
 		<attribute>____ Cassidy</attribute>
@@ -1740,10 +1718,6 @@
 		<attribute>James Thompson</attribute>
 		<attribute>James THompson</attribute>
 		<attribute>- Thompson</attribute>
-	</object>
-	<object name="X506">
-		<attribute>Lieut. Craig</attribute>
-		<attribute>Craig</attribute>
 	</object>
 	<object name="X507">
 		<attribute>Chidley Coote</attribute>
@@ -1778,15 +1752,18 @@
 		<attribute>Coote</attribute>
 	</object>
 	<object name="X516">
-		<attribute>james Ward</attribute>
 		<attribute>James Ward</attribute>
+		<attribute>james Ward</attribute>
 	</object>
 	<object name="X517">
 		<attribute>James M'Pherson</attribute>
 		<attribute>james M'Pherson</attribute>
 		<attribute>James M'pherson</attribute>
 		<attribute>James M Pherson</attribute>
+		<attribute>James M'Phrson</attribute>
+		<!-- 
 		<attribute>- M'Pherson</attribute>
+		 -->
 	</object>
 	<object name="X518">
 		<attribute>George Coote</attribute>
@@ -1798,16 +1775,13 @@
 		<attribute>Butler</attribute>
 	</object>
 	<object name="X520">
-		<attribute>David Wilkinon</attribute>
 		<attribute>David Wilkinson</attribute>
+		<attribute>David Wilkinon</attribute>
 		<attribute>Wilkinson</attribute>
-	</object>
-	<object name="X521">
-		<attribute>Hugh M'Pherson</attribute>
-		<attribute>- M'Pherson</attribute>
 	</object>
 	<object name="X522">
 		<attribute>John Craig</attribute>
+		<attribute>Lieut. Craig</attribute>
 		<attribute>Craig</attribute>
 	</object>
 	<object name="X523">
@@ -1835,12 +1809,15 @@
 		<attribute>Cassidy</attribute>
 		<attribute>____ Cassidy</attribute>
 		<attribute>John Cassidy</attribute>
-		<!-- transcription error: "Alexanter Casidy" should be "Cassidy" -->
 		<attribute>Alexanter Casidy</attribute>
 	</object>
 	<object name="X529">
 		<attribute>Charles M'Pherson</attribute>
 		<attribute>- M'Pherson</attribute>
+		<!-- transcription error: "Joseph M'Pherson" should be "Charles M'Pherson" -->
+		<attribute>Joseph M'Pherson</attribute>
+		<!-- transcription error: "Joseph M'Pherson" should be "M'Pherson" = Charles, by Ensign date -->
+		<attribute>Hugh M'Pherson</attribute>
 	</object>
 	<object name="X530">
 		<attribute>Ambrose Morris</attribute>
@@ -1852,6 +1829,5 @@
 	</object>
 	<object name="X533">
 		<attribute>Ewen Cam. M'Pherson</attribute>
-		<attribute>- M'Pherson</attribute>
 	</object>
 </context>

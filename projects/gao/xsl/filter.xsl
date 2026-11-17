@@ -9,6 +9,16 @@
   </xsl:copy>
 </xsl:template>
 
+<xsl:template match="person">
+<xsl:copy>
+	<xsl:copy-of select="@*"/>
+	<xsl:if test="not(row[contains(col[@name = 'sheet']/@value, '99.')])">
+		<xsl:copy-of select="row"/>
+	</xsl:if>
+	<xsl:apply-templates select="row"/>
+</xsl:copy>
+</xsl:template>
+
 <xsl:template match="row[not(contains(col[@name = 'sheet']/@value, '99.'))]" />
 
 

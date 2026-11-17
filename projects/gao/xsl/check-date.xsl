@@ -19,17 +19,17 @@
 	</xsl:copy>
 </xsl:template>
 
-<xsl:template match="row[string-length(col[@name = 'reg_rank']/@value) &gt; 0 and string-length(col[@name = 'reg_date']/@value)]">
-	<xsl:apply-templates select="following-sibling::row[./col[@name = 'reg_rank']/@value = current()/col[@name = 'reg_rank']/@value and ./col[@name = 'reg_date']/@value != current()/col[@name = 'reg_date']/@value][1]" mode="check">
+<xsl:template match="row[string-length(col[@name = 'reg_rank']/@value) &gt; 0 and string-length(col[@name = 'reg_date']/@value) &gt; 0]">
+	<xsl:apply-templates select="following-sibling::row[./col[@name = 'reg_rank']/@value = current()/col[@name = 'reg_rank']/@value and ./col[@name = 'reg_date']/@value != current()/col[@name = 'reg_date']/@value and string-length(col[@name = 'reg_date']/@value) &gt; 0][1]" mode="check">
 		<xsl:with-param name="date" select="col[@name = 'reg_date']/@value"/>
 		<xsl:with-param name="idkey" select="col[@name = 'idkey']/@value"/>
 		<xsl:with-param name="year" select="col[@name = 'fileyear']/@value"/>
 		<xsl:with-param name="prev" select="."/>
 	</xsl:apply-templates>
-	<xsl:apply-templates select="following-sibling::row[number(./col[@name = 'rank_lvl']/@value) &gt; number(current()/col[@name = 'rank_lvl']/@value)][1]" />
+	<xsl:apply-templates select="following-sibling::row[./col[@name = 'reg_rank']/@value != current()/col[@name = 'reg_rank']/@value and string-length(./col[@name = 'reg_date']/@value) &gt; 0][1]" />
 </xsl:template>
 
-<xsl:template match="row[string-length(col[@name = 'reg_rank']/@value) &gt; 0 and string-length(col[@name = 'reg_date']/@value)]" mode="check">
+<xsl:template match="row[string-length(col[@name = 'reg_rank']/@value) &gt; 0 and string-length(col[@name = 'reg_date']/@value) &gt; 0]" mode="check">
 	<xsl:param name="date"/>
 	<xsl:param name="idkey"/>
 	<xsl:param name="year"/>

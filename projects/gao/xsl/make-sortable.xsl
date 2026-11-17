@@ -13,6 +13,7 @@
 	<xsl:variable name="name"><xsl:apply-templates select="row[1]" mode="name"/></xsl:variable>
 	<xsl:message><xsl:value-of select="$name"/></xsl:message>
 	<xsl:copy>
+		<xsl:copy-of select="@*"/>
 		<xsl:attribute name="sort">
 			<xsl:value-of select="$name"/>
 		</xsl:attribute>

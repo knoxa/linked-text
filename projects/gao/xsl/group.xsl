@@ -13,7 +13,7 @@
 </xsl:template>
 
 <xsl:template match="object">
-  <person>
+  <person id="{generate-id()}">
   	<xsl:apply-templates select="attribute"/>
   </person>
 </xsl:template>
